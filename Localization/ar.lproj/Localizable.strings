@@ -1,0 +1,44 @@
+// Get Started
+"GetStartedTitle" = "اختر نوع الحساب";
+"User" = "مستخدم";
+"Driver" = "سائق";
+"Go" = "انطلق";
+
+// Auth View
+"Slogan" = "سريعة، موثوقة وآمنة";
+
+// Login
+"Login" = "تسجيل الدخول";
+"LoginDesc" = "أدخل رقم هاتفك المحمول لإكمال عملية التسجيل.";
+"ForgetPassword" = "نسيت كلمة المرور!";
+
+// Sign up
+"Signup" = "التسجيل";
+"SignupDesc" = "أدخل اسمك، رقم هاتفك، بريدك الإلكتروني، وكلمة المرور لإكمال عملية التسجيل.";
+
+// Text Fields
+"FullName" = "الاسم الكامل";
+"FullNameDesc" = "أدخل اسمك الكامل";
+
+"PhoneNumber" = "رقم الهاتف";
+"PhoneNumberDesc" = "أدخل رقم هاتفك";
+
+"Password" = "كلمة المرور";
+"PasswordDesc" = "أدخل كلمة المرور الخاصة بك";
+
+"Email" = "البريد الإلكتروني";
+"EmailDesc" = "أدخل بريدك الإلكتروني";
+
+// Send email
+"SendEmail" = "إرسال البريد الإلكتروني";
+"SendEmailDesc" = "من فضلك قم بإرسال بريدك الإلكتروني لتلقي الرمز المؤقت (OTP).";
+"Next" = "التالي";
+
+// OTP
+"EnterOTP" = "أدخل الرمز المؤقت (OTP)";
+"EnterOTPDesc" = "من فضلك أدخل الرمز المؤقت المكون من 6 أرقام الذي تلقيته في بريدك الإلكتروني.";
+
+// Reset Password
+"newPassword" = "أدخل كلمة المرور الجديدة";
+"PasswordConfirmation" = "تأكيد كلمة المرور";
+"PasswordConfirmation" = "تأكيد كلمة المرور";

@@ -1,0 +1,45 @@
+// Get Started
+"GetStartedTitle" = "Choose Acount Type";
+"User" = "User";
+"Driver" = "Driver";
+"Go" = "Go";
+
+// Auth View
+"Slogan" = "Fast, Reable, and Safe";
+
+// Login
+"Login" = "Login";
+"LoginDesc" = "Enter your mobile number to complete the registration proccess.";
+"ForgetPassword" = "Forget Password!";
+
+// Sign up
+"Signup" = "Signup";
+"SignupDesc" = "Enter your name, phone number, email, and password to complete the registration process";
+
+// Text Fields
+"FullName" = "Full Name";
+"FullNameDesc" = "Enter your full name";
+
+"PhoneNumber" = "Phone Number";
+"PhoneNumberDesc" = "Enter your phone number";
+
+"Password" = "Password";
+"PasswordDesc" = "Enter your password";
+
+"Email" = "Email";
+"EmailDesc" = "Enter your email";
+
+// Send email
+"SendEmail" = "Send Email";
+"SendEmailDesc" = "Please send your email to recive OTP.";
+"Next" = "Next";
+
+// OTP
+"EnterOTP" = "Enter OTP";
+"EnterOTPDesc" = "Please enter the 6-digit OTP you received in your email.";
+
+// Reset Password
+"newPassword" = "Enter your new password";
+"PasswordConfirmation" = "Password Confirmation";
+"PasswordConfirmation" = "Password Confirmation";
+
