@@ -21,6 +21,7 @@
 		7F5E43142AEBF49C008C2FC1 /* onboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E43132AEBF49C008C2FC1 /* onboardingModel.swift */; };
 		7F5E43182AEBF645008C2FC1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E43172AEBF645008C2FC1 /* OnboardingView.swift */; };
 		7F6CA3052AEBFEE200BAB446 /* GFNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA3042AEBFEE200BAB446 /* GFNextButton.swift */; };
+		7F6CA3072AEC19E800BAB446 /* GFSliderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA3062AEC19E800BAB446 /* GFSliderButton.swift */; };
 		7F988E5C2AE2D1BC00E0BCBD /* RoshettaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F988E5B2AE2D1BC00E0BCBD /* RoshettaApp.swift */; };
 		7F988E5E2AE2D1BC00E0BCBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F988E5D2AE2D1BC00E0BCBD /* ContentView.swift */; };
 		7F988E602AE2D1BE00E0BCBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F988E5F2AE2D1BE00E0BCBD /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		7F5E43132AEBF49C008C2FC1 /* onboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingModel.swift; sourceTree = "<group>"; };
 		7F5E43172AEBF645008C2FC1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		7F6CA3042AEBFEE200BAB446 /* GFNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFNextButton.swift; sourceTree = "<group>"; };
+		7F6CA3062AEC19E800BAB446 /* GFSliderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSliderButton.swift; sourceTree = "<group>"; };
 		7F988E582AE2D1BC00E0BCBD /* Roshetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F988E5B2AE2D1BC00E0BCBD /* RoshettaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshettaApp.swift; sourceTree = "<group>"; };
 		7F988E5D2AE2D1BC00E0BCBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				7F988EBB2AE2D33F00E0BCBD /* LoaderView.swift */,
 				7F988EBD2AE2D33F00E0BCBD /* GFSecureTextField.swift */,
 				7F6CA3042AEBFEE200BAB446 /* GFNextButton.swift */,
+				7F6CA3062AEC19E800BAB446 /* GFSliderButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				7F988E9D2AE2D29900E0BCBD /* HTTPClient.swift in Sources */,
 				7F5E43032AEBE034008C2FC1 /* Images.swift in Sources */,
 				7F988EAD2AE2D2BD00E0BCBD /* String.swift in Sources */,
+				7F6CA3072AEC19E800BAB446 /* GFSliderButton.swift in Sources */,
 				7F988EAC2AE2D2BD00E0BCBD /* Codable.swift in Sources */,
 				7F988E5C2AE2D1BC00E0BCBD /* RoshettaApp.swift in Sources */,
 				7F988EA02AE2D29900E0BCBD /* LanguageManager.swift in Sources */,

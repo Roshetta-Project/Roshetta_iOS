@@ -12,6 +12,11 @@ struct OnboardingView: View {
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
     
     private var data = OnbordingModel.onboardingData
+    
+    @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
+    @State private var buttonOffset: CGFloat = 0
+    let hapticFeedback = UINotificationFeedbackGenerator()
+
     @State private var currentStep: Int = 0
     @State private var isAnimating: Bool = false
         
@@ -46,7 +51,7 @@ struct OnboardingView: View {
                         Text(tab.descrption)
                             .font(.custom(GFFonts.popinsMedium, size: 16))
                             .multilineTextAlignment(.center)
-                            .foregroundColor(.gray.opacity(0.5))
+                            .foregroundColor(.gray.opacity(0.7))
                             .padding(.horizontal)
                     }
                 }
@@ -54,7 +59,6 @@ struct OnboardingView: View {
             }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        .animation(Animation.easeInOut(duration: 5), value: isAnimating)
         .onChange(of: isAnimating, perform: { _ in
             isAnimating = false
         })
@@ -67,13 +71,13 @@ struct OnboardingView: View {
                 if index == currentStep {
                     Rectangle()
                         .fill(Colors.main)
-                        .frame(width: 20, height: 10)
+                        .frame(width: 20, height: 8)
                         .cornerRadius(10)
                 } else {
                     Rectangle()
-                        .frame(width: 10, height: 10)
+                        .frame(width: 8, height: 8)
                         .cornerRadius(10)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.gray.opacity(0.7))
                 }
             }
         }
@@ -82,23 +86,29 @@ struct OnboardingView: View {
 
     // MARK: - FOOTER
     private func footer() -> some View {
-        
         HStack {
-            Button {
-                isOnboardingViewActive = false
-            } label: {
-                Text("Skip")
-                    .font(.custom(GFFonts.popinsBold, size: 14))
-                    .foregroundColor(Colors.text)
-            }
+            if currentStep < data.count - 1 {
+                Button {
+                    isOnboardingViewActive = false
+                } label: {
+                    Text("Skip")
+                        .font(.custom(GFFonts.popinsBold, size: 14))
+                        .foregroundColor(Colors.text)
+                }
 
-            Spacer()
-            
-            GFNextButton {
-                if currentStep < data.count - 1 {
-                    isAnimating = true
-                    currentStep += 1
-                } else {
+                Spacer()
+                
+                GFNextButton {
+                    if currentStep < data.count - 1 {
+                        isAnimating = true
+                        currentStep += 1
+                    } else {
+                        isOnboardingViewActive = false
+                    }
+                }
+            } else {
+                GFSliderButton(isAnimating: $isAnimating) {
+                    buttonOffset = buttonWidth - 80
                     isOnboardingViewActive = false
                 }
             }
