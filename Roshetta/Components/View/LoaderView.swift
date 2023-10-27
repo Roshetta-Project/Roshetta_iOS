@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-#warning("change color to main app color")
 
 struct LoaderView: View {
     @State private var showSpinner:Bool = false
@@ -14,7 +13,7 @@ struct LoaderView: View {
         
     var body: some View {
         Circle()
-            .fill(.red)
+            .fill(Colors.main)
             .overlay {
                 Circle()
                     .trim(from: 0.0, to: 0.6)

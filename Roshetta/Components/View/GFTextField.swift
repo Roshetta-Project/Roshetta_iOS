@@ -55,12 +55,11 @@ struct GFTextField: View {
     }
     
     // MARK: - FUNCTIONS
-#warning("color")
     private func textFieldTitle() -> some View {
         HStack {
             Text(title)
                 .font(.system(size: 16, weight: .semibold))
-                .foregroundColor(Color.black)
+                .foregroundColor(Colors.text)
             Spacer()
         }
     }
