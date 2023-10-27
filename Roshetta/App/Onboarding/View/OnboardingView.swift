@@ -59,6 +59,7 @@ struct OnboardingView: View {
             }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        .animation(Animation.easeInOut(duration: 1.0), value: isAnimating)
         .onChange(of: isAnimating, perform: { _ in
             isAnimating = false
         })
