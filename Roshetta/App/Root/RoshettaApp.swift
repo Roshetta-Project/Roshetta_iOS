@@ -24,7 +24,7 @@ struct RoshettaApp: App {
         WindowGroup {
             if viewModel.currentState == true {
                 if isOnboardingViewActive {
-                    /// go to onboarind
+                    OnboardingView()
                 } else {
                     if isLogin {
                         /// go to home
