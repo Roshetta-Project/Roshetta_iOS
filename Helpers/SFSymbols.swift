@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum SFSymbols {
-    static let facebook = "FacebookIcon"
-    static let google = "GoogleIcon"
+    static let facebook = Image("FacebookIcon")
+    static let google = Image("GoogleIcon")
     static let apple = Image("AppleIcon")
 }

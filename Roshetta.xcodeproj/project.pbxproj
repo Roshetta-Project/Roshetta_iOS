@@ -23,6 +23,8 @@
 		7F6CA3052AEBFEE200BAB446 /* GFNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA3042AEBFEE200BAB446 /* GFNextButton.swift */; };
 		7F6CA3072AEC19E800BAB446 /* GFSliderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA3062AEC19E800BAB446 /* GFSliderButton.swift */; };
 		7F6CA30B2AECF52900BAB446 /* GFAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA30A2AECF52900BAB446 /* GFAuthButton.swift */; };
+		7F6CA3122AECF99600BAB446 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA3112AECF99600BAB446 /* AuthViewModel.swift */; };
+		7F6CA3142AECF9A500BAB446 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA3132AECF9A500BAB446 /* AuthView.swift */; };
 		7F988E5C2AE2D1BC00E0BCBD /* RoshettaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F988E5B2AE2D1BC00E0BCBD /* RoshettaApp.swift */; };
 		7F988E5E2AE2D1BC00E0BCBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F988E5D2AE2D1BC00E0BCBD /* ContentView.swift */; };
 		7F988E602AE2D1BE00E0BCBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F988E5F2AE2D1BE00E0BCBD /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		7F6CA3042AEBFEE200BAB446 /* GFNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFNextButton.swift; sourceTree = "<group>"; };
 		7F6CA3062AEC19E800BAB446 /* GFSliderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSliderButton.swift; sourceTree = "<group>"; };
 		7F6CA30A2AECF52900BAB446 /* GFAuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAuthButton.swift; sourceTree = "<group>"; };
+		7F6CA3112AECF99600BAB446 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		7F6CA3132AECF9A500BAB446 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		7F988E582AE2D1BC00E0BCBD /* Roshetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F988E5B2AE2D1BC00E0BCBD /* RoshettaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshettaApp.swift; sourceTree = "<group>"; };
 		7F988E5D2AE2D1BC00E0BCBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +118,9 @@
 		7F0D4CE12AE799B40057C1CE /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				7F6CA30E2AECF96F00BAB446 /* Presentation */,
+				7F6CA30D2AECF96C00BAB446 /* Domain */,
+				7F6CA30C2AECF92E00BAB446 /* Data */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -180,6 +187,45 @@
 				7F5E43132AEBF49C008C2FC1 /* onboardingModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7F6CA30C2AECF92E00BAB446 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7F6CA30D2AECF96C00BAB446 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7F6CA30E2AECF96F00BAB446 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7F6CA3102AECF97E00BAB446 /* View */,
+				7F6CA30F2AECF97800BAB446 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7F6CA30F2AECF97800BAB446 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F6CA3112AECF99600BAB446 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F6CA3102AECF97E00BAB446 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F6CA3132AECF9A500BAB446 /* AuthView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7F988E4F2AE2D1BC00E0BCBD = {
@@ -420,6 +466,7 @@
 				7F988ECC2AE2D35000E0BCBD /* SFSymbolModifire.swift in Sources */,
 				7F988EC72AE2D34000E0BCBD /* GFSecureTextField.swift in Sources */,
 				7F5E42FF2AEBDE00008C2FC1 /* Fonts.swift in Sources */,
+				7F6CA3122AECF99600BAB446 /* AuthViewModel.swift in Sources */,
 				7F988EC42AE2D34000E0BCBD /* GFTextField.swift in Sources */,
 				7F988EAB2AE2D2BD00E0BCBD /* View.swift in Sources */,
 				7F6CA30B2AECF52900BAB446 /* GFAuthButton.swift in Sources */,
@@ -427,6 +474,7 @@
 				7F988E9F2AE2D29900E0BCBD /* EndPoint.swift in Sources */,
 				7F988EC32AE2D34000E0BCBD /* OTPTextField.swift in Sources */,
 				7F988E5E2AE2D1BC00E0BCBD /* ContentView.swift in Sources */,
+				7F6CA3142AECF9A500BAB446 /* AuthView.swift in Sources */,
 				7F988E9D2AE2D29900E0BCBD /* HTTPClient.swift in Sources */,
 				7F5E43032AEBE034008C2FC1 /* Images.swift in Sources */,
 				7F988EAD2AE2D2BD00E0BCBD /* String.swift in Sources */,
