@@ -33,7 +33,7 @@ struct GFAuthButton: View {
                 HStack(spacing: 16) {
                     icon
                         .padding(.leading, 32)
-                    Text("Continue With Apple")
+                    Text(tilte)
                         .foregroundColor(Colors.text)
                         .font(.custom(GFFonts.popinsMedium, size: 20))
                     
