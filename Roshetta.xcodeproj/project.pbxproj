@@ -22,6 +22,7 @@
 		7F5E43182AEBF645008C2FC1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E43172AEBF645008C2FC1 /* OnboardingView.swift */; };
 		7F6CA3052AEBFEE200BAB446 /* GFNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA3042AEBFEE200BAB446 /* GFNextButton.swift */; };
 		7F6CA3072AEC19E800BAB446 /* GFSliderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA3062AEC19E800BAB446 /* GFSliderButton.swift */; };
+		7F6CA30B2AECF52900BAB446 /* GFAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA30A2AECF52900BAB446 /* GFAuthButton.swift */; };
 		7F988E5C2AE2D1BC00E0BCBD /* RoshettaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F988E5B2AE2D1BC00E0BCBD /* RoshettaApp.swift */; };
 		7F988E5E2AE2D1BC00E0BCBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F988E5D2AE2D1BC00E0BCBD /* ContentView.swift */; };
 		7F988E602AE2D1BE00E0BCBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F988E5F2AE2D1BE00E0BCBD /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		7F5E43172AEBF645008C2FC1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		7F6CA3042AEBFEE200BAB446 /* GFNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFNextButton.swift; sourceTree = "<group>"; };
 		7F6CA3062AEC19E800BAB446 /* GFSliderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSliderButton.swift; sourceTree = "<group>"; };
+		7F6CA30A2AECF52900BAB446 /* GFAuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAuthButton.swift; sourceTree = "<group>"; };
 		7F988E582AE2D1BC00E0BCBD /* Roshetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F988E5B2AE2D1BC00E0BCBD /* RoshettaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshettaApp.swift; sourceTree = "<group>"; };
 		7F988E5D2AE2D1BC00E0BCBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				7F988EB72AE2D33F00E0BCBD /* GFButton.swift */,
+				7F6CA30A2AECF52900BAB446 /* GFAuthButton.swift */,
 				7F988EB82AE2D33F00E0BCBD /* HomeSlider.swift */,
 				7F988EB92AE2D33F00E0BCBD /* OTPTextField.swift */,
 				7F988EBA2AE2D33F00E0BCBD /* GFTextField.swift */,
@@ -419,6 +422,7 @@
 				7F5E42FF2AEBDE00008C2FC1 /* Fonts.swift in Sources */,
 				7F988EC42AE2D34000E0BCBD /* GFTextField.swift in Sources */,
 				7F988EAB2AE2D2BD00E0BCBD /* View.swift in Sources */,
+				7F6CA30B2AECF52900BAB446 /* GFAuthButton.swift in Sources */,
 				7F5E43182AEBF645008C2FC1 /* OnboardingView.swift in Sources */,
 				7F988E9F2AE2D29900E0BCBD /* EndPoint.swift in Sources */,
 				7F988EC32AE2D34000E0BCBD /* OTPTextField.swift in Sources */,
