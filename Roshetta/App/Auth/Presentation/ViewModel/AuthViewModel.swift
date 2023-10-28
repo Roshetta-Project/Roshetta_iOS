@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class AuthViewModel: ObservableObject {
+    // MARK: - PROPERTYS
+    static let shared = AuthViewModel()
+    private var loginUseCase = AuthUseCase(repo: AuthDataSource())
+    
+    // MARK: - INITILIZER
+    private init() { }
+    
+    // MARK: - FUNCTIONS
+}
