@@ -9,5 +9,27 @@
 		<string>Poppins-Medium.ttf</string>
 		<string>Poppins-Bold.ttf</string>
 	</array>
+    
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb263951256133910</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>263951256133910</string>
+    <key>FacebookClientToken</key>
+    <string>979ff79524919f84e016837f8c5c63b4</string>
+    <key>FacebookDisplayName</key>
+    <string>Roshetta-app</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
+    </array>
+    
 </dict>
 </plist>
