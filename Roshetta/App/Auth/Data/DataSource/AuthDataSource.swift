@@ -15,6 +15,7 @@ struct AuthDataSource: AuthRepositories {
         self.services = AuthServices()
     }
     
+    @MainActor
     func facebookAuth() async throws {
         FacebookManger.shared.loginWithFacebook { result in
             switch result {
