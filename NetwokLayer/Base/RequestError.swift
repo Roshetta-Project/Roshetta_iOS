@@ -20,8 +20,8 @@ enum RequestError: Error, LocalizedError {
     case noResponse
     case unauthorized
     case unexpectedStatusCode
+    
     case noData
-    case facebook
         
     var errorDescription: String? {
         switch self {
@@ -51,8 +51,6 @@ enum RequestError: Error, LocalizedError {
             return NSLocalizedString("Woops, invalid URL Please try agine later.", comment: "")
         case .noData:
             return NSLocalizedString("There is no data to show.", comment: "")
-        case .facebook:
-            return NSLocalizedString("Error while login with facebook please try later.", comment: "")
         }
     }
 }
