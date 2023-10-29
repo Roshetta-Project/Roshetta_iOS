@@ -8,7 +8,7 @@
 import Foundation
  
 protocol AuthRepositories {
-    func facebookAuth()
+    func facebookAuth() async throws
     func googleAuth()
     func appleAuth()
 }

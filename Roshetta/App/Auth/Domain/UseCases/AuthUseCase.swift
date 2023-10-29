@@ -10,8 +10,8 @@ import Foundation
 struct AuthUseCase: AuthRepositories {
     var repo: AuthRepositories
     
-    func facebookAuth() {
-        repo.facebookAuth()
+    func facebookAuth() async throws {
+        try await repo.facebookAuth()
     }
     
     func googleAuth() {

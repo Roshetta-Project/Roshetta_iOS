@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AuthView: View {
     // MARK: - PROPERTYS
+    @StateObject var vm = AuthViewModel.shared
     
     // MARK: - Body
     var body: some View {
@@ -53,7 +54,7 @@ struct AuthView: View {
             
             GFAuthButton(icon: SFSymbols.facebook,
                          tilte: "Continue With Google") {
-                // Login with google
+                vm.facebookAuth()
             }
 
             GFAuthButton(icon: SFSymbols.apple,

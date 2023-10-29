@@ -8,8 +8,25 @@
 import Foundation
 
 struct AuthDataSource: AuthRepositories {
-    func facebookAuth() {
-        /// Logic in here
+    
+    private var services: AuthServices
+    
+    init() {
+        self.services = AuthServices()
+    }
+    
+    func facebookAuth() async throws {
+        FacebookManger.shared.loginWithFacebook { result in
+            switch result {
+            case .success(let token):
+                print("user token is \(token)")
+                Task {
+                    try await services.facebookAuth(token: token)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func googleAuth() {

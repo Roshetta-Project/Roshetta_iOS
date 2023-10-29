@@ -16,4 +16,14 @@ class AuthViewModel: ObservableObject {
     private init() { }
     
     // MARK: - FUNCTIONS
+    @MainActor
+    func facebookAuth() {
+        Task {
+            do {
+                try await loginUseCase.facebookAuth()
+            } catch {
+                print(error)
+            }
+        }
+    }
 }
