@@ -31,5 +31,17 @@
         <string>fb-messenger-share-api</string>
     </array>
     
+    <key>GIDClientID</key>
+    <string>562711267687-l9j2lpilm8g0nl54htd3vifcaele433p.apps.googleusercontent.com</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.googleusercontent.apps.562711267687-l9j2lpilm8g0nl54htd3vifcaele433p</string>
+        </array>
+      </dict>
+    </array>
+    
 </dict>
 </plist>
