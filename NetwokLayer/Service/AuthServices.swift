@@ -10,7 +10,7 @@ import Foundation
 protocol AuthServicable {
     func facebookAuth(token: String) async throws
     func googleAuth(token: String) async throws
-    func appleAuth() async throws
+    func appleAuth(token: String) async throws
 }
 
 struct AuthServices: AuthServicable, NetworkServicesMultipart {
@@ -22,11 +22,13 @@ struct AuthServices: AuthServicable, NetworkServicesMultipart {
     
     func googleAuth(token: String) async throws {
         let body = ["authToken": token]
-        let user = try await request(endPoint: AuthEndPoint.facebook(body), imagesData: nil)
+        let user = try await request(endPoint: AuthEndPoint.google(body), imagesData: nil)
         print(user)
     }
     
-    func appleAuth() async throws {
-        
+    func appleAuth(token: String) async throws {
+        let body = ["authToken": token]
+        let user = try await request(endPoint: AuthEndPoint.apple(body), imagesData: nil)
+        print(user)
     }
 }

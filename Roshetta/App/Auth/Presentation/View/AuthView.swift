@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
-import GoogleSignIn
+import AuthenticationServices
 
 struct AuthView: View {
+    let appleSignInHandler = AppleSignInHandler()
+
     // MARK: - PROPERTYS
     @StateObject var vm = AuthViewModel.shared
     
@@ -60,7 +62,14 @@ struct AuthView: View {
             
             GFAuthButton(icon: SFSymbols.apple,
                          tilte: "Continue With Apple") {
-                // Login with google
+                let appleIDProvider = ASAuthorizationAppleIDProvider()
+                let request = appleIDProvider.createRequest()
+                request.requestedScopes = [.fullName, .email]
+
+                let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+                authorizationController.delegate = appleSignInHandler
+                authorizationController.presentationContextProvider = appleSignInHandler
+                authorizationController.performRequests()
             }
         }
         .padding(.horizontal)
@@ -80,5 +89,27 @@ struct AuthView: View {
 struct AuthView_Previews: PreviewProvider {
     static var previews: some View {
         AuthView()
+    }
+}
+
+
+class AppleSignInHandler: NSObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+         return UIApplication.shared.connectedScenes
+             .first { $0.activationState == .foregroundActive }
+             .map { $0 as? UIWindowScene }
+             .flatMap { $0?.windows.first }!
+     }
+
+
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            guard let userToken = appleIDCredential.identityToken?.base64EncodedString() else { return }
+            print("Apple Sign In was successful. User's full name is: \(userToken)")
+        }
+    }
+
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("Apple Sign In failed with error: \(error.localizedDescription)")
     }
 }

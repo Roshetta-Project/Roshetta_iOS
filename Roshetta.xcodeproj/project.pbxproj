@@ -10,6 +10,7 @@
 		7F50EC732AF016110060D6B6 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC722AF016110060D6B6 /* GoogleSignIn */; };
 		7F50EC752AF016110060D6B6 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC742AF016110060D6B6 /* GoogleSignInSwift */; };
 		7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */; };
+		7F50EC7A2AF0614E0060D6B6 /* AppleSigninManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F50EC792AF0614E0060D6B6 /* AppleSigninManager.swift */; };
 		7F5E42ED2AEBD782008C2FC1 /* RoshettaAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E42EC2AEBD782008C2FC1 /* RoshettaAppViewModel.swift */; };
 		7F5E42F42AEBD8E4008C2FC1 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E42F02AEBD8E3008C2FC1 /* Poppins-SemiBold.ttf */; };
 		7F5E42F52AEBD8E4008C2FC1 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E42F12AEBD8E3008C2FC1 /* Poppins-Bold.ttf */; };
@@ -62,6 +63,8 @@
 
 /* Begin PBXFileReference section */
 		7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleManager.swift; sourceTree = "<group>"; };
+		7F50EC782AF057F70060D6B6 /* Roshetta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roshetta.entitlements; sourceTree = "<group>"; };
+		7F50EC792AF0614E0060D6B6 /* AppleSigninManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSigninManager.swift; sourceTree = "<group>"; };
 		7F5E42EC2AEBD782008C2FC1 /* RoshettaAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshettaAppViewModel.swift; sourceTree = "<group>"; };
 		7F5E42F02AEBD8E3008C2FC1 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		7F5E42F12AEBD8E3008C2FC1 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
@@ -312,6 +315,7 @@
 		7F988E5A2AE2D1BC00E0BCBD /* Roshetta */ = {
 			isa = PBXGroup;
 			children = (
+				7F50EC782AF057F70060D6B6 /* Roshetta.entitlements */,
 				7F5E42F72AEBD924008C2FC1 /* Info.plist */,
 				7F988EB22AE2D33F00E0BCBD /* Components */,
 				7F988EC82AE2D35000E0BCBD /* CustomModifire */,
@@ -373,6 +377,7 @@
 				7F988E992AE2D29900E0BCBD /* LanguageManager.swift */,
 				7F6CA33B2AEF0AA400BAB446 /* FacebookManager.swift */,
 				7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */,
+				7F50EC792AF0614E0060D6B6 /* AppleSigninManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -553,6 +558,7 @@
 				7F5E43032AEBE034008C2FC1 /* Images.swift in Sources */,
 				7F988EAD2AE2D2BD00E0BCBD /* String.swift in Sources */,
 				7F6CA3072AEC19E800BAB446 /* GFSliderButton.swift in Sources */,
+				7F50EC7A2AF0614E0060D6B6 /* AppleSigninManager.swift in Sources */,
 				7F988EAC2AE2D2BD00E0BCBD /* Codable.swift in Sources */,
 				7F988E5C2AE2D1BC00E0BCBD /* RoshettaApp.swift in Sources */,
 				7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */,
@@ -703,6 +709,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Roshetta/Roshetta.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Roshetta/Preview Content\"";
@@ -734,6 +741,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Roshetta/Roshetta.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Roshetta/Preview Content\"";
