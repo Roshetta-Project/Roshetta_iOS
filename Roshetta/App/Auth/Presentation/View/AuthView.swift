@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GoogleSignIn
 
 struct AuthView: View {
     // MARK: - PROPERTYS
@@ -49,16 +50,16 @@ struct AuthView: View {
         VStack(spacing: 24) {
             GFAuthButton(icon: SFSymbols.google,
                          tilte: "Continue With Google") {
-                // Login with google
+                vm.googleAuth()
             }
             
             GFAuthButton(icon: SFSymbols.facebook,
-                         tilte: "Continue With Google") {
+                         tilte: "Continue With Facebook") {
                 vm.facebookAuth()
             }
-
+            
             GFAuthButton(icon: SFSymbols.apple,
-                         tilte: "Continue With Google") {
+                         tilte: "Continue With Apple") {
                 // Login with google
             }
         }

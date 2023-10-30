@@ -14,8 +14,8 @@ struct AuthUseCase: AuthRepositories {
         try await repo.facebookAuth()
     }
     
-    func googleAuth() {
-        repo.googleAuth()
+    func googleAuth() async throws {
+        try await repo.googleAuth()
     }
     
     func appleAuth() {

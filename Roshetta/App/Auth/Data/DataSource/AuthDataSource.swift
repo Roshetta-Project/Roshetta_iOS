@@ -30,8 +30,10 @@ struct AuthDataSource: AuthRepositories {
         }
     }
     
-    func googleAuth() {
-        /// Logic in here
+    func googleAuth() async throws {
+        let token = try await GoogleManager.shared.loginWithGoogle()
+        print("user token \(token)")
+        try await services.googleAuth(token: token)
     }
     
     func appleAuth() {

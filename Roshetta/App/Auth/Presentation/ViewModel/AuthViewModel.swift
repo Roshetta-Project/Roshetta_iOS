@@ -26,4 +26,15 @@ class AuthViewModel: ObservableObject {
             }
         }
     }
+    
+    @MainActor
+    func googleAuth() {
+        Task {
+            do {
+                try await loginUseCase.googleAuth()
+            } catch {
+                print(error)
+            }
+        }
+    }
 }

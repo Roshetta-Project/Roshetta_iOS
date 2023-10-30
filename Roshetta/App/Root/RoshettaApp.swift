@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FacebookLogin
+import GoogleSignIn
 
 @main
 struct RoshettaApp: App {
@@ -49,5 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         ApplicationDelegate.shared.application(app, open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+        
+        var handled: Bool
+
+        handled = GIDSignIn.sharedInstance.handle(url)
+        if handled {
+          return true
+        }
+        return false
     }
 }
