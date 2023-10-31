@@ -11,11 +11,11 @@
 		7F50EC752AF016110060D6B6 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC742AF016110060D6B6 /* GoogleSignInSwift */; };
 		7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */; };
 		7F50EC7A2AF0614E0060D6B6 /* AppleSigninManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F50EC792AF0614E0060D6B6 /* AppleSigninManager.swift */; };
+		7F50EC7E2AF1B60D0060D6B6 /* Times New Roman Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F50EC7D2AF1B60D0060D6B6 /* Times New Roman Bold.ttf */; };
 		7F5E42ED2AEBD782008C2FC1 /* RoshettaAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E42EC2AEBD782008C2FC1 /* RoshettaAppViewModel.swift */; };
 		7F5E42F42AEBD8E4008C2FC1 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E42F02AEBD8E3008C2FC1 /* Poppins-SemiBold.ttf */; };
 		7F5E42F52AEBD8E4008C2FC1 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E42F12AEBD8E3008C2FC1 /* Poppins-Bold.ttf */; };
 		7F5E42F62AEBD8E4008C2FC1 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E42F22AEBD8E4008C2FC1 /* Poppins-Medium.ttf */; };
-		7F5E42FC2AEBDD52008C2FC1 /* OPTITimes-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E42FB2AEBDD52008C2FC1 /* OPTITimes-Roman.otf */; };
 		7F5E42FF2AEBDE00008C2FC1 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E42FE2AEBDE00008C2FC1 /* Fonts.swift */; };
 		7F5E43012AEBDFE6008C2FC1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E43002AEBDFE6008C2FC1 /* Colors.swift */; };
 		7F5E43032AEBE034008C2FC1 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E43022AEBE034008C2FC1 /* Images.swift */; };
@@ -65,12 +65,12 @@
 		7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleManager.swift; sourceTree = "<group>"; };
 		7F50EC782AF057F70060D6B6 /* Roshetta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roshetta.entitlements; sourceTree = "<group>"; };
 		7F50EC792AF0614E0060D6B6 /* AppleSigninManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSigninManager.swift; sourceTree = "<group>"; };
+		7F50EC7D2AF1B60D0060D6B6 /* Times New Roman Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Times New Roman Bold.ttf"; sourceTree = "<group>"; };
 		7F5E42EC2AEBD782008C2FC1 /* RoshettaAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshettaAppViewModel.swift; sourceTree = "<group>"; };
 		7F5E42F02AEBD8E3008C2FC1 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		7F5E42F12AEBD8E3008C2FC1 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		7F5E42F22AEBD8E4008C2FC1 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		7F5E42F72AEBD924008C2FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		7F5E42FB2AEBDD52008C2FC1 /* OPTITimes-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OPTITimes-Roman.otf"; sourceTree = "<group>"; };
 		7F5E42FE2AEBDE00008C2FC1 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		7F5E43002AEBDFE6008C2FC1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7F5E43022AEBE034008C2FC1 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -162,10 +162,10 @@
 		7F5E42EE2AEBD88A008C2FC1 /* CustomFonts */ = {
 			isa = PBXGroup;
 			children = (
+				7F50EC7D2AF1B60D0060D6B6 /* Times New Roman Bold.ttf */,
 				7F5E42F12AEBD8E3008C2FC1 /* Poppins-Bold.ttf */,
 				7F5E42F22AEBD8E4008C2FC1 /* Poppins-Medium.ttf */,
 				7F5E42F02AEBD8E3008C2FC1 /* Poppins-SemiBold.ttf */,
-				7F5E42FB2AEBDD52008C2FC1 /* OPTITimes-Roman.otf */,
 			);
 			path = CustomFonts;
 			sourceTree = "<group>";
@@ -517,7 +517,7 @@
 				7F5E42F62AEBD8E4008C2FC1 /* Poppins-Medium.ttf in Resources */,
 				7F5E42F52AEBD8E4008C2FC1 /* Poppins-Bold.ttf in Resources */,
 				7F988E632AE2D1BE00E0BCBD /* Preview Assets.xcassets in Resources */,
-				7F5E42FC2AEBDD52008C2FC1 /* OPTITimes-Roman.otf in Resources */,
+				7F50EC7E2AF1B60D0060D6B6 /* Times New Roman Bold.ttf in Resources */,
 				7F988EA52AE2D2AC00E0BCBD /* Localizable.strings in Resources */,
 				7F988E602AE2D1BE00E0BCBD /* Assets.xcassets in Resources */,
 			);

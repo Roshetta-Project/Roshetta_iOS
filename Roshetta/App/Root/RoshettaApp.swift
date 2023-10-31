@@ -24,20 +24,19 @@ struct RoshettaApp: App {
     // MARK: - MAIN
     var body: some Scene {
         WindowGroup {
-            AuthView()
-//            if viewModel.currentState == true {
-//                if isOnboardingViewActive {
-//                    OnboardingView()
-//                } else {
-//                    if isLogin {
-//                        /// go to home
-//                    } else {
-//                        /// go to auth screen
-//                    }
-//                }
-//            } else {
-//                SplashView()
-//            }
+            if viewModel.currentState == true {
+                if isOnboardingViewActive {
+                    OnboardingView()
+                } else {
+                    if isLogin {
+                        /// go to home
+                    } else {
+                        AuthView()
+                    }
+                }
+            } else {
+                SplashView()
+            }
         }
     }
 }

@@ -35,8 +35,9 @@ struct AuthView: View {
                 .frame(height: 416)
                 .cornerRadius(112, corners: [.bottomRight, .bottomLeft])
             
-            VStack(spacing: 40) {
+            VStack(spacing: 32) {
                 Text("Join us now !")
+                    .foregroundColor(Colors.text)
                     .font(.custom(GFFonts.roman, size: 36))
                     .padding(.top, 32)
                 
