@@ -2,19 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Times New Roman Bold.ttf</string>
-		<string>Poppins-SemiBold.ttf</string>
-		<string>Poppins-Medium.ttf</string>
-		<string>Poppins-Bold.ttf</string>
-	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>google</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.562711267687-l9j2lpilm8g0nl54htd3vifcaele433p</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>faceebook</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb263951256133910</string>
 			</array>
 		</dict>
 	</array>
@@ -24,12 +31,19 @@
 	<string>979ff79524919f84e016837f8c5c63b4</string>
 	<key>FacebookDisplayName</key>
 	<string>Roshetta-app</string>
+	<key>GIDClientID</key>
+	<string>562711267687-l9j2lpilm8g0nl54htd3vifcaele433p.apps.googleusercontent.com</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
 		<string>fb-messenger-share-api</string>
 	</array>
-	<key>GIDClientID</key>
-	<string>562711267687-l9j2lpilm8g0nl54htd3vifcaele433p.apps.googleusercontent.com</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Times New Roman Bold.ttf</string>
+		<string>Poppins-SemiBold.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-Bold.ttf</string>
+	</array>
 </dict>
 </plist>
