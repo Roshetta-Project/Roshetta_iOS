@@ -69,22 +69,6 @@ struct DoctorCard: View {
     }
 }
 
-struct InfoRow: View {
-    let symbol: Image
-    let text: String
-
-    var body: some View {
-        HStack(spacing: 0) {
-            symbol
-            Text(text)
-                .font(.custom(GFFonts.popinsMedium, size: 10))
-                .minimumScaleFactor(0.5)
-                .lineLimit(1)
-                .foregroundColor(Colors.text.opacity(0.6))
-        }
-    }
-}
-
 struct DoctorCard_Previews: PreviewProvider {
     static var previews: some View {
         DoctorCard(image: Image("user"), name: "Abdalazem Saleh", specialization: "Surgery", rate: 3, price: "400", location: "Mansoura, Dakahlia")
