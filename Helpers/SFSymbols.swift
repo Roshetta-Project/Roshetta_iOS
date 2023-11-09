@@ -12,5 +12,6 @@ enum SFSymbols {
     static let google = Image("GoogleIcon")
     static let apple = Image("AppleIcon")
     
+    static let price = Image("Price")
     static let locationPin = Image("Location")
 }

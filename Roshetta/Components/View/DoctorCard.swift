@@ -52,7 +52,7 @@ struct DoctorCard: View {
             // Price and Location
             HStack {
                 VStack(alignment: .leading, spacing: 8) {
-                    InfoRow(symbol: SFSymbols.locationPin, text: price + " L.E")
+                    InfoRow(symbol: SFSymbols.price, text: price + " L.E")
                     InfoRow(symbol: SFSymbols.locationPin, text: location)
                 }
                 Spacer()
