@@ -16,7 +16,7 @@ struct ReviewCard: View {
         VStack(alignment: .leading, spacing : 3){
             HStack(spacing: 3){
                 Text(userName)
-                    .font(.custom(GFFonts.popinsSemiBold, size: 12))
+                    .font(.custom(GFFonts.popinsSemiBold, size: 14))
                     .foregroundColor(Color("text"))
                 Text(review)
                     .font(.custom(GFFonts.popinsMedium, size: 10))
@@ -29,7 +29,7 @@ struct ReviewCard: View {
             }//HStack
             
             Text(description)
-            .font(.custom(GFFonts.popinsMedium, size: 8))
+            .font(.custom(GFFonts.popinsMedium, size: 12))
             .foregroundColor(Color("text").opacity(0.65))
             .frame(width: 70,height: 10)
         }//VStacck

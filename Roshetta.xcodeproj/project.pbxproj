@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2667350A2B190474005B3760 /* ImageScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266735092B190474005B3760 /* ImageScroll.swift */; };
+		2667350D2B19190E005B3760 /* CenterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667350C2B19190E005B3760 /* CenterDetailsView.swift */; };
 		269D24B72B18A30E0080A2F9 /* LocationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24B62B18A30E0080A2F9 /* LocationCard.swift */; };
 		269D24B92B18A6CA0080A2F9 /* SpecializationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24B82B18A6CA0080A2F9 /* SpecializationCard.swift */; };
 		269D24BB2B18ABE40080A2F9 /* PriceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24BA2B18ABE40080A2F9 /* PriceCard.swift */; };
@@ -74,6 +76,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		266735092B190474005B3760 /* ImageScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScroll.swift; sourceTree = "<group>"; };
+		2667350C2B19190E005B3760 /* CenterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailsView.swift; sourceTree = "<group>"; };
 		269D24B62B18A30E0080A2F9 /* LocationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCard.swift; sourceTree = "<group>"; };
 		269D24B82B18A6CA0080A2F9 /* SpecializationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecializationCard.swift; sourceTree = "<group>"; };
 		269D24BA2B18ABE40080A2F9 /* PriceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCard.swift; sourceTree = "<group>"; };
@@ -155,6 +159,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2667350B2B191901005B3760 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2667350C2B19190E005B3760 /* CenterDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		269D24B22B18A1FA0080A2F9 /* CategoriesDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +188,7 @@
 		269D24B42B18A2160080A2F9 /* CenterDetails */ = {
 			isa = PBXGroup;
 			children = (
+				2667350B2B191901005B3760 /* View */,
 			);
 			path = CenterDetails;
 			sourceTree = "<group>";
@@ -497,13 +510,14 @@
 				7FB00F552AFD7CA800303EB2 /* ClincCard.swift */,
 				7FB00F592AFD7FF000303EB2 /* MedicalCenterCard.swift */,
 				7FB00F572AFD7E3900303EB2 /* InfoRow.swift */,
+				269D24BE2B18B1820080A2F9 /* AboutCategory.swift */,
 				269D24B62B18A30E0080A2F9 /* LocationCard.swift */,
-				269D24C52B18C4FE0080A2F9 /* GFBookButoon.swift */,
 				269D24BA2B18ABE40080A2F9 /* PriceCard.swift */,
 				269D24B82B18A6CA0080A2F9 /* SpecializationCard.swift */,
 				269D24BC2B18AE360080A2F9 /* ReviewCard.swift */,
-				269D24BE2B18B1820080A2F9 /* AboutCategory.swift */,
 				269D24C32B18B4E90080A2F9 /* CategoryDetailsImage.swift */,
+				266735092B190474005B3760 /* ImageScroll.swift */,
+				269D24C52B18C4FE0080A2F9 /* GFBookButoon.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -682,6 +696,7 @@
 				7F6CA3142AECF9A500BAB446 /* AuthView.swift in Sources */,
 				7F988E9D2AE2D29900E0BCBD /* HTTPClient.swift in Sources */,
 				7F5E43032AEBE034008C2FC1 /* Images.swift in Sources */,
+				2667350D2B19190E005B3760 /* CenterDetailsView.swift in Sources */,
 				7F988EAD2AE2D2BD00E0BCBD /* String.swift in Sources */,
 				7F6CA3072AEC19E800BAB446 /* GFSliderButton.swift in Sources */,
 				7F50EC7A2AF0614E0060D6B6 /* AppleSigninManager.swift in Sources */,
@@ -691,6 +706,7 @@
 				7F988EA02AE2D29900E0BCBD /* LanguageManager.swift in Sources */,
 				7F5E430B2AEBE88B008C2FC1 /* SplashViewModel.swift in Sources */,
 				269D24BB2B18ABE40080A2F9 /* PriceCard.swift in Sources */,
+				2667350A2B190474005B3760 /* ImageScroll.swift in Sources */,
 				7F6CA3222AED074000BAB446 /* AuthEndPoint.swift in Sources */,
 				7F6CA3242AED074C00BAB446 /* AuthServices.swift in Sources */,
 				7F6CA31E2AED056B00BAB446 /* AuthUseCase.swift in Sources */,

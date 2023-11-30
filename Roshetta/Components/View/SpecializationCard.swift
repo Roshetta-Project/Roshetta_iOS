@@ -16,10 +16,10 @@ struct SpecializationCard: View {
         HStack(spacing: 4){
             Image(specializationImage)
             Text (specialization)
-                .font(.custom(GFFonts.roman, size: 16))
+                .font(.custom(GFFonts.roman, size: 18))
                 .foregroundColor(Color("mainBold"))
         }//HStack
-        .padding(8)
+        .padding(10)
         .background(Color.gray.opacity(0.05))
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .overlay(
