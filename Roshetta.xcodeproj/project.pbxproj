@@ -15,6 +15,7 @@
 		269D24C12B18B2BB0080A2F9 /* DoctorDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24C02B18B2BB0080A2F9 /* DoctorDetailsView.swift */; };
 		269D24C42B18B4E90080A2F9 /* CategoryDetailsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24C32B18B4E90080A2F9 /* CategoryDetailsImage.swift */; };
 		269D24C62B18C4FE0080A2F9 /* GFBookButoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24C52B18C4FE0080A2F9 /* GFBookButoon.swift */; };
+		269D24C92B18CA170080A2F9 /* ClinicDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24C82B18CA170080A2F9 /* ClinicDetailsView.swift */; };
 		7F50EC732AF016110060D6B6 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC722AF016110060D6B6 /* GoogleSignIn */; };
 		7F50EC752AF016110060D6B6 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC742AF016110060D6B6 /* GoogleSignInSwift */; };
 		7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */; };
@@ -81,6 +82,7 @@
 		269D24C02B18B2BB0080A2F9 /* DoctorDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsView.swift; sourceTree = "<group>"; };
 		269D24C32B18B4E90080A2F9 /* CategoryDetailsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsImage.swift; sourceTree = "<group>"; };
 		269D24C52B18C4FE0080A2F9 /* GFBookButoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBookButoon.swift; sourceTree = "<group>"; };
+		269D24C82B18CA170080A2F9 /* ClinicDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsView.swift; sourceTree = "<group>"; };
 		7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleManager.swift; sourceTree = "<group>"; };
 		7F50EC782AF057F70060D6B6 /* Roshetta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roshetta.entitlements; sourceTree = "<group>"; };
 		7F50EC792AF0614E0060D6B6 /* AppleSigninManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSigninManager.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		269D24B52B18A2220080A2F9 /* ClinicDetails */ = {
 			isa = PBXGroup;
 			children = (
+				269D24C72B18CA090080A2F9 /* View */,
 			);
 			path = ClinicDetails;
 			sourceTree = "<group>";
@@ -189,6 +192,14 @@
 			isa = PBXGroup;
 			children = (
 				269D24C02B18B2BB0080A2F9 /* DoctorDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		269D24C72B18CA090080A2F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				269D24C82B18CA170080A2F9 /* ClinicDetailsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -663,6 +674,7 @@
 				7F988EAB2AE2D2BD00E0BCBD /* View.swift in Sources */,
 				7F6CA30B2AECF52900BAB446 /* GFAuthButton.swift in Sources */,
 				269D24C62B18C4FE0080A2F9 /* GFBookButoon.swift in Sources */,
+				269D24C92B18CA170080A2F9 /* ClinicDetailsView.swift in Sources */,
 				7F5E43182AEBF645008C2FC1 /* OnboardingView.swift in Sources */,
 				7F988E9F2AE2D29900E0BCBD /* EndPoint.swift in Sources */,
 				7F6CA31A2AED052800BAB446 /* AuthDataSource.swift in Sources */,
