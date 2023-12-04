@@ -115,7 +115,13 @@ struct ClinicDetailsView: View {
                             .padding(EdgeInsets(top:10, leading: 20 ,bottom: 20, trailing: 20))
                         }                
                     }//:Group
-                    GFBookButoon(tilte: "Book Now")
+                    GFButton(isLoading: .constant(false),
+                             text: "Book Now",
+                             backgroundColor: Colors.main,
+                             foregroundColot: Colors.text) {
+                        // TODO: - Book
+                    }
+                             .padding()
                 }//:VStack
             }//:ScrollView
             .navigationBarTitle("", displayMode: .inline)

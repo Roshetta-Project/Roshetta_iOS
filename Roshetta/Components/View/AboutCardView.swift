@@ -11,6 +11,7 @@ struct AboutCardView: View {
     // MARK: - PROPERTIES
     let aboutText: String
     
+    // MARK: - VIEW
     var body: some View {
         Text(aboutText)
             .font(.system(size: 14))

@@ -25,7 +25,7 @@ struct GFButton: View {
                 LoaderView()
             } else {
                 Text(text)
-                    .font(.system(size: 16, weight: .bold))
+                    .font(.custom(GFFonts.popinsSemiBold, size: 24))
                     .padding(.horizontal, 32)
                     .lineLimit(0)
                     .minimumScaleFactor(0.7)
@@ -38,6 +38,10 @@ struct GFButton: View {
                         backgroundColor
                     }
                     .cornerRadius(isAnimating ? 24 : 8)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: isAnimating ? 24 : 8)
+                            .stroke(Colors.text, lineWidth: 1)
+                    )
             }
         }
         .onChange(of: isLoading, perform: { value in
@@ -63,11 +67,12 @@ struct GFButton: View {
 }
 
 struct GFButton_Previews: PreviewProvider {
-    @State private static var isLoading = false
+    @State private static var isLoading = true
 
     static var previews: some View {
-        GFButton(isLoading: $isLoading, text: "Test", backgroundColor: .gray, foregroundColot:.white) {
-            print("Test")
+        GFButton(isLoading: $isLoading, text: "Test", backgroundColor: Colors.text, foregroundColot:.white) {
+            isLoading.toggle()
         }
+        .padding(.horizontal)
     }
 }

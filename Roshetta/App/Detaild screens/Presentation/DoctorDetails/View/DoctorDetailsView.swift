@@ -116,7 +116,13 @@ struct DoctorDetailsView: View {
                         }
                     } //:Group
                     
-                    GFBookButoon(tilte: "Book Now")
+                    GFButton(isLoading: .constant(false),
+                             text: "Book Now",
+                             backgroundColor: Colors.main,
+                             foregroundColot: Colors.text) {
+                        // TODO: - Book
+                    }
+                             .padding()
                 }//:VStack
             }//:ScrollView
             .navigationBarTitle("", displayMode: .inline)
@@ -140,7 +146,6 @@ struct DoctorDetailsView: View {
                     }
                 }
             )
-            
         }//:NavigationStack
     }
 }
