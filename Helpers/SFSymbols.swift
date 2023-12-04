@@ -14,4 +14,5 @@ enum SFSymbols {
     
     static let price = Image("Price")
     static let locationPin = Image("Location")
+    static let Dentist = Image("Dentist")
 }
