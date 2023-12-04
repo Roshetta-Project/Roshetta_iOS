@@ -12,7 +12,7 @@ struct DoctorDetailsView: View {
         NavigationStack{
             ScrollView{
                 VStack(spacing: 4){
-                    CategoryDetailsImage(image: "user")
+                    StatusImageView(image: "user")
                     Text("Dr. Abdalzem Saleh")
                         .foregroundColor(Color("text"))
                         .font(.custom(GFFonts.popinsSemiBold, size: 20))

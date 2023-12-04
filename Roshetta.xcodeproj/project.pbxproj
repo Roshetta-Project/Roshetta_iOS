@@ -15,7 +15,7 @@
 		269D24BD2B18AE360080A2F9 /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24BC2B18AE360080A2F9 /* ReviewCard.swift */; };
 		269D24BF2B18B1820080A2F9 /* AboutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24BE2B18B1820080A2F9 /* AboutCardView.swift */; };
 		269D24C12B18B2BB0080A2F9 /* DoctorDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24C02B18B2BB0080A2F9 /* DoctorDetailsView.swift */; };
-		269D24C42B18B4E90080A2F9 /* CategoryDetailsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24C32B18B4E90080A2F9 /* CategoryDetailsImage.swift */; };
+		269D24C42B18B4E90080A2F9 /* StatusImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24C32B18B4E90080A2F9 /* StatusImageView.swift */; };
 		269D24C62B18C4FE0080A2F9 /* GFBookButoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24C52B18C4FE0080A2F9 /* GFBookButoon.swift */; };
 		269D24C92B18CA170080A2F9 /* ClinicDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24C82B18CA170080A2F9 /* ClinicDetailsView.swift */; };
 		7F50EC732AF016110060D6B6 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC722AF016110060D6B6 /* GoogleSignIn */; };
@@ -84,7 +84,7 @@
 		269D24BC2B18AE360080A2F9 /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
 		269D24BE2B18B1820080A2F9 /* AboutCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCardView.swift; sourceTree = "<group>"; };
 		269D24C02B18B2BB0080A2F9 /* DoctorDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsView.swift; sourceTree = "<group>"; };
-		269D24C32B18B4E90080A2F9 /* CategoryDetailsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailsImage.swift; sourceTree = "<group>"; };
+		269D24C32B18B4E90080A2F9 /* StatusImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusImageView.swift; sourceTree = "<group>"; };
 		269D24C52B18C4FE0080A2F9 /* GFBookButoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBookButoon.swift; sourceTree = "<group>"; };
 		269D24C82B18CA170080A2F9 /* ClinicDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsView.swift; sourceTree = "<group>"; };
 		7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleManager.swift; sourceTree = "<group>"; };
@@ -539,7 +539,7 @@
 				269D24BA2B18ABE40080A2F9 /* PriceCard.swift */,
 				269D24B82B18A6CA0080A2F9 /* SpecializationCard.swift */,
 				269D24BC2B18AE360080A2F9 /* ReviewCard.swift */,
-				269D24C32B18B4E90080A2F9 /* CategoryDetailsImage.swift */,
+				269D24C32B18B4E90080A2F9 /* StatusImageView.swift */,
 				266735092B190474005B3760 /* ImageScroll.swift */,
 				269D24C52B18C4FE0080A2F9 /* GFBookButoon.swift */,
 			);
@@ -687,7 +687,7 @@
 				269D24B92B18A6CA0080A2F9 /* SpecializationCard.swift in Sources */,
 				7F5E42ED2AEBD782008C2FC1 /* RoshettaAppViewModel.swift in Sources */,
 				7F6CA3202AED059F00BAB446 /* AuthRepositories.swift in Sources */,
-				269D24C42B18B4E90080A2F9 /* CategoryDetailsImage.swift in Sources */,
+				269D24C42B18B4E90080A2F9 /* StatusImageView.swift in Sources */,
 				269D24C12B18B2BB0080A2F9 /* DoctorDetailsView.swift in Sources */,
 				269D24BF2B18B1820080A2F9 /* AboutCardView.swift in Sources */,
 				7F5E43012AEBDFE6008C2FC1 /* Colors.swift in Sources */,
