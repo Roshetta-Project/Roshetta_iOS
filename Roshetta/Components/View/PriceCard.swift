@@ -7,7 +7,7 @@
 
 import SwiftUI
 struct PriceCard: View {
-    // MARK: - PROPERTYS
+    // MARK: - PROPERTIES
     let image: String
     let price: String
     
@@ -17,15 +17,15 @@ struct PriceCard: View {
             Image(image)
             
             Text(price + " L.E")
-                .font(.custom(GFFonts.popinsSemiBold, size: 18))
-                .foregroundColor(Color("text").opacity(0.65))
+                .font(.custom(GFFonts.popinsSemiBold, size: 15))
+                .foregroundColor(Colors.text.opacity(0.65))
         }//HStacks
-        .padding(10)
+        .padding(8)
         .background(Color.gray.opacity(0.05))
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color("main"), lineWidth: 1)
+                .stroke(Colors.main, lineWidth: 1)
         )
     }
 }

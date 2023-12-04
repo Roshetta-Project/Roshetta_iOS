@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct locationCard: View {
-    // MARK: - PROPERTYS
+    // MARK: - PROPERTIES
+    let image : String
     let location: String
     
     // MARK: - VIEW
     var body: some View {
         HStack(spacing: 5){
-            Image("Location")
+            Image(image)
             
             Text(location)
                 .font(.custom(GFFonts.popinsSemiBold, size: 15))
@@ -31,6 +32,6 @@ struct locationCard: View {
 
 struct locationCard_Previews: PreviewProvider {
     static var previews: some View {
-        locationCard(location: " New Damietta, Damietta")
+        locationCard(image: "Location", location: " New Damietta, Damietta")
     }
 }

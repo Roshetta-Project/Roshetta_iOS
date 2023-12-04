@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CenterDetailsView: View {
-    // MARK: - PROPERTYS
+    // MARK: - PROPERTIES
     
     // MARK: - VIEW
     var body: some View {
@@ -49,7 +49,7 @@ struct CenterDetailsView: View {
         }//:NavigationStack
     }
     
-    // MARK: - FUNCITIONS
+    // MARK: - FUNCTIONS
     private func header() -> some View {
         VStack(spacing: 4) {
             LogoImageView(image: "clinc")
@@ -128,7 +128,7 @@ struct CenterDetailsView: View {
             Text("Location")
                 .modifier(TitleTextModifir())
             
-            locationCard(location: "Mansoura")
+            locationCard(image: "Location", location: "Mansoura")
             
         }//:VStack
     }

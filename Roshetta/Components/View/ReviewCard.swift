@@ -17,28 +17,28 @@ struct ReviewCard: View {
             HStack(spacing: 3){
                 Text(userName)
                     .font(.custom(GFFonts.popinsSemiBold, size: 14))
-                    .foregroundColor(Color("text"))
+                    .foregroundColor(Colors.text)
+                
                 Text(review)
                     .font(.custom(GFFonts.popinsMedium, size: 10))
-                    .foregroundColor(Color("text").opacity(0.65))
+                    .foregroundColor(Colors.text.opacity(0.65))
                 
                 Image(systemName: "star.fill")
                     .resizable()
                     .frame(width: 10,height: 10)
                     .foregroundColor(.yellow)
             }//HStack
-            
             Text(description)
             .font(.custom(GFFonts.popinsMedium, size: 12))
-            .foregroundColor(Color("text").opacity(0.65))
+            .foregroundColor(Colors.text.opacity(0.65))
             .frame(width: 70,height: 10)
-        }//VStacck
+        }//VStack
         .padding(10)
         .background(Color.gray.opacity(0.05))
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color("main"), lineWidth: 1))
+                .stroke(Colors.main, lineWidth: 1))
     }
 }
 

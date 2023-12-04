@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ClinicDetailsView: View {
-    // MARK: - PROPERTYS
+    // MARK: - PROPERTIES
     
     // MARK: - VIEW
     var body: some View {
@@ -47,6 +47,7 @@ struct ClinicDetailsView: View {
             )
         }//:NavigationStack
     }
+    
     private func header() -> some View {
         VStack(spacing: 4) {
             LogoImageView(image: "clinc")
@@ -78,10 +79,9 @@ struct ClinicDetailsView: View {
                 .modifier(TitleTextModifir())
             DoctorCard(image: Image("user"),
                        name: "Dr. Sami Ahmed", specialization: "dentist", rate: 4, price: "300", location: "Cairo")
-            
         }
-        
     }
+    
     private func doctorSpecilization() -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Specialization")
@@ -105,10 +105,11 @@ struct ClinicDetailsView: View {
             Text("Location")
                 .modifier(TitleTextModifir())
             
-            locationCard(location: "Mansoura")
+            locationCard(image: "Location",location: "Mansoura")
             
         }//:VStack
     }
+    
     private func reviewSection() -> some View {
         VStack(alignment: .leading, spacing: 8){
             Text("Reviews")

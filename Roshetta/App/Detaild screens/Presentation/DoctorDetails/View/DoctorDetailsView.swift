@@ -122,7 +122,7 @@ struct DoctorDetailsView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
                     ForEach(1..<6) { _ in
-                        locationCard(location: "New Damietta, Damietta")
+                        locationCard(image: "Location", location: "New Damietta, Damietta")
                     }
                 }
                 .padding(1)
