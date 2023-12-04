@@ -10,8 +10,7 @@ struct ImageScroll: View {
     ]
 
     var body: some View {
-        VStack(spacing: 10) {
-            ScrollView(.horizontal) {
+            ScrollView(.horizontal,showsIndicators: false) {
                 HStack(spacing: 15) {
                     ForEach(images) { image in
                         Image(image.name)
@@ -29,11 +28,11 @@ struct ImageScroll: View {
                     }
                 }
             }
+            .padding(10)
             .sheet(item: $selectedImage) { selected in
                 ImageDetailView(imageName: selected.name)
             }
-        }
-        .padding()
+        
     }
 }
 

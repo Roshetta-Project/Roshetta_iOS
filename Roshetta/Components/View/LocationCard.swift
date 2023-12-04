@@ -17,7 +17,7 @@ struct locationCard: View {
             Image("Location")
             
             Text(location)
-                .font(.custom(GFFonts.popinsSemiBold, size: 18))
+                .font(.custom(GFFonts.popinsSemiBold, size: 15))
                 .foregroundColor(Colors.text.opacity(0.6))
         }//HStack
         .padding(8)

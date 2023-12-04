@@ -17,6 +17,7 @@
 		269D24C12B18B2BB0080A2F9 /* DoctorDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24C02B18B2BB0080A2F9 /* DoctorDetailsView.swift */; };
 		269D24C42B18B4E90080A2F9 /* StatusImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24C32B18B4E90080A2F9 /* StatusImageView.swift */; };
 		269D24C92B18CA170080A2F9 /* ClinicDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269D24C82B18CA170080A2F9 /* ClinicDetailsView.swift */; };
+		26A7EF362B1E4B95005B13D6 /* LogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A7EF352B1E4B95005B13D6 /* LogoImageView.swift */; };
 		7F50EC732AF016110060D6B6 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC722AF016110060D6B6 /* GoogleSignIn */; };
 		7F50EC752AF016110060D6B6 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC742AF016110060D6B6 /* GoogleSignInSwift */; };
 		7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */; };
@@ -86,6 +87,7 @@
 		269D24C02B18B2BB0080A2F9 /* DoctorDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsView.swift; sourceTree = "<group>"; };
 		269D24C32B18B4E90080A2F9 /* StatusImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusImageView.swift; sourceTree = "<group>"; };
 		269D24C82B18CA170080A2F9 /* ClinicDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsView.swift; sourceTree = "<group>"; };
+		26A7EF352B1E4B95005B13D6 /* LogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageView.swift; sourceTree = "<group>"; };
 		7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleManager.swift; sourceTree = "<group>"; };
 		7F50EC782AF057F70060D6B6 /* Roshetta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roshetta.entitlements; sourceTree = "<group>"; };
 		7F50EC792AF0614E0060D6B6 /* AppleSigninManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSigninManager.swift; sourceTree = "<group>"; };
@@ -540,6 +542,7 @@
 				269D24B82B18A6CA0080A2F9 /* SpecializationCard.swift */,
 				269D24BC2B18AE360080A2F9 /* ReviewCard.swift */,
 				269D24C32B18B4E90080A2F9 /* StatusImageView.swift */,
+				26A7EF352B1E4B95005B13D6 /* LogoImageView.swift */,
 				266735092B190474005B3760 /* ImageScroll.swift */,
 			);
 			path = View;
@@ -702,6 +705,7 @@
 				7F6CA31C2AED054500BAB446 /* UserModel.swift in Sources */,
 				7F5E43142AEBF49C008C2FC1 /* onboardingModel.swift in Sources */,
 				7FB00F5A2AFD7FF000303EB2 /* MedicalCenterCard.swift in Sources */,
+				26A7EF362B1E4B95005B13D6 /* LogoImageView.swift in Sources */,
 				7F58B4AA2B1E30680096B33B /* TitleTextModifir.swift in Sources */,
 				7F988ECC2AE2D35000E0BCBD /* SFSymbolModifire.swift in Sources */,
 				7F988EC72AE2D34000E0BCBD /* GFSecureTextField.swift in Sources */,

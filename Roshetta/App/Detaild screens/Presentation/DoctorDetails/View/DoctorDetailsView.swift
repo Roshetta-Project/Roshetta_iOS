@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DoctorDetailsView: View {
-    // MARK: - PROPERTS
+    // MARK: - PROPERTYS
     
     // MARK: - VIEW
     var body: some View {
@@ -30,9 +30,9 @@ struct DoctorDetailsView: View {
                         // TODO: - Book
                     }
                              .padding(.top, 24)
-                }
+                }//:VStack
                 .padding()
-            }//:VStack
+            }//:ScrollView
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(
                 trailing: HStack {
@@ -45,8 +45,8 @@ struct DoctorDetailsView: View {
                     }
                 }
             )
-        }//:ScrollView
-    }//:NavigationStack
+        }//:NavigationStack
+    }
     
     // MARK: - FUNCITIONS
     private func header() -> some View {
@@ -54,7 +54,7 @@ struct DoctorDetailsView: View {
             StatusImageView(image: "user")
             
             Text("Dr. Abdalzem Saleh")
-                .foregroundColor(Color("text"))
+                .foregroundColor(Colors.text)
                 .font(.custom(GFFonts.popinsSemiBold, size: 20))
             
             HStack {
