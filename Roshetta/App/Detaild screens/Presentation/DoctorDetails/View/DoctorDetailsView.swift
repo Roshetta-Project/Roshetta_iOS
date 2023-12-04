@@ -8,134 +8,33 @@
 import SwiftUI
 
 struct DoctorDetailsView: View {
+    // MARK: - PROPERTS
+    
+    // MARK: - VIEW
     var body: some View {
-        NavigationStack{
-            ScrollView{
-                VStack(spacing: 4){
-                    StatusImageView(image: "user")
-                    Text("Dr. Abdalzem Saleh")
-                        .foregroundColor(Color("text"))
-                        .font(.custom(GFFonts.popinsSemiBold, size: 20))
-                    HStack {
-                        ForEach(0 ..< 5) { index in
-                            Image(systemName: index < 3 ? "star.fill" : "star")
-                                .resizable()
-                                .foregroundColor(.yellow)
-                                .frame(width:15,height: 15)
-                        }
-                    } //HStack
-                    
-                    Group{
-                        Text("About Doctor")
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("text"))
-                            .font(.custom(GFFonts.popinsSemiBold, size: 18))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(EdgeInsets(top:20, leading: 20 ,bottom: 0, trailing: 0))
-                        
-                        AboutCardView(aboutText: "Dr. Abdalazem is a highly skilled and compassionate dentist dedicated to providing comprehensive oral care to his patients. With a wealth of knowledge and experience in dentistry, he excels in diagnosing and treating various dental conditions, ranging from routine cleanings to complex procedures. ")
-                    }//:Group
-                    
-                    Group{
-                        Text("Specialization")
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("text"))
-                            .font(.custom(GFFonts.popinsSemiBold, size: 18))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(EdgeInsets(top:16, leading: 20 ,bottom: 0, trailing: 0))
-                        SpecializationCard(specializationImage: "Dentist", specialization: "Dentist")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(EdgeInsets(top:8, leading: 20 ,bottom: 0, trailing: 0))
-                    }//:Group
-                    
-                    Group{
-                        Text("Price")
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("text"))
-                            .font(.custom(GFFonts.popinsSemiBold, size: 18))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(EdgeInsets(top:16, leading: 20 ,bottom: 0, trailing: 0))
-                
-                        PriceCard(image: "Price", price: "300")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(EdgeInsets(top:8, leading: 20 ,bottom: 0, trailing: 0))
-
-                    }//:Group
-                    
-                    Group{
-                        Text("Clinic")
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("text"))
-                            .font(.custom(GFFonts.popinsSemiBold, size: 18))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(EdgeInsets(top:16, leading: 20 ,bottom: -8, trailing: 0))
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: -10) {
-                                ForEach(1..<6) { _ in
-                                    ClincCard(image: Image("Clinic"),
-                                              name: "Care",
-                                              rate: 3,
-                                              price: "300",
-                                              location: "Mansoura")
-                                }
-                            }
-                            .padding([.leading, .trailing], 5)
-                        }
-                    }//:Group
-                    
-                    Group{
-                        Text("Location")
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("text"))
-                            .font(.custom(GFFonts.popinsSemiBold, size: 18))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(EdgeInsets(top:-5, leading: 20 ,bottom: -8, trailing: 0))
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 20) {
-                                ForEach(1..<6) { _ in
-                                    locationCard(location: "New Damietta, Damietta")
-                                }
-                            }
-                            .padding(EdgeInsets(top:16, leading: 20 ,bottom: 20, trailing: 20))
-                        }
-                    }//:Group
-                    Group{
-                        Text("Reviews")
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("text"))
-                            .font(.custom(GFFonts.popinsSemiBold, size: 18))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(EdgeInsets(top:-8, leading: 20 ,bottom: 0, trailing: 0))
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 20) {
-                                ForEach(1..<6) { _ in
-                                    ReviewCard(userName: "Sami Ahmed", description: "He is agood doctor and he is good good bbbbnbbb", review: "3")
-                                }
-                            }
-                            .padding(EdgeInsets(top:10, leading: 20 ,bottom: 20, trailing: 20))
-                        }
-                    } //:Group
-                    
+        NavigationStack {
+            ScrollView {
+                header()
+                VStack(alignment: .leading, spacing: 16) {
+                    aboutDoctorSection()
+                    doctorSpecilization()
+                    priceSection()
+                    clincSection()
+                    locationSection()
+                    reviewsSection()
+                                        
                     GFButton(isLoading: .constant(false),
                              text: "Book Now",
                              backgroundColor: Colors.main,
                              foregroundColot: Colors.text) {
                         // TODO: - Book
                     }
-                             .padding()
-                }//:VStack
-            }//:ScrollView
+                             .padding(.top, 24)
+                }
+                .padding()
+            }//:VStack
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(
-                leading: HStack {
-                    Button(action: {
-                        // back
-                    }) {
-                        Image(systemName: "chevron.backward")
-                            .frame(width: 20,height: 20)
-                            .foregroundColor(Color("text"))
-                    }
-                },
                 trailing: HStack {
                     Button(action: {
                         // fav button
@@ -146,7 +45,105 @@ struct DoctorDetailsView: View {
                     }
                 }
             )
-        }//:NavigationStack
+        }//:ScrollView
+    }//:NavigationStack
+    
+    // MARK: - FUNCITIONS
+    private func header() -> some View {
+        VStack(spacing: 4) {
+            StatusImageView(image: "user")
+            
+            Text("Dr. Abdalzem Saleh")
+                .foregroundColor(Color("text"))
+                .font(.custom(GFFonts.popinsSemiBold, size: 20))
+            
+            HStack {
+                ForEach(0 ..< 5) { index in
+                    Image(systemName: index < 3 ? "star.fill" : "star")
+                        .resizable()
+                        .foregroundColor(.yellow)
+                        .frame(width:15,height: 15)
+                }
+            }
+        }
+    }
+    
+    private func aboutDoctorSection() -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("About Doctor")
+                .modifier(TitleTextModifir())
+            
+            AboutCardView(aboutText: "Dr. Abdalazem is a highly skilled and compassionate dentist dedicated to providing comprehensive oral care to his patients. With a wealth of knowledge and experience in dentistry, he excels in diagnosing and treating various dental conditions, ranging from routine cleanings to complex procedures. ")
+        }
+    }
+    
+    private func doctorSpecilization() -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Specialization")
+                .modifier(TitleTextModifir())
+            
+            SpecializationCard(specializationImage: "Dentist", specialization: "Dentist")
+        }
+    }
+    
+    private func priceSection() -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Price")
+                .modifier(TitleTextModifir())
+            
+            PriceCard(image: "Price", price: "300")            
+        }//:Group
+    }
+    
+    private func clincSection() -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Clinic")
+                .modifier(TitleTextModifir())
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 4) {
+                    ForEach(1..<6) { _ in
+                        ClincCard(image: Image("Clinic"),
+                                  name: "Care",
+                                  rate: 3,
+                                  price: "300",
+                                  location: "Mansoura")
+                    }
+                }
+            }
+        }
+    }
+    
+    private func locationSection() -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Location")
+                .modifier(TitleTextModifir())
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 8) {
+                    ForEach(1..<6) { _ in
+                        locationCard(location: "New Damietta, Damietta")
+                    }
+                }
+                .padding(1)
+            }
+        }
+    }
+    
+    private func reviewsSection() -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Reviews")
+                .modifier(TitleTextModifir())
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 20) {
+                    ForEach(1..<6) { _ in
+                        ReviewCard(userName: "Sami Ahmed", description: "He is agood doctor and he is good good bbbbnbbb", review: "3")
+                    }
+                }
+                .padding(1)
+            }
+        }
     }
 }
 

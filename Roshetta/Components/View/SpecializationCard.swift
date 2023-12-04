@@ -11,6 +11,7 @@ struct SpecializationCard: View {
     // MARK: - PROPERTYS
     let specializationImage : String
     let specialization: String
+    
     // MARK: - VIEW
     var body: some View {
         HStack(spacing: 4){
@@ -24,7 +25,7 @@ struct SpecializationCard: View {
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color("main"), lineWidth: 1))
+                .stroke(Colors.main, lineWidth: 1))
     }
 }
 

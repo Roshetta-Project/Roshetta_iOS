@@ -46,17 +46,16 @@ struct ClincCard: View {
                     InfoRow(symbol: SFSymbols.locationPin, text: location)
                 }
                 .padding(.top, 8)
-                
             }
         }
-        .padding(12)
+        .padding(8)
         .background(Color.gray.opacity(0.05))
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .overlay(
             RoundedRectangle(cornerRadius: 8)
                 .stroke(Colors.main, lineWidth: 1)
         )
-        .frame(width: 216, height: 148)
+        .frame(width: (UIWindow().frame.width / 2), height: 148)
     }
 }
 

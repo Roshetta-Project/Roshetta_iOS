@@ -22,6 +22,7 @@
 		7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */; };
 		7F50EC7A2AF0614E0060D6B6 /* AppleSigninManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F50EC792AF0614E0060D6B6 /* AppleSigninManager.swift */; };
 		7F50EC7E2AF1B60D0060D6B6 /* Times New Roman Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F50EC7D2AF1B60D0060D6B6 /* Times New Roman Bold.ttf */; };
+		7F58B4AA2B1E30680096B33B /* TitleTextModifir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F58B4A92B1E30680096B33B /* TitleTextModifir.swift */; };
 		7F5E42ED2AEBD782008C2FC1 /* RoshettaAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E42EC2AEBD782008C2FC1 /* RoshettaAppViewModel.swift */; };
 		7F5E42F42AEBD8E4008C2FC1 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E42F02AEBD8E3008C2FC1 /* Poppins-SemiBold.ttf */; };
 		7F5E42F52AEBD8E4008C2FC1 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E42F12AEBD8E3008C2FC1 /* Poppins-Bold.ttf */; };
@@ -89,6 +90,7 @@
 		7F50EC782AF057F70060D6B6 /* Roshetta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roshetta.entitlements; sourceTree = "<group>"; };
 		7F50EC792AF0614E0060D6B6 /* AppleSigninManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSigninManager.swift; sourceTree = "<group>"; };
 		7F50EC7D2AF1B60D0060D6B6 /* Times New Roman Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Times New Roman Bold.ttf"; sourceTree = "<group>"; };
+		7F58B4A92B1E30680096B33B /* TitleTextModifir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextModifir.swift; sourceTree = "<group>"; };
 		7F5E42EC2AEBD782008C2FC1 /* RoshettaAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshettaAppViewModel.swift; sourceTree = "<group>"; };
 		7F5E42F02AEBD8E3008C2FC1 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		7F5E42F12AEBD8E3008C2FC1 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
@@ -548,6 +550,7 @@
 			children = (
 				7F988EC92AE2D35000E0BCBD /* RounderCorners.swift */,
 				7F988ECA2AE2D35000E0BCBD /* SFSymbolModifire.swift */,
+				7F58B4A92B1E30680096B33B /* TitleTextModifir.swift */,
 			);
 			path = CustomModifire;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 				7F6CA31C2AED054500BAB446 /* UserModel.swift in Sources */,
 				7F5E43142AEBF49C008C2FC1 /* onboardingModel.swift in Sources */,
 				7FB00F5A2AFD7FF000303EB2 /* MedicalCenterCard.swift in Sources */,
+				7F58B4AA2B1E30680096B33B /* TitleTextModifir.swift in Sources */,
 				7F988ECC2AE2D35000E0BCBD /* SFSymbolModifire.swift in Sources */,
 				7F988EC72AE2D34000E0BCBD /* GFSecureTextField.swift in Sources */,
 				7F5E42FF2AEBDE00008C2FC1 /* Fonts.swift in Sources */,

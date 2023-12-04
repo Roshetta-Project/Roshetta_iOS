@@ -27,7 +27,6 @@ struct AboutCardView: View {
                     )
             )
             .clipShape(RoundedRectangle(cornerRadius: 8))
-            .padding(.horizontal, 10)
     }
 }
 
