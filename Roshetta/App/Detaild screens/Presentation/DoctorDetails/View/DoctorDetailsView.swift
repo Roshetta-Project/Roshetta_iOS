@@ -33,7 +33,7 @@ struct DoctorDetailsView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(EdgeInsets(top:20, leading: 20 ,bottom: 0, trailing: 0))
                         
-                        AboutCategory(aboutText: "Dr. Abdalazem is a highly skilled and compassionate dentist dedicated to providing comprehensive oral care to his patients. With a wealth of knowledge and experience in dentistry, he excels in diagnosing and treating various dental conditions, ranging from routine cleanings to complex procedures. ")
+                        AboutCardView(aboutText: "Dr. Abdalazem is a highly skilled and compassionate dentist dedicated to providing comprehensive oral care to his patients. With a wealth of knowledge and experience in dentistry, he excels in diagnosing and treating various dental conditions, ranging from routine cleanings to complex procedures. ")
                     }//:Group
                     
                     Group{
@@ -135,7 +135,8 @@ struct DoctorDetailsView: View {
                         // fav button
                     }) {
                         Image(systemName: "bookmark")
-                            .frame(width: 24,   height: 24)        .foregroundColor(Color("text"))
+                            .frame(width: 24,   height: 24)
+                            .foregroundColor(Color("text"))
                     }
                 }
             )
