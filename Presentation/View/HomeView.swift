@@ -11,8 +11,9 @@ struct HomeView: View {
     var body: some View {
         NavigationStack{
             ScrollView(.vertical,showsIndicators: false){
-                headerViewSction()
+                sliderViewSction()
                 VStack(alignment: .leading, spacing: 16){
+                    categoriesSectionView()
                     nearesrDoctorsSection()
                     nearestCentersSections()
                 }//VStack
@@ -44,20 +45,19 @@ struct HomeView: View {
     }
     
     //MARK: - FUNCTIONS
-    private func headerViewSction() -> some View {
-        VStack(alignment:.center,spacing: 30){
-            HomeSlider(slides:.constant(["user", "user", "Logo"]))
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 22) {
-                    ForEach(1..<5) { _ in
-                        CategoryCard(image: "AppleIcon", name: "Doctor")
-                    }
-                }//:HStack
-                .padding(1)
-            }
+    private func sliderViewSction() -> some View {
+        HomeSlider(slides:.constant(["user", "user", "Logo"]))
+    }
+    
+    private func categoriesSectionView() -> some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack( spacing: 20) {
+                ForEach(1..<5) { _ in
+                    CategoryCard(image: "AppleIcon", name: "Doctor")
+                }
+            }//:HStack
+            .padding(1)
         }
-        .padding()
     }
     
     private func nearesrDoctorsSection() -> some View{
@@ -67,7 +67,6 @@ struct HomeView: View {
                     .foregroundColor(Colors.text)
                     .font(.custom(GFFonts.popinsSemiBold, size: 20))
                 Spacer()
-                
                 Button {
                     //sell all nearest centers
                 } label: {
@@ -115,7 +114,7 @@ struct HomeView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
-                    ForEach(1..<6) { _ in
+                    ForEach(1..<5) { _ in
                         MedicalCenterCard(image: Image("Logo"), name: "The care", rate: 4, minPrice: "200", maxPrice: "400", location: "Damietta")
                     }
                 }//:HStack
