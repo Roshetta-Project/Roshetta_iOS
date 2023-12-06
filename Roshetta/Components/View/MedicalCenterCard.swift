@@ -26,6 +26,7 @@ struct MedicalCenterCard: View {
                     .clipShape(Circle())
                     .frame(width: 64, height: 64)
                     .shadow(color: .black.opacity(0.1), radius: 2, x: 2, y: 4)//: PROFILE IMAG
+                //
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Text(name)
