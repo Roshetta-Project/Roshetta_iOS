@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2606D30B2B20A4220052AAA1 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2606D30A2B20A4220052AAA1 /* CategoryCard.swift */; };
+		2606D30E2B20AAE50052AAA1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2606D30D2B20AAE50052AAA1 /* HomeView.swift */; };
 		7F50EC732AF016110060D6B6 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC722AF016110060D6B6 /* GoogleSignIn */; };
 		7F50EC752AF016110060D6B6 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC742AF016110060D6B6 /* GoogleSignInSwift */; };
 		7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		2606D30A2B20A4220052AAA1 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
+		2606D30D2B20AAE50052AAA1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = Presentation/View/HomeView.swift; sourceTree = SOURCE_ROOT; };
 		7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleManager.swift; sourceTree = "<group>"; };
 		7F50EC782AF057F70060D6B6 /* Roshetta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roshetta.entitlements; sourceTree = "<group>"; };
 		7F50EC792AF0614E0060D6B6 /* AppleSigninManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSigninManager.swift; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2606D30C2B20AAD60052AAA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2606D30D2B20AAE50052AAA1 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7F0D4CE02AE799AA0057C1CE /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +495,7 @@
 		7FB00F522AFD6ABE00303EB2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				2606D30C2B20AAD60052AAA1 /* View */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -601,6 +612,7 @@
 				7F6CA31A2AED052800BAB446 /* AuthDataSource.swift in Sources */,
 				7F988EC32AE2D34000E0BCBD /* OTPTextField.swift in Sources */,
 				7F6CA3142AECF9A500BAB446 /* AuthView.swift in Sources */,
+				2606D30E2B20AAE50052AAA1 /* HomeView.swift in Sources */,
 				7F988E9D2AE2D29900E0BCBD /* HTTPClient.swift in Sources */,
 				7F5E43032AEBE034008C2FC1 /* Images.swift in Sources */,
 				7F988EAD2AE2D2BD00E0BCBD /* String.swift in Sources */,

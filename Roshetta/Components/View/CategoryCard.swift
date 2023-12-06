@@ -23,7 +23,7 @@ struct CategoryCard: View {
                 .foregroundColor(Colors.text.opacity(0.85))
         }//Vstack
         .padding(10)
-        .padding(.horizontal, 3)
+        .padding(.horizontal, 5)
         .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 0)
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .overlay(
