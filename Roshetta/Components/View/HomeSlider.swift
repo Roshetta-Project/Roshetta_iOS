@@ -1,36 +1,41 @@
 //
-//  HomeSlider.swift
-//  Pickup
+//  HomeBanner.swift
+//  Roshetta
 //
-//  Created by Abdalazem Saleh on 2023-10-17.
+//  Created by Sami Ahmed on 06/12/2023.
 //
 
 import SwiftUI
 
 struct HomeSlider: View {
-    // MARK: - POPERTYS
+    // MARK: - Properties
     @State private var currentIndex: Int = 0
     @Binding var slides: [String]
-
-    // MARK: - VIEW
+    
+    // MARK: - Body
     var body: some View {
-        TabView {
-            ForEach(slides.indices, id: \.self) { slide in
-                Image(slides[slide])
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .cornerRadius(16)
+        TabView(selection: $currentIndex) {
+            ForEach(slides.indices, id: \.self) { index in
+                slideView(for: slides[index])
+                    .tag(index)
             }
         }
-        .cornerRadius(16)
-        .tabViewStyle(PageTabViewStyle())
+        .frame(width: UIScreen.main.bounds.size.width - 40, height: 184)
+        .cornerRadius(15)
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
     }
-    
-    // MARK: - FUNCTIONS
+}
+
+// MARK: -Functions
+private func slideView(for imageName: String) -> some View {
+    Image(imageName)
+        .resizable()
+        .aspectRatio(contentMode: .fill)
+        .cornerRadius(15)
 }
 
 struct HomeSlider_Previews: PreviewProvider {
     static var previews: some View {
-        HomeSlider(slides: .constant(["Banner", "Banner"]))
+        HomeSlider(slides:.constant(["Logo", "Logo", "Logo"]))
     }
 }
