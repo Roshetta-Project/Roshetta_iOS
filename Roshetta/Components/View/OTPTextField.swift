@@ -34,13 +34,13 @@ struct OTPTextField: View {
                     .multilineTextAlignment(.center)
                     .focused($fieldFoucus, equals: index)
                     .tag(index)
-                    .onChange(of: enterValue[index]) { newValue in
+                    .onChange(of: enterValue[index]) { _, newValue in
                         if enterValue[index].count > 1 {
                             let currentValue = Array(enterValue[index])
                             if currentValue[0] == Character(oldValue) {
-                                enterValue[index] =  String(enterValue[index].suffix(1))
+                                enterValue[index] = String(enterValue[index].suffix(1))
                             } else {
-                                enterValue[index] =  String(enterValue[index].prefix(1))
+                                enterValue[index] = String(enterValue[index].prefix(1))
                             }
                         }
                         if !newValue.isEmpty {
@@ -53,13 +53,13 @@ struct OTPTextField: View {
                             fieldFoucus = (fieldFoucus ?? 0) - 1
                         }
                     }
+
+
             }
         }
     }
 }
 
-struct OTPTextField_Previews: PreviewProvider {
-    static var previews: some View {
-        OTPTextField(numberOfFields: 6, enterValue: .constant(["", "", "", "", "", ""]))
-    }
+#Preview {
+     OTPTextField(numberOfFields: 6, enterValue: .constant(["", "", "", "", "", ""]))
 }
