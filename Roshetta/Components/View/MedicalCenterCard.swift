@@ -53,13 +53,10 @@ struct MedicalCenterCard: View {
         }
         .padding(12)
         .padding(.horizontal, 4)
-        .background(Color.gray.opacity(0.05))
+        .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 8))
-        .overlay(
-            RoundedRectangle(cornerRadius: 8)
-                .stroke(Colors.main, lineWidth: 1)
-        )
         .frame(width: 188)
+        .shadow(color: .black.opacity(0.05),radius: 4, x: 0, y: 4)
     }
 }
 
