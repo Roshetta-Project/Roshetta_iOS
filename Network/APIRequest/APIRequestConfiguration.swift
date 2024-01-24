@@ -34,5 +34,5 @@ extension APIRequestConfiguration {
     }
 }
 
-typealias HTTPHeaders = [String:String]
+typealias HTTPHeaders = [String: String]
 typealias Parameters = [String: Any]

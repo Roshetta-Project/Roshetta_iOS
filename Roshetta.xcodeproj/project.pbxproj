@@ -529,8 +529,8 @@
 			children = (
 				7FC67AE82B27B547000A5586 /* APIRequestConfiguration.swift */,
 				7FC67AEA2B27B56D000A5586 /* MultipartAPIRequestConfiguration.swift */,
-				7FC67AEC2B27B5B6000A5586 /* URLRequestConvertible.swift */,
 				7FC67AEE2B27B6D6000A5586 /* URLRequestStrategy.swift */,
+				7FC67AEC2B27B5B6000A5586 /* URLRequestConvertible.swift */,
 				7FC67AF02B27B6E8000A5586 /* RequestsStrategy */,
 			);
 			path = APIRequest;

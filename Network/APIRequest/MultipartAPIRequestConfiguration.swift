@@ -12,8 +12,7 @@ protocol MultipartAPIRequestConfiguration: APIRequestConfiguration {
 }
 
 protocol MultipartFormData {
-    var data: Data { get }
-    var name: String { get }
+    var data: Parameters { get }
     var fileName: String { get }
     var mimeType: String { get }
 }

@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol URLRequestStrategy {
-    func asURLRequest() throws -> URLRequest
-}
-
 struct URLRequestStrategyFactory {
     static func createStrategy(for configuration: APIRequestConfiguration) throws -> URLRequestConvertible {
         if let multipartConfig = configuration as? MultipartAPIRequestConfiguration {
