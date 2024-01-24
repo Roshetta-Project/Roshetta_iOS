@@ -18,7 +18,7 @@ struct MultipartURLRequestStrategy: URLRequestConvertible {
         ]
         return headers
     }
-
+    
     func asURLRequest() throws -> URLRequest {
         /// URL Components
         var components = configuration.components
@@ -31,7 +31,7 @@ struct MultipartURLRequestStrategy: URLRequestConvertible {
         /// Request
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = configuration.method.method
-
+        
         /// Headers
         let requestHeaders = multipartHeaders
         requestHeaders.forEach {
@@ -43,12 +43,8 @@ struct MultipartURLRequestStrategy: URLRequestConvertible {
         
         /// Handel request parms
         if let parameters = configuration.multipartFormData {
-            do {
-                appendParametersToBody()
-                 appendDataToBody(imagesData: parameters.data)
-            } catch {
-                throw error 
-            }
+            appendParametersToBody()
+            appendDataToBody(imagesData: parameters.data)
         }
         
         /// Append parameters to request body
@@ -69,13 +65,13 @@ struct MultipartURLRequestStrategy: URLRequestConvertible {
         func appendDataToBody(imagesData: [String: Any])  {
             for (key, value) in imagesData {
                 if let imageArrayData = value as? [Data] {
-                     appendImageDataArray(key: key, imageArrayData: imageArrayData)
+                    appendImageDataArray(key: key, imageArrayData: imageArrayData)
                 } else if let singleImageData = value as? Data {
-                     appendSingleImageData(key: key, imageData: singleImageData)
+                    appendSingleImageData(key: key, imageData: singleImageData)
                 }
             }
         }
-
+        
         /// Handel append of values to specific key
         func appendArrayValue(_ value: [String], forKey key: String, to requestBody: inout Data, using boundary: String) {
             for (index, item) in value.enumerated() {
@@ -84,7 +80,7 @@ struct MultipartURLRequestStrategy: URLRequestConvertible {
                 appendMultipartData(item, to: &requestBody)
             }
         }
-
+        
         /// Handel append value to key
         func appendStringValue(_ value: String, forKey key: String, to requestBody: inout Data, using boundary: String) {
             appendMultipartHeader(for: key, to: &requestBody, using: boundary)
@@ -105,16 +101,16 @@ struct MultipartURLRequestStrategy: URLRequestConvertible {
         func appendImageDataArray(key: String, imageArrayData: [Data]) {
             for (index, imageData) in imageArrayData.enumerated() {
                 let fieldName = "\(key)_\(index)"
-                 appendImageData(fieldName: fieldName, imageData: imageData)
+                appendImageData(fieldName: fieldName, imageData: imageData)
             }
         }
-
+        
         /// Append a single image data to request body
         func appendSingleImageData(key: String, imageData: Data) {
             let fieldName = key
             appendImageData(fieldName: fieldName, imageData: imageData)
         }
-
+        
         /// Append image data to request body
         func appendImageData(fieldName: String, imageData: Data) {
             requestBody.append("--\(boundary)\r\n".data(using: .utf8)!)
@@ -123,7 +119,7 @@ struct MultipartURLRequestStrategy: URLRequestConvertible {
             requestBody.append(imageData)
             requestBody.append("\r\n".data(using: .utf8)!)
         }
-
+        
         /// Return
         return urlRequest
     }
