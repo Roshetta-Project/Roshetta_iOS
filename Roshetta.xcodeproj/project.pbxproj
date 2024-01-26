@@ -64,7 +64,18 @@
 		7FB00F5A2AFD7FF000303EB2 /* MedicalCenterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB00F592AFD7FF000303EB2 /* MedicalCenterCard.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7F47CD6B2B646D0F00228CFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F988E502AE2D1BC00E0BCBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F988E572AE2D1BC00E0BCBD;
+			remoteInfo = Roshetta;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		7F47CD672B646D0F00228CFA /* RoshettaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoshettaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleManager.swift; sourceTree = "<group>"; };
 		7F50EC782AF057F70060D6B6 /* Roshetta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roshetta.entitlements; sourceTree = "<group>"; };
 		7F50EC792AF0614E0060D6B6 /* AppleSigninManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSigninManager.swift; sourceTree = "<group>"; };
@@ -124,6 +135,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7F47CD642B646D0F00228CFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F988E552AE2D1BC00E0BCBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +181,13 @@
 				7F5E43122AEBF476008C2FC1 /* Model */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		7F47CD682B646D0F00228CFA /* RoshettaTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RoshettaTests;
 			sourceTree = "<group>";
 		};
 		7F5E42EE2AEBD88A008C2FC1 /* CustomFonts */ = {
@@ -306,6 +331,7 @@
 				7F988EA12AE2D2AB00E0BCBD /* Localization */,
 				7F988EA62AE2D2BD00E0BCBD /* Extentions */,
 				7F988E5A2AE2D1BC00E0BCBD /* Roshetta */,
+				7F47CD682B646D0F00228CFA /* RoshettaTests */,
 				7F988E592AE2D1BC00E0BCBD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -314,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				7F988E582AE2D1BC00E0BCBD /* Roshetta.app */,
+				7F47CD672B646D0F00228CFA /* RoshettaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -489,6 +516,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7F47CD662B646D0F00228CFA /* RoshettaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F47CD6F2B646D0F00228CFA /* Build configuration list for PBXNativeTarget "RoshettaTests" */;
+			buildPhases = (
+				7F47CD632B646D0F00228CFA /* Sources */,
+				7F47CD642B646D0F00228CFA /* Frameworks */,
+				7F47CD652B646D0F00228CFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F47CD6C2B646D0F00228CFA /* PBXTargetDependency */,
+			);
+			name = RoshettaTests;
+			productName = RoshettaTests;
+			productReference = 7F47CD672B646D0F00228CFA /* RoshettaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7F988E572AE2D1BC00E0BCBD /* Roshetta */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F988E662AE2D1BE00E0BCBD /* Build configuration list for PBXNativeTarget "Roshetta" */;
@@ -521,6 +566,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					7F47CD662B646D0F00228CFA = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 7F988E572AE2D1BC00E0BCBD;
+					};
 					7F988E572AE2D1BC00E0BCBD = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -545,11 +594,19 @@
 			projectRoot = "";
 			targets = (
 				7F988E572AE2D1BC00E0BCBD /* Roshetta */,
+				7F47CD662B646D0F00228CFA /* RoshettaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7F47CD652B646D0F00228CFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F988E562AE2D1BC00E0BCBD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -567,6 +624,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7F47CD632B646D0F00228CFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F988E542AE2D1BC00E0BCBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -621,6 +685,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7F47CD6C2B646D0F00228CFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F988E572AE2D1BC00E0BCBD /* Roshetta */;
+			targetProxy = 7F47CD6B2B646D0F00228CFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		7F988EA22AE2D2AB00E0BCBD /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -634,6 +706,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7F47CD6D2B646D0F00228CFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 475V82HT95;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Visualinnovate.RoshettaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roshetta.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Roshetta";
+			};
+			name = Debug;
+		};
+		7F47CD6E2B646D0F00228CFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 475V82HT95;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Visualinnovate.RoshettaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roshetta.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Roshetta";
+			};
+			name = Release;
+		};
 		7F988E642AE2D1BE00E0BCBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -815,6 +923,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7F47CD6F2B646D0F00228CFA /* Build configuration list for PBXNativeTarget "RoshettaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F47CD6D2B646D0F00228CFA /* Debug */,
+				7F47CD6E2B646D0F00228CFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7F988E532AE2D1BC00E0BCBD /* Build configuration list for PBXProject "Roshetta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
