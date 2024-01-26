@@ -37,6 +37,8 @@
 		7F6CA3242AED074C00BAB446 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA3232AED074C00BAB446 /* AuthServices.swift */; };
 		7F6CA3362AEF041F00BAB446 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 7F6CA3352AEF041F00BAB446 /* FacebookLogin */; };
 		7F6CA33C2AEF0AA400BAB446 /* FacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA33B2AEF0AA400BAB446 /* FacebookManager.swift */; };
+		7F78B6112B61DA4D004DB15E /* NetworkLayerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78B6102B61DA4D004DB15E /* NetworkLayerTestView.swift */; };
+		7F78B6132B61DA5B004DB15E /* NetworkLayerTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78B6122B61DA5B004DB15E /* NetworkLayerTestViewModel.swift */; };
 		7F988E5C2AE2D1BC00E0BCBD /* RoshettaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F988E5B2AE2D1BC00E0BCBD /* RoshettaApp.swift */; };
 		7F988E602AE2D1BE00E0BCBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F988E5F2AE2D1BE00E0BCBD /* Assets.xcassets */; };
 		7F988E632AE2D1BE00E0BCBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F988E622AE2D1BE00E0BCBD /* Preview Assets.xcassets */; };
@@ -103,6 +105,8 @@
 		7F6CA3212AED074000BAB446 /* AuthEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndPoint.swift; sourceTree = "<group>"; };
 		7F6CA3232AED074C00BAB446 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		7F6CA33B2AEF0AA400BAB446 /* FacebookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookManager.swift; sourceTree = "<group>"; };
+		7F78B6102B61DA4D004DB15E /* NetworkLayerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTestView.swift; sourceTree = "<group>"; };
+		7F78B6122B61DA5B004DB15E /* NetworkLayerTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTestViewModel.swift; sourceTree = "<group>"; };
 		7F988E582AE2D1BC00E0BCBD /* Roshetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F988E5B2AE2D1BC00E0BCBD /* RoshettaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshettaApp.swift; sourceTree = "<group>"; };
 		7F988E5F2AE2D1BE00E0BCBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -313,6 +317,15 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		7F78B60F2B61DA29004DB15E /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				7F78B6102B61DA4D004DB15E /* NetworkLayerTestView.swift */,
+				7F78B6122B61DA5B004DB15E /* NetworkLayerTestViewModel.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		7F988E4F2AE2D1BC00E0BCBD = {
 			isa = PBXGroup;
 			children = (
@@ -507,6 +520,7 @@
 		7FC67ADD2B277D05000A5586 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7F78B60F2B61DA29004DB15E /* Example */,
 				7FC67AE72B27B52D000A5586 /* APIRequest */,
 				7FC67ADE2B277D65000A5586 /* Base */,
 			);
@@ -665,6 +679,7 @@
 				7FC67AEF2B27B6D6000A5586 /* URLRequestStrategy.swift in Sources */,
 				7FC67AED2B27B5B6000A5586 /* URLRequestConvertible.swift in Sources */,
 				7F5E43032AEBE034008C2FC1 /* Images.swift in Sources */,
+				7F78B6112B61DA4D004DB15E /* NetworkLayerTestView.swift in Sources */,
 				7F988EAD2AE2D2BD00E0BCBD /* String.swift in Sources */,
 				7F6CA3072AEC19E800BAB446 /* GFSliderButton.swift in Sources */,
 				7F50EC7A2AF0614E0060D6B6 /* AppleSigninManager.swift in Sources */,
@@ -682,6 +697,7 @@
 				7FC67AF42B27B763000A5586 /* MultipartURLRequestStrategy.swift in Sources */,
 				7F988EC12AE2D34000E0BCBD /* GFButton.swift in Sources */,
 				7F6CA33C2AEF0AA400BAB446 /* FacebookManager.swift in Sources */,
+				7F78B6132B61DA5B004DB15E /* NetworkLayerTestViewModel.swift in Sources */,
 				7F988E9C2AE2D29900E0BCBD /* HTTPMethod.swift in Sources */,
 				7F988EAE2AE2D2BD00E0BCBD /* UINavigationBarAppearance.swift in Sources */,
 			);
