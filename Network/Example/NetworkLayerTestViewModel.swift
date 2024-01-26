@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+class NetworkLayerViewModel: ObservableObject {
+    
+    // MARK: - PROPERTYS
+    
+    
+    // MARK: - INITILIZER
+    
+    init() { }
+        
+    // MARK: - FUNCTIONS
+    
+}
