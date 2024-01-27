@@ -23,7 +23,7 @@ struct MultipartURLRequestStrategy: URLRequestConvertible {
         /// URL Components
         var components = configuration.components
         components.scheme = "https"
-        components.host = "catreloaded.com"
+        components.host = "api.escuelajs.co"
         components.path = configuration.path
         
         /// URL
@@ -107,18 +107,20 @@ struct MultipartURLRequestStrategy: URLRequestConvertible {
         
         /// Append a single image data to request body
         func appendSingleImageData(key: String, imageData: Data) {
-            let fieldName = key
-            appendImageData(fieldName: fieldName, imageData: imageData)
+            appendImageData(fieldName: key, imageData: imageData)
         }
         
         /// Append image data to request body
         func appendImageData(fieldName: String, imageData: Data) {
             requestBody.append("--\(boundary)\r\n".data(using: .utf8)!)
-            requestBody.append("Content-Disposition: form-data; name=\"\(fieldName)\"; filename=\"\(fieldName).png\"\r\n".data(using: .utf8)!)
+            requestBody.append("Content-Disposition: form-data; name=\"\(fieldName)\"; filename=\"\(fieldName)hell.png\"\r\n".data(using: .utf8)!)
             requestBody.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
             requestBody.append(imageData)
             requestBody.append("\r\n".data(using: .utf8)!)
         }
+
+        urlRequest.httpBody = requestBody
+        
         
         /// Return
         return urlRequest

@@ -35,10 +35,14 @@ struct NetworkLayerTestView: View {
             
             createButton(title: "Multipart data", backgroundColor: Colors.main) {
                 Task {
-                    print("Upload data")
+                    await vm.addImage()
                 }
             }
             
+            Image(uiImage: vm.testImage!)
+                .resizable()
+                .scaledToFit()
+                .frame(height: 48)
         }
         .padding(.horizontal)
         

@@ -6,15 +6,21 @@
 //
 
 import Foundation
+import UIKit
+import SwiftUI
 
-class NetworkLayerViewModel: ObservableObject {
+class NetworkLayerViewModel: ObservableObject, NetworkServicesMultipart {
     
     // MARK: - PROPERTYS
     let productApiClient = ProductApiClient(client: BaseAPIClient())
+    let imageApiClient = AddImageApiClient(client: BaseAPIClient())
     
     @Published var products: [ProductNetworkResponse]?
     @Published var addedProduct: ProductNetworkResponse?
+    @Published var addedImage: AddImageNetworkResponse?
     @Published var isError: Bool = false
+    
+    @Published var testImage = UIImage(named: "clinc")
     
     // MARK: - INITILIZER
     
@@ -51,8 +57,29 @@ class NetworkLayerViewModel: ObservableObject {
         }
     }
     
+    func addImage() async {
+        do {
+            guard let imageData = testImage?.pngData() else { return }
+            let dataParameters = AddImageParameters(data: ["file": imageData],
+                                                    fileName: "file",
+                                                    mimeType: ".png")
+            addedImage = try await imageApiClient.addImage(dataParameters: dataParameters)
+            guard let addedImage = addedImage else { return }
+            print("Added image is \(addedImage)")
+        } catch {
+            print("Error is \(error.localizedDescription)")
+            isError = true
+        }
+    }
+    
     private struct UserDetailsParameters: ProductParametersProtocol {
         var productParameters: [String : Any]
+    }
+    
+    private struct AddImageParameters: MultipartFormData {
+        var data: Parameters
+        var fileName: String
+        var mimeType: String
     }
 }
 
@@ -134,4 +161,61 @@ struct ProductNetworkResponse: Codable {
     var title: String?
     var category: String?
     var description: String?
+}
+
+// MARK: - Formdata
+enum AddImageAPIRequest: MultipartAPIRequestConfiguration {
+case addImage(dataParameters: MultipartFormData)
+        
+    var method: HTTPMethod {
+        return .post
+    }
+    
+    var path: String {
+        return "/api/v1/files/upload"
+    }
+    
+    var parameters: Parameters? {
+        nil
+    }
+    
+    var headers: HTTPHeaders? {
+        nil
+    }
+    
+    var multipartFormData: MultipartFormData? {
+        switch self {
+        case .addImage(let parameter):
+            return parameter
+        }
+    }
+}
+
+// MARK: - Product API Client
+
+protocol AddImageAPIClientProtocol {
+  func addImage(dataParameters: MultipartFormData) async throws -> AddImageNetworkResponse?
+}
+
+class AddImageApiClient: AddImageAPIClientProtocol {
+    let client: BaseAPIClientProtocol
+    init(client: BaseAPIClientProtocol) {
+        self.client = client
+    }
+    
+    func addImage(dataParameters: MultipartFormData) async throws -> AddImageNetworkResponse? {
+        let request = AddImageAPIRequest.addImage(dataParameters: dataParameters)
+        var image: AddImageNetworkResponse?
+        image = try await client.perform(request)
+        return image
+    }
+}
+
+
+// MARK: - Model
+
+struct AddImageNetworkResponse: Codable {
+    var originalname: String?
+    var filename: String?
+    var location: String?
 }
