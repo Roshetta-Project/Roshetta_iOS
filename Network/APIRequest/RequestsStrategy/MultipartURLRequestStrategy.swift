@@ -23,7 +23,7 @@ struct MultipartURLRequestStrategy: URLRequestConvertible {
         /// URL Components
         var components = configuration.components
         components.scheme = "https"
-        components.host = "api.escuelajs.co"
+        components.host = "roshetta-wy5u.onrender.com"
         components.path = configuration.path
         
         /// URL

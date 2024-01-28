@@ -14,7 +14,7 @@ struct RegularURLRequestStrategy: URLRequestConvertible {
         /// URL Components
         var components = configuration.components
         components.scheme = "https"
-        components.host = "fakestoreapi.com"
+        components.host = "roshetta-wy5u.onrender.com"
         components.path = configuration.path
         /// URL
         guard let url = components.url else { throw SessionDataTaskError.invalidURL }

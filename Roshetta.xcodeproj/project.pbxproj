@@ -208,8 +208,16 @@
 		7F47CD682B646D0F00228CFA /* RoshettaTests */ = {
 			isa = PBXGroup;
 			children = (
+				7F47CD7B2B66936300228CFA /* Auth */,
 			);
 			path = RoshettaTests;
+			sourceTree = "<group>";
+		};
+		7F47CD7B2B66936300228CFA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		7F5E42EE2AEBD88A008C2FC1 /* CustomFonts */ = {
