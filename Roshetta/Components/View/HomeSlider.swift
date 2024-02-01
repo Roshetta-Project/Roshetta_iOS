@@ -8,25 +8,34 @@
 import SwiftUI
 
 struct HomeSlider: View {
-    // MARK: - POPERTYS
+    // MARK: - PROPERTYS
+    
     @State private var currentIndex: Int = 0
     @Binding var slides: [String]
 
     // MARK: - VIEW
+    
     var body: some View {
-        TabView {
-            ForEach(slides.indices, id: \.self) { slide in
-                Image(slides[slide])
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .cornerRadius(16)
+        TabView(selection: $currentIndex) {
+            ForEach(slides.indices, id: \.self) { index in
+                slideView(for: slides[index])
+                    .tag(index)
             }
         }
-        .cornerRadius(16)
-        .tabViewStyle(PageTabViewStyle())
+        .frame(width: UIScreen.main.bounds.size.width - 40, height: 184)
+        .cornerRadius(15)
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
     }
     
     // MARK: - FUNCTIONS
+    
+    private func slideView(for imageName: String) -> some View {
+        Image(imageName)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .cornerRadius(15)
+    }
+
 }
 
 struct HomeSlider_Previews: PreviewProvider {

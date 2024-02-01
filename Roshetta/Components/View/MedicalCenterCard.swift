@@ -25,7 +25,7 @@ struct MedicalCenterCard: View {
                     .scaledToFill()
                     .clipShape(Circle())
                     .frame(width: 64, height: 64)
-                    .shadow(color: .black.opacity(0.1), radius: 2, x: 2, y: 4)//: PROFILE IMAG
+                    .shadow(color: .black.opacity(0.1), radius: 8)
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Text(name)
@@ -41,7 +41,7 @@ struct MedicalCenterCard: View {
                                 .foregroundColor(.yellow)
                                 .frame(width: 12, height: 12)
                         }
-                    }//: RATING STARS
+                    }
                 }
             }
             
@@ -49,10 +49,10 @@ struct MedicalCenterCard: View {
                 InfoRow(symbol: SFSymbols.price, text: minPrice + " L.E" + " ~ " + maxPrice + " L.E")
                 InfoRow(symbol: SFSymbols.locationPin, text: location)
             }
-            .padding(.top, 12)
+            .padding(.top, 16)
         }
-        .padding(12)
-        .padding(.horizontal, 4)
+        .padding(16)
+        .padding(.horizontal, 8)
         .background(Color.gray.opacity(0.05))
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .overlay(

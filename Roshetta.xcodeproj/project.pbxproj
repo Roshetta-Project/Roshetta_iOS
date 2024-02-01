@@ -39,6 +39,20 @@
 		7F6CA33C2AEF0AA400BAB446 /* FacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA33B2AEF0AA400BAB446 /* FacebookManager.swift */; };
 		7F78B6112B61DA4D004DB15E /* NetworkLayerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78B6102B61DA4D004DB15E /* NetworkLayerTestView.swift */; };
 		7F78B6132B61DA5B004DB15E /* NetworkLayerTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78B6122B61DA5B004DB15E /* NetworkLayerTestViewModel.swift */; };
+		7F884CB92B6C197200B82521 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CB82B6C197200B82521 /* HomeView.swift */; };
+		7F884CBB2B6C1A0E00B82521 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CBA2B6C1A0E00B82521 /* CategoryCard.swift */; };
+		7F884CBE2B6C1CD200B82521 /* TitleTextModifir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CBD2B6C1CD200B82521 /* TitleTextModifir.swift */; };
+		7F884CC02B6C1D3800B82521 /* CenterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */; };
+		7F884CC22B6C1D5D00B82521 /* ClinicDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CC12B6C1D5D00B82521 /* ClinicDetailsView.swift */; };
+		7F884CC42B6C1D9400B82521 /* DoctorDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CC32B6C1D9400B82521 /* DoctorDetailsView.swift */; };
+		7F884CC62B6C1DA700B82521 /* AboutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CC52B6C1DA700B82521 /* AboutCardView.swift */; };
+		7F884CC82B6C1DDC00B82521 /* ImageScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CC72B6C1DDC00B82521 /* ImageScroll.swift */; };
+		7F884CCA2B6C1DF500B82521 /* locationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CC92B6C1DF500B82521 /* locationCard.swift */; };
+		7F884CCC2B6C1E0A00B82521 /* LogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CCB2B6C1E0A00B82521 /* LogoImageView.swift */; };
+		7F884CCE2B6C1E1900B82521 /* PriceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CCD2B6C1E1900B82521 /* PriceCard.swift */; };
+		7F884CD02B6C1E2C00B82521 /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CCF2B6C1E2C00B82521 /* ReviewCard.swift */; };
+		7F884CD22B6C1E4800B82521 /* SpecializationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CD12B6C1E4800B82521 /* SpecializationCard.swift */; };
+		7F884CD42B6C1E5400B82521 /* StatusImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CD32B6C1E5400B82521 /* StatusImageView.swift */; };
 		7F988E5C2AE2D1BC00E0BCBD /* RoshettaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F988E5B2AE2D1BC00E0BCBD /* RoshettaApp.swift */; };
 		7F988E602AE2D1BE00E0BCBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F988E5F2AE2D1BE00E0BCBD /* Assets.xcassets */; };
 		7F988E632AE2D1BE00E0BCBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F988E622AE2D1BE00E0BCBD /* Preview Assets.xcassets */; };
@@ -118,6 +132,20 @@
 		7F6CA33B2AEF0AA400BAB446 /* FacebookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookManager.swift; sourceTree = "<group>"; };
 		7F78B6102B61DA4D004DB15E /* NetworkLayerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTestView.swift; sourceTree = "<group>"; };
 		7F78B6122B61DA5B004DB15E /* NetworkLayerTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTestViewModel.swift; sourceTree = "<group>"; };
+		7F884CB82B6C197200B82521 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../../../../../HomeView.swift; sourceTree = "<group>"; };
+		7F884CBA2B6C1A0E00B82521 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
+		7F884CBD2B6C1CD200B82521 /* TitleTextModifir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextModifir.swift; sourceTree = "<group>"; };
+		7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailsView.swift; sourceTree = "<group>"; };
+		7F884CC12B6C1D5D00B82521 /* ClinicDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsView.swift; sourceTree = "<group>"; };
+		7F884CC32B6C1D9400B82521 /* DoctorDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsView.swift; sourceTree = "<group>"; };
+		7F884CC52B6C1DA700B82521 /* AboutCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCardView.swift; sourceTree = "<group>"; };
+		7F884CC72B6C1DDC00B82521 /* ImageScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScroll.swift; sourceTree = "<group>"; };
+		7F884CC92B6C1DF500B82521 /* locationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationCard.swift; sourceTree = "<group>"; };
+		7F884CCB2B6C1E0A00B82521 /* LogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageView.swift; sourceTree = "<group>"; };
+		7F884CCD2B6C1E1900B82521 /* PriceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCard.swift; sourceTree = "<group>"; };
+		7F884CCF2B6C1E2C00B82521 /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
+		7F884CD12B6C1E4800B82521 /* SpecializationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecializationCard.swift; sourceTree = "<group>"; };
+		7F884CD32B6C1E5400B82521 /* StatusImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusImageView.swift; sourceTree = "<group>"; };
 		7F988E582AE2D1BC00E0BCBD /* Roshetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F988E5B2AE2D1BC00E0BCBD /* RoshettaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshettaApp.swift; sourceTree = "<group>"; };
 		7F988E5F2AE2D1BE00E0BCBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -359,6 +387,48 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		7F884CB32B6C192300B82521 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7F884CB42B6C193000B82521 /* Presentation */,
+				7F884CB62B6C194400B82521 /* Domain */,
+				7F884CB72B6C194A00B82521 /* Data */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7F884CB42B6C193000B82521 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7F884CB82B6C197200B82521 /* HomeView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7F884CB62B6C194400B82521 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7F884CB72B6C194A00B82521 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7F884CBC2B6C1C8800B82521 /* Detaild Screen */ = {
+			isa = PBXGroup;
+			children = (
+				7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */,
+				7F884CC12B6C1D5D00B82521 /* ClinicDetailsView.swift */,
+				7F884CC32B6C1D9400B82521 /* DoctorDetailsView.swift */,
+			);
+			path = "Detaild Screen";
+			sourceTree = "<group>";
+		};
 		7F988E4F2AE2D1BC00E0BCBD = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +566,15 @@
 				7FB00F552AFD7CA800303EB2 /* ClincCard.swift */,
 				7FB00F592AFD7FF000303EB2 /* MedicalCenterCard.swift */,
 				7FB00F572AFD7E3900303EB2 /* InfoRow.swift */,
+				7F884CBA2B6C1A0E00B82521 /* CategoryCard.swift */,
+				7F884CC52B6C1DA700B82521 /* AboutCardView.swift */,
+				7F884CC72B6C1DDC00B82521 /* ImageScroll.swift */,
+				7F884CC92B6C1DF500B82521 /* locationCard.swift */,
+				7F884CCB2B6C1E0A00B82521 /* LogoImageView.swift */,
+				7F884CCD2B6C1E1900B82521 /* PriceCard.swift */,
+				7F884CCF2B6C1E2C00B82521 /* ReviewCard.swift */,
+				7F884CD12B6C1E4800B82521 /* SpecializationCard.swift */,
+				7F884CD32B6C1E5400B82521 /* StatusImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -505,6 +584,7 @@
 			children = (
 				7F988EC92AE2D35000E0BCBD /* RounderCorners.swift */,
 				7F988ECA2AE2D35000E0BCBD /* SFSymbolModifire.swift */,
+				7F884CBD2B6C1CD200B82521 /* TitleTextModifir.swift */,
 			);
 			path = CustomModifire;
 			sourceTree = "<group>";
@@ -516,40 +596,10 @@
 				7F5E43072AEBE844008C2FC1 /* Splash */,
 				7F0D4CE22AE799BD0057C1CE /* Onboarding */,
 				7F0D4CE12AE799B40057C1CE /* Auth */,
-				7FB00F4F2AFD6AA500303EB2 /* Home */,
+				7F884CB32B6C192300B82521 /* Home */,
+				7F884CBC2B6C1C8800B82521 /* Detaild Screen */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		7FB00F4F2AFD6AA500303EB2 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				7FB00F522AFD6ABE00303EB2 /* Presentation */,
-				7FB00F512AFD6AB900303EB2 /* Domain */,
-				7FB00F502AFD6AB600303EB2 /* Data */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		7FB00F502AFD6AB600303EB2 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		7FB00F512AFD6AB900303EB2 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		7FB00F522AFD6ABE00303EB2 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presentation;
 			sourceTree = "<group>";
 		};
 		7FC67ADD2B277D05000A5586 /* Network */ = {
@@ -716,9 +766,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F884CD42B6C1E5400B82521 /* StatusImageView.swift in Sources */,
+				7F884CC02B6C1D3800B82521 /* CenterDetailsView.swift in Sources */,
 				7F5E42ED2AEBD782008C2FC1 /* RoshettaAppViewModel.swift in Sources */,
 				7F6CA3202AED059F00BAB446 /* AuthRepositories.swift in Sources */,
 				7FC67AE42B2785D0000A5586 /* BaseAPIClient.swift in Sources */,
+				7F884CCE2B6C1E1900B82521 /* PriceCard.swift in Sources */,
+				7F884CBB2B6C1A0E00B82521 /* CategoryCard.swift in Sources */,
 				7FC67AE62B27B211000A5586 /* SessionDataTaskError.swift in Sources */,
 				7F5E43012AEBDFE6008C2FC1 /* Colors.swift in Sources */,
 				7F5E43092AEBE878008C2FC1 /* SplashView.swift in Sources */,
@@ -728,14 +782,20 @@
 				7F988EC22AE2D34000E0BCBD /* HomeSlider.swift in Sources */,
 				7FB00F582AFD7E3900303EB2 /* InfoRow.swift in Sources */,
 				7F988E9E2AE2D29900E0BCBD /* RequestError.swift in Sources */,
+				7F884CD22B6C1E4800B82521 /* SpecializationCard.swift in Sources */,
+				7F884CC62B6C1DA700B82521 /* AboutCardView.swift in Sources */,
+				7F884CCC2B6C1E0A00B82521 /* LogoImageView.swift in Sources */,
 				7F6CA31C2AED054500BAB446 /* UserModel.swift in Sources */,
 				7F5E43142AEBF49C008C2FC1 /* onboardingModel.swift in Sources */,
+				7F884CD02B6C1E2C00B82521 /* ReviewCard.swift in Sources */,
 				7FB00F5A2AFD7FF000303EB2 /* MedicalCenterCard.swift in Sources */,
 				7F988ECC2AE2D35000E0BCBD /* SFSymbolModifire.swift in Sources */,
 				7F988EC72AE2D34000E0BCBD /* GFSecureTextField.swift in Sources */,
 				7F5E42FF2AEBDE00008C2FC1 /* Fonts.swift in Sources */,
+				7F884CB92B6C197200B82521 /* HomeView.swift in Sources */,
 				7F6CA3122AECF99600BAB446 /* AuthViewModel.swift in Sources */,
 				7FB00F562AFD7CA800303EB2 /* ClincCard.swift in Sources */,
+				7F884CCA2B6C1DF500B82521 /* locationCard.swift in Sources */,
 				7F988EC42AE2D34000E0BCBD /* GFTextField.swift in Sources */,
 				7FB00F542AFD6AF000303EB2 /* DoctorCard.swift in Sources */,
 				7F988EAB2AE2D2BD00E0BCBD /* View.swift in Sources */,
@@ -759,11 +819,14 @@
 				7FC67AE22B278416000A5586 /* BaseAPIRequest.swift in Sources */,
 				7F988E5C2AE2D1BC00E0BCBD /* RoshettaApp.swift in Sources */,
 				7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */,
+				7F884CC22B6C1D5D00B82521 /* ClinicDetailsView.swift in Sources */,
 				7FC67AEB2B27B56D000A5586 /* MultipartAPIRequestConfiguration.swift in Sources */,
+				7F884CC42B6C1D9400B82521 /* DoctorDetailsView.swift in Sources */,
 				7F988EA02AE2D29900E0BCBD /* LanguageManager.swift in Sources */,
 				7F5E430B2AEBE88B008C2FC1 /* SplashViewModel.swift in Sources */,
 				7F6CA3222AED074000BAB446 /* AuthEndPoint.swift in Sources */,
 				7F6CA3242AED074C00BAB446 /* AuthServices.swift in Sources */,
+				7F884CBE2B6C1CD200B82521 /* TitleTextModifir.swift in Sources */,
 				7F6CA31E2AED056B00BAB446 /* AuthUseCase.swift in Sources */,
 				7F5E43052AEBE3AF008C2FC1 /* SFSymbols.swift in Sources */,
 				7FC67AF42B27B763000A5586 /* MultipartURLRequestStrategy.swift in Sources */,
@@ -771,6 +834,7 @@
 				7F6CA33C2AEF0AA400BAB446 /* FacebookManager.swift in Sources */,
 				7F78B6132B61DA5B004DB15E /* NetworkLayerTestViewModel.swift in Sources */,
 				7F988E9C2AE2D29900E0BCBD /* HTTPMethod.swift in Sources */,
+				7F884CC82B6C1DDC00B82521 /* ImageScroll.swift in Sources */,
 				7F988EAE2AE2D2BD00E0BCBD /* UINavigationBarAppearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,7 +23,7 @@ struct ClincCard: View {
                 .scaledToFill()
                 .clipShape(Circle())
                 .frame(width: 64, height: 64)
-                .shadow(color: .black.opacity(0.1), radius: 2, x: 2, y: 4)//: PROFILE IMAG
+                .shadow(color: .black.opacity(0.1), radius: 2, x: 2, y: 4)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(name)
@@ -49,7 +49,7 @@ struct ClincCard: View {
                 
             }
         }
-        .padding(12)
+        .padding(8)
         .background(Color.gray.opacity(0.05))
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .overlay(
