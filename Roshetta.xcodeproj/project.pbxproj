@@ -214,14 +214,14 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		7F0D4CE12AE799B40057C1CE /* Auth */ = {
+		7F0D4CE12AE799B40057C1CE /* AuthModule */ = {
 			isa = PBXGroup;
 			children = (
 				7F6CA30E2AECF96F00BAB446 /* Presentation */,
 				7F6CA30D2AECF96C00BAB446 /* Domain */,
 				7F6CA30C2AECF92E00BAB446 /* Data */,
 			);
-			path = Auth;
+			path = AuthModule;
 			sourceTree = "<group>";
 		};
 		7F0D4CE22AE799BD0057C1CE /* Onboarding */ = {
@@ -429,17 +429,39 @@
 			path = "Detaild Screen";
 			sourceTree = "<group>";
 		};
+		7F884CD52B6C209A00B82521 /* NetworkModule */ = {
+			isa = PBXGroup;
+			children = (
+				7FC67ADD2B277D05000A5586 /* Network */,
+				7F988E8C2AE2D29900E0BCBD /* NetwokLayer */,
+			);
+			path = NetworkModule;
+			sourceTree = "<group>";
+		};
+		7F884CD62B6C20EA00B82521 /* DoctorsModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DoctorsModule;
+			sourceTree = "<group>";
+		};
+		7F884CD72B6C20F200B82521 /* clinicsModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = clinicsModule;
+			sourceTree = "<group>";
+		};
+		7F884CD82B6C210800B82521 /* MedicalCneterModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MedicalCneterModule;
+			sourceTree = "<group>";
+		};
 		7F988E4F2AE2D1BC00E0BCBD = {
 			isa = PBXGroup;
 			children = (
-				7F5E43062AEBE48D008C2FC1 /* Assets file */,
-				7F5E42FD2AEBDDE9008C2FC1 /* Helpers */,
-				7F5E42EE2AEBD88A008C2FC1 /* CustomFonts */,
-				7FC67ADD2B277D05000A5586 /* Network */,
-				7F988E8C2AE2D29900E0BCBD /* NetwokLayer */,
-				7F988E982AE2D29900E0BCBD /* Managers */,
-				7F988EA12AE2D2AB00E0BCBD /* Localization */,
-				7F988EA62AE2D2BD00E0BCBD /* Extentions */,
 				7F988E5A2AE2D1BC00E0BCBD /* Roshetta */,
 				7F47CD682B646D0F00228CFA /* RoshettaTests */,
 				7F988E592AE2D1BC00E0BCBD /* Products */,
@@ -460,6 +482,13 @@
 			children = (
 				7F50EC782AF057F70060D6B6 /* Roshetta.entitlements */,
 				7F5E42F72AEBD924008C2FC1 /* Info.plist */,
+				7F884CD52B6C209A00B82521 /* NetworkModule */,
+				7F988E982AE2D29900E0BCBD /* Managers */,
+				7F988EA12AE2D2AB00E0BCBD /* Localization */,
+				7F988EA62AE2D2BD00E0BCBD /* Extentions */,
+				7F5E43062AEBE48D008C2FC1 /* Assets file */,
+				7F5E42FD2AEBDDE9008C2FC1 /* Helpers */,
+				7F5E42EE2AEBD88A008C2FC1 /* CustomFonts */,
 				7F988EB22AE2D33F00E0BCBD /* Components */,
 				7F988EC82AE2D35000E0BCBD /* CustomModifire */,
 				7F988ECE2AE2D3F800E0BCBD /* App */,
@@ -595,7 +624,10 @@
 				7F0D4CE02AE799AA0057C1CE /* Root */,
 				7F5E43072AEBE844008C2FC1 /* Splash */,
 				7F0D4CE22AE799BD0057C1CE /* Onboarding */,
-				7F0D4CE12AE799B40057C1CE /* Auth */,
+				7F0D4CE12AE799B40057C1CE /* AuthModule */,
+				7F884CD82B6C210800B82521 /* MedicalCneterModule */,
+				7F884CD72B6C20F200B82521 /* clinicsModule */,
+				7F884CD62B6C20EA00B82521 /* DoctorsModule */,
 				7F884CB32B6C192300B82521 /* Home */,
 				7F884CBC2B6C1C8800B82521 /* Detaild Screen */,
 			);
