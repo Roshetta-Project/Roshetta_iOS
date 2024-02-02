@@ -18,13 +18,10 @@ struct DoctorCard: View {
     
     // MARK: - VIEW
     var body: some View {
-        VStack(alignment: .center, spacing: 10)  {
+        VStack(alignment: .center, spacing: 10) {
             image
                 .resizable()
-                .scaledToFill()
-                .clipShape(Circle())
-                .frame(width: 64, height: 64)
-                .shadow(color: .black.opacity(0.1), radius: 2, x: 2, y: 4)//: PROFILE IMAGE
+                .modifier(RoundedImage(size: 64))
 
             VStack(alignment: .center, spacing: 4) {
                 Text(name)
@@ -59,12 +56,7 @@ struct DoctorCard: View {
             }
         }//: PRICE AND LOCATION
         .padding(12)
-        .background(Color.gray.opacity(0.05))
         .clipShape(RoundedRectangle(cornerRadius: 8))
-        .overlay(
-            RoundedRectangle(cornerRadius: 8)
-                .stroke(Colors.main, lineWidth: 1)
-        )
         .frame(width: 154)
     }
 }

@@ -59,7 +59,6 @@ struct MedicalCenterCard: View {
             RoundedRectangle(cornerRadius: 8)
                 .stroke(Colors.main, lineWidth: 1)
         )
-        .frame(width: 188)
     }
 }
 
