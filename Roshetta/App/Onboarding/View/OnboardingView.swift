@@ -93,7 +93,7 @@ struct OnboardingView: View {
     // MARK: - FOOTER
     private func footer() -> some View {
         VStack (spacing:16){
-            if currentStep < data.count - 1 {
+            if currentStep < data.count  {
                 GFButton(isLoading: $isLoading, text: "Next", backgroundColor: Colors.newmain, foregroundColot: Color.white) {
                     if currentStep < data.count - 1 {
                         isAnimating = true
@@ -101,12 +101,6 @@ struct OnboardingView: View {
                     } else {
                         isOnboardingViewActive = false
                     }
-                }
-                
-            } else {
-                GFSliderButton(isAnimating: $isAnimating) {
-                    buttonOffset = buttonWidth - 80
-                    isOnboardingViewActive = false
                 }
             }
             
