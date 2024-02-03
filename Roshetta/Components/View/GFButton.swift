@@ -25,7 +25,7 @@ struct GFButton: View {
                 LoaderView()
             } else {
                 Text(text)
-                    .font(.system(size: 16, weight: .bold))
+                    .font(.system(size: 24, weight: .bold))
                     .padding(.horizontal, 32)
                     .lineLimit(0)
                     .minimumScaleFactor(0.7)
