@@ -9,6 +9,7 @@ import SwiftUI
 
 enum Colors {
     static let main = Color("main")
+    static let newmain = Color("newmain")
     static let secondary = Color("secondary")
     static let text = Color("text")
 }

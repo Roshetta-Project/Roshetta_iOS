@@ -30,18 +30,17 @@ struct AuthView: View {
     // MARK: - HEADER
     private func headerView() -> some View {
         ZStack {
-            Rectangle()
-                .fill(.gray.opacity(0.1))
-                .frame(height: 416)
-                .cornerRadius(112, corners: [.bottomRight, .bottomLeft])
+            CircularGradient()
             
             VStack(spacing: 32) {
                 Text("Join us now !")
-                    .foregroundColor(Colors.text)
-                    .font(.custom(GFFonts.roman, size: 36))
+                    .foregroundColor(Color.black)
+                    .font(.custom(GFFonts.popinsMedium, size: 36))
                     .padding(.top, 32)
                 
-                Images.join
+                Images.authphoto
+                    .resizable()
+                    .frame(width: 240,height: 280)
             }
             .padding(.top, 32)
         }

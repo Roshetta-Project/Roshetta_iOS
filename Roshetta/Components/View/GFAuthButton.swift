@@ -21,27 +21,19 @@ struct GFAuthButton: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 32)
                     .fill(.white)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 32)
-                            .stroke(LinearGradient(
-                                colors: [Colors.main, Colors.secondary],
-                                startPoint: .leading,
-                                endPoint: .trailing),
-                                    lineWidth: 2
-                            )
-                    }
+
                 HStack(spacing: 16) {
                     icon
                         .padding(.leading, 32)
                     Text(tilte)
-                        .foregroundColor(Colors.text)
+                        .foregroundColor(Color.black)
                         .font(.custom(GFFonts.popinsMedium, size: 20))
                     
                     Spacer()
                 }
             }
         }
-        .shadow(color: .black.opacity(0.2), radius: 6)
+        .shadow(color: .black.opacity(0.1), radius: 3)
         .frame(height: 56)
     }
 }

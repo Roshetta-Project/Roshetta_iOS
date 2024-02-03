@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26D3E6CA2B6E60D4001BE5CE /* CircularGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3E6C92B6E60D4001BE5CE /* CircularGradient.swift */; };
 		7F50EC732AF016110060D6B6 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC722AF016110060D6B6 /* GoogleSignIn */; };
 		7F50EC752AF016110060D6B6 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC742AF016110060D6B6 /* GoogleSignInSwift */; };
 		7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */; };
@@ -39,7 +40,6 @@
 		7F6CA33C2AEF0AA400BAB446 /* FacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CA33B2AEF0AA400BAB446 /* FacebookManager.swift */; };
 		7F78B6112B61DA4D004DB15E /* NetworkLayerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78B6102B61DA4D004DB15E /* NetworkLayerTestView.swift */; };
 		7F78B6132B61DA5B004DB15E /* NetworkLayerTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78B6122B61DA5B004DB15E /* NetworkLayerTestViewModel.swift */; };
-		7F884CB92B6C197200B82521 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CB82B6C197200B82521 /* HomeView.swift */; };
 		7F884CBB2B6C1A0E00B82521 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CBA2B6C1A0E00B82521 /* CategoryCard.swift */; };
 		7F884CBE2B6C1CD200B82521 /* TitleTextModifir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CBD2B6C1CD200B82521 /* TitleTextModifir.swift */; };
 		7F884CC02B6C1D3800B82521 /* CenterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */; };
@@ -101,6 +101,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26D3E6C92B6E60D4001BE5CE /* CircularGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGradient.swift; sourceTree = "<group>"; };
 		7F47CD672B646D0F00228CFA /* RoshettaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoshettaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleManager.swift; sourceTree = "<group>"; };
 		7F50EC782AF057F70060D6B6 /* Roshetta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roshetta.entitlements; sourceTree = "<group>"; };
@@ -133,7 +134,6 @@
 		7F6CA33B2AEF0AA400BAB446 /* FacebookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookManager.swift; sourceTree = "<group>"; };
 		7F78B6102B61DA4D004DB15E /* NetworkLayerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTestView.swift; sourceTree = "<group>"; };
 		7F78B6122B61DA5B004DB15E /* NetworkLayerTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTestViewModel.swift; sourceTree = "<group>"; };
-		7F884CB82B6C197200B82521 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../../../../../HomeView.swift; sourceTree = "<group>"; };
 		7F884CBA2B6C1A0E00B82521 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		7F884CBD2B6C1CD200B82521 /* TitleTextModifir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextModifir.swift; sourceTree = "<group>"; };
 		7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailsView.swift; sourceTree = "<group>"; };
@@ -389,38 +389,6 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		7F884CB32B6C192300B82521 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				7F884CB42B6C193000B82521 /* Presentation */,
-				7F884CB62B6C194400B82521 /* Domain */,
-				7F884CB72B6C194A00B82521 /* Data */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		7F884CB42B6C193000B82521 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				7F884CB82B6C197200B82521 /* HomeView.swift */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		7F884CB62B6C194400B82521 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		7F884CB72B6C194A00B82521 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		7F884CBC2B6C1C8800B82521 /* Detaild Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,99 +406,6 @@
 				7F988E8C2AE2D29900E0BCBD /* NetwokLayer */,
 			);
 			path = NetworkModule;
-			sourceTree = "<group>";
-		};
-		7F884CD62B6C20EA00B82521 /* DoctorsModule */ = {
-			isa = PBXGroup;
-			children = (
-				7F884CE12B6C22AA00B82521 /* Presentation */,
-				7F884CE02B6C22A400B82521 /* Domain */,
-				7F884CDF2B6C22A100B82521 /* Data */,
-			);
-			path = DoctorsModule;
-			sourceTree = "<group>";
-		};
-		7F884CD72B6C20F200B82521 /* clinicsModule */ = {
-			isa = PBXGroup;
-			children = (
-				7F884CDE2B6C229D00B82521 /* Presentation */,
-				7F884CDD2B6C229A00B82521 /* Domain */,
-				7F884CDC2B6C229800B82521 /* Data */,
-			);
-			path = clinicsModule;
-			sourceTree = "<group>";
-		};
-		7F884CD82B6C210800B82521 /* MedicalCenterModule */ = {
-			isa = PBXGroup;
-			children = (
-				7F884CDB2B6C228D00B82521 /* Presentation */,
-				7F884CDA2B6C228700B82521 /* Domain */,
-				7F884CD92B6C227F00B82521 /* Data */,
-			);
-			path = MedicalCenterModule;
-			sourceTree = "<group>";
-		};
-		7F884CD92B6C227F00B82521 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		7F884CDA2B6C228700B82521 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		7F884CDB2B6C228D00B82521 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		7F884CDC2B6C229800B82521 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		7F884CDD2B6C229A00B82521 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		7F884CDE2B6C229D00B82521 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		7F884CDF2B6C22A100B82521 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		7F884CE02B6C22A400B82521 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		7F884CE12B6C22AA00B82521 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presentation;
 			sourceTree = "<group>";
 		};
 		7F988E4F2AE2D1BC00E0BCBD = {
@@ -678,6 +553,7 @@
 				7F884CCF2B6C1E2C00B82521 /* ReviewCard.swift */,
 				7F884CD12B6C1E4800B82521 /* SpecializationCard.swift */,
 				7F884CD32B6C1E5400B82521 /* StatusImageView.swift */,
+				26D3E6C92B6E60D4001BE5CE /* CircularGradient.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -700,10 +576,6 @@
 				7F5E43072AEBE844008C2FC1 /* Splash */,
 				7F0D4CE22AE799BD0057C1CE /* Onboarding */,
 				7F0D4CE12AE799B40057C1CE /* AuthModule */,
-				7F884CD82B6C210800B82521 /* MedicalCenterModule */,
-				7F884CD72B6C20F200B82521 /* clinicsModule */,
-				7F884CD62B6C20EA00B82521 /* DoctorsModule */,
-				7F884CB32B6C192300B82521 /* Home */,
 				7F884CBC2B6C1C8800B82521 /* Detaild Screen */,
 			);
 			path = App;
@@ -899,7 +771,6 @@
 				7F988ECC2AE2D35000E0BCBD /* SFSymbolModifire.swift in Sources */,
 				7F988EC72AE2D34000E0BCBD /* GFSecureTextField.swift in Sources */,
 				7F5E42FF2AEBDE00008C2FC1 /* Fonts.swift in Sources */,
-				7F884CB92B6C197200B82521 /* HomeView.swift in Sources */,
 				7F6CA3122AECF99600BAB446 /* AuthViewModel.swift in Sources */,
 				7FB00F562AFD7CA800303EB2 /* ClincCard.swift in Sources */,
 				7F884CCA2B6C1DF500B82521 /* locationCard.swift in Sources */,
@@ -915,6 +786,7 @@
 				7F988EC32AE2D34000E0BCBD /* OTPTextField.swift in Sources */,
 				7F6CA3142AECF9A500BAB446 /* AuthView.swift in Sources */,
 				7F988E9D2AE2D29900E0BCBD /* HTTPClient.swift in Sources */,
+				26D3E6CA2B6E60D4001BE5CE /* CircularGradient.swift in Sources */,
 				7FC67AEF2B27B6D6000A5586 /* URLRequestStrategy.swift in Sources */,
 				7FC67AED2B27B5B6000A5586 /* URLRequestConvertible.swift in Sources */,
 				7F884CE32B6C269100B82521 /* RoundedImage.swift in Sources */,

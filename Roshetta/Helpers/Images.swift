@@ -14,5 +14,6 @@ enum Images {
     static let onboarding2 = Image("onboarding2")
     static let onboarding3 = Image("onboarding3")
     
-    static let join = Image("join")
+    static let authphoto = Image("authphoto")
+    static let authbg = Image("authbg")
 }

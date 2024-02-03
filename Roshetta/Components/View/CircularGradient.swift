@@ -9,10 +9,15 @@ import SwiftUI
 
 struct CircularGradient: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RadialGradient(gradient: Gradient(colors: [Colors.newmain.opacity(0.3), Color.white]),
+                       center: .topLeading,
+                       startRadius: 0,
+                       endRadius: UIScreen.main.bounds.width )
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
 #Preview {
     CircularGradient()
 }
+
