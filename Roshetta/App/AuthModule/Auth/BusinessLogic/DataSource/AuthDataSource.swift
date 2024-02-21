@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct AuthDataSource: AuthDataSourceProtocol {
+    var user: UserProtocol
+    var isLoading: Bool = true
+}

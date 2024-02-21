@@ -7,34 +7,34 @@
 
 import Foundation
 
-class AuthViewModel: ObservableObject {
-    // MARK: - PROPERTYS
-    static let shared = AuthViewModel()
-    private var loginUseCase = AuthUseCase(repo: AuthDataSource())
-    
-    // MARK: - INITILIZER
-    private init() { }
-    
-    // MARK: - FUNCTIONS
-    @MainActor
-    func facebookAuth() {
-        Task {
-            do {
-                try await loginUseCase.facebookAuth()
-            } catch {
-                print(error)
-            }
-        }
-    }
-    
-    @MainActor
-    func googleAuth() {
-        Task {
-            do {
-                try await loginUseCase.googleAuth()
-            } catch {
-                print(error)
-            }
-        }
-    }
-}
+//class AuthViewModel: ObservableObject {
+//    // MARK: - PROPERTYS
+//    static let shared = AuthViewModel()
+//    private var loginUseCase = AuthUseCase(repo: AuthDataSource())
+//    
+//    // MARK: - INITILIZER
+//    private init() { }
+//    
+//    // MARK: - FUNCTIONS
+//    @MainActor
+//    func facebookAuth() {
+//        Task {
+//            do {
+//                try await loginUseCase.facebookAuth()
+//            } catch {
+//                print(error)
+//            }
+//        }
+//    }
+//    
+//    @MainActor
+//    func googleAuth() {
+//        Task {
+//            do {
+//                try await loginUseCase.googleAuth()
+//            } catch {
+//                print(error)
+//            }
+//        }
+//    }
+//}

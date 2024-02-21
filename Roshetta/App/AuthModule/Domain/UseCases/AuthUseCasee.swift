@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct AuthUseCase: AuthRepositories {
-    var repo: AuthRepositories
-    
-    func facebookAuth() async throws {
-        try await repo.facebookAuth()
-    }
-    
-    func googleAuth() async throws {
-        try await repo.googleAuth()
-    }
-    
-    func appleAuth() {
-        repo.appleAuth()
-    }
-}
+//struct AuthUseCase: AuthRepositories {
+//    var repo: AuthRepositories
+//    
+//    func facebookAuth() async throws {
+//        try await repo.facebookAuth()
+//    }
+//    
+//    func googleAuth() async throws {
+//        try await repo.googleAuth()
+//    }
+//    
+//    func appleAuth() {
+//        repo.appleAuth()
+//    }
+//}

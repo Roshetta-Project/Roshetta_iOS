@@ -12,7 +12,7 @@ struct AuthView: View {
     let appleSignInHandler = AppleSignInHandler()
 
     // MARK: - PROPERTYS
-    @StateObject var vm = AuthViewModel.shared
+//    @StateObject var vm = AuthViewModel.shared
     
     // MARK: - Body
     var body: some View {
@@ -53,12 +53,12 @@ struct AuthView: View {
         VStack(spacing: 24) {
             GFAuthButton(icon: SFSymbols.google,
                          tilte: "Continue With Google") {
-                vm.googleAuth()
+//                vm.googleAuth()
             }
             
             GFAuthButton(icon: SFSymbols.facebook,
                          tilte: "Continue With Facebook") {
-                vm.facebookAuth()
+//                vm.facebookAuth()
             }
             
             GFAuthButton(icon: SFSymbols.apple,
