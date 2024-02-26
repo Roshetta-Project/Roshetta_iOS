@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol AuthUseCaseProtocol {
-    func facebookAuth(parameters: AuthParametersProtocol) async throws -> UserProtocol?
-    func googleAuth(parameters: AuthParametersProtocol) async throws -> UserProtocol?
-    func appleAuth(parameters: AuthParametersProtocol) async throws -> UserProtocol?
-}
+//protocol AuthUseCaseProtocol {
+//    func facebookAuth(parameters: AuthParametersProtocol) async throws -> UserProtocol?
+//    func googleAuth(parameters: AuthParametersProtocol) async throws -> UserProtocol?
+//    func appleAuth(parameters: AuthParametersProtocol) async throws -> UserProtocol?
+//}
 
 protocol UserProtocol {
     var token: String { get }
