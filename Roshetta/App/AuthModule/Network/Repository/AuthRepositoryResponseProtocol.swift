@@ -7,17 +7,17 @@
 
 import Foundation
 
-protocol AuthRepositoryProtocol: UsersRepositoryGettable {
-    
+protocol AuthRepositoryDependeciesProtocol {
+    var client: AuthAPIClientProtocol { get }
 }
+
+protocol AuthRepositoryProtocol: UsersRepositoryGettable { }
 
 protocol UsersRepositoryGettable {
-    func facebookAuth(parameters: AuthParametersProtocol) async throws -> AuthRepositoryResponseProtocol?
-    func googleAuth(parameters: AuthParametersProtocol) async throws -> AuthRepositoryResponseProtocol?
-    func appleAuth(parameters: AuthParametersProtocol) async throws -> AuthRepositoryResponseProtocol?
+    func loginWithFacebook() async throws -> AuthRepositoryResponseProtocol?
+    func loginWithGoogle() async throws -> AuthRepositoryResponseProtocol?
+    func loginWithApple() async throws -> AuthRepositoryResponseProtocol?
 }
-
-// MARK: - AuthRepositoryResponseProtocol
 
 protocol AuthRepositoryResponseProtocol {
     var token: String? { get }

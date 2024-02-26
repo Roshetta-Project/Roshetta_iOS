@@ -8,6 +8,9 @@
 import Foundation
 
 protocol AuthViewModelProtocol {
+    var isError: Bool { get set }
+    var isLoading: Bool { get set }
+    var errorMessage: String { get set }
     func facebookLogin() async
     func googleLogin() async
     func appleLogin() async

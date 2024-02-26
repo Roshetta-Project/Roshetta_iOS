@@ -9,6 +9,7 @@ import Foundation
 import AuthenticationServices
 
 class AppleSigninManager: NSObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+            
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
          return UIApplication.shared.connectedScenes
              .first { $0.activationState == .foregroundActive }

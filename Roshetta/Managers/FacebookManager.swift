@@ -8,25 +8,32 @@
 import Foundation
 import FacebookLogin
 
+@MainActor
 class FacebookManger{
     static let shared = FacebookManger()
     
     private init() { }
-    
-    func loginWithFacebook(completion: @escaping (Result<String, RequestError>) -> Void) {
+        
+    func login() async throws -> String {
         let manager = LoginManager()
 
-        manager.logIn(permissions: ["public_profile","email"], from: nil) { result, error in
-            
-            guard error == nil else {
-                completion(.failure(RequestError.facebook))
-                return
+        do {
+            let token = try await withCheckedThrowingContinuation { continuation in
+                manager.logIn(permissions: ["public_profile","email"], from: nil) { result, error in
+                    if error == nil {
+                        if let userToken = AccessToken.current, !userToken.isExpired {
+                            let tokenString = userToken.tokenString
+                            continuation.resume(returning: tokenString)
+                        }
+
+                    } else {
+                        continuation.resume(throwing: RequestError.facebook)
+                    }
+                }
             }
-        
-            if let userToken = AccessToken.current, !userToken.isExpired {
-                let tokenString = userToken.tokenString
-                completion(.success(tokenString))
-            }
+            return token
+        } catch {
+            throw error
         }
     }
 }

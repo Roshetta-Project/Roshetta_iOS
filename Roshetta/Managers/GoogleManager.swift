@@ -8,13 +8,13 @@
 import Foundation
 import GoogleSignIn
 
+@MainActor
 class GoogleManager {
     static let shared = GoogleManager()
     
     private init() { }
     
-    @MainActor
-    func loginWithGoogle() async throws -> String {
+    func login() async throws -> String {
         let user = try await GIDSignIn.sharedInstance.signIn(withPresenting: ApplicationUtilitys.rootViewController).user
         let token = user.accessToken
         let tokenString = token.tokenString

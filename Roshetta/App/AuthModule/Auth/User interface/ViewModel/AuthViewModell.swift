@@ -22,38 +22,53 @@ final class AuthViewModel: ObservableObject {
     
     // MARK: - PROPERTYS
     
-    private let usecase: AuthUseCaseProtocol
-    @Published var currentType: LoginType?
+    private let useCase: AuthUseCaseProtocol
+    @Published var isLoading: Bool = false
+    @Published var isError: Bool = false
+    @Published var errorMessage: String = ""
     
     // MARK: - LIFE CYCLE
+    
     init(dependencies: AuthViewModelDependenciesProtocol) {
-        self.usecase = dependencies.useCase
+        self.useCase = dependencies.useCase
     }
 }
 
 // MARK: - AuthViewModelProtocol
 extension AuthViewModel: AuthViewModelProtocol {
     func facebookLogin() async {
+        isLoading = useCase.notifyLoading()
         do {
-            let _ = try await usecase.execute(type: .facebook)
+           try await useCase.execute(type: .facebook)
+            isLoading = useCase.stopLoading()
         } catch {
-            print("Error")
+            isError = true
+            isLoading = useCase.stopLoading()
+            errorMessage = error.localizedDescription
         }
     }
     
     func googleLogin() async {
+        isLoading = useCase.notifyLoading()
         do {
-            let _ = try await usecase.execute(type: .google)
+            try await useCase.execute(type: .google)
+            isLoading = useCase.stopLoading()
         } catch {
-            print("Error")
+            isError = true
+            isLoading = useCase.stopLoading()
+            errorMessage = error.localizedDescription
         }
     }
     
     func appleLogin() async {
+        isLoading = useCase.notifyLoading()
         do {
-            let _ = try await usecase.execute(type: .apple)
+            try await useCase.execute(type: .apple)
+            isLoading = useCase.stopLoading()
         } catch {
-            print("Error")
+            isError = true
+            isLoading = useCase.stopLoading()
+            errorMessage = error.localizedDescription
         }
     }
 }

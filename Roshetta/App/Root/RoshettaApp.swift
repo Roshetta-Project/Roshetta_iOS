@@ -12,6 +12,8 @@ import GoogleSignIn
 @main
 struct RoshettaApp: App {
     // MARK: - PROPERTYS
+    private var moduleFactory = AuthModuleFactory.shared
+
     /// SDK
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     /// OTHERS
@@ -31,7 +33,10 @@ struct RoshettaApp: App {
                     if isLogin {
                         /// go to home
                     } else {
-                        AuthView()
+//                        AuthView()
+                        if let authView = moduleFactory.makeView() as? AuthViews {
+                            authView
+                        }
                     }
                 }
             } else {

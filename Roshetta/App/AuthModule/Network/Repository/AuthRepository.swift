@@ -7,19 +7,20 @@
 
 import Foundation
 
-protocol AuthRepositoryDependeciesProtocol {
-    var client: AuthAPIClientProtocol { get }
+struct AuthParameters: AuthParametersProtocol {
+    var token: String
 }
 
-struct AuthRepository {
-    
-    private let client: AuthAPIClientProtocol
+
+struct AuthRepository: AuthRepositoryProtocol {
+        
+    let client: AuthAPIClientProtocol
     
     init(dependencies: AuthRepositoryDependeciesProtocol) {
         self.client = dependencies.client
     }
     
-    private func convert(_ response: UserNetworkResponse?) -> AuthRepositoryResponseProtocol {
+    func convert(_ response: UserNetworkResponse?) -> AuthRepositoryResponseProtocol {
         return AuthRepositoryResponse(
             token: response?.token,
             id: response?.id,
@@ -44,43 +45,75 @@ struct AuthRepository {
     }
 }
 
-extension AuthRepository: AuthRepositoryProtocol {
-    
-    private enum AuthProvider {
-        case facebook
-        case google
-        case apple
-    }
-
-    private func authenticate(provider: AuthProvider, parameters: AuthParametersProtocol) async throws -> AuthRepositoryResponseProtocol? {
-        var user: AuthRepositoryResponseProtocol?
+extension AuthRepository {
+    func loginWithFacebook() async throws -> AuthRepositoryResponseProtocol? {
         do {
-            switch provider {
-                case .facebook:
-                    user = try await convert(client.facebookAuth(parameter: parameters))
-                case .google:
-                    user = try await convert(client.googleAuth(parameter: parameters))
-                case .apple:
-                    user = try await convert(client.appleAuth(parameter: parameters))
-            }
+            var user: AuthRepositoryResponseProtocol?
+            let token = try await FacebookManger.shared.login()
+            let parameters: AuthParametersProtocol = AuthParameters(token: token)
+            user =  try await convert(client.facebookAuth(parameter: parameters))
+            return user
         } catch {
             guard let error = error as? SessionDataTaskError else {
                 throw RequestError.unknown
             }
             throw RepositoryError(error: error)
         }
-        return user
+    }
+}
+
+extension AuthRepository {
+    func loginWithGoogle() async throws -> AuthRepositoryResponseProtocol? {
+        do {
+            var user: AuthRepositoryResponseProtocol?
+            let token = try await GoogleManager.shared.login()
+            let parameters: AuthParametersProtocol = AuthParameters(token: token)
+            user =  try await convert(client.facebookAuth(parameter: parameters))
+            return user
+        } catch {
+            guard let error = error as? SessionDataTaskError else {
+                throw RequestError.unknown
+            }
+            throw RepositoryError(error: error)
+        }
+    }
+}
+
+extension AuthRepository {
+    func loginWithApple() async throws -> AuthRepositoryResponseProtocol? {
+        return nil
+    }
+}
+
+
+protocol TesetLogin {
+    func login()
+}
+
+class FBLogin: TesetLogin {
+    func login() {
+        print("Hello FB")
+    }
+}
+
+class GoogleLogin: TesetLogin {
+    func login() {
+        print("Hello FB")
+    }
+}
+
+class LoginManagerr {
+    private var loginStratgy: TesetLogin
+    
+    init(loginStratgy: TesetLogin) {
+        self.loginStratgy = loginStratgy
     }
     
-    func facebookAuth(parameters: AuthParametersProtocol) async throws -> AuthRepositoryResponseProtocol? {
-        try await authenticate(provider: .facebook, parameters: parameters)
+    func changeStratgy(loginStratgy: TesetLogin) {
+        self.loginStratgy = loginStratgy
     }
     
-    func googleAuth(parameters: AuthParametersProtocol) async throws -> AuthRepositoryResponseProtocol? {
-        try await authenticate(provider: .google, parameters: parameters)
-    }
-    
-    func appleAuth(parameters: AuthParametersProtocol) async throws -> AuthRepositoryResponseProtocol? {
-        try await authenticate(provider: .apple, parameters: parameters)
+    func login() {
+        loginStratgy.login()
     }
 }

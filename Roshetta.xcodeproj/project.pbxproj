@@ -13,6 +13,9 @@
 		7F196E9B2B6F97F100CBBD6A /* AuthModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E9A2B6F97F100CBBD6A /* AuthModuleFactory.swift */; };
 		7F196E9F2B6F983300CBBD6A /* AuthUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E9E2B6F983300CBBD6A /* AuthUseCaseProtocol.swift */; };
 		7F196EA12B6F9B6100CBBD6A /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196EA02B6F9B6100CBBD6A /* AuthUseCase.swift */; };
+		7F388C162B87622500FE021B /* AuthViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F388C152B87622500FE021B /* AuthViewModelProtocol.swift */; };
+		7F388C182B8762EA00FE021B /* AuthViewModell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F388C172B8762EA00FE021B /* AuthViewModell.swift */; };
+		7F388C1C2B8777E200FE021B /* AuthViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F388C1B2B8777E200FE021B /* AuthViews.swift */; };
 		7F48B4AB2B852A2F00B2AD82 /* AuthDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F48B4AA2B852A2F00B2AD82 /* AuthDataSourceProtocol.swift */; };
 		7F48B4AD2B852ADE00B2AD82 /* AuthDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F48B4AC2B852ADE00B2AD82 /* AuthDataSource.swift */; };
 		7F48B4AF2B85315500B2AD82 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F48B4AE2B85315500B2AD82 /* RepositoryError.swift */; };
@@ -116,6 +119,9 @@
 		7F196E9A2B6F97F100CBBD6A /* AuthModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleFactory.swift; sourceTree = "<group>"; };
 		7F196E9E2B6F983300CBBD6A /* AuthUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCaseProtocol.swift; sourceTree = "<group>"; };
 		7F196EA02B6F9B6100CBBD6A /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
+		7F388C152B87622500FE021B /* AuthViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelProtocol.swift; sourceTree = "<group>"; };
+		7F388C172B8762EA00FE021B /* AuthViewModell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModell.swift; sourceTree = "<group>"; };
+		7F388C1B2B8777E200FE021B /* AuthViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViews.swift; sourceTree = "<group>"; };
 		7F47CD672B646D0F00228CFA /* RoshettaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoshettaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F48B4AA2B852A2F00B2AD82 /* AuthDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthDataSourceProtocol.swift; path = ../../../../../../../AuthDataSourceProtocol.swift; sourceTree = "<group>"; };
 		7F48B4AC2B852ADE00B2AD82 /* AuthDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataSource.swift; sourceTree = "<group>"; };
@@ -239,9 +245,6 @@
 			children = (
 				7F81F48A2B6E917600C8016B /* Network */,
 				7F196E962B6F977700CBBD6A /* Auth */,
-				7F6CA30E2AECF96F00BAB446 /* Presentation */,
-				7F6CA30D2AECF96C00BAB446 /* Domain */,
-				7F6CA30C2AECF92E00BAB446 /* Data */,
 			);
 			path = AuthModule;
 			sourceTree = "<group>";
@@ -260,16 +263,18 @@
 			children = (
 				7F196E9A2B6F97F100CBBD6A /* AuthModuleFactory.swift */,
 				7F196E992B6F97CB00CBBD6A /* BusinessLogic */,
-				7F196E982B6F97B700CBBD6A /* UserInterface */,
+				7F196E982B6F97B700CBBD6A /* User interface */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		7F196E982B6F97B700CBBD6A /* UserInterface */ = {
+		7F196E982B6F97B700CBBD6A /* User interface */ = {
 			isa = PBXGroup;
 			children = (
+				7F388C102B8688FA00FE021B /* View */,
+				7F388C0F2B8688F500FE021B /* ViewModel */,
 			);
-			path = UserInterface;
+			path = "User interface";
 			sourceTree = "<group>";
 		};
 		7F196E992B6F97CB00CBBD6A /* BusinessLogic */ = {
@@ -297,6 +302,23 @@
 				7F196EA02B6F9B6100CBBD6A /* AuthUseCase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		7F388C0F2B8688F500FE021B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F388C152B87622500FE021B /* AuthViewModelProtocol.swift */,
+				7F388C172B8762EA00FE021B /* AuthViewModell.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F388C102B8688FA00FE021B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F388C1B2B8777E200FE021B /* AuthViews.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7F5E42EE2AEBD88A008C2FC1 /* CustomFonts */ = {
@@ -750,6 +772,9 @@
 				7F0D4CE02AE799AA0057C1CE /* Root */,
 				7F5E43072AEBE844008C2FC1 /* Splash */,
 				7F0D4CE22AE799BD0057C1CE /* Onboarding */,
+				7F6CA30E2AECF96F00BAB446 /* Presentation */,
+				7F6CA30D2AECF96C00BAB446 /* Domain */,
+				7F6CA30C2AECF92E00BAB446 /* Data */,
 				7F0D4CE12AE799B40057C1CE /* AuthModule */,
 				7F884CD82B6C210800B82521 /* MedicalCenterModule */,
 				7F884CD72B6C20F200B82521 /* clinicsModule */,
@@ -924,6 +949,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F388C1C2B8777E200FE021B /* AuthViews.swift in Sources */,
 				7F884CD42B6C1E5400B82521 /* StatusImageView.swift in Sources */,
 				7F884CC02B6C1D3800B82521 /* CenterDetailsView.swift in Sources */,
 				7F5E42ED2AEBD782008C2FC1 /* RoshettaAppViewModel.swift in Sources */,
@@ -952,6 +978,7 @@
 				7F196E9F2B6F983300CBBD6A /* AuthUseCaseProtocol.swift in Sources */,
 				7F988EC72AE2D34000E0BCBD /* GFSecureTextField.swift in Sources */,
 				7F5E42FF2AEBDE00008C2FC1 /* Fonts.swift in Sources */,
+				7F388C182B8762EA00FE021B /* AuthViewModell.swift in Sources */,
 				7F6CA3122AECF99600BAB446 /* AuthViewModel.swift in Sources */,
 				7FB00F562AFD7CA800303EB2 /* ClincCard.swift in Sources */,
 				7F884CCA2B6C1DF500B82521 /* locationCard.swift in Sources */,
@@ -959,6 +986,7 @@
 				7FB00F542AFD6AF000303EB2 /* DoctorCard.swift in Sources */,
 				7F988EAB2AE2D2BD00E0BCBD /* View.swift in Sources */,
 				7F6CA30B2AECF52900BAB446 /* GFAuthButton.swift in Sources */,
+				7F388C162B87622500FE021B /* AuthViewModelProtocol.swift in Sources */,
 				7F5E43182AEBF645008C2FC1 /* OnboardingView.swift in Sources */,
 				7F48B4AD2B852ADE00B2AD82 /* AuthDataSource.swift in Sources */,
 				7FC67AF22B27B701000A5586 /* RegularURLRequestStrategy.swift in Sources */,

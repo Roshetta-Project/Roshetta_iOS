@@ -7,27 +7,14 @@
 
 import Foundation
 
-
-protocol AuthUseCaseProtocol {
-    func execute() async throws  -> UserProtocol?
-}
-
-protocol AuthUseCaseDependenciesProtocol {
-    var dataSource: AuthDataSourceProtocol { get }
-    var repository: AuthRepositoryProtocol { get }
-}
-
-
-// MARK: - AuthUseCaseProtocol
-
-class AuthUseCase: AuthUseCaseProtocol {
+class AuthUseCase {
 
     // MARK: - PROPERTYS
     
     private var dataSource: AuthDataSourceProtocol
     private let repository: AuthRepositoryProtocol
     
-    // MARK: - INIT
+    // MARK: - INITILIZER
     
     init(dependencies: AuthUseCaseDependenciesProtocol) {
         self.dataSource = dependencies.dataSource
@@ -60,21 +47,46 @@ class AuthUseCase: AuthUseCaseProtocol {
                 )
         )
     }
+}
 
-    // MARK: - FUNCTIONS
-    
-    func execute() async throws  -> UserProtocol? {
-        guard let user = try await repository.login() else { return nil }
-        dataSource.user = convert(user)
-        dataSource.isLoading = false
-        return dataSource.user
+extension AuthUseCase: AuthUseCaseProtocol {
+    func execute(type: LoginType) async throws {
+        do {
+            dataSource.isLoading = true
+            
+            var user: AuthRepositoryResponseProtocol?
+            
+            switch type {
+            case .facebook:
+                user = try await repository.loginWithFacebook()
+            case .google:
+                user = try await repository.loginWithGoogle()
+            case .apple:
+                user = try await repository.loginWithApple()
+            }
+            
+            dataSource.user = convert(user!)
+            dataSource.isLoading = false
+        } catch {
+            dataSource.isLoading = false
+            throw error
+        }
     }
 }
 
+extension AuthUseCase {
+    func notifyLoading() -> Bool {
+        dataSource.isLoading
+    }
+    
+    func stopLoading() -> Bool {
+        dataSource.isLoading
+    }
+}
 
 // MARK: - User item protocol
-
-private struct UserItem: UserProtocol {
+ 
+struct UserItem: UserProtocol {
     var token: String
     var id: String
     var name: String

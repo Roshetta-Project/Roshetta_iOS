@@ -7,11 +7,17 @@
 
 import Foundation
 
-//protocol AuthUseCaseProtocol {
-//    func facebookAuth(parameters: AuthParametersProtocol) async throws -> UserProtocol?
-//    func googleAuth(parameters: AuthParametersProtocol) async throws -> UserProtocol?
-//    func appleAuth(parameters: AuthParametersProtocol) async throws -> UserProtocol?
-//}
+
+protocol AuthUseCaseProtocol {
+    func execute(type: LoginType) async throws
+    func notifyLoading() -> Bool
+    func stopLoading() -> Bool
+}
+
+protocol AuthUseCaseDependenciesProtocol {
+    var dataSource: AuthDataSourceProtocol { get }
+    var repository: AuthRepositoryProtocol { get }
+}
 
 protocol UserProtocol {
     var token: String { get }
