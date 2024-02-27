@@ -22,7 +22,7 @@ struct AuthViews: View {
     var body: some View {
         Button {
             Task {
-                AuthModuleFactory.shared.isFacebook = true
+//                AuthModuleFactory.shared.isFacebook = true
                 await authViewModel.facebookLogin()
             }
         } label: {
@@ -31,7 +31,7 @@ struct AuthViews: View {
 
         Button {
             Task {
-                AuthModuleFactory.shared.isFacebook = false
+//                AuthModuleFactory.shared.isFacebook = false
                 await authViewModel.googleLogin()
             }
         } label: {

@@ -53,19 +53,10 @@ extension AuthUseCase: AuthUseCaseProtocol {
     func execute(type: LoginType) async throws {
         do {
             dataSource.isLoading = true
-            
             var user: AuthRepositoryResponseProtocol?
-            
-            switch type {
-            case .facebook:
-                user = try await repository.loginWithFacebook()
-            case .google:
-                user = try await repository.loginWithGoogle()
-            case .apple:
-                user = try await repository.loginWithApple()
-            }
-            
-            dataSource.user = convert(user!)
+            user = try await repository.login(with: type)
+            guard let user = user else { throw RequestError.notAllowed }
+            dataSource.user = convert(user)
             dataSource.isLoading = false
         } catch {
             dataSource.isLoading = false

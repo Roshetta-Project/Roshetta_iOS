@@ -14,7 +14,7 @@ class FacebookManger{
     
     private init() { }
         
-    func login() async throws -> String {
+    func getUserToken() async throws -> String {
         let manager = LoginManager()
 
         do {

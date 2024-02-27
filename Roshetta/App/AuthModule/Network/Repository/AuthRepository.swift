@@ -12,10 +12,10 @@ struct AuthParameters: AuthParametersProtocol {
 }
 
 
-struct AuthRepository: AuthRepositoryProtocol {
+class AuthRepository: AuthRepositoryProtocol {
         
     let client: AuthAPIClientProtocol
-    
+        
     init(dependencies: AuthRepositoryDependeciesProtocol) {
         self.client = dependencies.client
     }
@@ -32,7 +32,7 @@ struct AuthRepository: AuthRepositoryProtocol {
                 dateOfBirth: response?.medicalHistory?.dateOfBirth,
                 countryId: response?.medicalHistory?.countryId,
                 cityId: response?.medicalHistory?.cityId,
-                height: response?.medicalHistory?.height,
+                height: response?.medicalHistory?.height,  
                 weight: response?.medicalHistory?.weight,
                 isExerciseAvilable: response?.medicalHistory?.isExerciseAvilable,
                 exerciseType: response?.medicalHistory?.exerciseType,
@@ -43,77 +43,61 @@ struct AuthRepository: AuthRepositoryProtocol {
             )
         )
     }
-}
-
-extension AuthRepository {
-    func loginWithFacebook() async throws -> AuthRepositoryResponseProtocol? {
-        do {
-            var user: AuthRepositoryResponseProtocol?
-            let token = try await FacebookManger.shared.login()
-            let parameters: AuthParametersProtocol = AuthParameters(token: token)
-            user =  try await convert(client.facebookAuth(parameter: parameters))
-            return user
-        } catch {
-            guard let error = error as? SessionDataTaskError else {
-                throw RequestError.unknown
-            }
-            throw RepositoryError(error: error)
+    
+    func login(with type: LoginType) async throws -> AuthRepositoryResponseProtocol? {
+        /// Get user token from Tirhd Party SDKs
+        
+        var thirdPartyManagr: ThirdPartyManagr
+        switch type {
+        case .facebook:
+            thirdPartyManagr = ThirdPartyManagr(loginStrategy: FacebookLogin())
+        case .google:
+            thirdPartyManagr = ThirdPartyManagr(loginStrategy: GoogleLogin())
+        case .apple:
+            thirdPartyManagr = ThirdPartyManagr(loginStrategy: FacebookLogin())
         }
+        let token = try await thirdPartyManagr.getUserToken()
+        
+        /// Send token to backend
+        
+        var user: AuthRepositoryResponseProtocol?
+        user = try await convert(client.login(with: type, parameter: AuthParameters(token: "")))
+        return user
     }
 }
 
-extension AuthRepository {
-    func loginWithGoogle() async throws -> AuthRepositoryResponseProtocol? {
-        do {
-            var user: AuthRepositoryResponseProtocol?
-            let token = try await GoogleManager.shared.login()
-            let parameters: AuthParametersProtocol = AuthParameters(token: token)
-            user =  try await convert(client.facebookAuth(parameter: parameters))
-            return user
-        } catch {
-            guard let error = error as? SessionDataTaskError else {
-                throw RequestError.unknown
-            }
-            throw RepositoryError(error: error)
-        }
+class ThirdPartyManagr: LoginStrategyProtocol {
+    private var loginStrategy: LoginStrategyProtocol
+
+    init(loginStrategy: LoginStrategyProtocol) {
+        self.loginStrategy = loginStrategy
+    }
+    
+    func getUserToken() async throws -> String? {
+        return try await loginStrategy.getUserToken()
     }
 }
 
-extension AuthRepository {
-    func loginWithApple() async throws -> AuthRepositoryResponseProtocol? {
+class FacebookLogin: LoginStrategyProtocol {
+    let manager = FacebookManger.shared
+    
+    func getUserToken() async throws -> String? {
+        let userToken = try await manager.getUserToken()
+        return userToken
+    }
+}
+
+class GoogleLogin: LoginStrategyProtocol {
+    let manager = GoogleManager.shared
+
+    func getUserToken() async throws -> String? {
+        let userToken = try await manager.getUserToken()
+        return userToken
+    }
+}
+
+class AppleLogin: LoginStrategyProtocol {
+    func getUserToken() async throws -> String? {
         return nil
-    }
-}
-
-
-protocol TesetLogin {
-    func login()
-}
-
-class FBLogin: TesetLogin {
-    func login() {
-        print("Hello FB")
-    }
-}
-
-class GoogleLogin: TesetLogin {
-    func login() {
-        print("Hello FB")
-    }
-}
-
-class LoginManagerr {
-    private var loginStratgy: TesetLogin
-    
-    init(loginStratgy: TesetLogin) {
-        self.loginStratgy = loginStratgy
-    }
-    
-    func changeStratgy(loginStratgy: TesetLogin) {
-        self.loginStratgy = loginStratgy
-    }
-    
-    func login() {
-        loginStratgy.login()
     }
 }

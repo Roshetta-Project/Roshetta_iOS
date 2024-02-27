@@ -14,7 +14,7 @@ class GoogleManager {
     
     private init() { }
     
-    func login() async throws -> String {
+    func getUserToken() async throws -> String {
         let user = try await GIDSignIn.sharedInstance.signIn(withPresenting: ApplicationUtilitys.rootViewController).user
         let token = user.accessToken
         let tokenString = token.tokenString

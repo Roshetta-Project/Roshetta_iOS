@@ -12,25 +12,12 @@ protocol AuthModuleFactoryProtocol {
 }
 
 @MainActor
-final class  AuthModuleFactory { 
-    static let shared = AuthModuleFactory()
-    @Published var isFacebook = false
-    private init() {} // Prevent external initialization
-}
+final class  AuthModuleFactory { }
 
 extension AuthModuleFactory: AuthModuleFactoryProtocol {
     func makeView() -> any View {
         let repositoryDependencies = AuthRepositoryDependecies(client: AuthAPIClient(client: BaseAPIClient()))
-        
-        var repository: AuthRepositoryProtocol
-        if isFacebook {
-            print("Hello we change to facebook")
-            repository = AuthRepository(dependencies: repositoryDependencies)
-        } else {
-            print("Hello we change to not facebook")
-            repository = AuthRepository(dependencies: repositoryDependencies)
-        }
-        
+        let repository = AuthRepository(dependencies: repositoryDependencies)
         let useCaseDependencies = AuthUseCaseDependencies(
             dataSource: AuthDataSource(),
             repository: repository
@@ -45,6 +32,7 @@ extension AuthModuleFactory: AuthModuleFactoryProtocol {
 }
 
 // MARK: - AuthViewModelDependenciesProtocol
+
 private struct AuthViewModelDependencies: AuthViewModelDependenciesProtocol {
     var useCase: AuthUseCaseProtocol
 }
@@ -57,6 +45,7 @@ private struct AuthUseCaseDependencies: AuthUseCaseDependenciesProtocol {
 }
 
 // MARK: - AuthViewDependenciesProtocol
+
 private struct AuthViewDependencies: AuthViewDependenciesProtocol {
     var authViewModel: AuthViewModel
 }

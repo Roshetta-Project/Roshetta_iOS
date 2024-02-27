@@ -11,12 +11,15 @@ protocol AuthRepositoryDependeciesProtocol {
     var client: AuthAPIClientProtocol { get }
 }
 
+protocol LoginStrategyProtocol {
+    func getUserToken() async throws -> String?
+}
+
 protocol AuthRepositoryProtocol: UsersRepositoryGettable { }
 
 protocol UsersRepositoryGettable {
-    func loginWithFacebook() async throws -> AuthRepositoryResponseProtocol?
-    func loginWithGoogle() async throws -> AuthRepositoryResponseProtocol?
-    func loginWithApple() async throws -> AuthRepositoryResponseProtocol?
+    func login(with type: LoginType) async throws -> AuthRepositoryResponseProtocol?
+//    func login(loginStrategy: LoginStrategyProtocol) async throws -> AuthRepositoryResponseProtocol?
 }
 
 protocol AuthRepositoryResponseProtocol {
