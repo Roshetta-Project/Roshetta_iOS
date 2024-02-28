@@ -26,7 +26,7 @@ extension AuthModuleFactory: AuthModuleFactoryProtocol {
         let viewModelDependencies = AuthViewModelDependencies(useCase: useCase)
         let viewModel = AuthViewModel(dependencies: viewModelDependencies)
         let viewDependencies = AuthViewDependencies(authViewModel: viewModel)
-        let view = AuthViews(dependencies: viewDependencies)
+        let view = AuthView(dependencies: viewDependencies)
         return view
     }
 }

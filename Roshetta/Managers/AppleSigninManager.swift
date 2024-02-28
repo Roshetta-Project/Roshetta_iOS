@@ -24,7 +24,7 @@ class AppleSigninManager: NSObject, ASAuthorizationControllerDelegate, ASAuthori
             print("Apple Sign In was successful. User's full name is: \(userToken)")
             Task {
                 do {
-                    try await AuthServices().appleAuth(token: userToken)
+//                    try await AuthServices().appleAuth(token: userToken)
                     print("Apple Sign In was successful. User's full name is: \(userToken)")
                 } catch {
                     print(error.localizedDescription)

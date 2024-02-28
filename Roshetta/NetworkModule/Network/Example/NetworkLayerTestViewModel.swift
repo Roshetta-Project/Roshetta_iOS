@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
-class NetworkLayerViewModel: ObservableObject, NetworkServicesMultipart {
+class NetworkLayerViewModel: ObservableObject {
     
     // MARK: - PROPERTYS
     let productApiClient = ProductApiClient(client: BaseAPIClient())

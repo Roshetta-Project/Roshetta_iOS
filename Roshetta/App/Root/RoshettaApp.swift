@@ -33,7 +33,7 @@ struct RoshettaApp: App {
                         /// go to home
                     } else {
 //                        AuthView()
-                        if let authView = AuthModuleFactory().makeView() as? AuthViews {
+                        if let authView = AuthModuleFactory().makeView() as? AuthView {
                             authView
                         }
                     }
