@@ -19,6 +19,12 @@ struct MedicalCenterCard: View {
     // MARK: - VIEW
     var body: some View {
         VStack(alignment: .leading) {
+            HStack{
+                Spacer()
+                Image(systemName: "bookmark.fill")
+                    .foregroundColor(Colors.main)
+            }
+            
             HStack(alignment: .center) {
                 Image("clinc")
                     .resizable()
@@ -29,10 +35,10 @@ struct MedicalCenterCard: View {
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Text(name)
-                        .font(.custom(GFFonts.popinsSemiBold, size: 14))
+                        .font(.custom(GFFonts.SeguiSemiBold, size: 14))
                         .minimumScaleFactor(0.5)
                         .lineLimit(1)
-                        .foregroundColor(Colors.text)
+                        .foregroundColor(Color.black)
                     
                     HStack {
                         ForEach(0..<5) { index in
@@ -51,14 +57,15 @@ struct MedicalCenterCard: View {
             }
             .padding(.top, 16)
         }
-        .padding(16)
-        .padding(.horizontal, 8)
-        .background(Color.gray.opacity(0.05))
-        .clipShape(RoundedRectangle(cornerRadius: 8))
-        .overlay(
-            RoundedRectangle(cornerRadius: 8)
-                .stroke(Colors.main, lineWidth: 1)
-        )
+        .padding(12)
+        .background(
+              RoundedRectangle(cornerRadius: 8)
+                  .foregroundColor(Color.white)
+                  .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+          )
+        .frame(width: 200)
+
+        
     }
 }
 
