@@ -13,10 +13,10 @@
 		7F196E9B2B6F97F100CBBD6A /* AuthModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E9A2B6F97F100CBBD6A /* AuthModuleFactory.swift */; };
 		7F196E9F2B6F983300CBBD6A /* AuthUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E9E2B6F983300CBBD6A /* AuthUseCaseProtocol.swift */; };
 		7F196EA12B6F9B6100CBBD6A /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196EA02B6F9B6100CBBD6A /* AuthUseCase.swift */; };
+		7F260F9F2BAA2FF60067A214 /* AuthDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F260F9E2BAA2FF60067A214 /* AuthDataSourceProtocol.swift */; };
 		7F388C162B87622500FE021B /* AuthViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F388C152B87622500FE021B /* AuthViewModelProtocol.swift */; };
 		7F388C182B8762EA00FE021B /* AuthViewModell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F388C172B8762EA00FE021B /* AuthViewModell.swift */; };
 		7F388C1C2B8777E200FE021B /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F388C1B2B8777E200FE021B /* AuthView.swift */; };
-		7F48B4AB2B852A2F00B2AD82 /* AuthDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F48B4AA2B852A2F00B2AD82 /* AuthDataSourceProtocol.swift */; };
 		7F48B4AD2B852ADE00B2AD82 /* AuthDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F48B4AC2B852ADE00B2AD82 /* AuthDataSource.swift */; };
 		7F48B4AF2B85315500B2AD82 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F48B4AE2B85315500B2AD82 /* RepositoryError.swift */; };
 		7F50EC732AF016110060D6B6 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50EC722AF016110060D6B6 /* GoogleSignIn */; };
@@ -110,11 +110,11 @@
 		7F196E9A2B6F97F100CBBD6A /* AuthModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleFactory.swift; sourceTree = "<group>"; };
 		7F196E9E2B6F983300CBBD6A /* AuthUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCaseProtocol.swift; sourceTree = "<group>"; };
 		7F196EA02B6F9B6100CBBD6A /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
+		7F260F9E2BAA2FF60067A214 /* AuthDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataSourceProtocol.swift; sourceTree = "<group>"; };
 		7F388C152B87622500FE021B /* AuthViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelProtocol.swift; sourceTree = "<group>"; };
 		7F388C172B8762EA00FE021B /* AuthViewModell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModell.swift; sourceTree = "<group>"; };
 		7F388C1B2B8777E200FE021B /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		7F47CD672B646D0F00228CFA /* RoshettaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoshettaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F48B4AA2B852A2F00B2AD82 /* AuthDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthDataSourceProtocol.swift; path = ../../../../../../../AuthDataSourceProtocol.swift; sourceTree = "<group>"; };
 		7F48B4AC2B852ADE00B2AD82 /* AuthDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataSource.swift; sourceTree = "<group>"; };
 		7F48B4AE2B85315500B2AD82 /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
 		7F50EC762AF052ED0060D6B6 /* GoogleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleManager.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 		7F196E9C2B6F97FB00CBBD6A /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				7F48B4AA2B852A2F00B2AD82 /* AuthDataSourceProtocol.swift */,
+				7F260F9E2BAA2FF60067A214 /* AuthDataSourceProtocol.swift */,
 				7F48B4AC2B852ADE00B2AD82 /* AuthDataSource.swift */,
 			);
 			path = DataSource;
@@ -857,7 +857,6 @@
 				7F5E43182AEBF645008C2FC1 /* OnboardingView.swift in Sources */,
 				7F48B4AD2B852ADE00B2AD82 /* AuthDataSource.swift in Sources */,
 				7FC67AF22B27B701000A5586 /* RegularURLRequestStrategy.swift in Sources */,
-				7F48B4AB2B852A2F00B2AD82 /* AuthDataSourceProtocol.swift in Sources */,
 				7FC67AE92B27B548000A5586 /* APIRequestConfiguration.swift in Sources */,
 				7F988EC32AE2D34000E0BCBD /* OTPTextField.swift in Sources */,
 				7FC67AEF2B27B6D6000A5586 /* URLRequestStrategy.swift in Sources */,
@@ -880,6 +879,7 @@
 				7F988EA02AE2D29900E0BCBD /* LanguageManager.swift in Sources */,
 				7F5E430B2AEBE88B008C2FC1 /* SplashViewModel.swift in Sources */,
 				7F884CBE2B6C1CD200B82521 /* TitleTextModifir.swift in Sources */,
+				7F260F9F2BAA2FF60067A214 /* AuthDataSourceProtocol.swift in Sources */,
 				7F5E43052AEBE3AF008C2FC1 /* SFSymbols.swift in Sources */,
 				7FC67AF42B27B763000A5586 /* MultipartURLRequestStrategy.swift in Sources */,
 				7F81F4912B6E931A00C8016B /* AuthAPIClient.swift in Sources */,
