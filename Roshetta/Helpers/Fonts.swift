@@ -12,4 +12,8 @@ enum GFFonts {
     static let popinsMedium = "Poppins-Medium"
     static let popinsSemiBold = "Poppins-SemiBold"
     static let roman = "Times New Roman Bold"
+    static let Segui = "Segoe UI"
+    static let SeguiBold = "Segoe UI Bold"
+    static let SeguiSemiBold = "Segoe UI Semibold"
+   
 }

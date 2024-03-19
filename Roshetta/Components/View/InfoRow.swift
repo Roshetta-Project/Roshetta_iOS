@@ -12,10 +12,10 @@ struct InfoRow: View {
     let text: String
 
     var body: some View {
-        HStack(spacing: 0) {
+        HStack(spacing: 8) {
             symbol
             Text(text)
-                .font(.custom(GFFonts.popinsMedium, size: 10))
+                .font(.custom(GFFonts.SeguiSemiBold, size: 10))
                 .minimumScaleFactor(0.5)
                 .lineLimit(1)
                 .foregroundColor(Colors.text.opacity(0.6))
