@@ -18,6 +18,7 @@ class GoogleManager {
         let user = try await GIDSignIn.sharedInstance.signIn(withPresenting: ApplicationUtilitys.rootViewController).user
         let token = user.accessToken
         let tokenString = token.tokenString
+        print(tokenString)
         return tokenString
     }
 }

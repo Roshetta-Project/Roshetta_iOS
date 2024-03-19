@@ -11,7 +11,7 @@
 			<string>google</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.562711267687-l9j2lpilm8g0nl54htd3vifcaele433p</string>
+				<string>com.googleusercontent.apps.283587211506-606trqdah8hnidl55860dudkgtpedfv8</string>
 			</array>
 		</dict>
 		<dict>
@@ -21,18 +21,18 @@
 			<string>faceebook</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb263951256133910</string>
+				<string>fb777880483743696</string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>263951256133910</string>
+	<string>777880483743696</string>
 	<key>FacebookClientToken</key>
-	<string>979ff79524919f84e016837f8c5c63b4</string>
+	<string>69ad65294f32ff6509ee2c1c45f37ff8</string>
 	<key>FacebookDisplayName</key>
 	<string>Roshetta-app</string>
 	<key>GIDClientID</key>
-	<string>562711267687-l9j2lpilm8g0nl54htd3vifcaele433p.apps.googleusercontent.com</string>
+	<string>283587211506-606trqdah8hnidl55860dudkgtpedfv8.apps.googleusercontent.com</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
