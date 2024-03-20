@@ -26,7 +26,7 @@ struct CenterDetailsView: View {
                     GFButton(isLoading: .constant(false),
                              text: "Book Now",
                              backgroundColor: Colors.main,
-                             foregroundColot: Colors.text) {
+                             foregroundColot: Color.white) {
                         // TODO: - Book
                     }
                              .padding(.top, 24)
@@ -55,12 +55,12 @@ struct CenterDetailsView: View {
             LogoImageView(image: "clinc")
             HStack(spacing: 0){
                 Text("Family Care ")
-                    .foregroundColor(Colors.text)
-                    .font(.custom(GFFonts.popinsSemiBold, size: 20))
+                    .foregroundColor(Color.black)
+                    .font(.custom(GFFonts.SeguiSemiBold, size: 20))
 
                 Text("Clinic ")
-                    .foregroundColor(Colors.text.opacity(0.6))
-                    .font(.custom(GFFonts.popinsMedium, size: 20))
+                    .foregroundColor(Color.gray)
+                    .font(.custom(GFFonts.SeguiSemiBold, size: 20))
             }//:HStack
 
             HStack {
@@ -92,7 +92,7 @@ struct CenterDetailsView: View {
                                    location: "Mansoura")
                     }
                 }//:HStack
-                .padding(1)
+                .padding(2)
             }//:ScrollView
         }//:Vstack
     }
@@ -134,8 +134,18 @@ struct CenterDetailsView: View {
     }
     private func reviewSection() -> some View {
         VStack(alignment: .leading, spacing: 8){
-            Text("Reviews")
-                .modifier(TitleTextModifir())
+            HStack(spacing:20){
+                Text("Reviews")
+                    .modifier(TitleTextModifir())
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Text("See All")
+                        .multilineTextAlignment(.trailing)
+                        .underline(true, color: .gray)
+                        .font(.custom(GFFonts.SeguiSemiBold, size: 14))
+                        .foregroundColor(Color.gray)
+                        
+                })
+            }
 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {

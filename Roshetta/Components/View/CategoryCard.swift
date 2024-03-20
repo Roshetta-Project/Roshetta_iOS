@@ -19,10 +19,10 @@ struct CategoryCard: View {
                 .frame(width: 24,height: 32)
 
             Text(name)
-                .font(.custom(GFFonts.roman, size: 14))
-                .foregroundColor(Colors.text.opacity(0.85))
+                .font(.custom(GFFonts.SeguiSemiBold, size: 14))
+                .foregroundColor(Color.gray)
         }//Vstack
-        .padding(10)
+        .padding(8)
         .padding(.horizontal, 5)
         .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 0)
         .clipShape(RoundedRectangle(cornerRadius: 8))

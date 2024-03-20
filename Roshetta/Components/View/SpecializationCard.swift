@@ -19,7 +19,7 @@ struct SpecializationCard: View {
 
             Text (specialization)
                 .font(.custom(GFFonts.roman, size: 15))
-                .foregroundColor(Color("mainBold"))
+                .foregroundColor(Color.gray)
         }//HStack
         .padding(8)
         .background(Color.gray.opacity(0.05))

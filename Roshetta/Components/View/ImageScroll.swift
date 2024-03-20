@@ -10,9 +10,9 @@ import SwiftUI
 struct ImageScroll: View {
     @State private var selectedImage: ImageInfo?
     let images = [
-        ImageInfo(name: "medicalC"),
         ImageInfo(name: "clinc"),
-        ImageInfo(name: "medicalC"),
+        ImageInfo(name: "clinc"),
+        ImageInfo(name: "clinc"),
         ImageInfo(name: "clinc")
     ]
 

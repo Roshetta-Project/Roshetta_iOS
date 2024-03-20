@@ -26,7 +26,7 @@ struct DoctorDetailsView: View {
                     GFButton(isLoading: .constant(false),
                              text: "Book Now",
                              backgroundColor: Colors.main,
-                             foregroundColot: Colors.text) {
+                             foregroundColot: Color.white) {
                         // TODO: - Book
                     }
                              .padding(.top, 24)
@@ -54,8 +54,8 @@ struct DoctorDetailsView: View {
             StatusImageView(image: "user")
 
             Text("Dr. Abdalzem Saleh")
-                .foregroundColor(Colors.text)
-                .font(.custom(GFFonts.popinsSemiBold, size: 20))
+                .foregroundColor(Color.black)
+                .font(.custom(GFFonts.SeguiSemiBold, size: 20))
 
             HStack {
                 ForEach(0 ..< 5) { index in
@@ -110,6 +110,7 @@ struct DoctorDetailsView: View {
                                   location: "Mansoura")
                     }
                 }
+                .padding(2)
             }
         }
     }
@@ -132,8 +133,18 @@ struct DoctorDetailsView: View {
 
     private func reviewsSection() -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Reviews")
-                .modifier(TitleTextModifir())
+            HStack(spacing:20){
+                Text("Reviews")
+                    .modifier(TitleTextModifir())
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Text("See All")
+                        .multilineTextAlignment(.trailing)
+                        .underline(true, color: .gray)
+                        .font(.custom(GFFonts.SeguiSemiBold, size: 14))
+                        .foregroundColor(Color.gray)
+                        
+                })
+            }
 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {

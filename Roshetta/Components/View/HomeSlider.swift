@@ -23,8 +23,12 @@ struct HomeSlider: View {
             }
         }
         .frame(width: UIScreen.main.bounds.size.width - 40, height: 184)
-        .cornerRadius(15)
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+        .clipShape(RoundedRectangle(cornerRadius: 15))
+        .overlay(
+            RoundedRectangle(cornerRadius: 15)
+                .stroke(Colors.main, lineWidth: 1)
+        )
     }
     
     // MARK: - FUNCTIONS
@@ -32,14 +36,13 @@ struct HomeSlider: View {
     private func slideView(for imageName: String) -> some View {
         Image(imageName)
             .resizable()
-            .aspectRatio(contentMode: .fill)
             .cornerRadius(15)
+            .aspectRatio(contentMode: .fill)
     }
-
 }
 
 struct HomeSlider_Previews: PreviewProvider {
     static var previews: some View {
-        HomeSlider(slides: .constant(["Banner", "Banner"]))
+        HomeSlider(slides: .constant(["Banner", "Banner","user"]))
     }
 }

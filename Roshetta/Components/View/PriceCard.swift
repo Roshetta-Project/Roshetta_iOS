@@ -17,7 +17,7 @@ struct PriceCard: View {
             Image(image)
 
             Text(price + " L.E")
-                .font(.custom(GFFonts.popinsSemiBold, size: 15))
+                .font(.custom(GFFonts.SeguiSemiBold, size: 15))
                 .foregroundColor(Colors.text.opacity(0.65))
         }//HStacks
         .padding(8)
