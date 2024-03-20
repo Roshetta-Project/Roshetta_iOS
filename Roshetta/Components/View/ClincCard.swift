@@ -17,6 +17,7 @@ struct ClincCard: View {
     
     // MARK: - VIEW
     var body: some View {
+
         HStack(alignment: .center, spacing: 8) {
             Image("clinc")
                 .resizable()
@@ -25,7 +26,13 @@ struct ClincCard: View {
                 .frame(width: 64, height: 64)
                 .shadow(color: .black.opacity(0.1), radius: 2, x: 2, y: 4)
             
+            
             VStack(alignment: .leading, spacing: 4) {
+                HStack{
+                    Spacer()
+                    Image(systemName: "bookmark.fill")
+                        .foregroundColor(Colors.main)
+                }
                 Text(name)
                     .font(.custom(GFFonts.SeguiSemiBold, size: 14))
                     .minimumScaleFactor(0.5)
@@ -40,7 +47,7 @@ struct ClincCard: View {
                             .frame(width: 12, height: 12)
                     }
                 }//: RATING STARS
-
+                
                 VStack(alignment: .leading, spacing: 8) {
                     InfoRow(symbol: SFSymbols.price, text: price)
                     InfoRow(symbol: SFSymbols.locationPin, text: location)
@@ -50,15 +57,15 @@ struct ClincCard: View {
             }
         }
         .padding(8)
-        .background(Color.gray.opacity(0.05))
-        .clipShape(RoundedRectangle(cornerRadius: 8))
         .background(
-              RoundedRectangle(cornerRadius: 8)
-                  .foregroundColor(Color.white)
-                  .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
-          )
+            RoundedRectangle(cornerRadius: 8)
+                .foregroundColor(Color.white)
+                .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+        )
         .frame(width: 216, height: 148)
-    }
+    
+        
+}
 }
 
 struct ClincCard_Previews: PreviewProvider {
