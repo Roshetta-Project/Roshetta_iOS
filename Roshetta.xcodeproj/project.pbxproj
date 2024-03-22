@@ -108,6 +108,7 @@
 		7FC67AEF2B27B6D6000A5586 /* URLRequestStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AEE2B27B6D6000A5586 /* URLRequestStrategy.swift */; };
 		7FC67AF22B27B701000A5586 /* RegularURLRequestStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AF12B27B701000A5586 /* RegularURLRequestStrategy.swift */; };
 		7FC67AF42B27B763000A5586 /* MultipartURLRequestStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AF32B27B763000A5586 /* MultipartURLRequestStrategy.swift */; };
+		CC3C83AD2BACFAF60025AF74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C83AC2BACFAF60025AF74 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +225,7 @@
 		7FC67AEE2B27B6D6000A5586 /* URLRequestStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestStrategy.swift; sourceTree = "<group>"; };
 		7FC67AF12B27B701000A5586 /* RegularURLRequestStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularURLRequestStrategy.swift; sourceTree = "<group>"; };
 		7FC67AF32B27B763000A5586 /* MultipartURLRequestStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartURLRequestStrategy.swift; sourceTree = "<group>"; };
+		CC3C83AC2BACFAF60025AF74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -513,6 +515,7 @@
 				7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */,
 				7F884CC12B6C1D5D00B82521 /* ClinicDetailsView.swift */,
 				7F884CC32B6C1D9400B82521 /* DoctorDetailsView.swift */,
+				CC3C83AC2BACFAF60025AF74 /* HomeView.swift */,
 			);
 			path = "Detaild Screen";
 			sourceTree = "<group>";
@@ -940,6 +943,7 @@
 				7F388C1C2B8777E200FE021B /* AuthView.swift in Sources */,
 				7F884CD42B6C1E5400B82521 /* StatusImageView.swift in Sources */,
 				7F884CC02B6C1D3800B82521 /* CenterDetailsView.swift in Sources */,
+				CC3C83AD2BACFAF60025AF74 /* HomeView.swift in Sources */,
 				7F5E42ED2AEBD782008C2FC1 /* RoshettaAppViewModel.swift in Sources */,
 				7FC67AE42B2785D0000A5586 /* BaseAPIClient.swift in Sources */,
 				7F884CCE2B6C1E1900B82521 /* PriceCard.swift in Sources */,
