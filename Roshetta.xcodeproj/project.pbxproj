@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26547FF32BAF6B0C00AD302B /* CircularGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26547FF22BAF6B0C00AD302B /* CircularGradient.swift */; };
 		2665AABD2BAA37A400CE29F3 /* Segoe UI Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AAB92BAA37A400CE29F3 /* Segoe UI Bold.ttf */; };
 		2665AABE2BAA37A400CE29F3 /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AABA2BAA37A400CE29F3 /* Segoe UI.ttf */; };
 		2665AAC42BAA3AD500CE29F3 /* Segoe UI Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */; };
@@ -107,6 +108,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26547FF22BAF6B0C00AD302B /* CircularGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGradient.swift; sourceTree = "<group>"; };
 		2665AAB92BAA37A400CE29F3 /* Segoe UI Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Bold.ttf"; sourceTree = "<group>"; };
 		2665AABA2BAA37A400CE29F3 /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
 		2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Semibold.ttf"; sourceTree = "<group>"; };
@@ -631,6 +633,7 @@
 				7F884CCF2B6C1E2C00B82521 /* ReviewCard.swift */,
 				7F884CD12B6C1E4800B82521 /* SpecializationCard.swift */,
 				7F884CD32B6C1E5400B82521 /* StatusImageView.swift */,
+				26547FF22BAF6B0C00AD302B /* CircularGradient.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -892,6 +895,7 @@
 				7F5E430B2AEBE88B008C2FC1 /* SplashViewModel.swift in Sources */,
 				7F884CBE2B6C1CD200B82521 /* TitleTextModifir.swift in Sources */,
 				7F260F9F2BAA2FF60067A214 /* AuthDataSourceProtocol.swift in Sources */,
+				26547FF32BAF6B0C00AD302B /* CircularGradient.swift in Sources */,
 				7F5E43052AEBE3AF008C2FC1 /* SFSymbols.swift in Sources */,
 				7FC67AF42B27B763000A5586 /* MultipartURLRequestStrategy.swift in Sources */,
 				7F81F4912B6E931A00C8016B /* AuthAPIClient.swift in Sources */,
