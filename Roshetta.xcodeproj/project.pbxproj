@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		26547FF32BAF6B0C00AD302B /* CircularGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26547FF22BAF6B0C00AD302B /* CircularGradient.swift */; };
+		26547FF72BAF6F2700AD302B /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26547FF62BAF6F2700AD302B /* SideMenuView.swift */; };
+		26547FF92BAF73E300AD302B /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26547FF82BAF73E300AD302B /* TabButton.swift */; };
+		26547FFB2BAF805E00AD302B /* MenuSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26547FFA2BAF805E00AD302B /* MenuSide.swift */; };
+		265480012BAF852100AD302B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265480002BAF852100AD302B /* Home.swift */; };
 		2665AABD2BAA37A400CE29F3 /* Segoe UI Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AAB92BAA37A400CE29F3 /* Segoe UI Bold.ttf */; };
 		2665AABE2BAA37A400CE29F3 /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AABA2BAA37A400CE29F3 /* Segoe UI.ttf */; };
 		2665AAC42BAA3AD500CE29F3 /* Segoe UI Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */; };
@@ -109,6 +113,10 @@
 
 /* Begin PBXFileReference section */
 		26547FF22BAF6B0C00AD302B /* CircularGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGradient.swift; sourceTree = "<group>"; };
+		26547FF62BAF6F2700AD302B /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		26547FF82BAF73E300AD302B /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		26547FFA2BAF805E00AD302B /* MenuSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSide.swift; sourceTree = "<group>"; };
+		265480002BAF852100AD302B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		2665AAB92BAA37A400CE29F3 /* Segoe UI Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Bold.ttf"; sourceTree = "<group>"; };
 		2665AABA2BAA37A400CE29F3 /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
 		2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Semibold.ttf"; sourceTree = "<group>"; };
@@ -221,6 +229,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26547FF42BAF6EF100AD302B /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				26547FF52BAF6F1200AD302B /* View */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		26547FF52BAF6F1200AD302B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26547FF62BAF6F2700AD302B /* SideMenuView.swift */,
+				26547FF82BAF73E300AD302B /* TabButton.swift */,
+				26547FFA2BAF805E00AD302B /* MenuSide.swift */,
+				265480002BAF852100AD302B /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7F0D4CE02AE799AA0057C1CE /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -652,6 +679,7 @@
 		7F988ECE2AE2D3F800E0BCBD /* App */ = {
 			isa = PBXGroup;
 			children = (
+				26547FF42BAF6EF100AD302B /* SideMenu */,
 				7F0D4CE02AE799AA0057C1CE /* Root */,
 				7F5E43072AEBE844008C2FC1 /* Splash */,
 				7F0D4CE22AE799BD0057C1CE /* Onboarding */,
@@ -874,7 +902,9 @@
 				7FC67AF22B27B701000A5586 /* RegularURLRequestStrategy.swift in Sources */,
 				7FC67AE92B27B548000A5586 /* APIRequestConfiguration.swift in Sources */,
 				7F988EC32AE2D34000E0BCBD /* OTPTextField.swift in Sources */,
+				26547FF92BAF73E300AD302B /* TabButton.swift in Sources */,
 				7FC67AEF2B27B6D6000A5586 /* URLRequestStrategy.swift in Sources */,
+				26547FF72BAF6F2700AD302B /* SideMenuView.swift in Sources */,
 				7F196EA12B6F9B6100CBBD6A /* AuthUseCase.swift in Sources */,
 				7FC67AED2B27B5B6000A5586 /* URLRequestConvertible.swift in Sources */,
 				7F884CE32B6C269100B82521 /* RoundedImage.swift in Sources */,
@@ -892,10 +922,12 @@
 				7FC67AEB2B27B56D000A5586 /* MultipartAPIRequestConfiguration.swift in Sources */,
 				7F884CC42B6C1D9400B82521 /* DoctorDetailsView.swift in Sources */,
 				7F988EA02AE2D29900E0BCBD /* LanguageManager.swift in Sources */,
+				265480012BAF852100AD302B /* Home.swift in Sources */,
 				7F5E430B2AEBE88B008C2FC1 /* SplashViewModel.swift in Sources */,
 				7F884CBE2B6C1CD200B82521 /* TitleTextModifir.swift in Sources */,
 				7F260F9F2BAA2FF60067A214 /* AuthDataSourceProtocol.swift in Sources */,
 				26547FF32BAF6B0C00AD302B /* CircularGradient.swift in Sources */,
+				26547FFB2BAF805E00AD302B /* MenuSide.swift in Sources */,
 				7F5E43052AEBE3AF008C2FC1 /* SFSymbols.swift in Sources */,
 				7FC67AF42B27B763000A5586 /* MultipartURLRequestStrategy.swift in Sources */,
 				7F81F4912B6E931A00C8016B /* AuthAPIClient.swift in Sources */,
