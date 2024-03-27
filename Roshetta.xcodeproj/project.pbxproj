@@ -18,6 +18,7 @@
 		26FAD1DD2BB49F9A0025650F /* ReservationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1DC2BB49F9A0025650F /* ReservationCard.swift */; };
 		26FAD1DF2BB4A7310025650F /* BigReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1DE2BB4A7310025650F /* BigReviewCard.swift */; };
 		26FAD1E12BB4AA0F0025650F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1E02BB4AA0F0025650F /* SearchBar.swift */; };
+		26FAD1E32BB4AF790025650F /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1E22BB4AF790025650F /* NotificationCard.swift */; };
 		7F196E912B6F92ED00CBBD6A /* UserNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E902B6F92ED00CBBD6A /* UserNetworkResponse.swift */; };
 		7F196E932B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E922B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift */; };
 		7F196E952B6F942100CBBD6A /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E942B6F942100CBBD6A /* AuthRepository.swift */; };
@@ -126,6 +127,7 @@
 		26FAD1DC2BB49F9A0025650F /* ReservationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCard.swift; sourceTree = "<group>"; };
 		26FAD1DE2BB4A7310025650F /* BigReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigReviewCard.swift; sourceTree = "<group>"; };
 		26FAD1E02BB4AA0F0025650F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		26FAD1E22BB4AF790025650F /* NotificationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCard.swift; sourceTree = "<group>"; };
 		7F196E902B6F92ED00CBBD6A /* UserNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkResponse.swift; sourceTree = "<group>"; };
 		7F196E922B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryResponseProtocol.swift; sourceTree = "<group>"; };
 		7F196E942B6F942100CBBD6A /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
@@ -670,6 +672,7 @@
 				26547FF22BAF6B0C00AD302B /* CircularGradient.swift */,
 				26FAD1DC2BB49F9A0025650F /* ReservationCard.swift */,
 				26FAD1E02BB4AA0F0025650F /* SearchBar.swift */,
+				26FAD1E22BB4AF790025650F /* NotificationCard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -932,6 +935,7 @@
 				7F884CC22B6C1D5D00B82521 /* ClinicDetailsView.swift in Sources */,
 				7FC67AEB2B27B56D000A5586 /* MultipartAPIRequestConfiguration.swift in Sources */,
 				7F884CC42B6C1D9400B82521 /* DoctorDetailsView.swift in Sources */,
+				26FAD1E32BB4AF790025650F /* NotificationCard.swift in Sources */,
 				7F988EA02AE2D29900E0BCBD /* LanguageManager.swift in Sources */,
 				265480012BAF852100AD302B /* Home.swift in Sources */,
 				7F5E430B2AEBE88B008C2FC1 /* SplashViewModel.swift in Sources */,
