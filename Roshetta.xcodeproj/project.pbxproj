@@ -17,6 +17,7 @@
 		2665AAC42BAA3AD500CE29F3 /* Segoe UI Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */; };
 		26FAD1DD2BB49F9A0025650F /* ReservationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1DC2BB49F9A0025650F /* ReservationCard.swift */; };
 		26FAD1DF2BB4A7310025650F /* BigReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1DE2BB4A7310025650F /* BigReviewCard.swift */; };
+		26FAD1E12BB4AA0F0025650F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1E02BB4AA0F0025650F /* SearchBar.swift */; };
 		7F196E912B6F92ED00CBBD6A /* UserNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E902B6F92ED00CBBD6A /* UserNetworkResponse.swift */; };
 		7F196E932B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E922B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift */; };
 		7F196E952B6F942100CBBD6A /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E942B6F942100CBBD6A /* AuthRepository.swift */; };
@@ -124,6 +125,7 @@
 		2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Semibold.ttf"; sourceTree = "<group>"; };
 		26FAD1DC2BB49F9A0025650F /* ReservationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCard.swift; sourceTree = "<group>"; };
 		26FAD1DE2BB4A7310025650F /* BigReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigReviewCard.swift; sourceTree = "<group>"; };
+		26FAD1E02BB4AA0F0025650F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		7F196E902B6F92ED00CBBD6A /* UserNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkResponse.swift; sourceTree = "<group>"; };
 		7F196E922B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryResponseProtocol.swift; sourceTree = "<group>"; };
 		7F196E942B6F942100CBBD6A /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
@@ -667,6 +669,7 @@
 				7F884CD32B6C1E5400B82521 /* StatusImageView.swift */,
 				26547FF22BAF6B0C00AD302B /* CircularGradient.swift */,
 				26FAD1DC2BB49F9A0025650F /* ReservationCard.swift */,
+				26FAD1E02BB4AA0F0025650F /* SearchBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -942,6 +945,7 @@
 				7F196E932B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift in Sources */,
 				7F988EC12AE2D34000E0BCBD /* GFButton.swift in Sources */,
 				7F6CA33C2AEF0AA400BAB446 /* FacebookManager.swift in Sources */,
+				26FAD1E12BB4AA0F0025650F /* SearchBar.swift in Sources */,
 				7F48B4AF2B85315500B2AD82 /* RepositoryError.swift in Sources */,
 				7F78B6132B61DA5B004DB15E /* NetworkLayerTestViewModel.swift in Sources */,
 				7F196E912B6F92ED00CBBD6A /* UserNetworkResponse.swift in Sources */,
