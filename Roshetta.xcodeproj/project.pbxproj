@@ -13,6 +13,7 @@
 		26547FFB2BAF805E00AD302B /* MenuSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26547FFA2BAF805E00AD302B /* MenuSide.swift */; };
 		265480012BAF852100AD302B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265480002BAF852100AD302B /* Home.swift */; };
 		265B45542BB8ECC700C0CA06 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B45532BB8ECC700C0CA06 /* NotificationsView.swift */; };
+		265B45582BB8F65300C0CA06 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B45572BB8F65300C0CA06 /* TabBarView.swift */; };
 		2665AABD2BAA37A400CE29F3 /* Segoe UI Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AAB92BAA37A400CE29F3 /* Segoe UI Bold.ttf */; };
 		2665AABE2BAA37A400CE29F3 /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AABA2BAA37A400CE29F3 /* Segoe UI.ttf */; };
 		2665AAC42BAA3AD500CE29F3 /* Segoe UI Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */; };
@@ -123,6 +124,7 @@
 		26547FFA2BAF805E00AD302B /* MenuSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSide.swift; sourceTree = "<group>"; };
 		265480002BAF852100AD302B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		265B45532BB8ECC700C0CA06 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		265B45572BB8F65300C0CA06 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		2665AAB92BAA37A400CE29F3 /* Segoe UI Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Bold.ttf"; sourceTree = "<group>"; };
 		2665AABA2BAA37A400CE29F3 /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
 		2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Semibold.ttf"; sourceTree = "<group>"; };
@@ -270,6 +272,22 @@
 			isa = PBXGroup;
 			children = (
 				265B45532BB8ECC700C0CA06 /* NotificationsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		265B45552BB8F64300C0CA06 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				265B45562BB8F64900C0CA06 /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		265B45562BB8F64900C0CA06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				265B45572BB8F65300C0CA06 /* TabBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -709,6 +727,7 @@
 		7F988ECE2AE2D3F800E0BCBD /* App */ = {
 			isa = PBXGroup;
 			children = (
+				265B45552BB8F64300C0CA06 /* TabBar */,
 				265B45502BB8EC9D00C0CA06 /* Notifications */,
 				26547FF42BAF6EF100AD302B /* SideMenu */,
 				7F0D4CE02AE799AA0057C1CE /* Root */,
@@ -960,6 +979,7 @@
 				7F5E430B2AEBE88B008C2FC1 /* SplashViewModel.swift in Sources */,
 				7F884CBE2B6C1CD200B82521 /* TitleTextModifir.swift in Sources */,
 				7F260F9F2BAA2FF60067A214 /* AuthDataSourceProtocol.swift in Sources */,
+				265B45582BB8F65300C0CA06 /* TabBarView.swift in Sources */,
 				26547FF32BAF6B0C00AD302B /* CircularGradient.swift in Sources */,
 				26547FFB2BAF805E00AD302B /* MenuSide.swift in Sources */,
 				7F5E43052AEBE3AF008C2FC1 /* SFSymbols.swift in Sources */,
