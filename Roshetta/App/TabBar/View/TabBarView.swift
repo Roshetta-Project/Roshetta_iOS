@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
     @State private var selectedTab = 0
     
@@ -39,25 +38,6 @@ struct ContentView: View {
         .edgesIgnoringSafeArea(.bottom)
     }
 }
-
-
-
-    struct HomeView: View {
-        var body: some View {
-            Text("Home Screen")
-                .font(.title)
-                .padding()
-        }
-    }
-
-    struct ReservationsView: View {
-        var body: some View {
-            Text("Reservations Screen")
-                .font(.title)
-                .padding()
-        }
-    }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
