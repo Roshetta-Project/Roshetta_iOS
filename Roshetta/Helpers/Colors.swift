@@ -11,5 +11,5 @@ enum Colors {
     static let main = Color("main")
     static let secondary = Color("secondary")
     static let text = Color("text")
-    static let menuBar = Color("menuBar")
+    static let MenuBar = Color("MenuBar")
 }

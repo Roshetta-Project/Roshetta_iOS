@@ -13,7 +13,7 @@ struct Home: View {
         TabView(selection:$selectedTab){
             
            //views
-            Notifications()
+            NotificationsView()
                 .tag("Notifications")
             
             DoctorDetailsView()
@@ -53,15 +53,7 @@ struct Notifications: View {
     }
 }
 
-struct Saved: View {
-    var body: some View {
-        NavigationView{
-            Text("Saved")
-                .foregroundColor(.black)
-                .navigationTitle("Saved")
-        }
-    }
-}
+
 
 struct Scanner: View {
     var body: some View {

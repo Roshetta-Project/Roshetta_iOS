@@ -17,7 +17,7 @@ struct SideMenuView: View {
     // MARK: - Body
     var body: some View {
         ZStack{
-            Colors.menuBar
+            Colors.MenuBar
                 .ignoresSafeArea()
              //menuside
             MenuSide(selectedTab: $selectedTab, animation: animation)
