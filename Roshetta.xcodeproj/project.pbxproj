@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262C0C392BB9C27100565DC1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C0C382BB9C27100565DC1 /* ProfileView.swift */; };
+		262C0C3B2BB9C7D800565DC1 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C0C3A2BB9C7D800565DC1 /* ProfileImage.swift */; };
+		262C0C3D2BB9CC1000565DC1 /* ProfileViewSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C0C3C2BB9CC1000565DC1 /* ProfileViewSections.swift */; };
 		26547FF32BAF6B0C00AD302B /* CircularGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26547FF22BAF6B0C00AD302B /* CircularGradient.swift */; };
 		26547FF72BAF6F2700AD302B /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26547FF62BAF6F2700AD302B /* SideMenuView.swift */; };
 		26547FF92BAF73E300AD302B /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26547FF82BAF73E300AD302B /* TabButton.swift */; };
@@ -118,6 +121,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		262C0C382BB9C27100565DC1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		262C0C3A2BB9C7D800565DC1 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
+		262C0C3C2BB9CC1000565DC1 /* ProfileViewSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewSections.swift; sourceTree = "<group>"; };
 		26547FF22BAF6B0C00AD302B /* CircularGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGradient.swift; sourceTree = "<group>"; };
 		26547FF62BAF6F2700AD302B /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		26547FF82BAF73E300AD302B /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
@@ -241,6 +247,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		262C0C362BB9C25B00565DC1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				262C0C372BB9C26600565DC1 /* View */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		262C0C372BB9C26600565DC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				262C0C382BB9C27100565DC1 /* ProfileView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		26547FF42BAF6EF100AD302B /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -709,6 +731,8 @@
 				26FAD1DC2BB49F9A0025650F /* ReservationCard.swift */,
 				26FAD1E02BB4AA0F0025650F /* SearchBar.swift */,
 				26FAD1E22BB4AF790025650F /* NotificationCard.swift */,
+				262C0C3A2BB9C7D800565DC1 /* ProfileImage.swift */,
+				262C0C3C2BB9CC1000565DC1 /* ProfileViewSections.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -727,6 +751,7 @@
 		7F988ECE2AE2D3F800E0BCBD /* App */ = {
 			isa = PBXGroup;
 			children = (
+				262C0C362BB9C25B00565DC1 /* Profile */,
 				265B45552BB8F64300C0CA06 /* TabBar */,
 				265B45502BB8EC9D00C0CA06 /* Notifications */,
 				26547FF42BAF6EF100AD302B /* SideMenu */,
@@ -918,6 +943,7 @@
 				7F5E42ED2AEBD782008C2FC1 /* RoshettaAppViewModel.swift in Sources */,
 				7FC67AE42B2785D0000A5586 /* BaseAPIClient.swift in Sources */,
 				7F884CCE2B6C1E1900B82521 /* PriceCard.swift in Sources */,
+				262C0C3B2BB9C7D800565DC1 /* ProfileImage.swift in Sources */,
 				7F884CBB2B6C1A0E00B82521 /* CategoryCard.swift in Sources */,
 				7FC67AE62B27B211000A5586 /* SessionDataTaskError.swift in Sources */,
 				7F5E43012AEBDFE6008C2FC1 /* Colors.swift in Sources */,
@@ -958,6 +984,7 @@
 				26547FF72BAF6F2700AD302B /* SideMenuView.swift in Sources */,
 				26FAD1DD2BB49F9A0025650F /* ReservationCard.swift in Sources */,
 				7F196EA12B6F9B6100CBBD6A /* AuthUseCase.swift in Sources */,
+				262C0C3D2BB9CC1000565DC1 /* ProfileViewSections.swift in Sources */,
 				7FC67AED2B27B5B6000A5586 /* URLRequestConvertible.swift in Sources */,
 				7F884CE32B6C269100B82521 /* RoundedImage.swift in Sources */,
 				7F81F48F2B6E91DB00C8016B /* AuthAPIRequest.swift in Sources */,
@@ -967,6 +994,7 @@
 				7F6CA3072AEC19E800BAB446 /* GFSliderButton.swift in Sources */,
 				7F50EC7A2AF0614E0060D6B6 /* AppleSigninManager.swift in Sources */,
 				7F988EAC2AE2D2BD00E0BCBD /* Codable.swift in Sources */,
+				262C0C392BB9C27100565DC1 /* ProfileView.swift in Sources */,
 				7FC67AE22B278416000A5586 /* BaseAPIRequest.swift in Sources */,
 				7F988E5C2AE2D1BC00E0BCBD /* RoshettaApp.swift in Sources */,
 				7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */,
