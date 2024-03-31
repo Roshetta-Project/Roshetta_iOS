@@ -8,15 +8,26 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
     // MARK: - PROPERTYS
+    
     let userName : String
     let location : String
     
+    let sections = [
+        ProfileSectionItem(title: "Account", imageName: "contactus"),
+        ProfileSectionItem(title: "Privacy Policy", imageName: "lock icon"),
+        ProfileSectionItem(title: "Rate Us", imageName: "star icon"),
+        ProfileSectionItem(title: "About Us", imageName: "users icon"),
+        ProfileSectionItem(title: "Contact Us", imageName: "contactus")
+    ]
+    
+    
     // MARK: - VIEW
+    
     var body: some View {
-        
-        //Header
-        ScrollView{
+        NavigationStack {
+            
             VStack(alignment:.center,spacing: 8){
                 ProfileImage()
                 Text(userName)
@@ -29,13 +40,22 @@ struct ProfileView: View {
                         .foregroundColor(.gray)
                     
                 }
-                ProfileVieww()
-                    .padding()
+                
+                List {
+                    ForEach(sections) { section in
+                        NavigationLink(destination: HomeView()) {
+                            ProfileViewSections(section: section)
+                        }
+                    }
+                    .listRowBackground(Color.gray.opacity(0.1))
+                }
+                .listStyle(.plain)
+                .cornerRadius(16)
+                .padding()
             }
-
+            
         }
-        Spacer()
-        
+        .padding(.top, 32)
     }
 }
 

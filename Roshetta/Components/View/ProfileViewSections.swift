@@ -14,44 +14,41 @@ struct ProfileSectionItem: Identifiable {
 }
 
 struct ProfileViewSections: View {
+    
     let section: ProfileSectionItem
-
+    
     var body: some View {
-        NavigationLink(destination: Text(section.title)) {
-            HStack (spacing:10){
-                                  Image(section.imageName)
-                                  Text(section.title)
-                                      .font(.custom(GFFonts.SeguiSemiBold, size: 16))
-                                  Spacer()
-                              }
-                              .padding()
-
+        HStack (spacing:10){
+            Image(section.imageName)
+            Text(section.title)
+                .font(.custom(GFFonts.SeguiSemiBold, size: 16))
+            Spacer()
         }
+        .padding()
     }
 }
 
 struct ProfileVieww: View {
+    
     let sections = [
-               ProfileSectionItem(title: "Account", imageName: "contactus"),
-               ProfileSectionItem(title: "Privacy Policy", imageName: "lock icon"),
-               ProfileSectionItem(title: "Rate Us", imageName: "star icon"),
-               ProfileSectionItem(title: "About Us", imageName: "users icon"),
-               ProfileSectionItem(title: "Contact Us", imageName: "contactus"),
-           ]
-
+        ProfileSectionItem(title: "Account", imageName: "contactus"),
+        ProfileSectionItem(title: "Privacy Policy", imageName: "lock icon"),
+        ProfileSectionItem(title: "Rate Us", imageName: "star icon"),
+        ProfileSectionItem(title: "About Us", imageName: "users icon"),
+        ProfileSectionItem(title: "Contact Us", imageName: "contactus")
+    ]
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(sections) { section in
-                    ProfileViewSections(section: section)
+                    NavigationLink(destination: HomeView()) {
+                        ProfileViewSections(section: section)
+                    }
                 }
                 .listRowBackground(Color.gray.opacity(0.1))
             }
             .listStyle(.plain)
-            .cornerRadius(12)
-
-
-
         }
     }
 }

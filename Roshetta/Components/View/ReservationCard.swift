@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ReservationCard: View {
+    
     // MARK: - PROPERTYS
+    
     let date : String
     let status : String
     let doctorName: String
@@ -16,7 +18,9 @@ struct ReservationCard: View {
     let endTime : String
     let salary : String
     let salaryDescription : String
+    
     // MARK: - VIEW
+    
     var body: some View {
         VStack(alignment: .leading, spacing : 3){
             HStack{
@@ -28,10 +32,12 @@ struct ReservationCard: View {
                     .font(.custom(GFFonts.SeguiSemiBold, size: 12))
                     .foregroundColor(Color.yellow)
             }
+            
             Text(doctorName)
                 .font(.custom(GFFonts.SeguiSemiBold, size: 14))
                 .foregroundColor(Color.black)
                 .padding(.vertical,1)
+            
             VStack{
                 Text(startTime)
                     .font(.custom(GFFonts.Segui, size: 10))
@@ -41,6 +47,7 @@ struct ReservationCard: View {
                     .font(.custom(GFFonts.Segui, size: 10))
                     .foregroundColor(Color.gray)
             }
+            
             HStack(spacing:20){
                 Text(salary)
                     .font(.custom(GFFonts.SeguiSemiBold, size: 14))
@@ -50,6 +57,7 @@ struct ReservationCard: View {
                     .font(.custom(GFFonts.Segui, size: 10))
                     .foregroundColor(Color.gray)
             }
+            
         }
         .padding(30)
         .background(Color.gray.opacity(0.05))

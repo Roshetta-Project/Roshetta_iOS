@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct NotificationCard: View {
+    
     // MARK: - PROPERTIES
+    
     let image: Image
     let alert: String
     let description: String
     
     // MARK: - VIEW
+    
     var body: some View {
         HStack{
             image

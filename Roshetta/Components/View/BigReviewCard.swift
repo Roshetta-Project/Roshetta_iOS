@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct BigReviewCard: View {
+    
     // MARK: - PROPERTYS
+    
     let userName : String
     let description: String
     let rate: Int
     let date : String
+    
     // MARK: - VIEW
+    
     var body: some View {
         VStack(alignment: .leading, spacing : 8){
             HStack(spacing: 5){
+                
                 Text(userName)
                     .font(.custom(GFFonts.SeguiSemiBold, size: 14))
                     .foregroundColor(Color.black)
@@ -29,13 +34,16 @@ struct BigReviewCard: View {
                       .frame(width: 12, height: 12)
                   }
                 }//: RATING STARS
+                
                 Spacer()
+                
             Text(date)
               .font(.custom(GFFonts.Segui, size: 10))
               .foregroundColor(Color.gray)
 
 
             }//HStack
+            
             Text(description)
             .font(.custom(GFFonts.Segui, size: 12))
             .foregroundColor(Color.gray)
