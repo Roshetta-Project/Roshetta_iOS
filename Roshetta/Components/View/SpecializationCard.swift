@@ -15,11 +15,12 @@ struct SpecializationCard: View {
     // MARK: - VIEW
     var body: some View {
         HStack(spacing: 4){
+            Spacer()
             Image(specializationImage)
-
             Text (specialization)
                 .font(.custom(GFFonts.roman, size: 15))
                 .foregroundColor(Color.gray)
+            Spacer()
         }//HStack
         .padding(8)
         .background(Color.gray.opacity(0.05))
