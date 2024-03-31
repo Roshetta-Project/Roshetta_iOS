@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     // MARK: - Properties
+    
     struct Category {
         let name: String
         let imageName: String
         let destinationView: AnyView
     }
-
+    
     let categories: [Category] = [
         Category(name: "Doctor", imageName: "specialist", destinationView: AnyView(DoctorListView())),
         Category(name: "Clinic", imageName: "specialist", destinationView: AnyView(ClinicListView())),
         Category(name: "Center", imageName: "specialist", destinationView: AnyView(CenterListView())),
         Category(name: "Specialist", imageName: "specialist", destinationView: AnyView(SpecialistListView()))
     ]
+    
+    // MARK:- VIEW
     
     var body: some View {
         NavigationStack{
@@ -29,14 +33,14 @@ struct HomeView: View {
                 HomeSlider(slides: .constant(["Banner", "Banner","user"]))
                 
                 // MARK: - Categories
-                HStack (spacing: 22) {
+                HStack (spacing: 16) {
                     ForEach(categories, id: \.name) { category in
-                            NavigationLink(destination: category.destinationView) {
-                                CategoryCard(image: category.imageName, name: category.name)
-                            }
+                        NavigationLink(destination: category.destinationView) {
+                            CategoryCard(image: category.imageName, name: category.name)
                         }
+                    }
                 }
-                .padding()
+                .padding(.vertical, 16)
                 
                 // MARK: - Nearest Doctors Section
                 HStack () {
@@ -44,14 +48,14 @@ struct HomeView: View {
                         .bold()
                         .font(.system(size: 20))
                     Spacer()
-                        NavigationLink {
-                            DoctorListView()
-                        } label: {
-                            Text("See All")
-                                .underline()
-                                .font(.system(size: 16))
-                                .foregroundColor(.secondary)
-                        }
+                    NavigationLink {
+                        DoctorListView()
+                    } label: {
+                        Text("See All")
+                            .underline()
+                            .font(.system(size: 16))
+                            .foregroundColor(.secondary)
+                    }
                 }
                 .padding(.horizontal)
                 

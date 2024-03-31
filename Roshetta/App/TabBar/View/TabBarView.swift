@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // PROPERTYS
+    
     @State private var selectedTab = 0
     
+    // VIEW
+    
     var body: some View {
+        
         VStack(spacing: 0) {
             TabView(selection: $selectedTab) {
                 HomeView()
@@ -25,7 +31,7 @@ struct ContentView: View {
                 
                 NotificationsView()
                     .tabItem {
-                        Image(systemName:"rectangle.grid.3x2.fill")
+                        Image(systemName: "rectangle.grid.3x2.fill")
                             .foregroundColor(selectedTab == 1 ? Colors.main : .gray)
                         
                         Text("Reservations")
@@ -37,12 +43,9 @@ struct ContentView: View {
         }
         .edgesIgnoringSafeArea(.bottom)
     }
+    
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }
-
-
