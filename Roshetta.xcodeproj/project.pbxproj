@@ -109,6 +109,9 @@
 		7FC67AF22B27B701000A5586 /* RegularURLRequestStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AF12B27B701000A5586 /* RegularURLRequestStrategy.swift */; };
 		7FC67AF42B27B763000A5586 /* MultipartURLRequestStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AF32B27B763000A5586 /* MultipartURLRequestStrategy.swift */; };
 		CC3C83AD2BACFAF60025AF74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C83AC2BACFAF60025AF74 /* HomeView.swift */; };
+		CC9FAA652BB94E4200C54625 /* DoctorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA642BB94E4200C54625 /* DoctorListView.swift */; };
+		CC9FAA672BB953B300C54625 /* CenterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA662BB953B300C54625 /* CenterListView.swift */; };
+		CC9FAA692BB9545F00C54625 /* ClinicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA682BB9545F00C54625 /* ClinicListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,6 +229,9 @@
 		7FC67AF12B27B701000A5586 /* RegularURLRequestStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularURLRequestStrategy.swift; sourceTree = "<group>"; };
 		7FC67AF32B27B763000A5586 /* MultipartURLRequestStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartURLRequestStrategy.swift; sourceTree = "<group>"; };
 		CC3C83AC2BACFAF60025AF74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CC9FAA642BB94E4200C54625 /* DoctorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListView.swift; sourceTree = "<group>"; };
+		CC9FAA662BB953B300C54625 /* CenterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListView.swift; sourceTree = "<group>"; };
+		CC9FAA682BB9545F00C54625 /* ClinicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -516,6 +522,9 @@
 				7F884CC12B6C1D5D00B82521 /* ClinicDetailsView.swift */,
 				7F884CC32B6C1D9400B82521 /* DoctorDetailsView.swift */,
 				CC3C83AC2BACFAF60025AF74 /* HomeView.swift */,
+				CC9FAA642BB94E4200C54625 /* DoctorListView.swift */,
+				CC9FAA662BB953B300C54625 /* CenterListView.swift */,
+				CC9FAA682BB9545F00C54625 /* ClinicListView.swift */,
 			);
 			path = "Detaild Screen";
 			sourceTree = "<group>";
@@ -974,8 +983,10 @@
 				7FB00F562AFD7CA800303EB2 /* ClincCard.swift in Sources */,
 				7F884CCA2B6C1DF500B82521 /* locationCard.swift in Sources */,
 				7F988EC42AE2D34000E0BCBD /* GFTextField.swift in Sources */,
+				CC9FAA652BB94E4200C54625 /* DoctorListView.swift in Sources */,
 				7FB00F542AFD6AF000303EB2 /* DoctorCard.swift in Sources */,
 				7F988EAB2AE2D2BD00E0BCBD /* View.swift in Sources */,
+				CC9FAA672BB953B300C54625 /* CenterListView.swift in Sources */,
 				7F6CA30B2AECF52900BAB446 /* GFAuthButton.swift in Sources */,
 				7F388C162B87622500FE021B /* AuthViewModelProtocol.swift in Sources */,
 				7F5E43182AEBF645008C2FC1 /* OnboardingView.swift in Sources */,
@@ -1000,6 +1011,7 @@
 				7F988EAC2AE2D2BD00E0BCBD /* Codable.swift in Sources */,
 				262C0C392BB9C27100565DC1 /* ProfileView.swift in Sources */,
 				7FC67AE22B278416000A5586 /* BaseAPIRequest.swift in Sources */,
+				CC9FAA692BB9545F00C54625 /* ClinicListView.swift in Sources */,
 				7F988E5C2AE2D1BC00E0BCBD /* RoshettaApp.swift in Sources */,
 				7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */,
 				7F884CC22B6C1D5D00B82521 /* ClinicDetailsView.swift in Sources */,

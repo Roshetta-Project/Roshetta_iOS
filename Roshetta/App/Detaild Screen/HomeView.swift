@@ -9,7 +9,18 @@ import SwiftUI
 
 struct HomeView: View {
     // MARK: - Properties
-    let CategoryCardName = ["Doctor","Clinic","Center","Specialist"]
+    struct Category {
+        let name: String
+        let imageName: String
+        let destinationView: AnyView
+    }
+
+    let categories: [Category] = [
+        Category(name: "Doctor", imageName: "specialist", destinationView: AnyView(DoctorListView())),
+        Category(name: "Clinic", imageName: "specialist", destinationView: AnyView(ClinicListView())),
+        Category(name: "Center", imageName: "specialist", destinationView: AnyView(CenterListView())),
+        Category(name: "Specialist", imageName: "specialist", destinationView: AnyView(DoctorListView()))
+    ]
     
     var body: some View {
         NavigationStack{
@@ -19,14 +30,11 @@ struct HomeView: View {
                 
                 // MARK: - Categories
                 HStack (spacing: 22) {
-                    ForEach(0..<4){Index in
-                        NavigationLink {
-                            
-                        } label: {
-                            CategoryCard(image: "specialist", name: CategoryCardName[Index])
+                    ForEach(categories, id: \.name) { category in
+                            NavigationLink(destination: category.destinationView) {
+                                CategoryCard(image: category.imageName, name: category.name)
+                            }
                         }
-                        
-                    }
                 }
                 .padding()
                 
@@ -37,7 +45,7 @@ struct HomeView: View {
                         .font(.system(size: 20))
                     Spacer()
                         NavigationLink {
-                            
+                            DoctorListView()
                         } label: {
                             Text("See All")
                                 .underline()
@@ -67,7 +75,7 @@ struct HomeView: View {
                         .font(.system(size: 20))
                     Spacer()
                     NavigationLink {
-                        
+                        ClinicListView()
                     } label: {
                         Text("See All")
                             .underline()
@@ -96,7 +104,9 @@ struct HomeView: View {
                         .bold()
                         .font(.system(size: 20))
                     Spacer()
-                    NavigationLink {} label: {
+                    NavigationLink {
+                        CenterListView()
+                    } label: {
                         Text("See All")
                             .underline()
                             .font(.system(size: 16))
