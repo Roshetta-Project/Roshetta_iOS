@@ -95,7 +95,7 @@ struct HomeView: View {
                             }
                         }
                     }
-                    .padding(.horizontal)
+                    .padding()
                 }
                 
                 // MARK: - Nearest Centers Section

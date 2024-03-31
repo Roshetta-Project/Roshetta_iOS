@@ -16,7 +16,7 @@ struct InfoRow: View {
             symbol
             Text(text)
                 .font(.custom(GFFonts.SeguiSemiBold, size: 10))
-                .minimumScaleFactor(0.5)
+                .minimumScaleFactor(1)
                 .lineLimit(1)
                 .foregroundColor(Colors.text.opacity(0.6))
         }
