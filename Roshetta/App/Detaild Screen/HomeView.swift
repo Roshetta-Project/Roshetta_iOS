@@ -19,7 +19,7 @@ struct HomeView: View {
         Category(name: "Doctor", imageName: "specialist", destinationView: AnyView(DoctorListView())),
         Category(name: "Clinic", imageName: "specialist", destinationView: AnyView(ClinicListView())),
         Category(name: "Center", imageName: "specialist", destinationView: AnyView(CenterListView())),
-        Category(name: "Specialist", imageName: "specialist", destinationView: AnyView(DoctorListView()))
+        Category(name: "Specialist", imageName: "specialist", destinationView: AnyView(SpecialistListView()))
     ]
     
     var body: some View {

@@ -112,6 +112,7 @@
 		CC9FAA652BB94E4200C54625 /* DoctorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA642BB94E4200C54625 /* DoctorListView.swift */; };
 		CC9FAA672BB953B300C54625 /* CenterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA662BB953B300C54625 /* CenterListView.swift */; };
 		CC9FAA692BB9545F00C54625 /* ClinicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA682BB9545F00C54625 /* ClinicListView.swift */; };
+		CC9FAA6B2BB95D4100C54625 /* SpecialistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +233,7 @@
 		CC9FAA642BB94E4200C54625 /* DoctorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListView.swift; sourceTree = "<group>"; };
 		CC9FAA662BB953B300C54625 /* CenterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListView.swift; sourceTree = "<group>"; };
 		CC9FAA682BB9545F00C54625 /* ClinicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicListView.swift; sourceTree = "<group>"; };
+		CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -525,6 +527,7 @@
 				CC9FAA642BB94E4200C54625 /* DoctorListView.swift */,
 				CC9FAA662BB953B300C54625 /* CenterListView.swift */,
 				CC9FAA682BB9545F00C54625 /* ClinicListView.swift */,
+				CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */,
 			);
 			path = "Detaild Screen";
 			sourceTree = "<group>";
@@ -958,6 +961,7 @@
 				7F884CCE2B6C1E1900B82521 /* PriceCard.swift in Sources */,
 				262C0C3B2BB9C7D800565DC1 /* ProfileImage.swift in Sources */,
 				7F884CBB2B6C1A0E00B82521 /* CategoryCard.swift in Sources */,
+				CC9FAA6B2BB95D4100C54625 /* SpecialistListView.swift in Sources */,
 				7FC67AE62B27B211000A5586 /* SessionDataTaskError.swift in Sources */,
 				7F5E43012AEBDFE6008C2FC1 /* Colors.swift in Sources */,
 				7F5E43092AEBE878008C2FC1 /* SplashView.swift in Sources */,
