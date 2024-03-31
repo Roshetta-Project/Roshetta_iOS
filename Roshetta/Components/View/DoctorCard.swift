@@ -69,7 +69,6 @@ struct DoctorCard: View {
               .foregroundColor(Color.white)
               .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
       )
-    .frame(width: 154)
   
   }
 
