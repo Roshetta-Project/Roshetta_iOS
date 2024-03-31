@@ -8,25 +8,29 @@
 import SwiftUI
 
 struct HomeView: View {
+    // MARK: - Properties
+    let CategoryCardName = ["Doctor","Clinic","Center","Specialist"]
+    
     var body: some View {
         NavigationStack{
             ScrollView (.vertical, showsIndicators: false){
                 // MARK: - Slider
-
                 HomeSlider(slides: .constant(["Banner", "Banner","user"]))
-
-                // MARK: - Categories
                 
+                // MARK: - Categories
                 HStack (spacing: 22) {
-                    CategoryCard(image: "specialist", name: "Doctor")
-                    CategoryCard(image: "specialist", name: "Clinic")
-                    CategoryCard(image: "specialist", name: "Center")
-                    CategoryCard(image: "specialist", name: "Specialist")
+                    ForEach(0..<4){Index in
+                        NavigationLink {
+                            
+                        } label: {
+                            CategoryCard(image: "specialist", name: CategoryCardName[Index])
+                        }
+                        
+                    }
                 }
                 .padding()
                 
                 // MARK: - Nearest Doctors Section
-                
                 HStack () {
                     Text("Nearest Doctors")
                         .bold()
@@ -40,22 +44,23 @@ struct HomeView: View {
                                 .font(.system(size: 16))
                                 .foregroundColor(.secondary)
                         }
-
                 }
                 .padding(.horizontal)
                 
                 ScrollView (.horizontal, showsIndicators: false) {
                     HStack (spacing: 21) {
-                        DoctorCard(image: Image("user"), name: "Dr. Abdalazem Saleh", specialization: "Surgery", rate: 3, price: "400", location: "Mansoura, Dakahlia")
-                        
-                        DoctorCard(image: Image("user"), name: "Dr. Abdalazem Saleh", specialization: "Surgery", rate: 3, price: "400", location: "Mansoura, Dakahlia")
-                        
-                        DoctorCard(image: Image("user"), name: "Dr. Abdalazem Saleh", specialization: "Surgery", rate: 3, price: "400", location: "Mansoura, Dakahlia")
+                        ForEach(0..<5){_ in
+                            NavigationLink {
+                                DoctorDetailsView()
+                            } label: {
+                                DoctorCard(image: Image("user"), name: "Dr. Abdalazem Saleh", specialization: "Surgery", rate: 3, price: "400", location: "Mansoura, Dakahlia")
+                            }
+                        }
                     }
                     .padding()
                 }
-                // MARK: - Nearest Clinics Section
                 
+                // MARK: - Nearest Clinics Section
                 HStack () {
                     Text("Nearest Clinics")
                         .bold()
@@ -74,23 +79,24 @@ struct HomeView: View {
                 
                 ScrollView (.horizontal, showsIndicators: false) {
                     HStack (spacing: 21) {
-                        ClincCard(image: Image("clinc"), name: "The Care", rate: 3, price: "400", location: "Mansoura, Dakahlia")
-                        ClincCard(image: Image("clinc"), name: "The Care", rate: 3, price: "400", location: "Mansoura, Dakahlia")
-                        ClincCard(image: Image("clinc"), name: "The Care", rate: 3, price: "400", location: "Mansoura, Dakahlia")
+                        ForEach(0..<5){_ in
+                            NavigationLink {
+                                ClinicDetailsView()
+                            } label: {
+                                ClincCard(image: Image("clinc"), name: "The Care", rate: 3, price: "400", location: "Mansoura, Dakahlia")
+                            }
+                        }
                     }
                     .padding(.horizontal)
                 }
                 
                 // MARK: - Nearest Centers Section
-                
                 HStack () {
                     Text("Nearest Centers")
                         .bold()
                         .font(.system(size: 20))
                     Spacer()
-                    NavigationLink {
-                        
-                    } label: {
+                    NavigationLink {} label: {
                         Text("See All")
                             .underline()
                             .font(.system(size: 16))
@@ -101,8 +107,13 @@ struct HomeView: View {
                 
                 ScrollView (.horizontal, showsIndicators: false) {
                     HStack (spacing: 21) {
-                        MedicalCenterCard(image: Image("clinc"),name: "The Care",rate: 3,minPrice: "400",maxPrice: "600",location: "Mansoura, Dakahlia")
-                        MedicalCenterCard(image: Image("clinc"),name: "The Care",rate: 3,minPrice: "400",maxPrice: "600",location: "Mansoura, Dakahlia")
+                        ForEach(0..<5){_ in
+                            NavigationLink {
+                                CenterDetailsView()
+                            } label: {
+                                MedicalCenterCard(image: Image("clinc"),name: "The Care",rate: 3,minPrice: "400",maxPrice: "600",location: "Mansoura, Dakahlia")
+                            }
+                        }
                     }
                     .padding()
                 }
