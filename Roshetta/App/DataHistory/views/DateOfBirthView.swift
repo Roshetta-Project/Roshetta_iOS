@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct DateOfBirthView: View {
+    
+    // MARK: - PROPERTYS
     @State private var birthDate = Date()
     @State private var isDatePickerVisible = false
     @State private  var isLoading = false
     
+    // MARK: - VIEW
     var body: some View {
         ZStack {
             CircularGradient()

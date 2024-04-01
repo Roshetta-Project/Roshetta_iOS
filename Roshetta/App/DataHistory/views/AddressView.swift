@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct AddressView: View {
+    // MARK: - PROPERTYS
     @State private  var isLoading = false
-
+    
+    // MARK: - VIEW
     var body: some View {
         ZStack{
             CircularGradient()
@@ -27,13 +29,13 @@ struct AddressView: View {
                             .font(.custom(GFFonts.Segui, size: 18))
                         CustomTextField()
                     }
-                   
+                    
                     VStack(alignment: .leading){
                         Text("City")
                             .font(.custom(GFFonts.Segui, size: 18))
                         CustomPicker()
                     }
-                
+                    
                     VStack(alignment: .leading){
                         Text("Street")
                             .font(.custom(GFFonts.Segui, size: 18))

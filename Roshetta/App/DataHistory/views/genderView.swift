@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct GenderView: View {
+    
+    // MARK: - PROPERTYS
     @Binding var selectedGender: String?
     
+    // MARK: - VIEW
     var body: some View {
         ZStack {
             CircularGradient()
