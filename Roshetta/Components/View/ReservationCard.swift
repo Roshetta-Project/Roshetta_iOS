@@ -18,6 +18,7 @@ struct ReservationCard: View {
     let endTime : String
     let salary : String
     let salaryDescription : String
+    let statusColor: Color
     
     // MARK: - VIEW
     
@@ -30,7 +31,7 @@ struct ReservationCard: View {
                 Spacer()
                 Text(status)
                     .font(.custom(GFFonts.SeguiSemiBold, size: 12))
-                    .foregroundColor(Color.yellow)
+                    .foregroundColor(statusColor)
             }
             
             Text(doctorName)
@@ -59,12 +60,12 @@ struct ReservationCard: View {
             }
             
         }
-        .padding(30)
+        .padding(20)
         .background(Color.gray.opacity(0.05))
         .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
 
 #Preview {
-    ReservationCard(date: "Sep 28 2023 at 04:00 pm", status: "processing", doctorName: "Doctor. Sami Ahmed", startTime: "Start at 04:00 pm ", endTime: "End at 04:00 pm ", salary: "350 L.E", salaryDescription: "Expecting cash payment")
+    ReservationCard(date: "Sep 28 2023 at 04:00 pm", status: "processing", doctorName: "Doctor. Sami Ahmed", startTime: "Start at 04:00 pm ", endTime: "End at 04:00 pm ", salary: "350 L.E", salaryDescription: "Expecting cash payment", statusColor: .yellow)
 }
