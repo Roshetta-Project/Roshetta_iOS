@@ -53,24 +53,24 @@ struct ExerciseView: View {
                 
                 // MARK: - Second Question
                 if showSecondQuestion {
-                        Text("What type of exercises do you do?")
-                            .font(.custom(GFFonts.SeguiSemiBold, size: 24))
-                            .padding(.top, 25)
-                        
-                        VStack(alignment: .leading) {
-                            ForEach(["Strenuous", "Moderate", "Light"], id: \.self) { exerciseType in
-                                Button(action: {
-                                    selectedExerciseType = exerciseType
-                                }) {
-                                    HStack {
-                                        Image(systemName: selectedExerciseType == exerciseType ? "checkmark.square" : "square")
-                                        Text(exerciseType)
-                                    }
-                                    .padding(.vertical,5)
+                    Text("What type of exercises do you do?")
+                        .font(.custom(GFFonts.SeguiSemiBold, size: 24))
+                        .padding(.top, 25)
+                    
+                    VStack(alignment: .leading) {
+                        ForEach(["Strenuous", "Moderate", "Light"], id: \.self) { exerciseType in
+                            Button(action: {
+                                selectedExerciseType = exerciseType
+                            }) {
+                                HStack {
+                                    Image(systemName: selectedExerciseType == exerciseType ? "checkmark.square" : "square")
+                                    Text(exerciseType)
                                 }
-                                .foregroundColor(selectedExerciseType == exerciseType ? Colors.main : .gray)
+                                .padding(.vertical,5)
                             }
+                            .foregroundColor(selectedExerciseType == exerciseType ? Colors.main : .gray)
                         }
+                    }
                     
                     .padding(.horizontal,25)
                     .font(.custom(GFFonts.Segui, size: 21))
@@ -92,8 +92,6 @@ struct ExerciseView: View {
                 }
             }
             .padding()
-            
-
         }
     }
 }

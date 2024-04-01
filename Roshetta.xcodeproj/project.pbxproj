@@ -116,6 +116,8 @@
 		7FC67AF42B27B763000A5586 /* MultipartURLRequestStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AF32B27B763000A5586 /* MultipartURLRequestStrategy.swift */; };
 		CC3C83AD2BACFAF60025AF74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C83AC2BACFAF60025AF74 /* HomeView.swift */; };
 		CC6B32E42BBA9E630094A701 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E32BBA9E630094A701 /* ExerciseView.swift */; };
+		CC6B32E62BBAB3160094A701 /* PregnancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E52BBAB3160094A701 /* PregnancyView.swift */; };
+		CC6B32E82BBAB4840094A701 /* SmokingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E72BBAB4840094A701 /* SmokingView.swift */; };
 		CC9FAA652BB94E4200C54625 /* DoctorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA642BB94E4200C54625 /* DoctorListView.swift */; };
 		CC9FAA672BB953B300C54625 /* CenterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA662BB953B300C54625 /* CenterListView.swift */; };
 		CC9FAA692BB9545F00C54625 /* ClinicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA682BB9545F00C54625 /* ClinicListView.swift */; };
@@ -243,6 +245,8 @@
 		7FC67AF32B27B763000A5586 /* MultipartURLRequestStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartURLRequestStrategy.swift; sourceTree = "<group>"; };
 		CC3C83AC2BACFAF60025AF74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CC6B32E32BBA9E630094A701 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		CC6B32E52BBAB3160094A701 /* PregnancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregnancyView.swift; sourceTree = "<group>"; };
+		CC6B32E72BBAB4840094A701 /* SmokingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingView.swift; sourceTree = "<group>"; };
 		CC9FAA642BB94E4200C54625 /* DoctorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListView.swift; sourceTree = "<group>"; };
 		CC9FAA662BB953B300C54625 /* CenterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListView.swift; sourceTree = "<group>"; };
 		CC9FAA682BB9545F00C54625 /* ClinicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicListView.swift; sourceTree = "<group>"; };
@@ -353,6 +357,8 @@
 				26EF1E3E2BBA42D40010B57D /* DateOfBirthView.swift */,
 				26EF1E402BBA4C2A0010B57D /* AddressView.swift */,
 				CC6B32E32BBA9E630094A701 /* ExerciseView.swift */,
+				CC6B32E52BBAB3160094A701 /* PregnancyView.swift */,
+				CC6B32E72BBAB4840094A701 /* SmokingView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -992,6 +998,7 @@
 				7F388C1C2B8777E200FE021B /* AuthView.swift in Sources */,
 				7F884CD42B6C1E5400B82521 /* StatusImageView.swift in Sources */,
 				7F884CC02B6C1D3800B82521 /* CenterDetailsView.swift in Sources */,
+				CC6B32E62BBAB3160094A701 /* PregnancyView.swift in Sources */,
 				CC3C83AD2BACFAF60025AF74 /* HomeView.swift in Sources */,
 				7F5E42ED2AEBD782008C2FC1 /* RoshettaAppViewModel.swift in Sources */,
 				7FC67AE42B2785D0000A5586 /* BaseAPIClient.swift in Sources */,
@@ -1016,6 +1023,7 @@
 				7F884CCC2B6C1E0A00B82521 /* LogoImageView.swift in Sources */,
 				7F196E9B2B6F97F100CBBD6A /* AuthModuleFactory.swift in Sources */,
 				7F5E43142AEBF49C008C2FC1 /* onboardingModel.swift in Sources */,
+				CC6B32E82BBAB4840094A701 /* SmokingView.swift in Sources */,
 				7F884CD02B6C1E2C00B82521 /* ReviewCard.swift in Sources */,
 				7FB00F5A2AFD7FF000303EB2 /* MedicalCenterCard.swift in Sources */,
 				7F988ECC2AE2D35000E0BCBD /* SFSymbolModifire.swift in Sources */,
