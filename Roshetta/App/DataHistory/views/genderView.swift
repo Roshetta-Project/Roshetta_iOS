@@ -13,6 +13,7 @@ struct GenderView: View {
     var body: some View {
         ZStack {
             CircularGradient()
+            
             VStack {
                 Text("Tell me what's your gender?")
                     .font(.custom(GFFonts.SeguiSemiBold, size: 24))

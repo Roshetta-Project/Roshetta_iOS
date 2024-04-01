@@ -1,0 +1,28 @@
+//
+//  TextField.swift
+//  Roshetta
+//
+//  Created by Sami Ahmed on 01/04/2024.
+//
+
+import SwiftUI
+
+struct CustomTextField: View {
+    @State private var text = ""
+    
+    var body: some View {
+        TextField("Enter", text: $text)
+            .padding()
+            .frame(height: 50)
+            .background(Color.white)
+            .cornerRadius(8)
+            .shadow(color: Color.black.opacity(0.1), radius: 4, x: 4, y: 2)
+    }
+}
+
+
+struct CustomTextField_Previews: PreviewProvider {
+    static var previews: some View {
+        CustomTextField()
+    }
+}

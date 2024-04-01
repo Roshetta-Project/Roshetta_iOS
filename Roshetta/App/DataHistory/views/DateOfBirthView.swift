@@ -15,58 +15,60 @@ struct DateOfBirthView: View {
     var body: some View {
         ZStack {
             CircularGradient()
-            VStack {
-                Text("Select your date of birth!")
-                    .font(.custom(GFFonts.SeguiSemiBold, size: 24))
-                    .padding(.top, 50)
-                
-                CustomButton(action: {
-                    withAnimation {
-                        isDatePickerVisible.toggle()
-                    }
-                }) {
-                    HStack {
-                        Image(systemName: "calendar")
-                            .foregroundColor(.gray)
-                        
-                        Text("Choose Date")
-                            .font(.custom(GFFonts.Segui, size: 16))
-                            .foregroundColor(.gray)
-                        
-                        Spacer()
-                        
-                        Image(systemName: "xmark")
-                            .foregroundColor(.gray)
-                    }
-                    .padding()
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Colors.main, lineWidth: 1)
-                    )
-                    .background(Color.white)
-                }
-                .padding()
-                
-                
-                if isDatePickerVisible {
-                    DatePicker("", selection: $birthDate, displayedComponents: .date)
-                        .datePickerStyle(GraphicalDatePickerStyle())
-                        .accentColor(Colors.main)
+            ScrollView{
+                VStack {
+                    Text("Select your date of birth!")
+                        .font(.custom(GFFonts.SeguiSemiBold, size: 24))
+                        .padding(.top, 50)
+                    
+                    CustomButton(action: {
+                        withAnimation {
+                            isDatePickerVisible.toggle()
+                        }
+                    }) {
+                        HStack {
+                            Image(systemName: "calendar")
+                                .foregroundColor(.gray)
+                            
+                            Text("Choose Date")
+                                .font(.custom(GFFonts.Segui, size: 16))
+                                .foregroundColor(.gray)
+                            
+                            Spacer()
+                            
+                            Image(systemName: "xmark")
+                                .foregroundColor(.gray)
+                        }
                         .padding()
-                        .transition(.opacity)
-                }
-                
-                Text("Selected Date: \(formattedBirthDate)")
-                    .font(.custom(GFFonts.Segui, size: 16))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Colors.main, lineWidth: 1)
+                        )
+                        .background(Color.white)
+                    }
                     .padding()
-                
-                GFButton(isLoading: $isLoading, text: "Next", backgroundColor: Colors.main, foregroundColot: Color.white) {
-                    print("Next button tapped")
-                    // Add your action here
+                    
+                    
+                    if isDatePickerVisible {
+                        DatePicker("", selection: $birthDate, displayedComponents: .date)
+                            .datePickerStyle(GraphicalDatePickerStyle())
+                            .accentColor(Colors.main)
+                            .padding()
+                            .transition(.opacity)
+                    }
+                    
+                    Text("Selected Date: \(formattedBirthDate)")
+                        .font(.custom(GFFonts.Segui, size: 16))
+                        .padding()
+                    
+                    GFButton(isLoading: $isLoading, text: "Next", backgroundColor: Colors.main, foregroundColot: Color.white) {
+                        print("Next button tapped")
+                        // Add your action here
+                    }
+                    .padding()
+                    
+                    Spacer()
                 }
-                .padding()
-                
-                Spacer()
             }
         }
     }
