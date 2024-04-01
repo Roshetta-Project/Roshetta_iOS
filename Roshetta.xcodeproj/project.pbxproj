@@ -25,6 +25,7 @@
 		26EF1E352BBA13E60010B57D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 26EF1E342BBA13E60010B57D /* GoogleSignIn */; };
 		26EF1E372BBA13E60010B57D /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 26EF1E362BBA13E60010B57D /* GoogleSignInSwift */; };
 		26EF1E3B2BBA183B0010B57D /* genderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EF1E3A2BBA183B0010B57D /* genderView.swift */; };
+		26EF1E3F2BBA42D40010B57D /* DateOfBirthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EF1E3E2BBA42D40010B57D /* DateOfBirthView.swift */; };
 		26FAD1DD2BB49F9A0025650F /* ReservationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1DC2BB49F9A0025650F /* ReservationCard.swift */; };
 		26FAD1DF2BB4A7310025650F /* BigReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1DE2BB4A7310025650F /* BigReviewCard.swift */; };
 		26FAD1E12BB4AA0F0025650F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1E02BB4AA0F0025650F /* SearchBar.swift */; };
@@ -142,6 +143,7 @@
 		2665AABA2BAA37A400CE29F3 /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
 		2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Semibold.ttf"; sourceTree = "<group>"; };
 		26EF1E3A2BBA183B0010B57D /* genderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = genderView.swift; sourceTree = "<group>"; };
+		26EF1E3E2BBA42D40010B57D /* DateOfBirthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthView.swift; sourceTree = "<group>"; };
 		26FAD1DC2BB49F9A0025650F /* ReservationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCard.swift; sourceTree = "<group>"; };
 		26FAD1DE2BB4A7310025650F /* BigReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigReviewCard.swift; sourceTree = "<group>"; };
 		26FAD1E02BB4AA0F0025650F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				26EF1E3A2BBA183B0010B57D /* genderView.swift */,
+				26EF1E3E2BBA42D40010B57D /* DateOfBirthView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -984,6 +987,7 @@
 				262C0C3B2BB9C7D800565DC1 /* ProfileImage.swift in Sources */,
 				7F884CBB2B6C1A0E00B82521 /* CategoryCard.swift in Sources */,
 				CC9FAA6B2BB95D4100C54625 /* SpecialistListView.swift in Sources */,
+				26EF1E3F2BBA42D40010B57D /* DateOfBirthView.swift in Sources */,
 				7FC67AE62B27B211000A5586 /* SessionDataTaskError.swift in Sources */,
 				7F5E43012AEBDFE6008C2FC1 /* Colors.swift in Sources */,
 				7F5E43092AEBE878008C2FC1 /* SplashView.swift in Sources */,
