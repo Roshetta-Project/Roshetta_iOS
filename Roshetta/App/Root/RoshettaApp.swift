@@ -8,6 +8,7 @@
 import SwiftUI
 import FacebookLogin
 import GoogleSignIn
+import FirebaseCore
 
 @main
 struct RoshettaApp: App {
@@ -32,7 +33,6 @@ struct RoshettaApp: App {
                     if isLogin {
                         /// go to home
                     } else {
-//                        AuthView()
                         if let authView = AuthModuleFactory().makeView() as? AuthView {
                             authView
                         }
@@ -48,6 +48,7 @@ struct RoshettaApp: App {
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        FirebaseApp.configure()
         return true
     }
           

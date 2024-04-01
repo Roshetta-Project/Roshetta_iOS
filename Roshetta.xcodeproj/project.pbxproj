@@ -106,6 +106,8 @@
 		7FB00F562AFD7CA800303EB2 /* ClincCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB00F552AFD7CA800303EB2 /* ClincCard.swift */; };
 		7FB00F582AFD7E3900303EB2 /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB00F572AFD7E3900303EB2 /* InfoRow.swift */; };
 		7FB00F5A2AFD7FF000303EB2 /* MedicalCenterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB00F592AFD7FF000303EB2 /* MedicalCenterCard.swift */; };
+		7FBE21262BBB3FCF006E15A7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7FBE21252BBB3FCF006E15A7 /* FirebaseAnalytics */; };
+		7FBE21282BBB3FCF006E15A7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 7FBE21272BBB3FCF006E15A7 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		7FC67AE22B278416000A5586 /* BaseAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AE12B278416000A5586 /* BaseAPIRequest.swift */; };
 		7FC67AE42B2785D0000A5586 /* BaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AE32B2785D0000A5586 /* BaseAPIClient.swift */; };
 		7FC67AE62B27B211000A5586 /* SessionDataTaskError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AE52B27B211000A5586 /* SessionDataTaskError.swift */; };
@@ -262,8 +264,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				26EF1E322BBA13C60010B57D /* FacebookLogin in Frameworks */,
+				7FBE21282BBB3FCF006E15A7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				26EF1E302BBA13C60010B57D /* FacebookCore in Frameworks */,
 				26EF1E352BBA13E60010B57D /* GoogleSignIn in Frameworks */,
+				7FBE21262BBB3FCF006E15A7 /* FirebaseAnalytics in Frameworks */,
 				26EF1E372BBA13E60010B57D /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -816,13 +820,13 @@
 		7F988ECE2AE2D3F800E0BCBD /* App */ = {
 			isa = PBXGroup;
 			children = (
+				7F0D4CE02AE799AA0057C1CE /* Root */,
 				26D6AEAB2BBB259F00F6B5A8 /* Reservation */,
 				26EF1E382BBA174F0010B57D /* DataHistory */,
 				262C0C362BB9C25B00565DC1 /* Profile */,
 				265B45552BB8F64300C0CA06 /* TabBar */,
 				265B45502BB8EC9D00C0CA06 /* Notifications */,
 				26547FF42BAF6EF100AD302B /* SideMenu */,
-				7F0D4CE02AE799AA0057C1CE /* Root */,
 				7F5E43072AEBE844008C2FC1 /* Splash */,
 				7F0D4CE22AE799BD0057C1CE /* Onboarding */,
 				7F0D4CE12AE799B40057C1CE /* AuthModule */,
@@ -917,6 +921,8 @@
 				26EF1E312BBA13C60010B57D /* FacebookLogin */,
 				26EF1E342BBA13E60010B57D /* GoogleSignIn */,
 				26EF1E362BBA13E60010B57D /* GoogleSignInSwift */,
+				7FBE21252BBB3FCF006E15A7 /* FirebaseAnalytics */,
+				7FBE21272BBB3FCF006E15A7 /* FirebaseAnalyticsWithoutAdIdSupport */,
 			);
 			productName = Roshetta;
 			productReference = 7F988E582AE2D1BC00E0BCBD /* Roshetta.app */;
@@ -954,6 +960,7 @@
 			packageReferences = (
 				26EF1E2E2BBA13C60010B57D /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				26EF1E332BBA13E60010B57D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				7FBE21242BBB3FCF006E15A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 7F988E592AE2D1BC00E0BCBD /* Products */;
 			projectDirPath = "";
@@ -1392,6 +1399,14 @@
 				minimumVersion = 7.1.0;
 			};
 		};
+		7FBE21242BBB3FCF006E15A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.23.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1414,6 +1429,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 26EF1E332BBA13E60010B57D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		7FBE21252BBB3FCF006E15A7 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FBE21242BBB3FCF006E15A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		7FBE21272BBB3FCF006E15A7 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FBE21242BBB3FCF006E15A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
