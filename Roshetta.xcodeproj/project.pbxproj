@@ -119,6 +119,7 @@
 		CC6B32E62BBAB3160094A701 /* PregnancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E52BBAB3160094A701 /* PregnancyView.swift */; };
 		CC6B32E82BBAB4840094A701 /* SmokingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E72BBAB4840094A701 /* SmokingView.swift */; };
 		CC6B32EA2BBAB5830094A701 /* HealthProblemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E92BBAB5820094A701 /* HealthProblemsView.swift */; };
+		CC6B32EC2BBC06110094A701 /* HealthProblemToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32EB2BBC06110094A701 /* HealthProblemToggle.swift */; };
 		CC9FAA652BB94E4200C54625 /* DoctorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA642BB94E4200C54625 /* DoctorListView.swift */; };
 		CC9FAA672BB953B300C54625 /* CenterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA662BB953B300C54625 /* CenterListView.swift */; };
 		CC9FAA692BB9545F00C54625 /* ClinicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA682BB9545F00C54625 /* ClinicListView.swift */; };
@@ -249,6 +250,7 @@
 		CC6B32E52BBAB3160094A701 /* PregnancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregnancyView.swift; sourceTree = "<group>"; };
 		CC6B32E72BBAB4840094A701 /* SmokingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingView.swift; sourceTree = "<group>"; };
 		CC6B32E92BBAB5820094A701 /* HealthProblemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProblemsView.swift; sourceTree = "<group>"; };
+		CC6B32EB2BBC06110094A701 /* HealthProblemToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProblemToggle.swift; sourceTree = "<group>"; };
 		CC9FAA642BB94E4200C54625 /* DoctorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListView.swift; sourceTree = "<group>"; };
 		CC9FAA662BB953B300C54625 /* CenterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListView.swift; sourceTree = "<group>"; };
 		CC9FAA682BB9545F00C54625 /* ClinicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicListView.swift; sourceTree = "<group>"; };
@@ -792,6 +794,7 @@
 				262C0C3C2BB9CC1000565DC1 /* ProfileViewSections.swift */,
 				26EF1E442BBA4ED20010B57D /* CustomTextField.swift */,
 				26EF1E462BBA53410010B57D /* CustomPicker.swift */,
+				CC6B32EB2BBC06110094A701 /* HealthProblemToggle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1033,6 +1036,7 @@
 				7F196E9F2B6F983300CBBD6A /* AuthUseCaseProtocol.swift in Sources */,
 				7F988EC72AE2D34000E0BCBD /* GFSecureTextField.swift in Sources */,
 				7F5E42FF2AEBDE00008C2FC1 /* Fonts.swift in Sources */,
+				CC6B32EC2BBC06110094A701 /* HealthProblemToggle.swift in Sources */,
 				7F388C182B8762EA00FE021B /* AuthViewModell.swift in Sources */,
 				26EF1E3B2BBA183B0010B57D /* genderView.swift in Sources */,
 				7FB00F562AFD7CA800303EB2 /* ClincCard.swift in Sources */,
