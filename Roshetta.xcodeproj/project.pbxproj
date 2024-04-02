@@ -120,6 +120,7 @@
 		CC6B32E82BBAB4840094A701 /* SmokingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E72BBAB4840094A701 /* SmokingView.swift */; };
 		CC6B32EA2BBAB5830094A701 /* HealthProblemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E92BBAB5820094A701 /* HealthProblemsView.swift */; };
 		CC6B32EC2BBC06110094A701 /* HealthProblemToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32EB2BBC06110094A701 /* HealthProblemToggle.swift */; };
+		CC6B32EE2BBC0AF60094A701 /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32ED2BBC0AF60094A701 /* BookingView.swift */; };
 		CC9FAA652BB94E4200C54625 /* DoctorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA642BB94E4200C54625 /* DoctorListView.swift */; };
 		CC9FAA672BB953B300C54625 /* CenterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA662BB953B300C54625 /* CenterListView.swift */; };
 		CC9FAA692BB9545F00C54625 /* ClinicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA682BB9545F00C54625 /* ClinicListView.swift */; };
@@ -251,6 +252,7 @@
 		CC6B32E72BBAB4840094A701 /* SmokingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingView.swift; sourceTree = "<group>"; };
 		CC6B32E92BBAB5820094A701 /* HealthProblemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProblemsView.swift; sourceTree = "<group>"; };
 		CC6B32EB2BBC06110094A701 /* HealthProblemToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProblemToggle.swift; sourceTree = "<group>"; };
+		CC6B32ED2BBC0AF60094A701 /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
 		CC9FAA642BB94E4200C54625 /* DoctorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListView.swift; sourceTree = "<group>"; };
 		CC9FAA662BB953B300C54625 /* CenterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListView.swift; sourceTree = "<group>"; };
 		CC9FAA682BB9545F00C54625 /* ClinicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicListView.swift; sourceTree = "<group>"; };
@@ -572,6 +574,7 @@
 				CC9FAA662BB953B300C54625 /* CenterListView.swift */,
 				CC9FAA682BB9545F00C54625 /* ClinicListView.swift */,
 				CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */,
+				CC6B32ED2BBC0AF60094A701 /* BookingView.swift */,
 			);
 			path = "Detaild Screen";
 			sourceTree = "<group>";
@@ -1096,6 +1099,7 @@
 				7F988EC12AE2D34000E0BCBD /* GFButton.swift in Sources */,
 				7F6CA33C2AEF0AA400BAB446 /* FacebookManager.swift in Sources */,
 				26FAD1E12BB4AA0F0025650F /* SearchBar.swift in Sources */,
+				CC6B32EE2BBC0AF60094A701 /* BookingView.swift in Sources */,
 				7F48B4AF2B85315500B2AD82 /* RepositoryError.swift in Sources */,
 				7F78B6132B61DA5B004DB15E /* NetworkLayerTestViewModel.swift in Sources */,
 				7F196E912B6F92ED00CBBD6A /* UserNetworkResponse.swift in Sources */,

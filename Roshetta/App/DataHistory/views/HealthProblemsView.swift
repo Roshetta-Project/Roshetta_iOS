@@ -31,6 +31,7 @@ struct HealthProblemsView: View {
                     .padding(.top, 50)
                 
                 healthProblemsGrid
+                    .padding(.vertical)
                 
                 Spacer()
                 

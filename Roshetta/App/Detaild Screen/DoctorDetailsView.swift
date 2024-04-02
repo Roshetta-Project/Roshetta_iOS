@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DoctorDetailsView: View {
     // MARK: - PROPERTYS
-
+    @State private var isShowingSheet: Bool = false
     // MARK: - VIEW
     var body: some View {
         NavigationStack {
@@ -27,8 +27,12 @@ struct DoctorDetailsView: View {
                              text: "Book Now",
                              backgroundColor: Colors.main,
                              foregroundColot: Color.white) {
+                        isShowingSheet.toggle()
                         // TODO: - Book
-                    }
+                    }.sheet(isPresented: $isShowingSheet, content: {
+                        BookingView()
+                            .presentationDetents([.medium])
+                    })
                              .padding(.top, 24)
                 }//:VStack
                 .padding()
