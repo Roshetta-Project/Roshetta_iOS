@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     
     // MARK: - PROPERTYS
-    
+
     let userName : String
     let location : String
     
@@ -21,7 +21,6 @@ struct ProfileView: View {
         ProfileSectionItem(title: "About Us", imageName: "users icon"),
         ProfileSectionItem(title: "Contact Us", imageName: "contactus")
     ]
-    
     
     // MARK: - VIEW
     
@@ -43,7 +42,7 @@ struct ProfileView: View {
                 
                 List {
                     ForEach(sections) { section in
-                        NavigationLink(destination: HomeView()) {
+                        NavigationLink(destination: AccountView()) {
                             ProfileViewSections(section: section)
                         }
                     }

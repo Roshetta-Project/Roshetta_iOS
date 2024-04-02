@@ -16,7 +16,7 @@ struct CustomTextField: View {
             .frame(height: 50)
             .background(Color.white)
             .cornerRadius(8)
-            .shadow(color: Color.black.opacity(0.1), radius: 4, x: 4, y: 2)
+            .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 0)
     }
 }
 

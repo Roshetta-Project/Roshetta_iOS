@@ -18,6 +18,13 @@
 		265480D82BBC76B30070F5B5 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 265480D72BBC76B30070F5B5 /* FacebookCore */; };
 		265480DA2BBC76B30070F5B5 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 265480D92BBC76B30070F5B5 /* FacebookLogin */; };
 		265480DC2BBC7ACA0070F5B5 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 265480DB2BBC7ACA0070F5B5 /* GoogleSignIn */; };
+		265480E42BBC7FB70070F5B5 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265480E32BBC7FB70070F5B5 /* AccountView.swift */; };
+		265480E62BBC814A0070F5B5 /* ViewProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265480E52BBC814A0070F5B5 /* ViewProfileView.swift */; };
+		265480ED2BBC85D50070F5B5 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265480EC2BBC85D50070F5B5 /* Picker.swift */; };
+		265480EF2BBC863D0070F5B5 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265480EE2BBC863D0070F5B5 /* ProfileImageView.swift */; };
+		265480F12BBC890C0070F5B5 /* CustomProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265480F02BBC890C0070F5B5 /* CustomProfileTextField.swift */; };
+		265480F32BBC8FE20070F5B5 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265480F22BBC8FE20070F5B5 /* PrivacyPolicyView.swift */; };
+		265480F52BBC94F30070F5B5 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265480F42BBC94F30070F5B5 /* AboutUsView.swift */; };
 		265B45542BB8ECC700C0CA06 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B45532BB8ECC700C0CA06 /* NotificationsView.swift */; };
 		265B45582BB8F65300C0CA06 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B45572BB8F65300C0CA06 /* TabBarView.swift */; };
 		2665AABD2BAA37A400CE29F3 /* Segoe UI Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AAB92BAA37A400CE29F3 /* Segoe UI Bold.ttf */; };
@@ -140,6 +147,13 @@
 		26547FF82BAF73E300AD302B /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		26547FFA2BAF805E00AD302B /* MenuSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSide.swift; sourceTree = "<group>"; };
 		265480002BAF852100AD302B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		265480E32BBC7FB70070F5B5 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		265480E52BBC814A0070F5B5 /* ViewProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileView.swift; sourceTree = "<group>"; };
+		265480EC2BBC85D50070F5B5 /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		265480EE2BBC863D0070F5B5 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		265480F02BBC890C0070F5B5 /* CustomProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProfileTextField.swift; sourceTree = "<group>"; };
+		265480F22BBC8FE20070F5B5 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		265480F42BBC94F30070F5B5 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		265B45532BB8ECC700C0CA06 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		265B45572BB8F65300C0CA06 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		2665AAB92BAA37A400CE29F3 /* Segoe UI Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Bold.ttf"; sourceTree = "<group>"; };
@@ -281,6 +295,10 @@
 			isa = PBXGroup;
 			children = (
 				262C0C382BB9C27100565DC1 /* ProfileView.swift */,
+				265480E32BBC7FB70070F5B5 /* AccountView.swift */,
+				265480E52BBC814A0070F5B5 /* ViewProfileView.swift */,
+				265480F22BBC8FE20070F5B5 /* PrivacyPolicyView.swift */,
+				265480F42BBC94F30070F5B5 /* AboutUsView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -302,6 +320,15 @@
 				265480002BAF852100AD302B /* Home.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		265480EB2BBC85910070F5B5 /* ProfileImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				265480EC2BBC85D50070F5B5 /* Picker.swift */,
+				265480EE2BBC863D0070F5B5 /* ProfileImageView.swift */,
+			);
+			path = ProfileImagePicker;
 			sourceTree = "<group>";
 		};
 		265B45502BB8EC9D00C0CA06 /* Notifications */ = {
@@ -765,6 +792,7 @@
 		7F988EB32AE2D33F00E0BCBD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				265480EB2BBC85910070F5B5 /* ProfileImagePicker */,
 				7F988EB72AE2D33F00E0BCBD /* GFButton.swift */,
 				7F6CA30A2AECF52900BAB446 /* GFAuthButton.swift */,
 				7F988EB82AE2D33F00E0BCBD /* HomeSlider.swift */,
@@ -796,6 +824,7 @@
 				262C0C3C2BB9CC1000565DC1 /* ProfileViewSections.swift */,
 				26EF1E442BBA4ED20010B57D /* CustomTextField.swift */,
 				26EF1E462BBA53410010B57D /* CustomPicker.swift */,
+				265480F02BBC890C0070F5B5 /* CustomProfileTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1002,10 +1031,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				26FAD1DF2BB4A7310025650F /* BigReviewCard.swift in Sources */,
+				265480ED2BBC85D50070F5B5 /* Picker.swift in Sources */,
 				7F388C1C2B8777E200FE021B /* AuthView.swift in Sources */,
 				7F884CD42B6C1E5400B82521 /* StatusImageView.swift in Sources */,
 				7F884CC02B6C1D3800B82521 /* CenterDetailsView.swift in Sources */,
 				CC3C83AD2BACFAF60025AF74 /* HomeView.swift in Sources */,
+				265480E62BBC814A0070F5B5 /* ViewProfileView.swift in Sources */,
 				7F5E42ED2AEBD782008C2FC1 /* RoshettaAppViewModel.swift in Sources */,
 				7FC67AE42B2785D0000A5586 /* BaseAPIClient.swift in Sources */,
 				7F884CCE2B6C1E1900B82521 /* PriceCard.swift in Sources */,
@@ -1045,6 +1076,7 @@
 				7FB00F542AFD6AF000303EB2 /* DoctorCard.swift in Sources */,
 				7F988EAB2AE2D2BD00E0BCBD /* View.swift in Sources */,
 				CC9FAA672BB953B300C54625 /* CenterListView.swift in Sources */,
+				265480E42BBC7FB70070F5B5 /* AccountView.swift in Sources */,
 				26EF1E472BBA53410010B57D /* CustomPicker.swift in Sources */,
 				7F6CA30B2AECF52900BAB446 /* GFAuthButton.swift in Sources */,
 				7F388C162B87622500FE021B /* AuthViewModelProtocol.swift in Sources */,
@@ -1072,10 +1104,12 @@
 				7FC67AE22B278416000A5586 /* BaseAPIRequest.swift in Sources */,
 				CC9FAA692BB9545F00C54625 /* ClinicListView.swift in Sources */,
 				7F988E5C2AE2D1BC00E0BCBD /* RoshettaApp.swift in Sources */,
+				265480F52BBC94F30070F5B5 /* AboutUsView.swift in Sources */,
 				7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */,
 				7F884CC22B6C1D5D00B82521 /* ClinicDetailsView.swift in Sources */,
 				7FC67AEB2B27B56D000A5586 /* MultipartAPIRequestConfiguration.swift in Sources */,
 				7F884CC42B6C1D9400B82521 /* DoctorDetailsView.swift in Sources */,
+				265480F32BBC8FE20070F5B5 /* PrivacyPolicyView.swift in Sources */,
 				26FAD1E32BB4AF790025650F /* NotificationCard.swift in Sources */,
 				7F988EA02AE2D29900E0BCBD /* LanguageManager.swift in Sources */,
 				265480012BAF852100AD302B /* Home.swift in Sources */,
@@ -1090,6 +1124,8 @@
 				7FC67AF42B27B763000A5586 /* MultipartURLRequestStrategy.swift in Sources */,
 				7F81F4912B6E931A00C8016B /* AuthAPIClient.swift in Sources */,
 				7F196E932B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift in Sources */,
+				265480F12BBC890C0070F5B5 /* CustomProfileTextField.swift in Sources */,
+				265480EF2BBC863D0070F5B5 /* ProfileImageView.swift in Sources */,
 				7F988EC12AE2D34000E0BCBD /* GFButton.swift in Sources */,
 				7F6CA33C2AEF0AA400BAB446 /* FacebookManager.swift in Sources */,
 				26FAD1E12BB4AA0F0025650F /* SearchBar.swift in Sources */,
