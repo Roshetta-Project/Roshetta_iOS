@@ -114,6 +114,7 @@
 		7FC67AEF2B27B6D6000A5586 /* URLRequestStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AEE2B27B6D6000A5586 /* URLRequestStrategy.swift */; };
 		7FC67AF22B27B701000A5586 /* RegularURLRequestStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AF12B27B701000A5586 /* RegularURLRequestStrategy.swift */; };
 		7FC67AF42B27B763000A5586 /* MultipartURLRequestStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AF32B27B763000A5586 /* MultipartURLRequestStrategy.swift */; };
+		CC03B31B2BC2DD010035F7D8 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC03B31A2BC2DD010035F7D8 /* SavedView.swift */; };
 		CC3C83AD2BACFAF60025AF74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C83AC2BACFAF60025AF74 /* HomeView.swift */; };
 		CC6B32E42BBA9E630094A701 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E32BBA9E630094A701 /* ExerciseView.swift */; };
 		CC6B32E62BBAB3160094A701 /* PregnancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E52BBAB3160094A701 /* PregnancyView.swift */; };
@@ -246,6 +247,7 @@
 		7FC67AEE2B27B6D6000A5586 /* URLRequestStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestStrategy.swift; sourceTree = "<group>"; };
 		7FC67AF12B27B701000A5586 /* RegularURLRequestStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularURLRequestStrategy.swift; sourceTree = "<group>"; };
 		7FC67AF32B27B763000A5586 /* MultipartURLRequestStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartURLRequestStrategy.swift; sourceTree = "<group>"; };
+		CC03B31A2BC2DD010035F7D8 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		CC3C83AC2BACFAF60025AF74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CC6B32E32BBA9E630094A701 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		CC6B32E52BBAB3160094A701 /* PregnancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregnancyView.swift; sourceTree = "<group>"; };
@@ -816,6 +818,7 @@
 		7F988ECE2AE2D3F800E0BCBD /* App */ = {
 			isa = PBXGroup;
 			children = (
+				CC03B3192BC2DCED0035F7D8 /* Saved */,
 				26EF1E382BBA174F0010B57D /* DataHistory */,
 				262C0C362BB9C25B00565DC1 /* Profile */,
 				265B45552BB8F64300C0CA06 /* TabBar */,
@@ -875,6 +878,22 @@
 				7FC67AF32B27B763000A5586 /* MultipartURLRequestStrategy.swift */,
 			);
 			path = RequestsStrategy;
+			sourceTree = "<group>";
+		};
+		CC03B3192BC2DCED0035F7D8 /* Saved */ = {
+			isa = PBXGroup;
+			children = (
+				CC03B31C2BC2DD060035F7D8 /* View */,
+			);
+			path = Saved;
+			sourceTree = "<group>";
+		};
+		CC03B31C2BC2DD060035F7D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC03B31A2BC2DD010035F7D8 /* SavedView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1104,6 +1123,7 @@
 				7F78B6132B61DA5B004DB15E /* NetworkLayerTestViewModel.swift in Sources */,
 				7F196E912B6F92ED00CBBD6A /* UserNetworkResponse.swift in Sources */,
 				7F988E9C2AE2D29900E0BCBD /* HTTPMethod.swift in Sources */,
+				CC03B31B2BC2DD010035F7D8 /* SavedView.swift in Sources */,
 				7F884CC82B6C1DDC00B82521 /* ImageScroll.swift in Sources */,
 				7F988EAE2AE2D2BD00E0BCBD /* UINavigationBarAppearance.swift in Sources */,
 				265B45542BB8ECC700C0CA06 /* NotificationsView.swift in Sources */,
