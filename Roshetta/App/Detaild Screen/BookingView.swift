@@ -14,6 +14,19 @@ struct BookingView: View {
     let days = ["Sat","Sun", "Mon", "Tue", "Wed", "Thu", "Fri"]
     let times = ["10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:00 PM"]
     
+    init(){
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.init(red: 0.44, green: 0.76, blue: 0.97, alpha: 1.00)
+        UISegmentedControl.appearance().backgroundColor = .white
+        let selectedAttributes: [NSAttributedString.Key:Any] = [
+            .foregroundColor : UIColor.black,
+        ]
+        UISegmentedControl.appearance().setTitleTextAttributes(selectedAttributes, for: .selected)
+        let normalAttributes: [NSAttributedString.Key:Any] = [
+          .foregroundColor : UIColor.lightGray,
+        ]
+        UISegmentedControl.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
+    }
+    
     var body: some View {
             VStack {
                 Text("Select Date:")
@@ -37,11 +50,8 @@ struct BookingView: View {
                 .pickerStyle(SegmentedPickerStyle())
             }
             .padding()
+        Spacer()
     }
-    
-    
-//    public struct CustomPickerStyle : PickerStyle {
-//    }
 }
 
 #Preview {
