@@ -19,7 +19,7 @@ struct SavedView: View {
     
     
     var body: some View {
-        NavigationStack{
+        NavigationView{
             VStack {
                 HStack(spacing: 0) {
                     CustomSegmentedControl(title: "Doctors", index: 0, selectedIndex: $selectedPage)
@@ -31,8 +31,8 @@ struct SavedView: View {
                 getPageContent()
                 
                 Spacer()
-            }
-        }.navigationTitle("Saved").navigationBarTitleDisplayMode(.inline)
+            }.navigationTitle("Saved").navigationBarTitleDisplayMode(.inline)
+        }
     }
     
     // MARK: - Functions
