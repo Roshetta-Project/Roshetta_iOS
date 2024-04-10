@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		261D5BD02BC759A200346BAC /* ContactUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261D5BCF2BC759A200346BAC /* ContactUsView.swift */; };
 		261D5BD22BC75AC600346BAC /* MessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261D5BD12BC75AC600346BAC /* MessageTextField.swift */; };
+		261D5BD62BC75CB900346BAC /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261D5BD52BC75CB900346BAC /* ReviewView.swift */; };
 		262C0C392BB9C27100565DC1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C0C382BB9C27100565DC1 /* ProfileView.swift */; };
 		262C0C3B2BB9C7D800565DC1 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C0C3A2BB9C7D800565DC1 /* ProfileImage.swift */; };
 		262C0C3D2BB9CC1000565DC1 /* ProfileViewSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C0C3C2BB9CC1000565DC1 /* ProfileViewSections.swift */; };
@@ -146,6 +147,7 @@
 /* Begin PBXFileReference section */
 		261D5BCF2BC759A200346BAC /* ContactUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsView.swift; sourceTree = "<group>"; };
 		261D5BD12BC75AC600346BAC /* MessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTextField.swift; sourceTree = "<group>"; };
+		261D5BD52BC75CB900346BAC /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		262C0C382BB9C27100565DC1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		262C0C3A2BB9C7D800565DC1 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		262C0C3C2BB9CC1000565DC1 /* ProfileViewSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewSections.swift; sourceTree = "<group>"; };
@@ -293,6 +295,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		261D5BD32BC75CA300346BAC /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				261D5BD42BC75CAD00346BAC /* View */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		261D5BD42BC75CAD00346BAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				261D5BD52BC75CB900346BAC /* ReviewView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		262C0C362BB9C25B00565DC1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -858,6 +876,7 @@
 		7F988ECE2AE2D3F800E0BCBD /* App */ = {
 			isa = PBXGroup;
 			children = (
+				261D5BD32BC75CA300346BAC /* Review */,
 				7F0D4CE02AE799AA0057C1CE /* Root */,
 				26D6AEAB2BBB259F00F6B5A8 /* Reservation */,
 				26EF1E382BBA174F0010B57D /* DataHistory */,
@@ -1149,6 +1168,7 @@
 				7F988EC12AE2D34000E0BCBD /* GFButton.swift in Sources */,
 				7F6CA33C2AEF0AA400BAB446 /* FacebookManager.swift in Sources */,
 				26FAD1E12BB4AA0F0025650F /* SearchBar.swift in Sources */,
+				261D5BD62BC75CB900346BAC /* ReviewView.swift in Sources */,
 				7F48B4AF2B85315500B2AD82 /* RepositoryError.swift in Sources */,
 				7F78B6132B61DA5B004DB15E /* NetworkLayerTestViewModel.swift in Sources */,
 				7F196E912B6F92ED00CBBD6A /* UserNetworkResponse.swift in Sources */,
