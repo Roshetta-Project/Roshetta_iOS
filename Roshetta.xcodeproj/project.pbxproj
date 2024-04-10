@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261D5BD02BC759A200346BAC /* ContactUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261D5BCF2BC759A200346BAC /* ContactUsView.swift */; };
+		261D5BD22BC75AC600346BAC /* MessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261D5BD12BC75AC600346BAC /* MessageTextField.swift */; };
 		262C0C392BB9C27100565DC1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C0C382BB9C27100565DC1 /* ProfileView.swift */; };
 		262C0C3B2BB9C7D800565DC1 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C0C3A2BB9C7D800565DC1 /* ProfileImage.swift */; };
 		262C0C3D2BB9CC1000565DC1 /* ProfileViewSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C0C3C2BB9CC1000565DC1 /* ProfileViewSections.swift */; };
@@ -142,6 +144,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		261D5BCF2BC759A200346BAC /* ContactUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsView.swift; sourceTree = "<group>"; };
+		261D5BD12BC75AC600346BAC /* MessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTextField.swift; sourceTree = "<group>"; };
 		262C0C382BB9C27100565DC1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		262C0C3A2BB9C7D800565DC1 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		262C0C3C2BB9CC1000565DC1 /* ProfileViewSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewSections.swift; sourceTree = "<group>"; };
@@ -304,8 +308,9 @@
 				265480E32BBC7FB70070F5B5 /* AccountView.swift */,
 				265480E52BBC814A0070F5B5 /* ViewProfileView.swift */,
 				265480F22BBC8FE20070F5B5 /* PrivacyPolicyView.swift */,
-				265480F42BBC94F30070F5B5 /* AboutUsView.swift */,
 				26D7017E2BBE298D00DF0A20 /* RateUsView.swift */,
+				265480F42BBC94F30070F5B5 /* AboutUsView.swift */,
+				261D5BCF2BC759A200346BAC /* ContactUsView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -834,6 +839,7 @@
 				265480F02BBC890C0070F5B5 /* CustomProfileTextField.swift */,
 				26D701802BBE2A5F00DF0A20 /* StarRatingView.swift */,
 				26D701822BBE2B4D00DF0A20 /* ReviewTextField.swift */,
+				261D5BD12BC75AC600346BAC /* MessageTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1102,6 +1108,7 @@
 				26547FF72BAF6F2700AD302B /* SideMenuView.swift in Sources */,
 				26FAD1DD2BB49F9A0025650F /* ReservationCard.swift in Sources */,
 				7F196EA12B6F9B6100CBBD6A /* AuthUseCase.swift in Sources */,
+				261D5BD22BC75AC600346BAC /* MessageTextField.swift in Sources */,
 				262C0C3D2BB9CC1000565DC1 /* ProfileViewSections.swift in Sources */,
 				7FC67AED2B27B5B6000A5586 /* URLRequestConvertible.swift in Sources */,
 				7F884CE32B6C269100B82521 /* RoundedImage.swift in Sources */,
@@ -1130,6 +1137,7 @@
 				26EF1E412BBA4C2A0010B57D /* AddressView.swift in Sources */,
 				7F260F9F2BAA2FF60067A214 /* AuthDataSourceProtocol.swift in Sources */,
 				265B45582BB8F65300C0CA06 /* TabBarView.swift in Sources */,
+				261D5BD02BC759A200346BAC /* ContactUsView.swift in Sources */,
 				26547FF32BAF6B0C00AD302B /* CircularGradient.swift in Sources */,
 				26547FFB2BAF805E00AD302B /* MenuSide.swift in Sources */,
 				7F5E43052AEBE3AF008C2FC1 /* SFSymbols.swift in Sources */,
