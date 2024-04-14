@@ -116,6 +116,7 @@
 		7FC67AF42B27B763000A5586 /* MultipartURLRequestStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67AF32B27B763000A5586 /* MultipartURLRequestStrategy.swift */; };
 		CC03B31B2BC2DD010035F7D8 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC03B31A2BC2DD010035F7D8 /* SavedView.swift */; };
 		CC3C83AD2BACFAF60025AF74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C83AC2BACFAF60025AF74 /* HomeView.swift */; };
+		CC4071B32BCB8C2200AABD99 /* TimeScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4071B22BCB8C2200AABD99 /* TimeScrollView.swift */; };
 		CC6B32E42BBA9E630094A701 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E32BBA9E630094A701 /* ExerciseView.swift */; };
 		CC6B32E62BBAB3160094A701 /* PregnancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E52BBAB3160094A701 /* PregnancyView.swift */; };
 		CC6B32E82BBAB4840094A701 /* SmokingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6B32E72BBAB4840094A701 /* SmokingView.swift */; };
@@ -250,6 +251,7 @@
 		7FC67AF32B27B763000A5586 /* MultipartURLRequestStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartURLRequestStrategy.swift; sourceTree = "<group>"; };
 		CC03B31A2BC2DD010035F7D8 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		CC3C83AC2BACFAF60025AF74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CC4071B22BCB8C2200AABD99 /* TimeScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeScrollView.swift; sourceTree = "<group>"; };
 		CC6B32E32BBA9E630094A701 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		CC6B32E52BBAB3160094A701 /* PregnancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregnancyView.swift; sourceTree = "<group>"; };
 		CC6B32E72BBAB4840094A701 /* SmokingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingView.swift; sourceTree = "<group>"; };
@@ -803,6 +805,7 @@
 				26EF1E462BBA53410010B57D /* CustomPicker.swift */,
 				CC6B32EB2BBC06110094A701 /* HealthProblemToggle.swift */,
 				CCD98A5C2BC3EAF000CA0987 /* DaysDateScrollView.swift */,
+				CC4071B22BCB8C2200AABD99 /* TimeScrollView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1123,6 +1126,7 @@
 				26FAD1E12BB4AA0F0025650F /* SearchBar.swift in Sources */,
 				CC6B32EE2BBC0AF60094A701 /* BookingView.swift in Sources */,
 				7F48B4AF2B85315500B2AD82 /* RepositoryError.swift in Sources */,
+				CC4071B32BCB8C2200AABD99 /* TimeScrollView.swift in Sources */,
 				7F78B6132B61DA5B004DB15E /* NetworkLayerTestViewModel.swift in Sources */,
 				7F196E912B6F92ED00CBBD6A /* UserNetworkResponse.swift in Sources */,
 				7F988E9C2AE2D29900E0BCBD /* HTTPMethod.swift in Sources */,
