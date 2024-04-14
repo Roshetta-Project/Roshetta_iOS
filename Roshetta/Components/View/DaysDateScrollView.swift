@@ -38,7 +38,7 @@ struct DaysDateScrollView: View {
                             )
                     }
                 }
-            }.padding()
+            }.padding(.vertical)
         }
     }
 }
