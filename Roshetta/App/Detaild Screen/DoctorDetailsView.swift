@@ -31,7 +31,7 @@ struct DoctorDetailsView: View {
                         // TODO: - Book
                     }.sheet(isPresented: $isShowingSheet, content: {
                         BookingView()
-                            .presentationDetents([.medium])
+                            .presentationDetents([.fraction(0.45)])
                     })
                              .padding(.top, 24)
                 }//:VStack
