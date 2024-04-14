@@ -126,6 +126,7 @@
 		CC9FAA672BB953B300C54625 /* CenterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA662BB953B300C54625 /* CenterListView.swift */; };
 		CC9FAA692BB9545F00C54625 /* ClinicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA682BB9545F00C54625 /* ClinicListView.swift */; };
 		CC9FAA6B2BB95D4100C54625 /* SpecialistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */; };
+		CCD98A5D2BC3EAF000CA0987 /* DaysDateScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD98A5C2BC3EAF000CA0987 /* DaysDateScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +260,7 @@
 		CC9FAA662BB953B300C54625 /* CenterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListView.swift; sourceTree = "<group>"; };
 		CC9FAA682BB9545F00C54625 /* ClinicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicListView.swift; sourceTree = "<group>"; };
 		CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistListView.swift; sourceTree = "<group>"; };
+		CCD98A5C2BC3EAF000CA0987 /* DaysDateScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysDateScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -800,6 +802,7 @@
 				26EF1E442BBA4ED20010B57D /* CustomTextField.swift */,
 				26EF1E462BBA53410010B57D /* CustomPicker.swift */,
 				CC6B32EB2BBC06110094A701 /* HealthProblemToggle.swift */,
+				CCD98A5C2BC3EAF000CA0987 /* DaysDateScrollView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1125,6 +1128,7 @@
 				7F988E9C2AE2D29900E0BCBD /* HTTPMethod.swift in Sources */,
 				CC03B31B2BC2DD010035F7D8 /* SavedView.swift in Sources */,
 				7F884CC82B6C1DDC00B82521 /* ImageScroll.swift in Sources */,
+				CCD98A5D2BC3EAF000CA0987 /* DaysDateScrollView.swift in Sources */,
 				7F988EAE2AE2D2BD00E0BCBD /* UINavigationBarAppearance.swift in Sources */,
 				265B45542BB8ECC700C0CA06 /* NotificationsView.swift in Sources */,
 			);

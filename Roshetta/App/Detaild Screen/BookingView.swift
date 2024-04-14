@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BookingView: View {
+    // MARK: - Properties
     @State private var selectedDayIndex = 0
     @State private var selectedTimeIndex = 0
     
@@ -27,17 +28,21 @@ struct BookingView: View {
         UISegmentedControl.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
     }
     
+    // MARK: - Body
     var body: some View {
-            VStack {
+        VStack(alignment: .leading) {
                 Text("Select Date:")
-                Picker(selection: $selectedDayIndex, label: Text("")) {
-                    ForEach(0..<7) { index in
-                        Button(action: {}) {
-                            Text(self.days[index])
-                        }
-                    }
-                }
-                .pickerStyle(SegmentedPickerStyle())
+                .font(.custom(GFFonts.SeguiSemiBold, size: 18))
+//                Picker(selection: $selectedDayIndex, label: Text("")) {
+//                    ForEach(0..<7) { index in
+//                        Button(action: {}) {
+//                            Text(self.days[index])
+//                        }
+//                    }
+//                }
+//                .pickerStyle(SegmentedPickerStyle())
+                
+                DaysDateScrollView()
                 
                 Text("Select Schedule Day:")
                 Picker(selection: $selectedTimeIndex, label: Text("")) {
