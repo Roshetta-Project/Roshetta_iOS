@@ -10,18 +10,25 @@ import SwiftUI
 struct SplashView: View {
     // MARK: - Variables
     @State private var isStarted: Bool = false
+    @State private var showMainAppView: Bool = false
     
     // MARK: - Body
     var body: some View {
-        Images.AppLogo
-            .offset(y: -64)
-            .scaleEffect(isStarted ? 1 : 0.0)
-            .onAppear {
-                withAnimation(.linear(duration: 2.5)) {
-                    isStarted = true
+        ZStack{
+            Images.AppLogo
+                .scaledToFit()
+                .scaleEffect(isStarted ? 1.0: 0.5)
+                .onAppear {
+                    withAnimation(.linear(duration: 1.3)) {
+                        isStarted = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                            showMainAppView = true
+                        }
+                    }
                 }
-            }
-            .ignoresSafeArea()
+        }.fullScreenCover(isPresented: $showMainAppView) {
+            OnboardingView()
+        }
     }
 }
 
