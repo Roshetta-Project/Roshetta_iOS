@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HealthProblemToggle: ToggleStyle {
     let isSelected: Bool
-    let cardWidth = (UIScreen.main.bounds.width / 3) - 35
     
     func makeBody(configuration: Configuration) -> some View {
         Button(action: {
@@ -17,7 +16,6 @@ struct HealthProblemToggle: ToggleStyle {
         }, label: {
             HStack {
                 configuration.label
-                    .frame(width: cardWidth)
                     .lineLimit(2)
                     .font(.custom(GFFonts.Segui, size: 16))
                     .minimumScaleFactor(0.5)

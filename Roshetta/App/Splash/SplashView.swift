@@ -19,7 +19,7 @@ struct SplashView: View {
                 .scaledToFit()
                 .scaleEffect(isStarted ? 1.0: 0.5)
                 .onAppear {
-                    withAnimation(.linear(duration: 1.3)) {
+                    withAnimation(.linear(duration: 1.5)) {
                         isStarted = true
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                             showMainAppView = true
