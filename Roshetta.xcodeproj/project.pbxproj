@@ -20,10 +20,7 @@
 		2665AABD2BAA37A400CE29F3 /* Segoe UI Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AAB92BAA37A400CE29F3 /* Segoe UI Bold.ttf */; };
 		2665AABE2BAA37A400CE29F3 /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AABA2BAA37A400CE29F3 /* Segoe UI.ttf */; };
 		2665AAC42BAA3AD500CE29F3 /* Segoe UI Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */; };
-		26EF1E302BBA13C60010B57D /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 26EF1E2F2BBA13C60010B57D /* FacebookCore */; };
-		26EF1E322BBA13C60010B57D /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 26EF1E312BBA13C60010B57D /* FacebookLogin */; };
-		26EF1E352BBA13E60010B57D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 26EF1E342BBA13E60010B57D /* GoogleSignIn */; };
-		26EF1E372BBA13E60010B57D /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 26EF1E362BBA13E60010B57D /* GoogleSignInSwift */; };
+		26A353342BE1524600CA1344 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 26A353332BE1524600CA1344 /* FacebookLogin */; };
 		26EF1E3B2BBA183B0010B57D /* genderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EF1E3A2BBA183B0010B57D /* genderView.swift */; };
 		26EF1E3F2BBA42D40010B57D /* DateOfBirthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EF1E3E2BBA42D40010B57D /* DateOfBirthView.swift */; };
 		26EF1E412BBA4C2A0010B57D /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EF1E402BBA4C2A0010B57D /* AddressView.swift */; };
@@ -279,10 +276,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26EF1E322BBA13C60010B57D /* FacebookLogin in Frameworks */,
-				26EF1E302BBA13C60010B57D /* FacebookCore in Frameworks */,
-				26EF1E352BBA13E60010B57D /* GoogleSignIn in Frameworks */,
-				26EF1E372BBA13E60010B57D /* GoogleSignInSwift in Frameworks */,
+				26A353342BE1524600CA1344 /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,10 +934,7 @@
 			);
 			name = Roshetta;
 			packageProductDependencies = (
-				26EF1E2F2BBA13C60010B57D /* FacebookCore */,
-				26EF1E312BBA13C60010B57D /* FacebookLogin */,
-				26EF1E342BBA13E60010B57D /* GoogleSignIn */,
-				26EF1E362BBA13E60010B57D /* GoogleSignInSwift */,
+				26A353332BE1524600CA1344 /* FacebookLogin */,
 			);
 			productName = Roshetta;
 			productReference = 7F988E582AE2D1BC00E0BCBD /* Roshetta.app */;
@@ -979,8 +970,8 @@
 			);
 			mainGroup = 7F988E4F2AE2D1BC00E0BCBD;
 			packageReferences = (
-				26EF1E2E2BBA13C60010B57D /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
-				26EF1E332BBA13E60010B57D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				26A353312BE151F500CA1344 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				26A353322BE1524600CA1344 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 7F988E592AE2D1BC00E0BCBD /* Products */;
 			projectDirPath = "";
@@ -1412,15 +1403,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		26EF1E2E2BBA13C60010B57D /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 14.1.0;
-			};
-		};
-		26EF1E332BBA13E60010B57D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+		26A353312BE151F500CA1344 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
 			requirement = {
@@ -1428,28 +1411,21 @@
 				minimumVersion = 7.1.0;
 			};
 		};
+		26A353322BE1524600CA1344 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		26EF1E2F2BBA13C60010B57D /* FacebookCore */ = {
+		26A353332BE1524600CA1344 /* FacebookLogin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 26EF1E2E2BBA13C60010B57D /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookCore;
-		};
-		26EF1E312BBA13C60010B57D /* FacebookLogin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 26EF1E2E2BBA13C60010B57D /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			package = 26A353322BE1524600CA1344 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookLogin;
-		};
-		26EF1E342BBA13E60010B57D /* GoogleSignIn */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 26EF1E332BBA13E60010B57D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignIn;
-		};
-		26EF1E362BBA13E60010B57D /* GoogleSignInSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 26EF1E332BBA13E60010B57D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
