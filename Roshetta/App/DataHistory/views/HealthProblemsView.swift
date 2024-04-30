@@ -63,13 +63,13 @@ struct HealthProblemsView: View {
                         .alignmentGuide(.leading, computeValue: { d in
                         if (abs(width - d.width) > g.size.width) {
                             width = 0
-                            height -= d.height
+                            height -= d.height + 25
                         }
                         let result = width
                         if problem == self.$healthProblems.last!.wrappedValue {
                             width = 0
                         } else {
-                            width -= d.width
+                            width -= d.width + 30
                         }
                         return result
                     })
