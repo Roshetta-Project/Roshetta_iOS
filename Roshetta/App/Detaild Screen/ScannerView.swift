@@ -1,0 +1,26 @@
+//
+//  ScannerView.swift
+//  Roshetta
+//
+//  Created by Sami Ahmed on 05/05/2024.
+//
+
+import SwiftUI
+
+struct ScannerView: View {
+    var body: some View {
+        VStack{
+            Spacer()
+            Text("Upload Your X-ray")
+                .font(.custom(GFFonts.SeguiBold, size: 24))
+                .foregroundColor(Colors.main)
+            rayScannerView(image: "center")
+            Spacer()
+
+        }
+    }
+}
+
+#Preview {
+    ScannerView()
+}

@@ -132,24 +132,6 @@ struct HomeView: View {
                     .padding()
                 }
             }
-            .navigationBarItems(
-                leading: Button(action: {
-                    // fav button
-                }) {
-                    Image(systemName: "line.3.horizontal")
-                        .foregroundColor(Color("text"))
-                        .fontWeight(.semibold)
-                },
-                trailing:
-                    Button(action: {
-                        // fav button
-                    }) {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(Color("text"))
-                            .fontWeight(.semibold)
-                    }
-            )
-            .padding(.vertical)
             
         }
     }

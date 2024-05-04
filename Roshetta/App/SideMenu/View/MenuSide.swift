@@ -42,13 +42,15 @@ struct MenuSide: View {
             }
             
             VStack(alignment:.leading,spacing:10){
+                TabButton(image: "house", title: "Home", selectedTab: $selectedTab, animation: animation)
+                
+                TabButton(image: "calendar", title: "Reservation", selectedTab: $selectedTab, animation: animation)
+                
                 TabButton(image: "bell.fill", title: "Notification", selectedTab: $selectedTab, animation: animation)
                 
                 TabButton(image: "bookmark.fill", title: "Saved", selectedTab: $selectedTab, animation: animation)
                 
                 TabButton(image: "qrcode.viewfinder", title: "Scanner", selectedTab: $selectedTab, animation: animation)
-                
-                TabButton(image: "message.fill", title: "Chat", selectedTab: $selectedTab, animation: animation)
                 
                 TabButton(image: "gearshape.fill", title: "Setting", selectedTab: $selectedTab, animation: animation)
             }

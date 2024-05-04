@@ -9,21 +9,43 @@ import SwiftUI
 
 struct Home: View {
     @Binding var selectedTab : String
+    
+    init(selectedTab:Binding<String>) {
+        self._selectedTab = selectedTab
+        UITabBar.appearance().isHidden = true
+    }
+    
     var body: some View {
         TabView(selection:$selectedTab){
             
            //views
-            NotificationsView()
-                .tag("Notifications")
+            HomeView()
+                .tag("Home")
+                .padding(.top,45)
             
-            DoctorDetailsView()
+            ReservationVIew()
+                .tag("Reservation")
+                .padding(.top,45)
+
+            NotificationsView()
+                .tag("Notification")
+                .padding(.top,45)
+            
+            NotificationsView() //Replace with savedView
                 .tag("Saved")
-            Scanner()
+                .padding(.top,45)  
+            
+            NotificationsView() //Replace with Scanner
                 .tag("Scanner")
-            chat()
-                .tag("chat")
-            setting()
-                .tag("setting")
+                .padding(.top,45)
+            
+            NotificationsView() //Replace with Setting
+                .tag("Setting")
+                .padding(.top,45)
+            
+          
+
+
         }
     }
 }

@@ -34,6 +34,8 @@
 		2665AABE2BAA37A400CE29F3 /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AABA2BAA37A400CE29F3 /* Segoe UI.ttf */; };
 		2665AAC42BAA3AD500CE29F3 /* Segoe UI Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */; };
 		2677D33E2BCB7A2A003354E7 /* RulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2677D33D2BCB7A2A003354E7 /* RulerView.swift */; };
+		268F2DFF2BE6F35C00F1D87E /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268F2DFE2BE6F35C00F1D87E /* ScannerView.swift */; };
+		268F2E012BE6F46500F1D87E /* x-rayScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268F2E002BE6F46500F1D87E /* x-rayScannerView.swift */; };
 		26D6AEAE2BBB25B900F6B5A8 /* ReservationVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6AEAD2BBB25B900F6B5A8 /* ReservationVIew.swift */; };
 		26D7017F2BBE298D00DF0A20 /* RateUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D7017E2BBE298D00DF0A20 /* RateUsView.swift */; };
 		26D701812BBE2A5F00DF0A20 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D701802BBE2A5F00DF0A20 /* StarRatingView.swift */; };
@@ -170,6 +172,8 @@
 		2665AABA2BAA37A400CE29F3 /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
 		2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Semibold.ttf"; sourceTree = "<group>"; };
 		2677D33D2BCB7A2A003354E7 /* RulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerView.swift; sourceTree = "<group>"; };
+		268F2DFE2BE6F35C00F1D87E /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		268F2E002BE6F46500F1D87E /* x-rayScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "x-rayScannerView.swift"; sourceTree = "<group>"; };
 		26D6AEAD2BBB25B900F6B5A8 /* ReservationVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationVIew.swift; sourceTree = "<group>"; };
 		26D7017E2BBE298D00DF0A20 /* RateUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateUsView.swift; sourceTree = "<group>"; };
 		26D701802BBE2A5F00DF0A20 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
@@ -359,6 +363,7 @@
 			children = (
 				265480EC2BBC85D50070F5B5 /* Picker.swift */,
 				265480EE2BBC863D0070F5B5 /* ProfileImageView.swift */,
+				268F2E002BE6F46500F1D87E /* x-rayScannerView.swift */,
 			);
 			path = ProfileImagePicker;
 			sourceTree = "<group>";
@@ -626,6 +631,7 @@
 		7F884CBC2B6C1C8800B82521 /* Detaild Screen */ = {
 			isa = PBXGroup;
 			children = (
+				268F2DFE2BE6F35C00F1D87E /* ScannerView.swift */,
 				7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */,
 				7F884CC12B6C1D5D00B82521 /* ClinicDetailsView.swift */,
 				7F884CC32B6C1D9400B82521 /* DoctorDetailsView.swift */,
@@ -1106,6 +1112,7 @@
 				26D6AEAE2BBB25B900F6B5A8 /* ReservationVIew.swift in Sources */,
 				7F988EC72AE2D34000E0BCBD /* GFSecureTextField.swift in Sources */,
 				7F5E42FF2AEBDE00008C2FC1 /* Fonts.swift in Sources */,
+				268F2DFF2BE6F35C00F1D87E /* ScannerView.swift in Sources */,
 				7F388C182B8762EA00FE021B /* AuthViewModell.swift in Sources */,
 				26EF1E3B2BBA183B0010B57D /* genderView.swift in Sources */,
 				7FB00F562AFD7CA800303EB2 /* ClincCard.swift in Sources */,
@@ -1149,6 +1156,7 @@
 				7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */,
 				7F884CC22B6C1D5D00B82521 /* ClinicDetailsView.swift in Sources */,
 				7FC67AEB2B27B56D000A5586 /* MultipartAPIRequestConfiguration.swift in Sources */,
+				268F2E012BE6F46500F1D87E /* x-rayScannerView.swift in Sources */,
 				7F884CC42B6C1D9400B82521 /* DoctorDetailsView.swift in Sources */,
 				265480F32BBC8FE20070F5B5 /* PrivacyPolicyView.swift in Sources */,
 				26FAD1E32BB4AF790025650F /* NotificationCard.swift in Sources */,
@@ -1365,7 +1373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Roshetta/Preview Content\"";
-				DEVELOPMENT_TEAM = 5Z792TF2FL;
+				DEVELOPMENT_TEAM = 587KJ2SYVV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Roshetta/Info.plist;
@@ -1397,7 +1405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Roshetta/Preview Content\"";
-				DEVELOPMENT_TEAM = 5Z792TF2FL;
+				DEVELOPMENT_TEAM = 587KJ2SYVV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Roshetta/Info.plist;
