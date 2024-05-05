@@ -27,7 +27,7 @@ struct HomeView: View {
     // MARK:- VIEW
     
     var body: some View {
-        NavigationStack{
+        NavigationView{
             ScrollView (.vertical, showsIndicators: false){
                 // MARK: - Slider
                 HomeSlider(slides: .constant(["Banner", "Banner","user"]))
@@ -131,11 +131,24 @@ struct HomeView: View {
                     }
                     .padding()
                 }
+                .navigationBarItems(
+                    leading:
+                        NavigationLink(destination: NotificationsView()) {
+                            Image(systemName: "bell")
+                                .foregroundColor(.primary)
+                        },
+                    trailing:
+                        NavigationLink(destination: SearchBar()) {
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.primary)
+                        }
+                )
+                .navigationBarTitle("", displayMode: .inline)
             }
-            
         }
     }
 }
+               
 
 #Preview {
     HomeView()

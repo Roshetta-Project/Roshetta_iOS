@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     @Binding var selectedTab : String
+    @State var currentTab = "Home"
     
     init(selectedTab:Binding<String>) {
         self._selectedTab = selectedTab
@@ -16,93 +17,90 @@ struct Home: View {
     }
     
     var body: some View {
-        TabView(selection:$selectedTab){
-            
-           //views
-            HomeView()
-                .tag("Home")
-                .padding(.top,45)
-            
-            ReservationVIew()
-                .tag("Reservation")
-                .padding(.top,45)
+        NavigationView{
+                VStack(spacing:0){
+                    TabView(selection:$selectedTab){
+                        //views
+                        HomeView()
+                            .tag("Home")
+                            .padding(.top,45)
+                        
+                        ProfileView(userName: "Sami Ahmed", location: "Damietta,Egypt")
+                            .tag("Profile")
+                            .padding(.top,45)
+                        
+                        ReservationVIew()
+                            .tag("Reservation")
+                            .padding(.top,45)
+                        
+                        rayScannerView(image:"ray")
+                            .tag("Scanner")
+                            .padding(.top,45)
+                        
+                            NotificationsView() //Replace with savedView
+                                .tag("Saved")
+                                .padding(.top,45)
+                            
 
-            NotificationsView()
-                .tag("Notification")
-                .padding(.top,45)
-            
-            NotificationsView() //Replace with savedView
-                .tag("Saved")
-                .padding(.top,45)  
-            
-            NotificationsView() //Replace with Scanner
-                .tag("Scanner")
-                .padding(.top,45)
-            
-            NotificationsView() //Replace with Setting
-                .tag("Setting")
-                .padding(.top,45)
-            
-          
+                            
+                            NotificationsView() //Replace with Setting
+                                .tag("Setting")
+                                .padding(.top,45)
+                        
+                        
+                    }
 
-
-        }
+            
+                    
+                    //Custom Tab Bar
+                    HStack(spacing:140){
+                        // Navigation to Sami page
+                        NavigationLink(destination: HomeView()) {
+                            TabButton(image:"home",text: "Home")
+                        }
+                        
+                        // Navigation to Shmed page
+                        NavigationLink(destination: ReservationVIew()) {
+                            TabButton(image:"reservation",text: "reservation")
+                        }
+                    }
+                }
+            
+            
+        }.navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
     }
+    @ViewBuilder
+    func TabButton(image : String,text:String) ->some View{
+        Button(action: {
+            withAnimation{currentTab = image}
+        },
+               label: {
+            VStack{
+                Image(image)
+                    .resizable()
+                    .renderingMode(.template)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 25,height: 25)
+                    .foregroundColor(currentTab == image ? Colors.main : .gray)
+                
+                Text(text)
+                    .font(.custom(GFFonts.SeguiBold, size: 12))
+                    .foregroundColor(currentTab == image ? Colors.main : .gray)
+                
+            }
+            
+        })
+        
+    }
+    
 }
 
 #Preview {
     SideMenuView()
 }
 
-struct Notifications: View {
-    var body: some View {
-        NavigationView{
-            VStack{
-                Image("user")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: UIScreen.main.bounds.width - 50,height: 400)
-                    .cornerRadius(15)
-                Text("Welcome  Sami")
-                    .font(.custom(GFFonts.SeguiBold, size: 30))
-                    .foregroundColor(Colors.main)
-                Text("iOS Developer")
-                    .font(.custom(GFFonts.SeguiSemiBold, size: 24))
-                    .foregroundColor(Color.black)
-                
-            }
-        }
-    }
-}
 
 
 
-struct Scanner: View {
-    var body: some View {
-        NavigationView{
-            Text("Scanner")
-                .foregroundColor(.black)
-                .navigationTitle("Scanner")
-        }
-    }
-}
 
-struct chat: View {
-    var body: some View {
-        NavigationView{
-            Text("chat")
-                .foregroundColor(.black)
-                .navigationTitle("chat")
-        }
-    }
-}
-
-struct setting: View {
-    var body: some View {
-        NavigationView{
-            Text("setting")
-                .foregroundColor(.black)
-                .navigationTitle("setting")
-        }
-    }
-}

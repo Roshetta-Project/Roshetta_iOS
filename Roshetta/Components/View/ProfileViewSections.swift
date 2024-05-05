@@ -41,17 +41,34 @@ struct ProfileVieww: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(sections) { section in
-                    NavigationLink(destination: HomeView()) {
-                        ProfileViewSections(section: section)
-                    }
-                }
-                .listRowBackground(Color.gray.opacity(0.1))
+                           ForEach(sections) { section in
+                               NavigationLink(destination: destinationForSection(section)) {
+                                   ProfileViewSections(section: section)
+                               }
+                           }
+                           .listRowBackground(Color.gray.opacity(0.1))
             }
             .listStyle(.plain)
         }
     }
-}
+    private func destinationForSection(_ section: ProfileSectionItem) -> some View {
+            switch section.title {
+            case "Account":
+                return AnyView(AccountView()) // Replace AccountView() with your desired account view
+            case "Privacy Policy":
+                return AnyView(PrivacyPolicyView()) // Replace PrivacyPolicyView() with your desired privacy policy view
+            case "Rate Us":
+                return AnyView(RateUsView()) // Replace RateUsView() with your desired rate us view
+            case "About Us":
+                return AnyView(AboutUsView()) // Replace AboutUsView() with your desired about us view
+            case "Contact Us":
+                return AnyView(ContactUsView()) // Replace ContactUsView() with your desired contact us view
+            default:
+                return AnyView(EmptyView())
+            }
+        }
+    }
+
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {

@@ -40,17 +40,8 @@ struct ProfileView: View {
                     
                 }
                 
-                List {
-                    ForEach(sections) { section in
-                        NavigationLink(destination: AccountView()) {
-                            ProfileViewSections(section: section)
-                        }
-                    }
-                    .listRowBackground(Color.gray.opacity(0.1))
-                }
-                .listStyle(.plain)
-                .cornerRadius(16)
-                .padding()
+                ProfileVieww()
+                    .padding()
             }
             
         }

@@ -14,6 +14,8 @@ struct SideMenuView: View {
     @State var showMenu = false
     @Namespace var animation
     
+    
+    
     // MARK: - Body
     var body: some View {
         ZStack{
@@ -40,8 +42,8 @@ struct SideMenuView: View {
                     .offset(x: showMenu ? -50 : 0)
                     .padding(.vertical,60)
                 
-                
-                Home(selectedTab: $selectedTab)
+
+                Home(selectedTab:$selectedTab)
                     .cornerRadius(showMenu ? 15 : 0)
             }
             //scalling and moving
