@@ -43,15 +43,13 @@ struct Home: View {
                             
 
                             
-                            NotificationsView() //Replace with Setting
+                            ClinicListView() //Replace with Setting
                                 .tag("Setting")
                                 .padding(.top,45)
-                        
-                        
-                    }
 
-            
+                    }
                     
+
                     //Custom Tab Bar
                     HStack(spacing:140){
                         // Navigation to Sami page
@@ -67,7 +65,7 @@ struct Home: View {
                 }
             
             
-        }.navigationBarTitleDisplayMode(.inline)
+        }
             .navigationBarHidden(true)
     }
     @ViewBuilder
