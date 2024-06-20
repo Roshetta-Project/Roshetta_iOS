@@ -50,6 +50,16 @@
 		26FAD1DF2BB4A7310025650F /* BigReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1DE2BB4A7310025650F /* BigReviewCard.swift */; };
 		26FAD1E12BB4AA0F0025650F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1E02BB4AA0F0025650F /* SearchBar.swift */; };
 		26FAD1E32BB4AF790025650F /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1E22BB4AF790025650F /* NotificationCard.swift */; };
+		26FF85A62C24DCE40025FB9C /* HealthProblemToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85A52C24DCE40025FB9C /* HealthProblemToggle.swift */; };
+		26FF85A82C24DD390025FB9C /* TimeScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85A72C24DD390025FB9C /* TimeScrollView.swift */; };
+		26FF85AA2C24DD6E0025FB9C /*  DaysDateScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85A92C24DD6E0025FB9C /*  DaysDateScrollView.swift */; };
+		26FF85AC2C24DDE00025FB9C /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85AB2C24DDE00025FB9C /* ExerciseView.swift */; };
+		26FF85AE2C24DE070025FB9C /* HealthProblemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85AD2C24DE070025FB9C /* HealthProblemsView.swift */; };
+		26FF85B02C24DE1D0025FB9C /* PregnancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85AF2C24DE1D0025FB9C /* PregnancyView.swift */; };
+		26FF85B22C24DE370025FB9C /* SmokingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85B12C24DE370025FB9C /* SmokingView.swift */; };
+		26FF85B62C24DFF30025FB9C /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85B52C24DFF30025FB9C /* BookingView.swift */; };
+		26FF85B82C24E0E40025FB9C /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85B72C24E0E40025FB9C /* SavedView.swift */; };
+		26FF85BA2C24E29F0025FB9C /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85B92C24E29F0025FB9C /* DatePicker.swift */; };
 		7F1706CC2C24984A00EFC697 /* DoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1706CB2C24984A00EFC697 /* DoctorViewModel.swift */; };
 		7F1706DD2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1706DC2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift */; };
 		7F1706DF2C24ADCB00EFC697 /* DoctorDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1706DE2C24ADCB00EFC697 /* DoctorDetailsModel.swift */; };
@@ -194,6 +204,16 @@
 		26FAD1DE2BB4A7310025650F /* BigReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigReviewCard.swift; sourceTree = "<group>"; };
 		26FAD1E02BB4AA0F0025650F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		26FAD1E22BB4AF790025650F /* NotificationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCard.swift; sourceTree = "<group>"; };
+		26FF85A52C24DCE40025FB9C /* HealthProblemToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProblemToggle.swift; sourceTree = "<group>"; };
+		26FF85A72C24DD390025FB9C /* TimeScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeScrollView.swift; sourceTree = "<group>"; };
+		26FF85A92C24DD6E0025FB9C /*  DaysDateScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DaysDateScrollView.swift"; sourceTree = "<group>"; };
+		26FF85AB2C24DDE00025FB9C /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		26FF85AD2C24DE070025FB9C /* HealthProblemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProblemsView.swift; sourceTree = "<group>"; };
+		26FF85AF2C24DE1D0025FB9C /* PregnancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregnancyView.swift; sourceTree = "<group>"; };
+		26FF85B12C24DE370025FB9C /* SmokingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingView.swift; sourceTree = "<group>"; };
+		26FF85B52C24DFF30025FB9C /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
+		26FF85B72C24E0E40025FB9C /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		26FF85B92C24E29F0025FB9C /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		7F1706CB2C24984A00EFC697 /* DoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorViewModel.swift; sourceTree = "<group>"; };
 		7F1706DC2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsViewModel.swift; sourceTree = "<group>"; };
 		7F1706DE2C24ADCB00EFC697 /* DoctorDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsModel.swift; sourceTree = "<group>"; };
@@ -442,8 +462,12 @@
 			children = (
 				26EF1E3A2BBA183B0010B57D /* genderView.swift */,
 				26EF1E3E2BBA42D40010B57D /* DateOfBirthView.swift */,
-				26EF1E402BBA4C2A0010B57D /* AddressView.swift */,
 				2677D33D2BCB7A2A003354E7 /* RulerView.swift */,
+				26EF1E402BBA4C2A0010B57D /* AddressView.swift */,
+				26FF85AB2C24DDE00025FB9C /* ExerciseView.swift */,
+				26FF85AD2C24DE070025FB9C /* HealthProblemsView.swift */,
+				26FF85AF2C24DE1D0025FB9C /* PregnancyView.swift */,
+				26FF85B12C24DE370025FB9C /* SmokingView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -690,6 +714,8 @@
 				7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */,
 				7F884CC12B6C1D5D00B82521 /* ClinicDetailsView.swift */,
 				CC3C83AC2BACFAF60025AF74 /* HomeView.swift */,
+				26FF85B52C24DFF30025FB9C /* BookingView.swift */,
+				26FF85B72C24E0E40025FB9C /* SavedView.swift */,
 			);
 			path = "Detaild Screen";
 			sourceTree = "<group>";
@@ -824,6 +850,10 @@
 				26D701802BBE2A5F00DF0A20 /* StarRatingView.swift */,
 				26D701822BBE2B4D00DF0A20 /* ReviewTextField.swift */,
 				261D5BD12BC75AC600346BAC /* MessageTextField.swift */,
+				26FF85A52C24DCE40025FB9C /* HealthProblemToggle.swift */,
+				26FF85A72C24DD390025FB9C /* TimeScrollView.swift */,
+				26FF85A92C24DD6E0025FB9C /*  DaysDateScrollView.swift */,
+				26FF85B92C24E29F0025FB9C /* DatePicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1161,6 +1191,7 @@
 				7F884CD42B6C1E5400B82521 /* StatusImageView.swift in Sources */,
 				7F884CC02B6C1D3800B82521 /* CenterDetailsView.swift in Sources */,
 				CC3C83AD2BACFAF60025AF74 /* HomeView.swift in Sources */,
+				26FF85B82C24E0E40025FB9C /* SavedView.swift in Sources */,
 				265480E62BBC814A0070F5B5 /* ViewProfileView.swift in Sources */,
 				7F5E42ED2AEBD782008C2FC1 /* RoshettaAppViewModel.swift in Sources */,
 				7FC67AE42B2785D0000A5586 /* BaseAPIClient.swift in Sources */,
@@ -1168,10 +1199,12 @@
 				262C0C3B2BB9C7D800565DC1 /* ProfileImage.swift in Sources */,
 				7F884CBB2B6C1A0E00B82521 /* CategoryCard.swift in Sources */,
 				CC9FAA6B2BB95D4100C54625 /* SpecialistListView.swift in Sources */,
+				26FF85A62C24DCE40025FB9C /* HealthProblemToggle.swift in Sources */,
 				26EF1E3F2BBA42D40010B57D /* DateOfBirthView.swift in Sources */,
 				7FC67AE62B27B211000A5586 /* SessionDataTaskError.swift in Sources */,
 				7F5E43012AEBDFE6008C2FC1 /* Colors.swift in Sources */,
 				7F5E43092AEBE878008C2FC1 /* SplashView.swift in Sources */,
+				26FF85B62C24DFF30025FB9C /* BookingView.swift in Sources */,
 				7F6CA3052AEBFEE200BAB446 /* GFNextButton.swift in Sources */,
 				7F988EC52AE2D34000E0BCBD /* LoaderView.swift in Sources */,
 				26EF1E452BBA4ED20010B57D /* CustomTextField.swift in Sources */,
@@ -1179,9 +1212,11 @@
 				7F988EC22AE2D34000E0BCBD /* HomeSlider.swift in Sources */,
 				7FB00F582AFD7E3900303EB2 /* InfoRow.swift in Sources */,
 				7F196E952B6F942100CBBD6A /* AuthRepository.swift in Sources */,
+				26FF85AA2C24DD6E0025FB9C /*  DaysDateScrollView.swift in Sources */,
 				7F988E9E2AE2D29900E0BCBD /* RequestError.swift in Sources */,
 				7F884CD22B6C1E4800B82521 /* SpecializationCard.swift in Sources */,
 				CCDCA5232C24950B00E73D49 /* DoctorModel.swift in Sources */,
+				26FF85A82C24DD390025FB9C /* TimeScrollView.swift in Sources */,
 				7F884CC62B6C1DA700B82521 /* AboutCardView.swift in Sources */,
 				7F884CCC2B6C1E0A00B82521 /* LogoImageView.swift in Sources */,
 				7F196E9B2B6F97F100CBBD6A /* AuthModuleFactory.swift in Sources */,
@@ -1202,6 +1237,7 @@
 				7FB00F562AFD7CA800303EB2 /* ClincCard.swift in Sources */,
 				7F884CCA2B6C1DF500B82521 /* locationCard.swift in Sources */,
 				7F988EC42AE2D34000E0BCBD /* GFTextField.swift in Sources */,
+				26FF85AE2C24DE070025FB9C /* HealthProblemsView.swift in Sources */,
 				CC9FAA652BB94E4200C54625 /* DoctorListView.swift in Sources */,
 				7FB00F542AFD6AF000303EB2 /* DoctorCard.swift in Sources */,
 				7F988EAB2AE2D2BD00E0BCBD /* View.swift in Sources */,
@@ -1231,6 +1267,7 @@
 				7F5E43032AEBE034008C2FC1 /* Images.swift in Sources */,
 				7F78B6112B61DA4D004DB15E /* NetworkLayerTestView.swift in Sources */,
 				7F988EAD2AE2D2BD00E0BCBD /* String.swift in Sources */,
+				26FF85AC2C24DDE00025FB9C /* ExerciseView.swift in Sources */,
 				7F6CA3072AEC19E800BAB446 /* GFSliderButton.swift in Sources */,
 				CCDCA5252C2495E500E73D49 /* ClinicModel.swift in Sources */,
 				7F50EC7A2AF0614E0060D6B6 /* AppleSigninManager.swift in Sources */,
@@ -1239,11 +1276,14 @@
 				7FC67AE22B278416000A5586 /* BaseAPIRequest.swift in Sources */,
 				CC9FAA692BB9545F00C54625 /* ClinicListView.swift in Sources */,
 				7F988E5C2AE2D1BC00E0BCBD /* RoshettaApp.swift in Sources */,
+				26FF85BA2C24E29F0025FB9C /* DatePicker.swift in Sources */,
 				265480F52BBC94F30070F5B5 /* AboutUsView.swift in Sources */,
 				7F50EC772AF052ED0060D6B6 /* GoogleManager.swift in Sources */,
 				7F884CC22B6C1D5D00B82521 /* ClinicDetailsView.swift in Sources */,
+				26FF85B02C24DE1D0025FB9C /* PregnancyView.swift in Sources */,
 				7FC67AEB2B27B56D000A5586 /* MultipartAPIRequestConfiguration.swift in Sources */,
 				268F2E012BE6F46500F1D87E /* x-rayScannerView.swift in Sources */,
+				26FF85B22C24DE370025FB9C /* SmokingView.swift in Sources */,
 				7F1706DF2C24ADCB00EFC697 /* DoctorDetailsModel.swift in Sources */,
 				7F884CC42B6C1D9400B82521 /* DoctorDetailsView.swift in Sources */,
 				265480F32BBC8FE20070F5B5 /* PrivacyPolicyView.swift in Sources */,

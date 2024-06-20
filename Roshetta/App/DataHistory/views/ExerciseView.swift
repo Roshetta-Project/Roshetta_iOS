@@ -2,14 +2,97 @@
 //  ExerciseView.swift
 //  Roshetta
 //
-//  Created by Sami Ahmed on 21/06/2024.
+//  Created by Abdelrahman Esmail on 01/04/2024.
 //
 
 import SwiftUI
 
 struct ExerciseView: View {
+    // MARK: - Properties
+    @State private var isLoading = false
+    @State private var exerciseDaily = true
+    @State private var selectedExerciseType: String?
+    @State private var showSecondQuestion = false
+    
+    // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            CircularGradient()
+            
+            VStack(alignment: .leading) {
+                // MARK: - First Question
+                Text("Do you exercise daily?")
+                    .font(.custom(GFFonts.SeguiSemiBold, size: 24))
+                    .padding(.top, 50)
+                
+                HStack{
+                    Button(action: {
+                        exerciseDaily = true
+                    }) {
+                        Image(systemName: exerciseDaily ? "checkmark.square" : "square")
+                        Text("Yes")
+                    }
+                    .foregroundColor(exerciseDaily ? Colors.main : .gray)
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        exerciseDaily = false
+                    }) {
+                        Image(systemName: exerciseDaily ? "square" : "checkmark.square")
+                        Text("No")
+                    }
+                    .foregroundColor(exerciseDaily ? .gray : Colors.main)
+                }
+                .padding(5)
+                .padding(.horizontal,25)
+                .font(.custom(GFFonts.Segui, size: 21))
+                .foregroundStyle(.black)
+                
+                
+                
+                // MARK: - Second Question
+                if showSecondQuestion {
+                    Text("What type of exercises do you do?")
+                        .font(.custom(GFFonts.SeguiSemiBold, size: 24))
+                        .padding(.top, 25)
+                    
+                    VStack(alignment: .leading) {
+                        ForEach(["Strenuous", "Moderate", "Light"], id: \.self) { exerciseType in
+                            Button(action: {
+                                selectedExerciseType = exerciseType
+                            }) {
+                                HStack {
+                                    Image(systemName: selectedExerciseType == exerciseType ? "checkmark.square" : "square")
+                                    Text(exerciseType)
+                                }
+                                .padding(.vertical,5)
+                            }
+                            .foregroundColor(selectedExerciseType == exerciseType ? Colors.main : .gray)
+                        }
+                    }
+                    
+                    .padding(.horizontal,25)
+                    .font(.custom(GFFonts.Segui, size: 21))
+                    .transition(.slide)
+                    .animation(.easeInOut)
+                }
+                
+                Spacer()
+                // MARK: - Next Button
+                VStack{
+                    HStack{
+                        Spacer()
+                        Image(.homeVector)
+                    }
+                    
+                    GFButton(isLoading: $isLoading, text: "Next", backgroundColor: Colors.main, foregroundColot: Color.white) {
+                        showSecondQuestion = true
+                    }
+                }
+            }
+            .padding()
+        }
     }
 }
 

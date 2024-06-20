@@ -60,21 +60,4 @@ struct DoctorListView: View {
     DoctorListView()
 }
 
-//import Foundation
-//extension String {
-//    var asUrl: URL? {
-//        guard let encodedString = self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
-//            return nil
-//        }
-//        return URL(string: encodedString)
-//    }
-//}
 
-
-//                        ForEach(0..<5){_ in
-//                            NavigationLink {
-//                                DoctorDetailsView()
-//                            } label: {
-//                                DoctorCard(image: Image("user"), name: "Dr. Abdalazem Saleh", specialization: "Surgery", rate: 3, price: "400", location: "Mansoura, Dakahlia")
-//                            }
-//                        }.padding()
