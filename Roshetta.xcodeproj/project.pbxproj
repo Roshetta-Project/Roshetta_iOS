@@ -136,6 +136,8 @@
 		CC9FAA672BB953B300C54625 /* CenterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA662BB953B300C54625 /* CenterListView.swift */; };
 		CC9FAA692BB9545F00C54625 /* ClinicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA682BB9545F00C54625 /* ClinicListView.swift */; };
 		CC9FAA6B2BB95D4100C54625 /* SpecialistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */; };
+		CCDCA5232C24950B00E73D49 /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA5222C24950B00E73D49 /* DoctorModel.swift */; };
+		CCDCA5252C2495E500E73D49 /* ClinicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA5242C2495E500E73D49 /* ClinicModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -280,6 +282,8 @@
 		CC9FAA662BB953B300C54625 /* CenterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListView.swift; sourceTree = "<group>"; };
 		CC9FAA682BB9545F00C54625 /* ClinicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicListView.swift; sourceTree = "<group>"; };
 		CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistListView.swift; sourceTree = "<group>"; };
+		CCDCA5222C24950B00E73D49 /* DoctorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorModel.swift; sourceTree = "<group>"; };
+		CCDCA5242C2495E500E73D49 /* ClinicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -637,12 +641,8 @@
 				268F2DFE2BE6F35C00F1D87E /* ScannerView.swift */,
 				7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */,
 				7F884CC12B6C1D5D00B82521 /* ClinicDetailsView.swift */,
-				7F884CC32B6C1D9400B82521 /* DoctorDetailsView.swift */,
 				CC3C83AC2BACFAF60025AF74 /* HomeView.swift */,
-				CC9FAA642BB94E4200C54625 /* DoctorListView.swift */,
-				CC9FAA662BB953B300C54625 /* CenterListView.swift */,
-				CC9FAA682BB9545F00C54625 /* ClinicListView.swift */,
-				CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */,
+				7F884CC32B6C1D9400B82521 /* DoctorDetailsView.swift */,
 			);
 			path = "Detaild Screen";
 			sourceTree = "<group>";
@@ -653,99 +653,6 @@
 				7FC67ADD2B277D05000A5586 /* Network */,
 			);
 			path = NetworkModule;
-			sourceTree = "<group>";
-		};
-		7F884CD62B6C20EA00B82521 /* DoctorsModule */ = {
-			isa = PBXGroup;
-			children = (
-				7F884CE12B6C22AA00B82521 /* Presentation */,
-				7F884CE02B6C22A400B82521 /* Domain */,
-				7F884CDF2B6C22A100B82521 /* Data */,
-			);
-			path = DoctorsModule;
-			sourceTree = "<group>";
-		};
-		7F884CD72B6C20F200B82521 /* clinicsModule */ = {
-			isa = PBXGroup;
-			children = (
-				7F884CDE2B6C229D00B82521 /* Presentation */,
-				7F884CDD2B6C229A00B82521 /* Domain */,
-				7F884CDC2B6C229800B82521 /* Data */,
-			);
-			path = clinicsModule;
-			sourceTree = "<group>";
-		};
-		7F884CD82B6C210800B82521 /* MedicalCenterModule */ = {
-			isa = PBXGroup;
-			children = (
-				7F884CDB2B6C228D00B82521 /* Presentation */,
-				7F884CDA2B6C228700B82521 /* Domain */,
-				7F884CD92B6C227F00B82521 /* Data */,
-			);
-			path = MedicalCenterModule;
-			sourceTree = "<group>";
-		};
-		7F884CD92B6C227F00B82521 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		7F884CDA2B6C228700B82521 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		7F884CDB2B6C228D00B82521 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		7F884CDC2B6C229800B82521 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		7F884CDD2B6C229A00B82521 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		7F884CDE2B6C229D00B82521 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		7F884CDF2B6C22A100B82521 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		7F884CE02B6C22A400B82521 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		7F884CE12B6C22AA00B82521 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presentation;
 			sourceTree = "<group>";
 		};
 		7F988E4F2AE2D1BC00E0BCBD = {
@@ -888,21 +795,22 @@
 		7F988ECE2AE2D3F800E0BCBD /* App */ = {
 			isa = PBXGroup;
 			children = (
+				265B45552BB8F64300C0CA06 /* TabBar */,
 				261D5BD32BC75CA300346BAC /* Review */,
 				7F0D4CE02AE799AA0057C1CE /* Root */,
-				26D6AEAB2BBB259F00F6B5A8 /* Reservation */,
-				26EF1E382BBA174F0010B57D /* DataHistory */,
-				262C0C362BB9C25B00565DC1 /* Profile */,
-				265B45552BB8F64300C0CA06 /* TabBar */,
-				265B45502BB8EC9D00C0CA06 /* Notifications */,
-				26547FF42BAF6EF100AD302B /* SideMenu */,
 				7F5E43072AEBE844008C2FC1 /* Splash */,
 				7F0D4CE22AE799BD0057C1CE /* Onboarding */,
 				7F0D4CE12AE799B40057C1CE /* AuthModule */,
-				7F884CD82B6C210800B82521 /* MedicalCenterModule */,
-				7F884CD72B6C20F200B82521 /* clinicsModule */,
-				7F884CD62B6C20EA00B82521 /* DoctorsModule */,
+				26EF1E382BBA174F0010B57D /* DataHistory */,
+				26547FF42BAF6EF100AD302B /* SideMenu */,
+				CCDCA5122C24934D00E73D49 /* DoctorList */,
+				CCDCA5152C24939900E73D49 /* ClinicList */,
+				CCDCA51A2C2493F900E73D49 /* CenterList */,
+				CCDCA51E2C24942000E73D49 /* SpecialistList */,
 				7F884CBC2B6C1C8800B82521 /* Detaild Screen */,
+				26D6AEAB2BBB259F00F6B5A8 /* Reservation */,
+				265B45502BB8EC9D00C0CA06 /* Notifications */,
+				262C0C362BB9C25B00565DC1 /* Profile */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -949,6 +857,136 @@
 				7FC67AF32B27B763000A5586 /* MultipartURLRequestStrategy.swift */,
 			);
 			path = RequestsStrategy;
+			sourceTree = "<group>";
+		};
+		CCDCA5122C24934D00E73D49 /* DoctorList */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCA5192C2493C500E73D49 /* Model */,
+				CCDCA5142C24936900E73D49 /* ViewModel */,
+				CCDCA5132C24936600E73D49 /* View */,
+			);
+			path = DoctorList;
+			sourceTree = "<group>";
+		};
+		CCDCA5132C24936600E73D49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC9FAA642BB94E4200C54625 /* DoctorListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCDCA5142C24936900E73D49 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCDCA5152C24939900E73D49 /* ClinicList */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCA5182C2493B800E73D49 /* Model */,
+				CCDCA5172C2493AB00E73D49 /* ViewModel */,
+				CCDCA5162C2493A500E73D49 /* View */,
+			);
+			path = ClinicList;
+			sourceTree = "<group>";
+		};
+		CCDCA5162C2493A500E73D49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC9FAA682BB9545F00C54625 /* ClinicListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCDCA5172C2493AB00E73D49 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCDCA5182C2493B800E73D49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCA5242C2495E500E73D49 /* ClinicModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCDCA5192C2493C500E73D49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCA5222C24950B00E73D49 /* DoctorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCDCA51A2C2493F900E73D49 /* CenterList */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCA51D2C24940B00E73D49 /* Model */,
+				CCDCA51C2C24940600E73D49 /* ViewModel */,
+				CCDCA51B2C24940200E73D49 /* View */,
+			);
+			path = CenterList;
+			sourceTree = "<group>";
+		};
+		CCDCA51B2C24940200E73D49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC9FAA662BB953B300C54625 /* CenterListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCDCA51C2C24940600E73D49 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCDCA51D2C24940B00E73D49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCDCA51E2C24942000E73D49 /* SpecialistList */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCA5212C24943900E73D49 /* Model */,
+				CCDCA5202C24943500E73D49 /* ViewModel */,
+				CCDCA51F2C24943200E73D49 /* View */,
+			);
+			path = SpecialistList;
+			sourceTree = "<group>";
+		};
+		CCDCA51F2C24943200E73D49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCDCA5202C24943500E73D49 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCDCA5212C24943900E73D49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1102,6 +1140,7 @@
 				7F196E952B6F942100CBBD6A /* AuthRepository.swift in Sources */,
 				7F988E9E2AE2D29900E0BCBD /* RequestError.swift in Sources */,
 				7F884CD22B6C1E4800B82521 /* SpecializationCard.swift in Sources */,
+				CCDCA5232C24950B00E73D49 /* DoctorModel.swift in Sources */,
 				7F884CC62B6C1DA700B82521 /* AboutCardView.swift in Sources */,
 				7F884CCC2B6C1E0A00B82521 /* LogoImageView.swift in Sources */,
 				7F196E9B2B6F97F100CBBD6A /* AuthModuleFactory.swift in Sources */,
@@ -1150,6 +1189,7 @@
 				7F78B6112B61DA4D004DB15E /* NetworkLayerTestView.swift in Sources */,
 				7F988EAD2AE2D2BD00E0BCBD /* String.swift in Sources */,
 				7F6CA3072AEC19E800BAB446 /* GFSliderButton.swift in Sources */,
+				CCDCA5252C2495E500E73D49 /* ClinicModel.swift in Sources */,
 				7F50EC7A2AF0614E0060D6B6 /* AppleSigninManager.swift in Sources */,
 				7F988EAC2AE2D2BD00E0BCBD /* Codable.swift in Sources */,
 				262C0C392BB9C27100565DC1 /* ProfileView.swift in Sources */,
