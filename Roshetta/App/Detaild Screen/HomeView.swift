@@ -63,7 +63,7 @@ struct HomeView: View {
                     HStack (spacing: 21) {
                         ForEach(0..<5){_ in
                             NavigationLink {
-                                DoctorDetailsView()
+                                DoctorDetailsView(id: "")
                             } label: {
                                 DoctorCard(image: Image("user"), name: "Dr. Abdalazem Saleh", specialization: "Surgery", rate: 3, price: "400", location: "Mansoura, Dakahlia")
                             }

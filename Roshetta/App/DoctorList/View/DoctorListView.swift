@@ -32,7 +32,7 @@ struct DoctorListView: View {
                     LazyVGrid(columns: grids, spacing: 10) {
                         ForEach(viewModel.doctors) { doctor in
                             NavigationLink {
-                                DoctorDetailsView()
+                                DoctorDetailsView(id: doctor.id)
                             } label: {
                                 DoctorCard(
                                     image: Image("user"),

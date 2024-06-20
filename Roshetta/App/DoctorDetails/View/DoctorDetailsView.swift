@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct DoctorDetailsView: View {
+    
     // MARK: - PROPERTYS
-
+    let id: String
+    @StateObject var viewModel = DoctorDetailsViewModel()
+    
     // MARK: - VIEW
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -22,14 +26,16 @@ struct DoctorDetailsView: View {
                     clincSection()
                     locationSection()
                     reviewsSection()
-
-                    GFButton(isLoading: .constant(false),
-                             text: "Book Now",
-                             backgroundColor: Colors.main,
-                             foregroundColot: Color.white) {
+                    
+                    GFButton(
+                        isLoading: .constant(false),
+                        text: "Book Now",
+                        backgroundColor: Colors.main,
+                        foregroundColot: Color.white
+                    ) {
                         // TODO: - Book
                     }
-                             .padding(.top, 24)
+                    .padding(.top, 24)
                 }//:VStack
                 .padding()
             }//:ScrollView
@@ -46,17 +52,21 @@ struct DoctorDetailsView: View {
                 }
             )
         }//:NavigationStack
+        .task {
+            await viewModel.getDoctors(id: id)
+        }
     }
-
+    
     // MARK: - FUNCITIONS
+    
     private func header() -> some View {
         VStack(spacing: 4) {
             StatusImageView(image: "user")
-
+            
             Text("Dr. Abdalzem Saleh")
                 .foregroundColor(Color.black)
                 .font(.custom(GFFonts.SeguiSemiBold, size: 20))
-
+            
             HStack {
                 ForEach(0 ..< 5) { index in
                     Image(systemName: index < 3 ? "star.fill" : "star")
@@ -67,39 +77,39 @@ struct DoctorDetailsView: View {
             }
         }
     }
-
+    
     private func aboutDoctorSection() -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("About Doctor")
                 .modifier(TitleTextModifir())
-
+            
             AboutCardView(aboutText: "Dr. Abdalazem is a highly skilled and compassionate dentist dedicated to providing comprehensive oral care to his patients. With a wealth of knowledge and experience in dentistry, he excels in diagnosing and treating various dental conditions, ranging from routine cleanings to complex procedures. ")
         }
     }
-
+    
     private func doctorSpecilization() -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Specialization")
                 .modifier(TitleTextModifir())
-
+            
             SpecializationCard(specializationImage: "Dentist", specialization: "Dentist")
         }
     }
-
+    
     private func priceSection() -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Price")
                 .modifier(TitleTextModifir())
-
+            
             PriceCard(image: "Price", price: "300")
         }//:Group
     }
-
+    
     private func clincSection() -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Clinic")
                 .modifier(TitleTextModifir())
-
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 4) {
                     ForEach(1..<6) { _ in
@@ -114,12 +124,12 @@ struct DoctorDetailsView: View {
             }
         }
     }
-
+    
     private func locationSection() -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Location")
                 .modifier(TitleTextModifir())
-
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
                     ForEach(1..<6) { _ in
@@ -130,7 +140,7 @@ struct DoctorDetailsView: View {
             }
         }
     }
-
+    
     private func reviewsSection() -> some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing:20){
@@ -142,10 +152,10 @@ struct DoctorDetailsView: View {
                         .underline(true, color: .gray)
                         .font(.custom(GFFonts.SeguiSemiBold, size: 14))
                         .foregroundColor(Color.gray)
-                        
+                    
                 })
             }
-
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
                     ForEach(1..<6) { _ in
@@ -160,6 +170,6 @@ struct DoctorDetailsView: View {
 
 struct DoctorDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DoctorDetailsView()
+        DoctorDetailsView(id: "667473a59048a208580610bf")
     }
 }

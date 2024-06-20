@@ -51,6 +51,8 @@
 		26FAD1E12BB4AA0F0025650F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1E02BB4AA0F0025650F /* SearchBar.swift */; };
 		26FAD1E32BB4AF790025650F /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1E22BB4AF790025650F /* NotificationCard.swift */; };
 		7F1706CC2C24984A00EFC697 /* DoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1706CB2C24984A00EFC697 /* DoctorViewModel.swift */; };
+		7F1706DD2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1706DC2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift */; };
+		7F1706DF2C24ADCB00EFC697 /* DoctorDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1706DE2C24ADCB00EFC697 /* DoctorDetailsModel.swift */; };
 		7F196E912B6F92ED00CBBD6A /* UserNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E902B6F92ED00CBBD6A /* UserNetworkResponse.swift */; };
 		7F196E932B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E922B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift */; };
 		7F196E952B6F942100CBBD6A /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E942B6F942100CBBD6A /* AuthRepository.swift */; };
@@ -193,6 +195,8 @@
 		26FAD1E02BB4AA0F0025650F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		26FAD1E22BB4AF790025650F /* NotificationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCard.swift; sourceTree = "<group>"; };
 		7F1706CB2C24984A00EFC697 /* DoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorViewModel.swift; sourceTree = "<group>"; };
+		7F1706DC2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsViewModel.swift; sourceTree = "<group>"; };
+		7F1706DE2C24ADCB00EFC697 /* DoctorDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsModel.swift; sourceTree = "<group>"; };
 		7F196E902B6F92ED00CBBD6A /* UserNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkResponse.swift; sourceTree = "<group>"; };
 		7F196E922B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryResponseProtocol.swift; sourceTree = "<group>"; };
 		7F196E942B6F942100CBBD6A /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
@@ -479,6 +483,40 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		7F1706D72C24AC6F00EFC697 /* DoctorDetails */ = {
+			isa = PBXGroup;
+			children = (
+				7F1706DA2C24AC7F00EFC697 /* Model */,
+				7F1706D92C24AC7C00EFC697 /* View */,
+				7F1706D82C24AC7700EFC697 /* ViewModel */,
+			);
+			path = DoctorDetails;
+			sourceTree = "<group>";
+		};
+		7F1706D82C24AC7700EFC697 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F1706DC2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F1706D92C24AC7C00EFC697 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F884CC32B6C1D9400B82521 /* DoctorDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F1706DA2C24AC7F00EFC697 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F1706DE2C24ADCB00EFC697 /* DoctorDetailsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7F196E962B6F977700CBBD6A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -652,7 +690,6 @@
 				7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */,
 				7F884CC12B6C1D5D00B82521 /* ClinicDetailsView.swift */,
 				CC3C83AC2BACFAF60025AF74 /* HomeView.swift */,
-				7F884CC32B6C1D9400B82521 /* DoctorDetailsView.swift */,
 			);
 			path = "Detaild Screen";
 			sourceTree = "<group>";
@@ -814,6 +851,7 @@
 				26EF1E382BBA174F0010B57D /* DataHistory */,
 				26547FF42BAF6EF100AD302B /* SideMenu */,
 				CCDCA5122C24934D00E73D49 /* DoctorList */,
+				7F1706D72C24AC6F00EFC697 /* DoctorDetails */,
 				CCDCA5152C24939900E73D49 /* ClinicList */,
 				CCDCA51A2C2493F900E73D49 /* CenterList */,
 				CCDCA51E2C24942000E73D49 /* SpecialistList */,
@@ -1187,6 +1225,7 @@
 				261D5BD22BC75AC600346BAC /* MessageTextField.swift in Sources */,
 				262C0C3D2BB9CC1000565DC1 /* ProfileViewSections.swift in Sources */,
 				7FC67AED2B27B5B6000A5586 /* URLRequestConvertible.swift in Sources */,
+				7F1706DD2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift in Sources */,
 				7F884CE32B6C269100B82521 /* RoundedImage.swift in Sources */,
 				7F81F48F2B6E91DB00C8016B /* AuthAPIRequest.swift in Sources */,
 				7F5E43032AEBE034008C2FC1 /* Images.swift in Sources */,
@@ -1205,6 +1244,7 @@
 				7F884CC22B6C1D5D00B82521 /* ClinicDetailsView.swift in Sources */,
 				7FC67AEB2B27B56D000A5586 /* MultipartAPIRequestConfiguration.swift in Sources */,
 				268F2E012BE6F46500F1D87E /* x-rayScannerView.swift in Sources */,
+				7F1706DF2C24ADCB00EFC697 /* DoctorDetailsModel.swift in Sources */,
 				7F884CC42B6C1D9400B82521 /* DoctorDetailsView.swift in Sources */,
 				265480F32BBC8FE20070F5B5 /* PrivacyPolicyView.swift in Sources */,
 				26FAD1E32BB4AF790025650F /* NotificationCard.swift in Sources */,
