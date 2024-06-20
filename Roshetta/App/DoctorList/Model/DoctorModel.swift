@@ -7,7 +7,14 @@
 
 import Foundation
 
+// MARK: - DoctorListModel
+
+struct DoctorListModel: Codable {
+    let data: [DoctorModel]
+}
+
 // MARK: - DoctorModel
+
 struct DoctorModel: Codable, Identifiable {
     let id: String
     let image: String
@@ -17,7 +24,5 @@ struct DoctorModel: Codable, Identifiable {
     let location: String
     let ratingsAverage: Int
 }
-// MARK: - DoctorListModel
-struct DoctorListModel: Codable {
-    let data: [DoctorModel]
-}
+
+

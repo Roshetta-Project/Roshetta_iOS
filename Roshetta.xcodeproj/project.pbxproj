@@ -50,6 +50,7 @@
 		26FAD1DF2BB4A7310025650F /* BigReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1DE2BB4A7310025650F /* BigReviewCard.swift */; };
 		26FAD1E12BB4AA0F0025650F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1E02BB4AA0F0025650F /* SearchBar.swift */; };
 		26FAD1E32BB4AF790025650F /* NotificationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAD1E22BB4AF790025650F /* NotificationCard.swift */; };
+		7F1706CC2C24984A00EFC697 /* DoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1706CB2C24984A00EFC697 /* DoctorViewModel.swift */; };
 		7F196E912B6F92ED00CBBD6A /* UserNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E902B6F92ED00CBBD6A /* UserNetworkResponse.swift */; };
 		7F196E932B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E922B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift */; };
 		7F196E952B6F942100CBBD6A /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F196E942B6F942100CBBD6A /* AuthRepository.swift */; };
@@ -191,6 +192,7 @@
 		26FAD1DE2BB4A7310025650F /* BigReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigReviewCard.swift; sourceTree = "<group>"; };
 		26FAD1E02BB4AA0F0025650F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		26FAD1E22BB4AF790025650F /* NotificationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCard.swift; sourceTree = "<group>"; };
+		7F1706CB2C24984A00EFC697 /* DoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorViewModel.swift; sourceTree = "<group>"; };
 		7F196E902B6F92ED00CBBD6A /* UserNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkResponse.swift; sourceTree = "<group>"; };
 		7F196E922B6F940C00CBBD6A /* AuthRepositoryResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryResponseProtocol.swift; sourceTree = "<group>"; };
 		7F196E942B6F942100CBBD6A /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
@@ -467,6 +469,14 @@
 				7F5E43122AEBF476008C2FC1 /* Model */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		7F1706CA2C24983100EFC697 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F1706CB2C24984A00EFC697 /* DoctorViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7F196E962B6F977700CBBD6A /* Auth */ = {
@@ -863,8 +873,8 @@
 			isa = PBXGroup;
 			children = (
 				CCDCA5192C2493C500E73D49 /* Model */,
-				CCDCA5142C24936900E73D49 /* ViewModel */,
 				CCDCA5132C24936600E73D49 /* View */,
+				7F1706CA2C24983100EFC697 /* ViewModel */,
 			);
 			path = DoctorList;
 			sourceTree = "<group>";
@@ -875,13 +885,6 @@
 				CC9FAA642BB94E4200C54625 /* DoctorListView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		CCDCA5142C24936900E73D49 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CCDCA5152C24939900E73D49 /* ClinicList */ = {
@@ -1175,6 +1178,7 @@
 				7FC67AF22B27B701000A5586 /* RegularURLRequestStrategy.swift in Sources */,
 				7FC67AE92B27B548000A5586 /* APIRequestConfiguration.swift in Sources */,
 				7F988EC32AE2D34000E0BCBD /* OTPTextField.swift in Sources */,
+				7F1706CC2C24984A00EFC697 /* DoctorViewModel.swift in Sources */,
 				26547FF92BAF73E300AD302B /* TabButton.swift in Sources */,
 				7FC67AEF2B27B6D6000A5586 /* URLRequestStrategy.swift in Sources */,
 				26547FF72BAF6F2700AD302B /* SideMenuView.swift in Sources */,
@@ -1417,7 +1421,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Roshetta/Preview Content\"";
-				DEVELOPMENT_TEAM = 587KJ2SYVV;
+				DEVELOPMENT_TEAM = 5Z792TF2FL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Roshetta/Info.plist;
@@ -1449,7 +1453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Roshetta/Preview Content\"";
-				DEVELOPMENT_TEAM = 587KJ2SYVV;
+				DEVELOPMENT_TEAM = 5Z792TF2FL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Roshetta/Info.plist;
