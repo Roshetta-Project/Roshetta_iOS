@@ -16,7 +16,12 @@ struct DoctorDetailsView: View {
     // MARK: - VIEW
     
     var body: some View {
-        NavigationStack {
+        switch viewModel.status {
+        case .loading:
+            ProgressView()
+        case .error(let error):
+            Text("error while loading page: \(error)")
+        case .success:
             ScrollView {
                 header()
                 VStack(alignment: .leading, spacing: 16) {
@@ -39,6 +44,9 @@ struct DoctorDetailsView: View {
                 }//:VStack
                 .padding()
             }//:ScrollView
+            .task {
+                await viewModel.getDoctors(id: id)
+            }
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(
                 trailing: HStack {
@@ -51,25 +59,24 @@ struct DoctorDetailsView: View {
                     }
                 }
             )
-        }//:NavigationStack
-        .task {
-            await viewModel.getDoctors(id: id)
         }
     }
     
     // MARK: - FUNCITIONS
     
     private func header() -> some View {
-        VStack(spacing: 4) {
+        let doctor = viewModel.doctor?.data
+        
+        return VStack(spacing: 4) {
             StatusImageView(image: "user")
             
-            Text("Dr. Abdalzem Saleh")
+            Text(doctor?.name ?? "")
                 .foregroundColor(Color.black)
                 .font(.custom(GFFonts.SeguiSemiBold, size: 20))
             
             HStack {
                 ForEach(0 ..< 5) { index in
-                    Image(systemName: index < 3 ? "star.fill" : "star")
+                    Image(systemName: index < doctor?.ratingsAverage ?? 2 ? "star.fill" : "star")
                         .resizable()
                         .foregroundColor(.yellow)
                         .frame(width:15,height: 15)
@@ -79,16 +86,18 @@ struct DoctorDetailsView: View {
     }
     
     private func aboutDoctorSection() -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        let doctor = viewModel.doctor?.data
+        
+        return VStack(alignment: .leading, spacing: 8) {
             Text("About Doctor")
                 .modifier(TitleTextModifir())
             
-            AboutCardView(aboutText: "Dr. Abdalazem is a highly skilled and compassionate dentist dedicated to providing comprehensive oral care to his patients. With a wealth of knowledge and experience in dentistry, he excels in diagnosing and treating various dental conditions, ranging from routine cleanings to complex procedures. ")
+            AboutCardView(aboutText: doctor?.bio ?? "Not founded")
         }
     }
     
     private func doctorSpecilization() -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        return VStack(alignment: .leading, spacing: 8) {
             Text("Specialization")
                 .modifier(TitleTextModifir())
             
@@ -97,55 +106,54 @@ struct DoctorDetailsView: View {
     }
     
     private func priceSection() -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        let doctor = viewModel.doctor?.data
+        
+        return VStack(alignment: .leading, spacing: 8) {
             Text("Price")
                 .modifier(TitleTextModifir())
             
-            PriceCard(image: "Price", price: "300")
+            PriceCard(image: "Price", price: String(doctor?.price ?? 100))
         }//:Group
     }
     
     private func clincSection() -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        let doctor = viewModel.doctor?.data
+        
+        return VStack(alignment: .leading, spacing: 8) {
             Text("Clinic")
                 .modifier(TitleTextModifir())
             
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 4) {
-                    ForEach(1..<6) { _ in
-                        ClincCard(image: Image("Clinic"),
-                                  name: "Care",
-                                  rate: 3,
-                                  price: "300",
-                                  location: "Mansoura")
-                    }
-                }
-                .padding(2)
-            }
+            ClincCard(
+                image: Image("Clinic"),
+                name: doctor?.clinic.name ?? "",
+                rate: Int(doctor?.clinic.ratingsAverage ?? 2),
+                price: String(doctor?.clinic.price ?? 100) ,
+                location: doctor?.clinic.location ?? "Not founded"
+            )
+            .frame(width: (UIScreen.main.bounds.width / 2) + 20)
+            
         }
     }
     
     private func locationSection() -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        let doctor = viewModel.doctor?.data
+        
+        return VStack(alignment: .leading, spacing: 8) {
             Text("Location")
                 .modifier(TitleTextModifir())
             
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
-                    ForEach(1..<6) { _ in
-                        locationCard(image: "Location", location: "New Damietta, Damietta")
-                    }
-                }
-                .padding(1)
-            }
+            locationCard(image: "Location", location: doctor?.location ?? "Not founded")
         }
     }
     
     private func reviewsSection() -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        let doctor = viewModel.doctor?.data
+        
+        return VStack(alignment: .leading, spacing: 8) {
             HStack(spacing:20){
                 Text("Reviews")
                     .modifier(TitleTextModifir())
+                Spacer()
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     Text("See All")
                         .multilineTextAlignment(.trailing)
@@ -158,11 +166,17 @@ struct DoctorDetailsView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
-                    ForEach(1..<6) { _ in
-                        ReviewCard(userName: "Sami Ahmed", description: "He is agood doctor and he is good good bbbbnbbb", review: "3")
+                    if let reviews = doctor?.reviews {
+                        ForEach(reviews) { review in
+                            ReviewCard(
+                                userName: review.user.name,
+                                description: review.review,
+                                review: String(review.ratings)
+                            )
+                        }
+                        .padding(1)
                     }
                 }
-                .padding(1)
             }
         }
     }

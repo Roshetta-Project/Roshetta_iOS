@@ -9,7 +9,7 @@ import Foundation
 
 class DoctorDetailsViewModel: ObservableObject {
     
-//    @Published var doctors: [DoctorModel] = []
+    @Published var doctor: DoctorDetailsModel?
     @Published var status: NetworkState = .loading
         
     @MainActor
@@ -35,9 +35,13 @@ class DoctorDetailsViewModel: ObservableObject {
             }
             
             let decoder = JSONDecoder()
-            let doctorsResponse = try decoder.decode(DoctorListModel.self, from: data)
-//            doctors = doctorsResponse.data
-            status = .success
+            let doctorResponse = try decoder.decode(DoctorDetailsModel.self, from: data)
+            doctor = doctorResponse
+            if doctor != nil {
+                status = .success
+            } else {
+                status = .error("Doctor not found")
+            }
         } catch {
             status = .error(error.localizedDescription)
         }

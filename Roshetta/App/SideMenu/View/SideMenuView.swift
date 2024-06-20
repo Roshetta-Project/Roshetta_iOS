@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SideMenuView: View {
     // MARK: - PROPERTYS
-    
     @State  var selectedTab = "Home"
     @State var showMenu = false
     @Namespace var animation

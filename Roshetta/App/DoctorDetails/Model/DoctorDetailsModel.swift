@@ -8,6 +8,12 @@
 import Foundation
 
 struct DoctorDetailsModel: Codable {
+    let data: Doctor
+}
+
+// MARK: - Doctor
+
+struct Doctor: Codable {
     let id: String
     let image: String
     let name, specilization, bio: String
@@ -47,7 +53,7 @@ struct Clinic: Codable {
 }
 
 // MARK: - Review
-struct Review: Codable {
+struct Review: Codable, Identifiable {
     let review: String
     let ratings: Int
     let doctor: String

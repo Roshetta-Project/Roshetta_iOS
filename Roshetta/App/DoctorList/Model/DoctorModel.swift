@@ -19,7 +19,7 @@ struct DoctorModel: Codable, Identifiable {
     let id: String
     let image: String
     let name: String
-    let specilization: Int
+    let specilization: String
     let price: Int
     let location: String
     let ratingsAverage: Int
