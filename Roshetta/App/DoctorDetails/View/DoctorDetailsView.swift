@@ -128,7 +128,7 @@ struct DoctorDetailsView: View {
                 name: doctor?.clinic.name ?? "",
                 rate: Int(doctor?.clinic.ratingsAverage ?? 2),
                 price: String(doctor?.clinic.price ?? 100) ,
-                location: doctor?.clinic.location ?? "Not founded"
+                location: doctor?.clinic.location ?? "Not found"
             )
             .frame(width: (UIScreen.main.bounds.width / 2) + 20)
             

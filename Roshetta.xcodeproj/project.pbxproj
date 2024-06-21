@@ -153,6 +153,7 @@
 		CCDCA5252C2495E500E73D49 /* ClinicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA5242C2495E500E73D49 /* ClinicModel.swift */; };
 		CCDCA5272C254AD900E73D49 /* ClinicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA5262C254AD900E73D49 /* ClinicViewModel.swift */; };
 		CCDCA52C2C2552E900E73D49 /* ClinicDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA52B2C2552E900E73D49 /* ClinicDetailsViewModel.swift */; };
+		CCDCA52F2C2553E500E73D49 /* ClinicDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA52E2C2553E500E73D49 /* ClinicDetailsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -314,6 +315,7 @@
 		CCDCA5242C2495E500E73D49 /* ClinicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicModel.swift; sourceTree = "<group>"; };
 		CCDCA5262C254AD900E73D49 /* ClinicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewModel.swift; sourceTree = "<group>"; };
 		CCDCA52B2C2552E900E73D49 /* ClinicDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsViewModel.swift; sourceTree = "<group>"; };
+		CCDCA52E2C2553E500E73D49 /* ClinicDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1068,6 +1070,7 @@
 		CCDCA5282C2551E900E73D49 /* ClinicDetails */ = {
 			isa = PBXGroup;
 			children = (
+				CCDCA52D2C2553C400E73D49 /* Model */,
 				CCDCA52A2C2552CE00E73D49 /* ViewModel */,
 				CCDCA5292C25520300E73D49 /* View */,
 			);
@@ -1088,6 +1091,14 @@
 				CCDCA52B2C2552E900E73D49 /* ClinicDetailsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCDCA52D2C2553C400E73D49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCA52E2C2553E500E73D49 /* ClinicDetailsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1249,6 +1260,7 @@
 				CCDCA5232C24950B00E73D49 /* DoctorModel.swift in Sources */,
 				26FF85A82C24DD390025FB9C /* TimeScrollView.swift in Sources */,
 				7F884CC62B6C1DA700B82521 /* AboutCardView.swift in Sources */,
+				CCDCA52F2C2553E500E73D49 /* ClinicDetailsModel.swift in Sources */,
 				7F884CCC2B6C1E0A00B82521 /* LogoImageView.swift in Sources */,
 				7F196E9B2B6F97F100CBBD6A /* AuthModuleFactory.swift in Sources */,
 				26D7017F2BBE298D00DF0A20 /* RateUsView.swift in Sources */,

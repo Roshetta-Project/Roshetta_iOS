@@ -8,51 +8,68 @@
 import SwiftUI
 
 struct ClinicDetailsView: View {
+    
     // MARK: - PROPERTIES
+    
+    let id: String
+    @StateObject var viewModel = ClinicDetailsViewModel()
 
     // MARK: - VIEW
+    
     var body: some View {
-        NavigationStack{
-            ScrollView(.vertical,showsIndicators: false){
-                header()
-                VStack(alignment: .leading, spacing: 16){
-                    ImageScroll()
-                    doctorSection()
-                    doctorSpecilization()
-                    priceSection()
-                    locationSection()
-                    reviewSection()
+        switch viewModel.status {
+        case .loading:
+            ProgressView()
+        case .error(let error):
+            Text("error while loading page: \(error)")
+        case .success:
+            NavigationStack{
+                ScrollView(.vertical,showsIndicators: false){
+                    header()
+                    VStack(alignment: .leading, spacing: 16){
+                        ImageScroll()
+                        doctorSection()
+                        doctorSpecilization()
+                        priceSection()
+                        locationSection()
+                        reviewSection()
 
-                    GFButton(isLoading: .constant(false),
-                             text: "Book Now",
-                             backgroundColor: Colors.main,
-                             foregroundColot: Color.white) {
-                        // TODO: - Book
+                        GFButton(isLoading: .constant(false),
+                                 text: "Book Now",
+                                 backgroundColor: Colors.main,
+                                 foregroundColot: Color.white) {
+                            // TODO: - Book
+                        }
+                                 .padding(.top, 24)
+                    }//:VStack
+                    .padding()
+                }//:ScrollView
+                .navigationBarTitle("", displayMode: .inline)
+                .navigationBarItems(
+                    trailing: HStack {
+                        Button(action: {
+                            // fav button
+                        }) {
+                            Image(systemName: "bookmark")
+                                .frame(width: 24,   height: 24)
+                                .foregroundColor(Color("text"))
+                        }
                     }
-                             .padding(.top, 24)
-                }//:VStack
-                .padding()
-            }//:ScrollView
-            .navigationBarTitle("", displayMode: .inline)
-            .navigationBarItems(
-                trailing: HStack {
-                    Button(action: {
-                        // fav button
-                    }) {
-                        Image(systemName: "bookmark")
-                            .frame(width: 24,   height: 24)
-                            .foregroundColor(Color("text"))
-                    }
-                }
-            )
-        }//:NavigationStack
+                )
+            }//:NavigationStack
+        }
+
     }
+    
+    // MARK: - FUNCITIONS
 
     private func header() -> some View {
-        VStack(spacing: 4) {
+        let clinic = viewModel.clinic?.data
+        
+        return VStack(spacing: 4) {
             LogoImageView(image: "clinc")
             HStack(spacing: 0){
-                Text("Family ")
+                Text(clinic?.name ?? "")
                     .foregroundColor(Colors.text)
                     .font(.custom(GFFonts.popinsSemiBold, size: 20))
 
@@ -63,7 +80,7 @@ struct ClinicDetailsView: View {
 
             HStack {
                 ForEach(0 ..< 5) { index in
-                    Image(systemName: index < 3 ? "star.fill" : "star")
+                    Image(systemName: index < Int(clinic?.ratingsAverage ?? 2) ? "star.fill" : "star")
                         .resizable()
                         .foregroundColor(.yellow)
                         .frame(width:15,height: 15)
@@ -92,26 +109,29 @@ struct ClinicDetailsView: View {
     }
 
     private func priceSection() -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        let clinic = viewModel.clinic?.data
+        return VStack(alignment: .leading, spacing: 8) {
             Text("Price")
                 .modifier(TitleTextModifir())
 
-            PriceCard(image: "Price", price: "300")
+            PriceCard(image: "Price", price: String(clinic?.price ?? 100))
         }//:Group
     }
 
     private func locationSection() -> some View {
-        VStack(alignment: .leading, spacing: 8){
+        let clinic = viewModel.clinic?.data
+        return VStack(alignment: .leading, spacing: 8){
             Text("Location")
                 .modifier(TitleTextModifir())
 
-            locationCard(image: "Location",location: "Mansoura")
+            locationCard(image: "Location",location: clinic?.location ?? "Not found")
 
         }//:VStack
     }
 
     private func reviewSection() -> some View {
-        VStack(alignment: .leading, spacing: 8){
+        let clinic = viewModel.clinic?.data
+        return VStack(alignment: .leading, spacing: 8){
             HStack(spacing:20){
                 Text("Reviews")
                     .modifier(TitleTextModifir())
@@ -141,6 +161,6 @@ struct ClinicDetailsView: View {
 
 struct ClinicDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ClinicDetailsView()
+        ClinicDetailsView(id: "66748d78e9aeb04ffc589051")
     }
 }
