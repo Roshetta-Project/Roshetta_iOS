@@ -18,7 +18,7 @@ class DoctorViewModel: ObservableObject {
         
     @MainActor
     func getDoctors() async {
-        guard let url = URL(string: "https://roshetta-wy5u.onrender.com/api/v1/doctors") else { return }
+        guard let url = URL(string: "https://roshetta-back.vercel.app/api/v1/doctors") else { return }
         
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
