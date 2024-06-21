@@ -151,6 +151,8 @@
 		CC9FAA6B2BB95D4100C54625 /* SpecialistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */; };
 		CCDCA5232C24950B00E73D49 /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA5222C24950B00E73D49 /* DoctorModel.swift */; };
 		CCDCA5252C2495E500E73D49 /* ClinicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA5242C2495E500E73D49 /* ClinicModel.swift */; };
+		CCDCA5272C254AD900E73D49 /* ClinicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA5262C254AD900E73D49 /* ClinicViewModel.swift */; };
+		CCDCA52C2C2552E900E73D49 /* ClinicDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA52B2C2552E900E73D49 /* ClinicDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -310,6 +312,8 @@
 		CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistListView.swift; sourceTree = "<group>"; };
 		CCDCA5222C24950B00E73D49 /* DoctorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorModel.swift; sourceTree = "<group>"; };
 		CCDCA5242C2495E500E73D49 /* ClinicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicModel.swift; sourceTree = "<group>"; };
+		CCDCA5262C254AD900E73D49 /* ClinicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewModel.swift; sourceTree = "<group>"; };
+		CCDCA52B2C2552E900E73D49 /* ClinicDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -712,7 +716,6 @@
 			children = (
 				268F2DFE2BE6F35C00F1D87E /* ScannerView.swift */,
 				7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */,
-				7F884CC12B6C1D5D00B82521 /* ClinicDetailsView.swift */,
 				CC3C83AC2BACFAF60025AF74 /* HomeView.swift */,
 				26FF85B52C24DFF30025FB9C /* BookingView.swift */,
 				26FF85B72C24E0E40025FB9C /* SavedView.swift */,
@@ -883,6 +886,7 @@
 				CCDCA5122C24934D00E73D49 /* DoctorList */,
 				7F1706D72C24AC6F00EFC697 /* DoctorDetails */,
 				CCDCA5152C24939900E73D49 /* ClinicList */,
+				CCDCA5282C2551E900E73D49 /* ClinicDetails */,
 				CCDCA51A2C2493F900E73D49 /* CenterList */,
 				CCDCA51E2C24942000E73D49 /* SpecialistList */,
 				7F884CBC2B6C1C8800B82521 /* Detaild Screen */,
@@ -976,6 +980,7 @@
 		CCDCA5172C2493AB00E73D49 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CCDCA5262C254AD900E73D49 /* ClinicViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1058,6 +1063,31 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CCDCA5282C2551E900E73D49 /* ClinicDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCA52A2C2552CE00E73D49 /* ViewModel */,
+				CCDCA5292C25520300E73D49 /* View */,
+			);
+			path = ClinicDetails;
+			sourceTree = "<group>";
+		};
+		CCDCA5292C25520300E73D49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F884CC12B6C1D5D00B82521 /* ClinicDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCDCA52A2C2552CE00E73D49 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCDCA52B2C2552E900E73D49 /* ClinicDetailsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1211,6 +1241,7 @@
 				7F988ECB2AE2D35000E0BCBD /* RounderCorners.swift in Sources */,
 				7F988EC22AE2D34000E0BCBD /* HomeSlider.swift in Sources */,
 				7FB00F582AFD7E3900303EB2 /* InfoRow.swift in Sources */,
+				CCDCA5272C254AD900E73D49 /* ClinicViewModel.swift in Sources */,
 				7F196E952B6F942100CBBD6A /* AuthRepository.swift in Sources */,
 				26FF85AA2C24DD6E0025FB9C /*  DaysDateScrollView.swift in Sources */,
 				7F988E9E2AE2D29900E0BCBD /* RequestError.swift in Sources */,
@@ -1287,6 +1318,7 @@
 				7F1706DF2C24ADCB00EFC697 /* DoctorDetailsModel.swift in Sources */,
 				7F884CC42B6C1D9400B82521 /* DoctorDetailsView.swift in Sources */,
 				265480F32BBC8FE20070F5B5 /* PrivacyPolicyView.swift in Sources */,
+				CCDCA52C2C2552E900E73D49 /* ClinicDetailsViewModel.swift in Sources */,
 				26FAD1E32BB4AF790025650F /* NotificationCard.swift in Sources */,
 				7F988EA02AE2D29900E0BCBD /* LanguageManager.swift in Sources */,
 				265480012BAF852100AD302B /* Home.swift in Sources */,

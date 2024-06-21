@@ -8,27 +8,46 @@
 import SwiftUI
 
 struct ClinicListView: View {
+    
     // MARK: - PROPERTIES
+    
+    @StateObject var viewModel = ClinicViewModel()
+    
     let grids: [GridItem] = [
         .init(.flexible()),
         .init(.flexible())
     ]
+    
+    // MARK: - VIEW
+    
     var body: some View {
-        NavigationStack {
-            ScrollView(.vertical, showsIndicators: false) {
-                LazyVGrid(columns: grids, spacing: 10) {
-                ForEach(0..<5){_ in
-                    NavigationLink {
-                        ClinicDetailsView()
-                    } label: {
-                        ClincCard(image: Image("clinc"), name: "The Care", rate: 3, price: "400", location: "Mansoura, Dakahlia")
-                    }
-                }.padding()
+        switch viewModel.status{
+        case .loading:
+            ProgressView()
+        case .error(let error):
+            Text("Error while loading page:  \(error)")
+        case .success:
+            NavigationStack {
+                ScrollView(.vertical, showsIndicators: false) {
+                    LazyVGrid(columns: grids, spacing: 10) {
+                        ForEach(viewModel.clinics){ clinic in
+                            NavigationLink {
+                                ClinicDetailsView()
+                            } label: {
+                                ClincCard(image: Image("clinc"), name: clinic.name, rate: Int(clinic.ratingsAverage), price: String(clinic.price), location: clinic.location)
+                            }
+                        }.padding()
+                }
+                }
             }
+            .task {
+                await viewModel.getClinic()
             }
+            .navigationTitle("Clinics")
+            .navigationBarTitleDisplayMode(.large)
+        
         }
-        .navigationTitle("Clinics")
-        .navigationBarTitleDisplayMode(.large)
+        
     }
 }
 
