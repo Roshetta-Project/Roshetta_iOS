@@ -24,6 +24,11 @@ struct ClinicListView: View {
         switch viewModel.status{
         case .loading:
             ProgressView()
+                .onAppear {
+                    Task {
+                        await viewModel.getClinic()
+                    }
+                }
         case .error(let error):
             Text("Error while loading page:  \(error)")
         case .success:
@@ -39,9 +44,6 @@ struct ClinicListView: View {
                         }.padding()
                 }
                 }
-            }
-            .task {
-                await viewModel.getClinic()
             }
             .navigationTitle("Clinics")
             .navigationBarTitleDisplayMode(.large)
