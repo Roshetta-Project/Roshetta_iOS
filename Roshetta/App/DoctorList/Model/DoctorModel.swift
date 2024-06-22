@@ -22,7 +22,7 @@ struct DoctorModel: Codable, Identifiable {
     let specilization: String
     let price: Int
     let location: String
-    let ratingsAverage: Int
+    let ratingsAverage: Double
 }
 
 
