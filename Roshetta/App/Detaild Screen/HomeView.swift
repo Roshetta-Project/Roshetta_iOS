@@ -10,6 +10,11 @@ import SwiftUI
 struct HomeView: View {
     
     // MARK: - Properties
+    @StateObject var doctorViewModel = DoctorViewModel()
+    @StateObject var clinicViewModel = ClinicViewModel()
+    @StateObject var centerViewModel = CenterViewModel()
+    
+    
     
     struct Category {
         let name: String
@@ -61,11 +66,23 @@ struct HomeView: View {
                 
                 ScrollView (.horizontal, showsIndicators: false) {
                     HStack (spacing: 21) {
-                        ForEach(0..<5){_ in
-                            NavigationLink {
-                                DoctorDetailsView(id: "")
-                            } label: {
-                                DoctorCard(image: Image("user"), name: "Dr. Abdalazem Saleh", specialization: "Surgery", rate: 3, price: "400", location: "Mansoura, Dakahlia")
+                        switch doctorViewModel.status {
+                        case .loading:
+                            ProgressView()
+                                .onAppear {
+                                    Task {
+                                        await doctorViewModel.getDoctors()
+                                    }
+                                }
+                        case .error(let error):
+                            Text("Error while loading page:  \(error)")
+                        case .success:
+                            ForEach(doctorViewModel.doctors){ doctor in
+                                NavigationLink {
+                                    DoctorDetailsView(id: doctor.id)
+                                } label: {
+                                    DoctorCard(image: Image("user"), name: doctor.name, specialization: doctor.specilization, rate: Int(doctor.ratingsAverage), price: String(doctor.price), location: doctor.location)
+                                }
                             }
                         }
                     }
@@ -90,16 +107,28 @@ struct HomeView: View {
                 .padding(.horizontal)
                 
                 ScrollView (.horizontal, showsIndicators: false) {
-                    HStack (spacing: 21) {
-                        ForEach(0..<5){_ in
-                            NavigationLink {
-                                ClinicDetailsView(id: "66748d78e9aeb04ffc589051")
-                            } label: {
-                                ClincCard(image: Image("clinc"), name: "The Care", rate: 3, price: "400", location: "Mansoura, Dakahlia")
-                            }
+
+                        HStack (spacing: 21) {
+                            switch clinicViewModel.status {
+                            case .loading:
+                                ProgressView()
+                                    .onAppear {
+                                        Task {
+                                            await clinicViewModel.getClinic()
+                                        }
+                                    }
+                            case .error(let error):
+                                Text("Error while loading page:  \(error)")
+                            case .success:
+                                ForEach(clinicViewModel.clinics){clinic in
+                                    NavigationLink {
+                                        ClinicDetailsView(id: clinic.id)
+                                    } label: {
+                                        ClincCard(image: Image("clinc"), name: clinic.name, rate: Int(clinic.ratingsAverage), price: String(clinic.price), location: clinic.location)
+                                    }
+                                }
                         }
-                    }
-                    .padding()
+                    }.padding()
                 }
                 
                 // MARK: - Nearest Centers Section
@@ -121,11 +150,23 @@ struct HomeView: View {
                 
                 ScrollView (.horizontal, showsIndicators: false) {
                     HStack (spacing: 21) {
-                        ForEach(0..<5){_ in
-                            NavigationLink {
-                                CenterDetailsView()
-                            } label: {
-                                MedicalCenterCard(image: Image("clinc"),name: "The Care",rate: 3,minPrice: "400",maxPrice: "600",location: "Mansoura, Dakahlia")
+                        switch centerViewModel.status {
+                        case .loading:
+                            ProgressView()
+                                .onAppear {
+                                    Task {
+                                        await centerViewModel.getCenter()
+                                    }
+                                }
+                        case .error(let error):
+                            Text("Error while loading page:  \(error)")
+                        case .success:
+                            ForEach(centerViewModel.centers){center in
+                                NavigationLink {
+                                    CenterDetailsView()
+                                } label: {
+                                    MedicalCenterCard(image: Image("clinc"),name: center.name,rate: 3,minPrice: String(center.price - 100),maxPrice: String(center.price + 100),location: center.location)
+                                }
                             }
                         }
                     }
