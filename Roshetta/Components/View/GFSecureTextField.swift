@@ -1,6 +1,6 @@
 //
 //  GFSecureTextField.swift
-//  Hafazny
+//  Roshetta
 //
 //  Created by Abdalazem Saleh on 2023-10-11.
 //
@@ -85,5 +85,6 @@ struct GFSecureTextField_Previews: PreviewProvider {
                           image: Image(systemName: "star"),
                           placeholder: "Enter your password",
                           keyBoardType: .default)
+        .padding()
     }
 }
