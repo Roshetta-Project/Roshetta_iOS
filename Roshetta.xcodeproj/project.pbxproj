@@ -597,6 +597,14 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		7F25684D2C2F4E3B00694DD3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CC3C83AC2BACFAF60025AF74 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		7F388C0F2B8688F500FE021B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -722,7 +730,6 @@
 			children = (
 				268F2DFE2BE6F35C00F1D87E /* ScannerView.swift */,
 				7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */,
-				CC3C83AC2BACFAF60025AF74 /* HomeView.swift */,
 				26FF85B52C24DFF30025FB9C /* BookingView.swift */,
 				26FF85B72C24E0E40025FB9C /* SavedView.swift */,
 			);
@@ -889,6 +896,7 @@
 				7F0D4CE12AE799B40057C1CE /* AuthModule */,
 				26EF1E382BBA174F0010B57D /* DataHistory */,
 				26547FF42BAF6EF100AD302B /* SideMenu */,
+				7F25684D2C2F4E3B00694DD3 /* Home */,
 				CCDCA5122C24934D00E73D49 /* DoctorList */,
 				7F1706D72C24AC6F00EFC697 /* DoctorDetails */,
 				CCDCA5152C24939900E73D49 /* ClinicList */,

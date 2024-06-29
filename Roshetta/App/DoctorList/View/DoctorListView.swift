@@ -21,40 +21,38 @@ struct DoctorListView: View {
     // MARK: - VIEW
     
     var body: some View {
-        NavigationView {
-            switch viewModel.status {
-            case .loading:
-                ProgressView()
-                    .onAppear {
-                        Task {
-                            await viewModel.getDoctors()
-                        }
-                    }
-            case .error(let error):
-                Text("Error while loading page:  \(error)")
-            case .success:
-                ScrollView(.vertical, showsIndicators: false) {
-                    LazyVGrid(columns: grids, spacing: 10) {
-                        ForEach(viewModel.doctors) { doctor in
-                            NavigationLink {
-                                DoctorDetailsView(id: doctor.id)
-                            } label: {
-                                DoctorCard(
-                                    image: Image("user"),
-                                    name: doctor.name,
-                                    specialization: doctor.specilization,
-                                    rate: Int(doctor.ratingsAverage),
-                                    price: String(doctor.price),
-                                    location: doctor.location
-                                )
-                            }
-                        }
-                        .padding()
+        switch viewModel.status {
+        case .loading:
+            ProgressView()
+                .onAppear {
+                    Task {
+                        await viewModel.getDoctors()
                     }
                 }
-                .navigationTitle("Doctors")
-                .navigationBarTitleDisplayMode(.large)
+        case .error(let error):
+            Text("Error while loading page:  \(error)")
+        case .success:
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVGrid(columns: grids, spacing: 10) {
+                    ForEach(viewModel.doctors) { doctor in
+                        NavigationLink {
+                            DoctorDetailsView(id: doctor.id)
+                        } label: {
+                            DoctorCard(
+                                image: Image("user"),
+                                name: doctor.name,
+                                specialization: doctor.specilization,
+                                rate: Int(doctor.ratingsAverage),
+                                price: String(doctor.price),
+                                location: doctor.location
+                            )
+                        }
+                    }
+                    .padding()
+                }
             }
+            .navigationTitle("Doctors")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }
