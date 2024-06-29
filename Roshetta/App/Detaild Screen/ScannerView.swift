@@ -14,7 +14,7 @@ struct ScannerView: View {
             Text("Upload Your X-ray")
                 .font(.custom(GFFonts.SeguiBold, size: 24))
                 .foregroundColor(Colors.main)
-            rayScannerView(image: "center")
+            rayScannerView(image: "center", buttonAction: {})
             Spacer()
 
         }

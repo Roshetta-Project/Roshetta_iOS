@@ -10,9 +10,11 @@ import SwiftUI
 struct ProfileView: View {
     
     // MARK: - PROPERTYS
-
+    
     let userName : String
     let location : String
+    var buttonAction: () -> Void
+    
     
     let sections = [
         ProfileSectionItem(title: "Account", imageName: "contactus"),
@@ -25,7 +27,7 @@ struct ProfileView: View {
     // MARK: - VIEW
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             
             VStack(alignment:.center,spacing: 8){
                 ProfileImage()
@@ -43,12 +45,25 @@ struct ProfileView: View {
                 ProfileVieww()
                     .padding()
             }
-            
+            .navigationBarItems(
+                leading:
+                    Button {
+                       buttonAction()
+                    } label: {
+                        Image(systemName: "line.horizontal.3")
+                            .foregroundColor(.gray)
+                    },
+                trailing:
+                    NavigationLink(destination: SearchBar()) {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.gray)
+                    }
+            )
+            .navigationBarTitle("", displayMode: .inline)
         }
-        .padding(.top, 32)
     }
 }
 
 #Preview {
-    ProfileView(userName: "Sami Ahmed", location: "Damietta,Egypt")
+    ProfileView(userName: "Sami Ahmed", location: "Damietta,Egypt", buttonAction: {})
 }

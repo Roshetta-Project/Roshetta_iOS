@@ -10,20 +10,39 @@ import SwiftUI
 // MARK: - PROPERTYS
 struct ReservationVIew: View {
     @State private var selectedPage = 0
-    
+    var buttonAction: () -> Void
+
     // MARK: - VIEW
     var body: some View {
-        VStack {
-            HStack(spacing: 0) {
-                CustomSegmentedControl(title: "Processing", index: 0, selectedIndex: $selectedPage)
-                CustomSegmentedControl(title: "Completed", index: 1, selectedIndex: $selectedPage)
-                CustomSegmentedControl(title: "Canceled", index: 2, selectedIndex: $selectedPage)
+        NavigationStack {
+            VStack {
+                HStack(spacing: 0) {
+                    CustomSegmentedControl(title: "Processing", index: 0, selectedIndex: $selectedPage)
+                    CustomSegmentedControl(title: "Completed", index: 1, selectedIndex: $selectedPage)
+                    CustomSegmentedControl(title: "Canceled", index: 2, selectedIndex: $selectedPage)
+                }
+                .padding()
+                
+                getPageContent()
+                
+                Spacer()
             }
-            .padding()
-            
-            getPageContent()
-            
-            Spacer()
+            .navigationBarItems(
+                leading:
+                    Button {
+                       buttonAction()
+                    } label: {
+                        Image(systemName: "line.horizontal.3")
+                            .foregroundColor(.gray)
+                    },
+                trailing:
+                    NavigationLink(destination: SearchBar()) {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.gray)
+                    }
+            )
+            .navigationBarTitle("", displayMode: .inline)
+
         }
     }
     
@@ -62,13 +81,14 @@ struct ReservationVIew: View {
         default:
             Text("Error: Invalid Page")
         }
+        
     }
 }
 
 // MARK: - Preview
 struct ReservationVIew_Previews: PreviewProvider {
     static var previews: some View {
-        ReservationVIew()
+        ReservationVIew(buttonAction: {})
     }
 }
 

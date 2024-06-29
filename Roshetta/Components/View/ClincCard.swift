@@ -15,9 +15,13 @@ struct ClincCard: View {
     let price: String
     let location: String
     
+    var cardWidth: CGFloat {
+        return (UIScreen.main.bounds.width / 2) - 56
+    }
+    
     // MARK: - VIEW
     var body: some View {
-
+        
         HStack(alignment: .center, spacing: 8) {
             Image("clinc")
                 .resizable()
@@ -62,9 +66,8 @@ struct ClincCard: View {
                 .foregroundColor(Color.white)
                 .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
         )
-    
-        
-}
+        .frame(width: cardWidth)
+    }
 }
 
 struct ClincCard_Previews: PreviewProvider {

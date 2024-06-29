@@ -32,24 +32,22 @@ struct ClinicListView: View {
         case .error(let error):
             Text("Error while loading page:  \(error)")
         case .success:
-            NavigationStack {
-                ScrollView(.vertical, showsIndicators: false) {
-                    LazyVGrid(columns: grids, spacing: 10) {
-                        ForEach(viewModel.clinics){ clinic in
-                            NavigationLink {
-                                ClinicDetailsView(id: "66748d78e9aeb04ffc589051")
-                            } label: {
-                                ClincCard(image: Image("clinc"), name: clinic.name, rate: Int(clinic.ratingsAverage), price: String(clinic.price), location: clinic.location
-                                )
-                            }
-                        }.padding()
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVGrid(columns: grids) {
+                    ForEach(viewModel.clinics){ clinic in
+                        NavigationLink {
+                            ClinicDetailsView(id: "66748d78e9aeb04ffc589051")
+                        } label: {
+                            ClincCard(image: Image("clinc"), name: clinic.name, rate: Int(clinic.ratingsAverage), price: String(clinic.price), location: clinic.location
+                            )
+                        }
                     }
                 }
             }
+            .padding()
             .navigationTitle("Clinics")
             .navigationBarTitleDisplayMode(.large)
         }
-        
     }
 }
 

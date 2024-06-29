@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct NotificationsView: View {
+    var buttonAction: () -> Void
+
+
     var body: some View {
-        NavigationView {
+
+        NavigationStack{
             ScrollView {
                 LazyVStack (spacing:1){
                     ForEach(1..<10) { index in
@@ -23,12 +27,27 @@ struct NotificationsView: View {
             .padding(.horizontal,-10)
             .navigationTitle("Notifications")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(
+                leading:
+                    Button {
+                       buttonAction()
+                    } label: {
+                        Image(systemName: "line.horizontal.3")
+                            .foregroundColor(.gray)
+                    },
+                trailing:
+                    NavigationLink(destination: SearchBar()) {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.gray)
+                    }
+            )
+            .navigationBarTitle("", displayMode: .inline)
         }
     }
 }
 
 struct NotificationsView_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationsView()
+        NotificationsView(buttonAction: {})
     }
 }
