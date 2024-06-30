@@ -172,7 +172,7 @@ struct HomeView: View {
                         case .success:
                             ForEach(centerViewModel.centers){center in
                                 NavigationLink {
-                                    CenterDetailsView()
+                                    CenterDetailsView(id: "6681c4a2d5f54fd64cd1f370")
                                 } label: {
                                     MedicalCenterCard(
                                         image: Image("clinc"),

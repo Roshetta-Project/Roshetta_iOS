@@ -151,6 +151,8 @@
 		CC9FAA672BB953B300C54625 /* CenterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA662BB953B300C54625 /* CenterListView.swift */; };
 		CC9FAA692BB9545F00C54625 /* ClinicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA682BB9545F00C54625 /* ClinicListView.swift */; };
 		CC9FAA6B2BB95D4100C54625 /* SpecialistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */; };
+		CCD25B092C31FE96009B60C2 /* CenterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD25B082C31FE96009B60C2 /* CenterDetailsViewModel.swift */; };
+		CCD25B0B2C31FEA4009B60C2 /* CenterDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD25B0A2C31FEA4009B60C2 /* CenterDetailsModel.swift */; };
 		CCDCA5232C24950B00E73D49 /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA5222C24950B00E73D49 /* DoctorModel.swift */; };
 		CCDCA5252C2495E500E73D49 /* ClinicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA5242C2495E500E73D49 /* ClinicModel.swift */; };
 		CCDCA5272C254AD900E73D49 /* ClinicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDCA5262C254AD900E73D49 /* ClinicViewModel.swift */; };
@@ -315,6 +317,8 @@
 		CC9FAA662BB953B300C54625 /* CenterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListView.swift; sourceTree = "<group>"; };
 		CC9FAA682BB9545F00C54625 /* ClinicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicListView.swift; sourceTree = "<group>"; };
 		CC9FAA6A2BB95D4100C54625 /* SpecialistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistListView.swift; sourceTree = "<group>"; };
+		CCD25B082C31FE96009B60C2 /* CenterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailsViewModel.swift; sourceTree = "<group>"; };
+		CCD25B0A2C31FEA4009B60C2 /* CenterDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailsModel.swift; sourceTree = "<group>"; };
 		CCDCA5222C24950B00E73D49 /* DoctorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorModel.swift; sourceTree = "<group>"; };
 		CCDCA5242C2495E500E73D49 /* ClinicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicModel.swift; sourceTree = "<group>"; };
 		CCDCA5262C254AD900E73D49 /* ClinicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewModel.swift; sourceTree = "<group>"; };
@@ -485,25 +489,11 @@
 		7F09B2C42C30295900D2A74A /* CenterDetails */ = {
 			isa = PBXGroup;
 			children = (
+				CCD25B072C31FE7D009B60C2 /* Model */,
+				CCD25B062C31FE75009B60C2 /* ViewModel */,
 				7F09B2C72C30297400D2A74A /* View */,
-				7F09B2C62C30296F00D2A74A /* ViewModel */,
-				7F09B2C52C30296A00D2A74A /* Model */,
 			);
 			path = CenterDetails;
-			sourceTree = "<group>";
-		};
-		7F09B2C52C30296A00D2A74A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		7F09B2C62C30296F00D2A74A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7F09B2C72C30297400D2A74A /* View */ = {
@@ -987,6 +977,22 @@
 			path = RequestsStrategy;
 			sourceTree = "<group>";
 		};
+		CCD25B062C31FE75009B60C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCD25B082C31FE96009B60C2 /* CenterDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCD25B072C31FE7D009B60C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCD25B0A2C31FEA4009B60C2 /* CenterDetailsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CCDCA5122C24934D00E73D49 /* DoctorList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1311,12 +1317,14 @@
 				7F884CCC2B6C1E0A00B82521 /* LogoImageView.swift in Sources */,
 				7F196E9B2B6F97F100CBBD6A /* AuthModuleFactory.swift in Sources */,
 				26D7017F2BBE298D00DF0A20 /* RateUsView.swift in Sources */,
+				CCD25B0B2C31FEA4009B60C2 /* CenterDetailsModel.swift in Sources */,
 				7F5E43142AEBF49C008C2FC1 /* onboardingModel.swift in Sources */,
 				7F884CD02B6C1E2C00B82521 /* ReviewCard.swift in Sources */,
 				7FB00F5A2AFD7FF000303EB2 /* MedicalCenterCard.swift in Sources */,
 				26D701832BBE2B4D00DF0A20 /* ReviewTextField.swift in Sources */,
 				7F988ECC2AE2D35000E0BCBD /* SFSymbolModifire.swift in Sources */,
 				7F196E9F2B6F983300CBBD6A /* AuthUseCaseProtocol.swift in Sources */,
+				CCD25B092C31FE96009B60C2 /* CenterDetailsViewModel.swift in Sources */,
 				26D6AEAE2BBB25B900F6B5A8 /* ReservationVIew.swift in Sources */,
 				7F988EC72AE2D34000E0BCBD /* GFSecureTextField.swift in Sources */,
 				7F5E42FF2AEBDE00008C2FC1 /* Fonts.swift in Sources */,

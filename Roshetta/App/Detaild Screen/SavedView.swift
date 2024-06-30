@@ -74,7 +74,7 @@ struct SavedView: View {
                 LazyVGrid(columns: grids, spacing: 10) {
                     ForEach(0..<5){_ in
                         NavigationLink {
-                            CenterDetailsView()
+                            CenterDetailsView(id: "6681c4a2d5f54fd64cd1f370")
                         } label: {
                             MedicalCenterCard(image: Image("clinc"),name: "The Care",rate: 3,minPrice: "400",maxPrice: "600",location: "Mansoura, Dakahlia")
                         }

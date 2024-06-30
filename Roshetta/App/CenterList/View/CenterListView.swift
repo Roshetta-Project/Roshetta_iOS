@@ -37,7 +37,7 @@ struct CenterListView: View {
                     LazyVGrid(columns: grids) {
                         ForEach(viewModel.centers){center in
                             NavigationLink {
-                                CenterDetailsView()
+                                CenterDetailsView(id: "6681c4a2d5f54fd64cd1f370")
                             } label: {
                                 MedicalCenterCard(
                                     image: Image("clinc"),
