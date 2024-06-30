@@ -19,6 +19,9 @@ struct DoctorDetailsView: View {
         switch viewModel.status {
         case .loading:
             ProgressView()
+                .task {
+                    await viewModel.getDoctors(id: id)
+                }
         case .error(let error):
             Text("error while loading page: \(error)")
         case .success:
@@ -44,9 +47,6 @@ struct DoctorDetailsView: View {
                 }//:VStack
                 .padding()
             }//:ScrollView
-            .task {
-                await viewModel.getDoctors(id: id)
-            }
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(
                 trailing: HStack {
@@ -76,7 +76,7 @@ struct DoctorDetailsView: View {
             
             HStack {
                 ForEach(0 ..< 5) { index in
-                    Image(systemName: index < doctor?.ratingsAverage ?? 2 ? "star.fill" : "star")
+                    Image(systemName: index < Int(doctor?.ratingsAverage ?? 2) ? "star.fill" : "star")
                         .resizable()
                         .foregroundColor(.yellow)
                         .frame(width:15,height: 15)

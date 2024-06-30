@@ -22,7 +22,7 @@ struct Doctor: Codable {
     let isfavourite, isOnline: Bool
     let clinic: Clinic
     let center: Center
-    let ratingsAverage: Int
+    let ratingsAverage: Double
     let reviews: [Review]
 }
 

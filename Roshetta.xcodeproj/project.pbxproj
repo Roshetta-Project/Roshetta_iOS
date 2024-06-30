@@ -482,6 +482,38 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		7F09B2C42C30295900D2A74A /* CenterDetails */ = {
+			isa = PBXGroup;
+			children = (
+				7F09B2C72C30297400D2A74A /* View */,
+				7F09B2C62C30296F00D2A74A /* ViewModel */,
+				7F09B2C52C30296A00D2A74A /* Model */,
+			);
+			path = CenterDetails;
+			sourceTree = "<group>";
+		};
+		7F09B2C52C30296A00D2A74A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F09B2C62C30296F00D2A74A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F09B2C72C30297400D2A74A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7F0D4CE02AE799AA0057C1CE /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -595,6 +627,14 @@
 				7F196EA02B6F9B6100CBBD6A /* AuthUseCase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		7F25684D2C2F4E3B00694DD3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CC3C83AC2BACFAF60025AF74 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		7F388C0F2B8688F500FE021B /* ViewModel */ = {
@@ -721,8 +761,6 @@
 			isa = PBXGroup;
 			children = (
 				268F2DFE2BE6F35C00F1D87E /* ScannerView.swift */,
-				7F884CBF2B6C1D3800B82521 /* CenterDetailsView.swift */,
-				CC3C83AC2BACFAF60025AF74 /* HomeView.swift */,
 				26FF85B52C24DFF30025FB9C /* BookingView.swift */,
 				26FF85B72C24E0E40025FB9C /* SavedView.swift */,
 			);
@@ -889,11 +927,13 @@
 				7F0D4CE12AE799B40057C1CE /* AuthModule */,
 				26EF1E382BBA174F0010B57D /* DataHistory */,
 				26547FF42BAF6EF100AD302B /* SideMenu */,
+				7F25684D2C2F4E3B00694DD3 /* Home */,
 				CCDCA5122C24934D00E73D49 /* DoctorList */,
 				7F1706D72C24AC6F00EFC697 /* DoctorDetails */,
 				CCDCA5152C24939900E73D49 /* ClinicList */,
 				CCDCA5282C2551E900E73D49 /* ClinicDetails */,
 				CCDCA51A2C2493F900E73D49 /* CenterList */,
+				7F09B2C42C30295900D2A74A /* CenterDetails */,
 				CCDCA51E2C24942000E73D49 /* SpecialistList */,
 				7F884CBC2B6C1C8800B82521 /* Detaild Screen */,
 				26D6AEAB2BBB259F00F6B5A8 /* Reservation */,

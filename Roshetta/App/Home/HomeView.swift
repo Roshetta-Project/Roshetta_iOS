@@ -14,7 +14,7 @@ struct HomeView: View {
     @StateObject var clinicViewModel = ClinicViewModel()
     @StateObject var centerViewModel = CenterViewModel()
     
-    
+    var buttonAction: () -> Void
     
     struct Category {
         let name: String
@@ -81,7 +81,13 @@ struct HomeView: View {
                                 NavigationLink {
                                     DoctorDetailsView(id: doctor.id)
                                 } label: {
-                                    DoctorCard(image: Image("user"), name: doctor.name, specialization: doctor.specilization, rate: Int(doctor.ratingsAverage), price: String(doctor.price), location: doctor.location)
+                                    DoctorCard(
+                                        image: Image("user"),
+                                        name: doctor.name, specialization: doctor.specilization,
+                                        rate: Int(doctor.ratingsAverage),
+                                        price: String(doctor.price),
+                                        location: doctor.location
+                                    )
                                 }
                             }
                         }
@@ -107,29 +113,32 @@ struct HomeView: View {
                 .padding(.horizontal)
                 
                 ScrollView (.horizontal, showsIndicators: false) {
-
-                        HStack (spacing: 21) {
-                            switch clinicViewModel.status {
-                            case .loading:
-                                ProgressView()
-                                    .onAppear {
-                                        Task {
-                                            await clinicViewModel.getClinic()
-                                        }
-                                    }
-                            case .error(let error):
-                                Text("Error while loading page:  \(error)")
-                            case .success:
-                                ForEach(clinicViewModel.clinics){clinic in
-                                    NavigationLink {
-                                        ClinicDetailsView(id: clinic.id)
-                                    } label: {
-                                        ClincCard(image: Image("clinc"), name: clinic.name, rate: Int(clinic.ratingsAverage), price: String(clinic.price), location: clinic.location)
+                    
+                    HStack() {
+                        switch clinicViewModel.status {
+                        case .loading:
+                            ProgressView()
+                                .onAppear {
+                                    Task {
+                                        await clinicViewModel.getClinic()
                                     }
                                 }
+                        case .error(let error):
+                            Text("Error while loading page:  \(error)")
+                        case .success:
+                            ForEach(clinicViewModel.clinics){ clinic in
+                                NavigationLink {
+                                    ClinicDetailsView(id: clinic.id)
+                                } label: {
+                                    ClincCard(image: Image("clinc"), name: clinic.name, rate: Int(clinic.ratingsAverage), price: String(clinic.price), location: clinic.location)
+                                        .padding(.trailing)
+                                }
+                            }
+                            .padding(20)
                         }
-                    }.padding()
+                    }
                 }
+                .padding(.horizontal, 20)
                 
                 // MARK: - Nearest Centers Section
                 HStack () {
@@ -165,7 +174,14 @@ struct HomeView: View {
                                 NavigationLink {
                                     CenterDetailsView()
                                 } label: {
-                                    MedicalCenterCard(image: Image("clinc"),name: center.name,rate: 3,minPrice: String(center.price - 100),maxPrice: String(center.price + 100),location: center.location)
+                                    MedicalCenterCard(
+                                        image: Image("clinc"),
+                                        name: center.name,
+                                        rate: 3,
+                                        minPrice: String(center.price - 100),
+                                        maxPrice: String(center.price + 100),
+                                        location: center.location
+                                    )
                                 }
                             }
                         }
@@ -174,14 +190,16 @@ struct HomeView: View {
                 }
                 .navigationBarItems(
                     leading:
-                        NavigationLink(destination: NotificationsView()) {
-                            Image(systemName: "bell")
-                                .foregroundColor(.primary)
+                        Button {
+                           buttonAction()
+                        } label: {
+                            Image(systemName: "line.horizontal.3")
+                                .foregroundColor(.gray)
                         },
                     trailing:
                         NavigationLink(destination: SearchBar()) {
                             Image(systemName: "magnifyingglass")
-                                .foregroundColor(.primary)
+                                .foregroundColor(.gray)
                         }
                 )
                 .navigationBarTitle("", displayMode: .inline)
@@ -189,8 +207,9 @@ struct HomeView: View {
         }
     }
 }
-               
+
 
 #Preview {
-    HomeView()
+    HomeView(buttonAction: {})
 }
+

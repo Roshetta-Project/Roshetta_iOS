@@ -34,16 +34,24 @@ struct CenterListView: View {
         case .success:
             NavigationStack {
                 ScrollView(.vertical, showsIndicators: false) {
-                    LazyVGrid(columns: grids, spacing: 10) {
-                    ForEach(viewModel.centers){center in
-                        NavigationLink {
-                            CenterDetailsView()
-                        } label: {
-                            MedicalCenterCard(image: Image("clinc"),name: center.name,rate: 3,minPrice: String(center.price - 100),maxPrice: String(center.price + 100),location: center.location)
+                    LazyVGrid(columns: grids) {
+                        ForEach(viewModel.centers){center in
+                            NavigationLink {
+                                CenterDetailsView()
+                            } label: {
+                                MedicalCenterCard(
+                                    image: Image("clinc"),
+                                    name: center.name,
+                                    rate: 3,
+                                    minPrice: String(center.price - 100),
+                                    maxPrice: String(center.price + 100),
+                                    location: center.location
+                                )
+                            }
                         }
-                    }.padding()
+                    }
                 }
-                }
+                .padding()
             }
             .navigationTitle("Centers")
             .navigationBarTitleDisplayMode(.large)

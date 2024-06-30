@@ -16,6 +16,8 @@ class DoctorViewModel: ObservableObject {
     
     @Published var doctors: [DoctorModel] = []
     @Published var status: NetworkState = .loading
+    
+    // Fillter Key ->
     func getDoctors() async {
         guard let url = URL(string: "https://roshetta-back.vercel.app/api/v1/doctors") else {
             status = .error("Invalid URL")
@@ -34,6 +36,11 @@ class DoctorViewModel: ObservableObject {
                 throw URLError(.badServerResponse)
             }
             
+            if let jsonString = String(data: data, encoding: .utf8) {
+                print("Response is ---")
+               print(jsonString)
+            }
+
             let decoder = JSONDecoder()
             let doctorsResponse = try decoder.decode(DoctorListModel.self, from: data)
             doctors = doctorsResponse.data

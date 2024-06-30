@@ -20,10 +20,12 @@ struct ClinicDetailsView: View {
         switch viewModel.status {
         case .loading:
             ProgressView()
+                .task {
+                    await viewModel.getDoctors(id: id)
+                }
         case .error(let error):
             Text("error while loading page: \(error)")
         case .success:
-            NavigationStack{
                 ScrollView(.vertical,showsIndicators: false){
                     header()
                     VStack(alignment: .leading, spacing: 16){
@@ -56,7 +58,6 @@ struct ClinicDetailsView: View {
                         }
                     }
                 )
-            }//:NavigationStack
         }
 
     }
