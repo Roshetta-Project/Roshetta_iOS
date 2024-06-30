@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct GenderView: View {
-    
-    // MARK: - PROPERTYS
+    // MARK: - PROPERTIES
     @Binding var selectedGender: String?
-    
+    @State private var shouldNavigate: Bool = false
+
     // MARK: - VIEW
     var body: some View {
         ZStack {
@@ -28,6 +28,7 @@ struct GenderView: View {
                     VStack {
                         Button(action: {
                             selectedGender = "male"
+                            shouldNavigate = true
                         }) {
                             Image("male")
                                 .resizable()
@@ -44,6 +45,7 @@ struct GenderView: View {
                     VStack {
                         Button(action: {
                             selectedGender = "female"
+                            shouldNavigate = true
                         }) {
                             Image("female")
                                 .resizable()
@@ -59,16 +61,25 @@ struct GenderView: View {
                 Spacer()
                 Spacer()
             }
+            
+            // Navigation Link
+            NavigationLink(destination: DateOfBirthView(), isActive: $shouldNavigate) {
+                EmptyView()
+            }
+            
         }
     }
 }
+
 
 
 struct GenderSelectionView: View {
     @State private var selectedGender: String? = nil
     
     var body: some View {
-        GenderView(selectedGender: $selectedGender)
+        NavigationView {
+            GenderView(selectedGender: $selectedGender)
+        }
     }
 }
 

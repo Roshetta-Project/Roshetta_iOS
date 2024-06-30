@@ -34,6 +34,7 @@
 		2665AABE2BAA37A400CE29F3 /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AABA2BAA37A400CE29F3 /* Segoe UI.ttf */; };
 		2665AAC42BAA3AD500CE29F3 /* Segoe UI Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */; };
 		2677D33E2BCB7A2A003354E7 /* RulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2677D33D2BCB7A2A003354E7 /* RulerView.swift */; };
+		268431032C32027F0004A0B6 /* medicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268431022C32027F0004A0B6 /* medicationsView.swift */; };
 		268F2DFF2BE6F35C00F1D87E /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268F2DFE2BE6F35C00F1D87E /* ScannerView.swift */; };
 		268F2E012BE6F46500F1D87E /* x-rayScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268F2E002BE6F46500F1D87E /* x-rayScannerView.swift */; };
 		26C5042C2BE7D18B00778840 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C5042B2BE7D18B00778840 /* ResultView.swift */; };
@@ -195,6 +196,7 @@
 		2665AABA2BAA37A400CE29F3 /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
 		2665AAC32BAA3AD500CE29F3 /* Segoe UI Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Semibold.ttf"; sourceTree = "<group>"; };
 		2677D33D2BCB7A2A003354E7 /* RulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerView.swift; sourceTree = "<group>"; };
+		268431022C32027F0004A0B6 /* medicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medicationsView.swift; sourceTree = "<group>"; };
 		268F2DFE2BE6F35C00F1D87E /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		268F2E002BE6F46500F1D87E /* x-rayScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "x-rayScannerView.swift"; sourceTree = "<group>"; };
 		26C5042B2BE7D18B00778840 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 				26EF1E402BBA4C2A0010B57D /* AddressView.swift */,
 				26FF85AB2C24DDE00025FB9C /* ExerciseView.swift */,
 				26FF85AD2C24DE070025FB9C /* HealthProblemsView.swift */,
+				268431022C32027F0004A0B6 /* medicationsView.swift */,
 				26FF85AF2C24DE1D0025FB9C /* PregnancyView.swift */,
 				26FF85B12C24DE370025FB9C /* SmokingView.swift */,
 			);
@@ -1294,6 +1297,7 @@
 				7F884CBB2B6C1A0E00B82521 /* CategoryCard.swift in Sources */,
 				CC9FAA6B2BB95D4100C54625 /* SpecialistListView.swift in Sources */,
 				26FF85A62C24DCE40025FB9C /* HealthProblemToggle.swift in Sources */,
+				268431032C32027F0004A0B6 /* medicationsView.swift in Sources */,
 				26EF1E3F2BBA42D40010B57D /* DateOfBirthView.swift in Sources */,
 				7FC67AE62B27B211000A5586 /* SessionDataTaskError.swift in Sources */,
 				7F5E43012AEBDFE6008C2FC1 /* Colors.swift in Sources */,
