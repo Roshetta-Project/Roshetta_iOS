@@ -18,36 +18,41 @@ struct HealthProblemsView: View {
         "Hypertension and Autoimmune Diseases", "Hyperthyroidism", "Hypothyroidism"
     ]
     @State private var selectedHealthProblems: [String: Bool] = [:]
-    
-
-    
+    @State private var shouldNavigate = false // State variable for navigation
     
     // MARK: - Body
     var body: some View {
-        ZStack {
-            CircularGradient()
-            
-            VStack(alignment: .leading) {
-                Text("If you have any health problems, Just select it!")
-                    .font(.custom(GFFonts.SeguiSemiBold, size: 24))
-                    .padding(.top, 50)
+        NavigationView {
+            ZStack {
+                CircularGradient()
                 
-                GeometryReader { geo in
-                    self.generateContent(in: geo)
+                VStack(alignment: .leading) {
+                    Text("If you have any health problems, Just select it!")
+                        .font(.custom(GFFonts.SeguiSemiBold, size: 24))
+                        .padding(.top, 50)
+                    
+                    GeometryReader { geo in
+                        self.generateContent(in: geo)
+                    }
+                    
+                    Spacer()
+                    
+                    self.nextButton
                 }
-                
-                Spacer()
-                
-                nextButton
+                .padding()
             }
-            .padding()
+            .navigationViewStyle(StackNavigationViewStyle()) // Ensure correct display on all devices
         }
     }
     
     private var nextButton: some View {
-            GFButton(isLoading: $isLoading, text: "Next", backgroundColor: Colors.main, foregroundColot: Color.white) {}
+        NavigationLink(destination: medicationsView().navigationBarBackButtonHidden(true), isActive: $shouldNavigate) {
+            GFButton(isLoading: $isLoading, text: "Next", backgroundColor: Colors.main, foregroundColot: Color.white) {
+                self.shouldNavigate = true // Activate navigation when "Next" is tapped
+            }
         }
-    
+        .buttonStyle(PlainButtonStyle()) // Ensure GFButton behaves like a regular button inside NavigationLink
+    }
     
     private func generateContent(in g: GeometryProxy) -> some View {
         var width = CGFloat.zero
@@ -61,27 +66,27 @@ struct HealthProblemsView: View {
                 ), label: {
                     Text(problem)
                         .alignmentGuide(.leading, computeValue: { d in
-                        if (abs(width - d.width) > g.size.width) {
-                            width = 0
-                            height -= d.height + 25
-                        }
-                        let result = width
-                        if problem == self.$healthProblems.last!.wrappedValue {
-                            width = 0
-                        } else {
-                            width -= d.width + 30
-                        }
-                        return result
-                    })
+                            if (abs(width - d.width) > g.size.width) {
+                                width = 0
+                                height -= d.height + 25
+                            }
+                            let result = width
+                            if problem == self.$healthProblems.last!.wrappedValue {
+                                width = 0
+                            } else {
+                                width -= d.width + 30
+                            }
+                            return result
+                        })
                 })
                 .toggleStyle(HealthProblemToggle(isSelected: selectedHealthProblems[problem] ?? false))
-                    .alignmentGuide(.top, computeValue: { d in
-                        let result = height
-                        if problem == self.$healthProblems.last!.wrappedValue {
-                            height = 0
-                        }
-                        return result
-                    })
+                .alignmentGuide(.top, computeValue: { d in
+                    let result = height
+                    if problem == self.$healthProblems.last!.wrappedValue {
+                        height = 0
+                    }
+                    return result
+                })
             }
         }
     }
