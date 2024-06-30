@@ -17,7 +17,7 @@ struct MedicalCenterCard: View {
     let location: String
     
     var cardWidth: CGFloat {
-        return (UIScreen.main.bounds.width / 2) - 48
+        return (UIScreen.main.bounds.width / 2) - 56
     }
     
     // MARK: - VIEW
@@ -41,7 +41,7 @@ struct MedicalCenterCard: View {
                     @unknown default:
                         Image("user")
                             .resizable()
-                            .modifier(RoundedImage(size: 64))
+                            .modifier(RoundedImage(size: 44))
                             .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
                     }
                 }
@@ -52,7 +52,7 @@ struct MedicalCenterCard: View {
                         .minimumScaleFactor(0.8)
                         .lineLimit(1)
                         .foregroundColor(Color.black)
-                        .frame(width: 80)
+                        .frame(width: 60)
                     
                     HStack {
                         ForEach(0..<5) { index in
@@ -69,7 +69,7 @@ struct MedicalCenterCard: View {
                 InfoRow(symbol: SFSymbols.price, text: minPrice + " L.E" + " ~ " + maxPrice + " L.E")
                 InfoRow(symbol: SFSymbols.locationPin, text: location)
             }
-            .padding(.top, 16)
+            .padding(.top, 14)
         }
         .overlay {
             Image(systemName: "bookmark.fill")
@@ -80,12 +80,13 @@ struct MedicalCenterCard: View {
                     alignment: .topTrailing
                 )
         }
-        .padding(12)
+        .padding(10)
         .background(
             RoundedRectangle(cornerRadius: 8)
                 .foregroundColor(Color.white)
                 .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
         )
+        .frame(width: cardWidth)
     }
 }
 

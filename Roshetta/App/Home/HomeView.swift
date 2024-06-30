@@ -41,7 +41,7 @@ struct HomeView: View {
                 HStack (spacing: 16) {
                     ForEach(categories, id: \.name) { category in
                         NavigationLink(destination: category.destinationView) {
-                            CategoryCard(image: category.imageName, name: category.name)
+                            CategoryCard(image: category.imageName, name: category.name, destinationView: category.destinationView)
                         }
                     }
                 }

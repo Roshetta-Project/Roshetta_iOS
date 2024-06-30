@@ -53,7 +53,7 @@ struct ClincCard: View {
                 }
                 Text(name)
                     .font(.custom(GFFonts.SeguiSemiBold, size: 14))
-                    .minimumScaleFactor(0.5)
+                    .minimumScaleFactor(0.6)
                     .lineLimit(1)
                     .foregroundColor(Color.black)
                 
