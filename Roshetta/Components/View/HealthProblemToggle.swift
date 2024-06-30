@@ -20,11 +20,11 @@ struct HealthProblemToggle: ToggleStyle {
                     .minimumScaleFactor(0.5)
                     .foregroundColor(isSelected ? Color.white : Color.gray)
                     .padding(8)
-                    .background(isSelected ? Color.main : Color.gray.opacity(0.05))
+                    .background(isSelected ? Colors.main : Color.gray.opacity(0.05))
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(isSelected ? Color.main : Color.gray, lineWidth: 1))
+                            .stroke(isSelected ? Colors.main : Color.gray, lineWidth: 1))
             }
         })
     }

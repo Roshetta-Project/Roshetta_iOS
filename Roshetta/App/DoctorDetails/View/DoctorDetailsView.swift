@@ -12,6 +12,7 @@ struct DoctorDetailsView: View {
     // MARK: - PROPERTYS
     let id: String
     @StateObject var viewModel = DoctorDetailsViewModel()
+    @State private var isSheetPresented = false
     
     // MARK: - VIEW
     
@@ -41,18 +42,22 @@ struct DoctorDetailsView: View {
                         backgroundColor: Colors.main,
                         foregroundColot: Color.white
                     ) {
-                        // TODO: - Book
+                        isSheetPresented = true
                     }
                     .padding(.top, 24)
                 }//:VStack
                 .padding()
-            }//:ScrollView
+            }
+            //:ScrollView
+            .sheet(isPresented: $isSheetPresented) {
+                BookingView()
+            }
+            .presentationDetents([.fraction(0.4)])
+            
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(
                 trailing: HStack {
-                    Button(action: {
-                        // fav button
-                    }) {
+                    Button(action: {}) {
                         Image(systemName: "bookmark")
                             .frame(width: 24,   height: 24)
                             .foregroundColor(Color("text"))
