@@ -39,7 +39,7 @@ struct DoctorListView: View {
                             DoctorDetailsView(id: doctor.id)
                         } label: {
                             DoctorCard(
-                                image: Image("user"),
+                                image: doctor.image,
                                 name: doctor.name,
                                 specialization: doctor.specilization,
                                 rate: Int(doctor.ratingsAverage),

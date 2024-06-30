@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MedicalCenterCard: View {
     // MARK: - PROPERTYS
-    let image: Image
+    let image: String
     let name: String
     let rate: Int
     let minPrice: String
@@ -24,12 +24,27 @@ struct MedicalCenterCard: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .center) {
-                Image("clinc")
-                    .resizable()
-                    .scaledToFill()
-                    .clipShape(Circle())
-                    .frame(width: 64, height: 64)
-                    .shadow(color: .black.opacity(0.1), radius: 8)
+                AsyncImage(url: image.asUrl) { phase in
+                    switch phase {
+                    case .empty:
+                        ProgressView()
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .modifier(RoundedImage(size: 64))
+                            .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                    case .failure(let error):
+                        Image("user")
+                            .resizable()
+                            .modifier(RoundedImage(size: 64))
+                            .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                    @unknown default:
+                        Image("user")
+                            .resizable()
+                            .modifier(RoundedImage(size: 64))
+                            .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                    }
+                }
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Text(name)
@@ -77,7 +92,7 @@ struct MedicalCenterCard: View {
 struct MedicalCenterCard_Previews: PreviewProvider {
     static var previews: some View {
         MedicalCenterCard(
-            image: Image("clinc"),
+            image: "",
             name: "The Care",
             rate: 3,
             minPrice: "400",

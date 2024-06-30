@@ -82,7 +82,7 @@ struct HomeView: View {
                                     DoctorDetailsView(id: doctor.id)
                                 } label: {
                                     DoctorCard(
-                                        image: Image("user"),
+                                        image: doctor.image,
                                         name: doctor.name, specialization: doctor.specilization,
                                         rate: Int(doctor.ratingsAverage),
                                         price: String(doctor.price),
@@ -130,7 +130,7 @@ struct HomeView: View {
                                 NavigationLink {
                                     ClinicDetailsView(id: clinic.id)
                                 } label: {
-                                    ClincCard(image: Image("clinc"), name: clinic.name, rate: Int(clinic.ratingsAverage), price: String(clinic.price), location: clinic.location)
+                                    ClincCard(image: clinic.logo, name: clinic.name, rate: Int(clinic.ratingsAverage), price: String(clinic.price), location: clinic.location)
                                         .padding(.trailing)
                                 }
                             }
@@ -175,7 +175,7 @@ struct HomeView: View {
                                     CenterDetailsView(id: "6681c4a2d5f54fd64cd1f370")
                                 } label: {
                                     MedicalCenterCard(
-                                        image: Image("clinc"),
+                                        image: center.logo,
                                         name: center.name,
                                         rate: 3,
                                         minPrice: String(center.price - 100),

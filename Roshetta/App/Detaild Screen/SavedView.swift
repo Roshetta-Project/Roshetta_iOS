@@ -48,7 +48,7 @@ struct SavedView: View {
                             NavigationLink {
                                 DoctorDetailsView(id: "")
                             } label: {
-                                DoctorCard(image: Image("user"), name: "Dr. Abdalazem Saleh", specialization: "Surgery", rate: 3, price: "400", location: "Mansoura, Dakahlia")
+                                DoctorCard(image: (""), name: "Dr. Abdalazem Saleh", specialization: "Surgery", rate: 3, price: "400", location: "Mansoura, Dakahlia")
                             }
                         }
                     }.padding()
@@ -63,7 +63,7 @@ struct SavedView: View {
                         NavigationLink {
                             ClinicDetailsView(id: "66748d78e9aeb04ffc589051")
                         } label: {
-                            ClincCard(image: Image("clinc"), name: "The Care", rate: 3, price: "400", location: "Mansoura, Dakahlia")
+                            ClincCard(image: "", name: "The Care", rate: 3, price: "400", location: "Mansoura, Dakahlia")
                         }
                     }.padding()
                 }
@@ -76,7 +76,7 @@ struct SavedView: View {
                         NavigationLink {
                             CenterDetailsView(id: "6681c4a2d5f54fd64cd1f370")
                         } label: {
-                            MedicalCenterCard(image: Image("clinc"),name: "The Care",rate: 3,minPrice: "400",maxPrice: "600",location: "Mansoura, Dakahlia")
+                            MedicalCenterCard(image: "" ,name: "The Care",rate: 3,minPrice: "400",maxPrice: "600",location: "Mansoura, Dakahlia")
                         }
                     }.padding()
                 }

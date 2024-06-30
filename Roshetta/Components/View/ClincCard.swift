@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ClincCard: View {
     // MARK: - PROPERTYS
-    let image: Image
+    let image: String
     let name: String
     let rate: Int
     let price: String
@@ -23,13 +23,27 @@ struct ClincCard: View {
     var body: some View {
         
         HStack(alignment: .center, spacing: 8) {
-            Image("clinc")
-                .resizable()
-                .scaledToFill()
-                .clipShape(Circle())
-                .frame(width: 64, height: 64)
-                .shadow(color: .black.opacity(0.1), radius: 2, x: 2, y: 4)
-            
+            AsyncImage(url: image.asUrl) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                case .success(let image):
+                    image
+                        .resizable()
+                        .modifier(RoundedImage(size: 64))
+                        .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                case .failure(let error):
+                    Image("user")
+                        .resizable()
+                        .modifier(RoundedImage(size: 64))
+                        .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                @unknown default:
+                    Image("user")
+                        .resizable()
+                        .modifier(RoundedImage(size: 64))
+                        .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                }
+            }
             
             VStack(alignment: .leading, spacing: 4) {
                 HStack{
@@ -72,6 +86,6 @@ struct ClincCard: View {
 
 struct ClincCard_Previews: PreviewProvider {
     static var previews: some View {
-        ClincCard(image: Image("clinc"), name: "The Care", rate: 3, price: "400", location: "Mansoura, Dakahlia")
+        ClincCard(image: "", name: "The Care", rate: 3, price: "400", location: "Mansoura, Dakahlia")
     }
 }

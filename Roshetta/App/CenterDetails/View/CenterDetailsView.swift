@@ -29,7 +29,7 @@ struct CenterDetailsView: View {
             ScrollView(.vertical,showsIndicators: false) {
                 header()
                 VStack(alignment: .leading, spacing: 16){
-                    ImageScroll()
+                    ImageScroll(images: viewModel.center?.data.centerPhotos ?? [] )
                     avilableDoctors()
                     specialization()
                     priceSection()
@@ -65,7 +65,7 @@ struct CenterDetailsView: View {
     private func header() -> some View {
         let center = viewModel.center?.data
         return VStack(spacing: 4) {
-            LogoImageView(image: "clinc")
+            LogoImageView(image: center?.logo ?? "")
             HStack(spacing: 0){
                 Text(center?.name ?? "No Center Name")
                     .foregroundColor(Color.black)
@@ -110,7 +110,7 @@ struct CenterDetailsView: View {
                     case .success:
                         ForEach(doctorViewModel.doctors) { doctor in
                             DoctorCard(
-                                image: Image("user"),
+                                image: doctor.image,
                                 name: doctor.name, specialization: doctor.specilization,
                                 rate: Int(doctor.ratingsAverage),
                                 price: String(doctor.price),

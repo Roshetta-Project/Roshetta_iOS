@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DoctorCard: View {
     // MARK: - PROPERTIES
-    let image: Image
+    let image: String
     let name: String
     let specialization: String
     let rate: Int
@@ -29,10 +29,27 @@ struct DoctorCard: View {
                     .foregroundColor(Colors.main)
             }
             
-            image
-                .resizable()
-                .modifier(RoundedImage(size: 64))
-                .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+            AsyncImage(url: image.asUrl) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                case .success(let image):
+                    image
+                        .resizable()
+                        .modifier(RoundedImage(size: 64))
+                        .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                case .failure(let error):
+                    Image("user")
+                        .resizable()
+                        .modifier(RoundedImage(size: 64))
+                        .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                @unknown default:
+                    Image("user")
+                        .resizable()
+                        .modifier(RoundedImage(size: 64))
+                        .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                }
+            }
             
             VStack(alignment: .center, spacing: 4) {
                 Text(name)
@@ -81,6 +98,6 @@ struct DoctorCard: View {
 
 struct DoctorCard_Previews: PreviewProvider {
     static var previews: some View {
-        DoctorCard(image: Image("user"), name: "Dr. Abdalazem Saleh", specialization: "Surgery", rate: 3, price: "400", location: "Mansoura, Dakahlia")
+        DoctorCard(image: "", name: "Dr. Abdalazem Saleh", specialization: "Surgery", rate: 3, price: "400", location: "Mansoura, Dakahlia")
     }
 }

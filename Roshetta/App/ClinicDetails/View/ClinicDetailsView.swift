@@ -29,7 +29,7 @@ struct ClinicDetailsView: View {
                 ScrollView(.vertical,showsIndicators: false){
                     header()
                     VStack(alignment: .leading, spacing: 16){
-                        ImageScroll()
+                        ImageScroll(images: viewModel.clinic?.data.clinicPhotos ?? [])
                         doctorSection()
                         doctorSpecilization()
                         priceSection()
@@ -68,7 +68,7 @@ struct ClinicDetailsView: View {
         let clinic = viewModel.clinic?.data
         
         return VStack(spacing: 4) {
-            LogoImageView(image: "clinc")
+            LogoImageView(image: clinic?.logo ?? "")
             HStack(spacing: 0){
                 Text(clinic?.name ?? "")
                     .foregroundColor(Colors.text)
@@ -95,7 +95,7 @@ struct ClinicDetailsView: View {
         VStack(alignment: .leading, spacing: 8){
             Text("Doctors")
                 .modifier(TitleTextModifir())
-            DoctorCard(image: Image("user"),
+            DoctorCard(image: " Ima",
                        name: "Dr. Sami Ahmed", specialization: "dentist", rate: 4, price: "300", location: "Cairo")
         }
     }

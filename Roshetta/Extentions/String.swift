@@ -16,4 +16,13 @@ extension String {
             value: self,
             comment: self)
     }
+    
+    var asUrl: URL? {
+        guard let encodedString = self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            return nil
+        }
+        return URL(string: encodedString)
+    }
+    
+    
 }

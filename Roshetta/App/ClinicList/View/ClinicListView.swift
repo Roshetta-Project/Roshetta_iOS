@@ -38,7 +38,7 @@ struct ClinicListView: View {
                         NavigationLink {
                             ClinicDetailsView(id: "66748d78e9aeb04ffc589051")
                         } label: {
-                            ClincCard(image: Image("clinc"), name: clinic.name, rate: Int(clinic.ratingsAverage), price: String(clinic.price), location: clinic.location
+                            ClincCard(image: clinic.logo, name: clinic.name, rate: Int(clinic.ratingsAverage), price: String(clinic.price), location: clinic.location
                             )
                         }
                     }

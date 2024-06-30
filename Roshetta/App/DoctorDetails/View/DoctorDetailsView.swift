@@ -73,7 +73,7 @@ struct DoctorDetailsView: View {
         let doctor = viewModel.doctor?.data
         
         return VStack(spacing: 4) {
-            StatusImageView(image: "user")
+            StatusImageView(image: doctor?.image ?? "")
             
             Text(doctor?.name ?? "")
                 .foregroundColor(Color.black)
@@ -129,7 +129,7 @@ struct DoctorDetailsView: View {
                 .modifier(TitleTextModifir())
             
             ClincCard(
-                image: Image("Clinic"),
+                image:doctor?.clinic.logo ?? "" ,
                 name: doctor?.clinic.name ?? "",
                 rate: Int(doctor?.clinic.ratingsAverage ?? 2),
                 price: String(doctor?.clinic.price ?? 100) ,

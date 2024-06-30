@@ -40,7 +40,7 @@ struct CenterListView: View {
                                 CenterDetailsView(id: "6681c4a2d5f54fd64cd1f370")
                             } label: {
                                 MedicalCenterCard(
-                                    image: Image("clinc"),
+                                    image: center.logo,
                                     name: center.name,
                                     rate: 3,
                                     minPrice: String(center.price - 100),
