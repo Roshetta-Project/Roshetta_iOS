@@ -17,6 +17,15 @@ struct SavedView: View {
         .init(.flexible())
     ]
     
+    let doctors : [DoctorModel] = [
+    
+        DoctorModel(id: "6681c514d5f54fd64cd1f373", image: "https://roshetta-back.vercel.app/doctors/doctor-0f52d479-26f5-47cb-b0b1-e4a0d9f5c7d3-1719781513252.jpeg", name: "Dr.Sami Ahmed", specilization: "Surgy", price: 200, location: "Damietta", ratingsAverage: 7.5),
+        DoctorModel(id: "6681c840679cb8470a9d1819", image: "https://roshetta-back.vercel.app/doctors/doctor-0f52d479-26f5-47cb-b0b1-e4a0d9f5c7d3-1719781513252.jpeg", name: "Dr.Abdo Sami", specilization: "Surgy", price: 300, location: "Mansoura", ratingsAverage: 9)
+    ]
+    
+    
+    
+    
     var buttonAction: () -> Void
 
     
