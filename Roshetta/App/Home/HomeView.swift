@@ -158,7 +158,7 @@ struct HomeView: View {
                 .padding(.horizontal)
                 
                 ScrollView (.horizontal, showsIndicators: false) {
-                    HStack (spacing: 21) {
+                    HStack (spacing: 100) {
                         switch centerViewModel.status {
                         case .loading:
                             ProgressView()
@@ -188,6 +188,7 @@ struct HomeView: View {
                     }
                     .padding()
                 }
+                .padding()
                 .navigationBarItems(
                     leading:
                         Button {

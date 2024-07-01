@@ -49,10 +49,11 @@ struct MedicalCenterCard: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(name)
                         .font(.custom(GFFonts.SeguiSemiBold, size: 14))
-                        .minimumScaleFactor(0.8)
                         .lineLimit(1)
+                        .minimumScaleFactor(0.5)
                         .foregroundColor(Color.black)
-                        .frame(width: 60)
+                        .frame(width: cardWidth / 1.5, alignment: .leading)
+                        
                     
                     HStack {
                         ForEach(0..<5) { index in
@@ -69,8 +70,10 @@ struct MedicalCenterCard: View {
                 InfoRow(symbol: SFSymbols.price, text: minPrice + " L.E" + " ~ " + maxPrice + " L.E")
                 InfoRow(symbol: SFSymbols.locationPin, text: location)
             }
+            .frame(width: cardWidth)
             .padding(.top, 14)
         }
+        .padding()
         .overlay {
             Image(systemName: "bookmark.fill")
                 .foregroundColor(Colors.main)
@@ -93,7 +96,7 @@ struct MedicalCenterCard: View {
 struct MedicalCenterCard_Previews: PreviewProvider {
     static var previews: some View {
         MedicalCenterCard(
-            image: "",
+            image: "s",
             name: "The Care",
             rate: 3,
             minPrice: "400",

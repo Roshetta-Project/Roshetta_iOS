@@ -46,14 +46,10 @@ struct ClincCard: View {
             }
             
             VStack(alignment: .leading, spacing: 4) {
-                HStack{
-                    Spacer()
-                    Image(systemName: "bookmark.fill")
-                        .foregroundColor(Colors.main)
-                }
+                
                 Text(name)
                     .font(.custom(GFFonts.SeguiSemiBold, size: 14))
-                    .minimumScaleFactor(0.6)
+                    .minimumScaleFactor(0.7)
                     .lineLimit(1)
                     .foregroundColor(Color.black)
                 
@@ -74,6 +70,13 @@ struct ClincCard: View {
                 
             }
         }
+        .overlay( HStack{
+            Image(systemName: "bookmark.fill")
+                .foregroundColor(Colors.main)
+                .frame(width: cardWidth)
+            
+            
+        })
         .padding(8)
         .background(
             RoundedRectangle(cornerRadius: 8)
