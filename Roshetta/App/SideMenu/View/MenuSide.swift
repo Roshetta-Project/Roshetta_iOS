@@ -33,9 +33,15 @@ struct MenuSide: View {
             //Profile
             
             VStack(alignment:.leading,spacing: 8){
-                Text("Hi Sami !")
-                    .font(.custom(GFFonts.SeguiBold, size: 20))
-                    .foregroundColor(.white)
+                if let user: UserModel = UserDefaults.standard.getUser(forKey: "cachedUser") {
+                    Text("Hi \(user.data.user.name)")
+                        .font(.custom(GFFonts.SeguiBold, size: 20))
+                        .foregroundColor(.white)
+                    
+                    Text("\(user.data.user.email)")
+                        .font(.custom(GFFonts.SeguiBold, size: 8))
+                        .foregroundColor(Color(.secondaryLabel))
+                }
             }
             
             VStack{
