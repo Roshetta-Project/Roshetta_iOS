@@ -35,7 +35,7 @@ struct HomeView: View {
         NavigationView{
             ScrollView (.vertical, showsIndicators: false){
                 // MARK: - Slider
-                HomeSlider(slides: .constant(["Banner", "Banner","user"]))
+                HomeSlider(slides: .constant(["Banner", "baner2","baner3"]))
                 
                 // MARK: - Categories
                 HStack (spacing: 16) {

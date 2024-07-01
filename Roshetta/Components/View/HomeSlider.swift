@@ -43,6 +43,6 @@ struct HomeSlider: View {
 
 struct HomeSlider_Previews: PreviewProvider {
     static var previews: some View {
-        HomeSlider(slides: .constant(["Banner", "Banner","user"]))
+        HomeSlider(slides: .constant(["baner2", "baner3","user"]))
     }
 }

@@ -68,6 +68,7 @@ struct MenuSide: View {
                 showMenue.toggle()
             } label: {
                 Image(systemName: "xmark.circle.fill")
+                    .foregroundColor(.white)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         }
