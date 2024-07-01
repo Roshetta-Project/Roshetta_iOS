@@ -15,7 +15,7 @@ struct InfoRow: View {
         HStack(spacing: 8) {
             symbol
             Text(text)
-                .font(.custom(GFFonts.SeguiSemiBold, size: 10))
+                .font(.custom(GFFonts.SeguiSemiBold, size: 8))
                 .minimumScaleFactor(1)
                 .lineLimit(1)
                 .foregroundColor(Colors.text.opacity(0.6))

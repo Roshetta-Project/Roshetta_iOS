@@ -90,10 +90,11 @@ struct HomeView: View {
                                     )
                                 }
                             }
+                            .padding(4)
                         }
                     }
-                    .padding()
                 }
+                .padding()
                 
                 // MARK: - Nearest Clinics Section
                 HStack () {
@@ -113,7 +114,6 @@ struct HomeView: View {
                 .padding(.horizontal)
                 
                 ScrollView (.horizontal, showsIndicators: false) {
-                    
                     HStack() {
                         switch clinicViewModel.status {
                         case .loading:
@@ -126,7 +126,7 @@ struct HomeView: View {
                         case .error(let error):
                             Text("Error while loading page:  \(error)")
                         case .success:
-                            ForEach(clinicViewModel.clinics){ clinic in
+                            ForEach(clinicViewModel.clinics) { clinic in
                                 NavigationLink {
                                     ClinicDetailsView(id: clinic.id)
                                 } label: {
@@ -134,11 +134,11 @@ struct HomeView: View {
                                         .padding(.trailing)
                                 }
                             }
-                            .padding(20)
+                            .padding(4)
                         }
                     }
+                    .padding()
                 }
-                .padding(.horizontal, 20)
                 
                 // MARK: - Nearest Centers Section
                 HStack () {
@@ -158,7 +158,7 @@ struct HomeView: View {
                 .padding(.horizontal)
                 
                 ScrollView (.horizontal, showsIndicators: false) {
-                    HStack (spacing: 100) {
+                    HStack (spacing: 24) {
                         switch centerViewModel.status {
                         case .loading:
                             ProgressView()
@@ -184,11 +184,11 @@ struct HomeView: View {
                                     )
                                 }
                             }
+                            .padding(4)
                         }
                     }
                     .padding()
                 }
-                .padding()
                 .navigationBarItems(
                     leading:
                         Button {

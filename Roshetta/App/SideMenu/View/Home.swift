@@ -35,39 +35,11 @@ struct Home: View {
                 rayScannerView(image:"ray", buttonAction: {buttonAction()})
                     .tag("Scanner")
                 
-                NotificationsView(buttonAction: {buttonAction()}) //Replace with savedView
+                SavedView(buttonAction: {buttonAction()}) //Replace with savedView
                     .tag("Saved")
-                
-                ClinicListView() //Replace with Setting
-                    .tag("Setting")
-                
             }
         }
     }
-    //    @ViewBuilder
-    //    func TabButton(image : String,text:String) ->some View{
-    //        Button(action: {
-    //            withAnimation{currentTab = image}
-    //        },
-    //               label: {
-    //            VStack{
-    //                Image(image)
-    //                    .resizable()
-    //                    .renderingMode(.template)
-    //                    .aspectRatio(contentMode: .fit)
-    //                    .frame(width: 25,height: 25)
-    //                    .foregroundColor(currentTab == image ? Colors.main : .gray)
-    //
-    //                Text(text)
-    //                    .font(.custom(GFFonts.SeguiBold, size: 12))
-    //                    .foregroundColor(currentTab == image ? Colors.main : .gray)
-    //
-    //            }
-    //
-    //        })
-    //
-    //    }
-    
 }
 
 #Preview {

@@ -50,8 +50,7 @@ struct MenuSide: View {
                     
                     TabButton(image: "bookmark.fill", title: "Saved", selectedTab: $selectedTab, animation: animation)
                     
-                    
-                    TabButton(image: "gearshape.fill", title: "Setting", selectedTab: $selectedTab, animation: animation)
+//                    TabButton(image: "gearshape.fill", title: "Setting", selectedTab: $selectedTab, animation: animation)
                 }
                 .padding(.leading,-20)
                 .padding(.top,50)

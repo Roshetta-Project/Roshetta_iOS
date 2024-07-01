@@ -17,6 +17,8 @@ struct SavedView: View {
         .init(.flexible())
     ]
     
+    var buttonAction: () -> Void
+
     
     var body: some View {
         NavigationView{
@@ -31,8 +33,24 @@ struct SavedView: View {
                 getPageContent()
                 
                 Spacer()
-            }.navigationTitle("Saved").navigationBarTitleDisplayMode(.inline)
+            }
+            .navigationBarItems(
+                leading:
+                    Button {
+                        buttonAction()
+                    } label: {
+                        Image(systemName: "line.horizontal.3")
+                            .foregroundColor(.gray)
+                    },
+                trailing:
+                    NavigationLink(destination: SearchBar()) {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.gray)
+                    }
+            )
+            .navigationBarTitle("", displayMode: .inline)
         }
+        
     }
     
     // MARK: - Functions
@@ -87,10 +105,6 @@ struct SavedView: View {
     }
 }
 
-
-#Preview {
-    SavedView()
-}
 
 // MARK: - Segment
 struct CuustomSegmentedControl: View {

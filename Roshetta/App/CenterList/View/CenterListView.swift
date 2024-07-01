@@ -32,22 +32,20 @@ struct CenterListView: View {
         case .error(let error):
             Text("Error while loading page:  \(error)")
         case .success:
-            NavigationStack {
-                ScrollView(.vertical, showsIndicators: false) {
-                    LazyVGrid(columns: grids) {
-                        ForEach(viewModel.centers){center in
-                            NavigationLink {
-                                CenterDetailsView(id: "6681c4a2d5f54fd64cd1f370")
-                            } label: {
-                                MedicalCenterCard(
-                                    image: center.logo,
-                                    name: center.name,
-                                    rate: 3,
-                                    minPrice: String(center.price - 100),
-                                    maxPrice: String(center.price + 100),
-                                    location: center.location
-                                )
-                            }
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVGrid(columns: grids) {
+                    ForEach(viewModel.centers){center in
+                        NavigationLink {
+                            CenterDetailsView(id: "6681c4a2d5f54fd64cd1f370")
+                        } label: {
+                            MedicalCenterCard(
+                                image: center.logo,
+                                name: center.name,
+                                rate: 3,
+                                minPrice: String(center.price - 100),
+                                maxPrice: String(center.price + 100),
+                                location: center.location
+                            )
                         }
                     }
                 }
