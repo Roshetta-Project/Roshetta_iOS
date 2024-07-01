@@ -76,11 +76,10 @@ struct DateOfBirthView: View {
                 }
                 
                 // Navigation Link
-                NavigationLink(destination: RulerView().navigationBarBackButtonHidden(true), isActive: $shouldNavigate) {
+                NavigationLink(destination: RulerView(), isActive: $shouldNavigate) {
                     EmptyView()
                 }
             }
-            .navigationBarBackButtonHidden(true)
         }
         .navigationViewStyle(StackNavigationViewStyle()) // Ensure correct display on all devices
     }

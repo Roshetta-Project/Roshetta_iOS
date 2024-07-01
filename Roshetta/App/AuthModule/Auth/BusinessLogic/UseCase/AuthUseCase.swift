@@ -23,30 +23,30 @@ class AuthUseCase {
 
     // MARK: - Privates
     
-    private func convert(_ response: AuthRepositoryResponseProtocol) -> UserProtocol {
-        return UserItem(
-            token: response.token ?? "",
-            id: response.id ?? "",
-            name: response.name ?? "",
-            email: response.email ?? "",
-            personalPhoto: response.personalPhoto ?? "",
-            medicalHistory:
-                MedicalHistoryItem(
-                    gender: response.medicalHistory?.gender ?? 0,
-                    dateOfBirth: response.medicalHistory?.dateOfBirth ?? "",
-                    country: response.medicalHistory?.countryId ?? 0,
-                    city: response.medicalHistory?.cityId ?? 0,
-                    height: response.medicalHistory?.height ?? 0.0,
-                    weight: response.medicalHistory?.weight ?? 0.0,
-                    isExerciseAvilable: response.medicalHistory?.isExerciseAvilable ?? false,
-                    exerciseType: response.medicalHistory?.exerciseType ?? 0,
-                    isAnyHealthProblem: response.medicalHistory?.isAnyHealthProblem ?? false,
-                    medicine: response.medicalHistory?.medicine ?? [],
-                    isPregnant: response.medicalHistory?.isPregnant ?? false,
-                    isSmoker: response.medicalHistory?.isSmoker ?? false
-                )
-        )
-    }
+//    private func convert(_ response: AuthRepositoryResponseProtocol) -> UserProtocol {
+//        return UserItem(
+//            token: response.token ?? "",
+//            id: response.id ?? "",
+//            name: response.name ?? "",
+//            email: response.email ?? "",
+//            personalPhoto: response.personalPhoto ?? "",
+//            medicalHistory:
+//                MedicalHistoryItem(
+//                    gender: response.medicalHistory?.gender ?? 0,
+//                    dateOfBirth: response.medicalHistory?.dateOfBirth ?? "",
+//                    country: response.medicalHistory?.countryId ?? 0,
+//                    city: response.medicalHistory?.cityId ?? 0,
+//                    height: response.medicalHistory?.height ?? 0.0,
+//                    weight: response.medicalHistory?.weight ?? 0.0,
+//                    isExerciseAvilable: response.medicalHistory?.isExerciseAvilable ?? false,
+//                    exerciseType: response.medicalHistory?.exerciseType ?? 0,
+//                    isAnyHealthProblem: response.medicalHistory?.isAnyHealthProblem ?? false,
+//                    medicine: response.medicalHistory?.medicine ?? [],
+//                    isPregnant: response.medicalHistory?.isPregnant ?? false,
+//                    isSmoker: response.medicalHistory?.isSmoker ?? false
+//                )
+//        )
+//    }
 }
 
 extension AuthUseCase: AuthUseCaseProtocol {
@@ -56,7 +56,7 @@ extension AuthUseCase: AuthUseCaseProtocol {
             var user: AuthRepositoryResponseProtocol?
             user = try await repository.login(with: type)
             guard let user = user else { throw RequestError.notAllowed }
-            dataSource.user = convert(user)
+//            dataSource.user = convert(user)
             dataSource.isLoading = false
         } catch {
             dataSource.isLoading = false
@@ -86,17 +86,17 @@ struct UserItem: UserProtocol {
     var medicalHistory: MedicalHistoryProtocol
 }
 
-private struct MedicalHistoryItem: MedicalHistoryProtocol {
-    var gender: Int
-    var dateOfBirth: String
-    var country: Int
-    var city: Int
-    var height: Float
-    var weight: Float
-    var isExerciseAvilable: Bool
-    var exerciseType: Int
-    var isAnyHealthProblem: Bool
-    var medicine: [String]
-    var isPregnant: Bool
-    var isSmoker: Bool
-}
+//private struct MedicalHistoryItem: MedicalHistoryProtocol {
+//    var gender: Int
+//    var dateOfBirth: String
+//    var country: Int
+//    var city: Int
+//    var height: Float
+//    var weight: Float
+//    var isExerciseAvilable: Bool
+//    var exerciseType: Int
+//    var isAnyHealthProblem: Bool
+//    var medicine: [String]
+//    var isPregnant: Bool
+//    var isSmoker: Bool
+//}

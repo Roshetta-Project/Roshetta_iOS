@@ -69,7 +69,7 @@ struct AddressView: View {
                     .padding()
                     
                     // Navigation Link
-                    NavigationLink(destination: ExerciseView().navigationBarBackButtonHidden(true), isActive: $shouldNavigate) {
+                    NavigationLink(destination: ExerciseView(), isActive: $shouldNavigate) {
                         EmptyView()
                     }
                 }

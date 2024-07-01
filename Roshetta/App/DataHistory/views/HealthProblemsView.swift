@@ -46,7 +46,7 @@ struct HealthProblemsView: View {
     }
     
     private var nextButton: some View {
-        NavigationLink(destination: medicationsView().navigationBarBackButtonHidden(true), isActive: $shouldNavigate) {
+        NavigationLink(destination: medicationsView(), isActive: $shouldNavigate) {
             GFButton(isLoading: $isLoading, text: "Next", backgroundColor: Colors.main, foregroundColot: Color.white) {
                 self.shouldNavigate = true // Activate navigation when "Next" is tapped
             }

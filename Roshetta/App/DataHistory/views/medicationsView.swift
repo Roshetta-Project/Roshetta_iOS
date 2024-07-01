@@ -34,7 +34,7 @@ struct medicationsView: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: PregnancyView().navigationBarBackButtonHidden(true), isActive: $shouldNavigate) {
+                    NavigationLink(destination: PregnancyView(), isActive: $shouldNavigate) {
                         GFButton(isLoading: $isLoading, text: "Next", backgroundColor: Colors.main, foregroundColot: Color.white) {
                             print("Next button tapped")
                             shouldNavigate = true

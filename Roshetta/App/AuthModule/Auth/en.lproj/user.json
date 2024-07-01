@@ -1,0 +1,12 @@
+{
+    "status": "success",
+    "data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ODEyYWNkMWIyMmEzMTkzMjkwYzkyNSIsImlhdCI6MTcxOTgxOTYxNCwiZXhwIjoxNzI3NTk1NjE0fQ.f14uHtCwdvtkH0GOeh1-FKNk4ZZIx8i8mDrjlbo6o0c",
+        "user": {
+            "name": "Abdalazem Saleh",
+            "email": "abdalazem.saleh2002@gmail.com",
+            "MedicalHistory": null,
+            "id": "66812acd1b22a3193290c925"
+        }
+    }
+}

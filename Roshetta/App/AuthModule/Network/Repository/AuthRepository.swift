@@ -61,7 +61,8 @@ class AuthRepository: AuthRepositoryProtocol {
         /// Send token to backend
         
         var user: AuthRepositoryResponseProtocol?
-        user = try await convert(client.login(with: type, parameter: AuthParameters(token: "")))
+//        user = try await convert(/*client.login(with: type, parameter: AuthParameters(token: ""))*/)
+        user = convert(Bundle.main.decode("user.json"))
         return user
     }
 }

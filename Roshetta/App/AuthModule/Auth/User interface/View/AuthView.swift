@@ -25,15 +25,20 @@ struct AuthView: View {
     // MARK: - Body
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 32) {
-                headerView()
-                authButtons()
-                Spacer()
-                footer()
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 32) {
+                    headerView()
+                    authButtons()
+                    Spacer()
+                    footer()
+                }
+            }
+            .ignoresSafeArea()
+            .navigationDestination(isPresented: $authViewModel.isSuccess) {
+                GenderView(selectedGender: .constant("female"))
             }
         }
-        .ignoresSafeArea()
     }
     
     // MARK: - HEADER
@@ -66,7 +71,7 @@ struct AuthView: View {
             GFAuthButton(icon: SFSymbols.google,
                          tilte: "Continue With Google") {
                 Task {
-                     await authViewModel.googleLogin()
+                     await authViewModel.login()
                 }
             }
             

@@ -61,6 +61,7 @@
 		26FF85B62C24DFF30025FB9C /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85B52C24DFF30025FB9C /* BookingView.swift */; };
 		26FF85B82C24E0E40025FB9C /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85B72C24E0E40025FB9C /* SavedView.swift */; };
 		26FF85BA2C24E29F0025FB9C /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85B92C24E29F0025FB9C /* DatePicker.swift */; };
+		7F126DDA2C3294A500D585EA /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F126DD82C3294A500D585EA /* user.json */; };
 		7F1706CC2C24984A00EFC697 /* DoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1706CB2C24984A00EFC697 /* DoctorViewModel.swift */; };
 		7F1706DD2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1706DC2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift */; };
 		7F1706DF2C24ADCB00EFC697 /* DoctorDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1706DE2C24ADCB00EFC697 /* DoctorDetailsModel.swift */; };
@@ -223,6 +224,7 @@
 		26FF85B52C24DFF30025FB9C /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
 		26FF85B72C24E0E40025FB9C /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		26FF85B92C24E29F0025FB9C /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		7F126DD92C3294A500D585EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/user.json; sourceTree = "<group>"; };
 		7F1706CB2C24984A00EFC697 /* DoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorViewModel.swift; sourceTree = "<group>"; };
 		7F1706DC2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsViewModel.swift; sourceTree = "<group>"; };
 		7F1706DE2C24ADCB00EFC697 /* DoctorDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsModel.swift; sourceTree = "<group>"; };
@@ -579,6 +581,7 @@
 		7F196E962B6F977700CBBD6A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				7F126DD82C3294A500D585EA /* user.json */,
 				7F196E9A2B6F97F100CBBD6A /* AuthModuleFactory.swift */,
 				7F196E992B6F97CB00CBBD6A /* BusinessLogic */,
 				7F196E982B6F97B700CBBD6A /* User interface */,
@@ -633,8 +636,8 @@
 		7F388C0F2B8688F500FE021B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7F388C152B87622500FE021B /* AuthViewModelProtocol.swift */,
 				7F388C172B8762EA00FE021B /* AuthViewModell.swift */,
+				7F388C152B87622500FE021B /* AuthViewModelProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1262,6 +1265,7 @@
 				2665AABE2BAA37A400CE29F3 /* Segoe UI.ttf in Resources */,
 				7F988E632AE2D1BE00E0BCBD /* Preview Assets.xcassets in Resources */,
 				7F50EC7E2AF1B60D0060D6B6 /* Times New Roman Bold.ttf in Resources */,
+				7F126DDA2C3294A500D585EA /* user.json in Resources */,
 				7F988EA52AE2D2AC00E0BCBD /* Localizable.strings in Resources */,
 				7F988E602AE2D1BE00E0BCBD /* Assets.xcassets in Resources */,
 			);
@@ -1434,6 +1438,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7F126DD82C3294A500D585EA /* user.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F126DD92C3294A500D585EA /* en */,
+			);
+			name = user.json;
+			sourceTree = "<group>";
+		};
 		7F988EA22AE2D2AB00E0BCBD /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

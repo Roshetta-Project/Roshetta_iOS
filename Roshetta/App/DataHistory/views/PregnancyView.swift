@@ -56,7 +56,7 @@ struct PregnancyView: View {
                     Spacer()
                     
                     // MARK: - Next Button
-                    NavigationLink(destination: SmokingView().navigationBarBackButtonHidden(true), isActive: $shouldNavigate) {
+                    NavigationLink(destination: SmokingView(), isActive: $shouldNavigate) {
                         GFButton(isLoading: $isLoading, text: "Next", backgroundColor: Colors.main, foregroundColot: .white) {
                             // Action when Next button is tapped
                             shouldNavigate = true

@@ -89,7 +89,7 @@ struct ExerciseView: View {
                             Image("homeVector")
                         }
                         
-                        NavigationLink(destination: HealthProblemsView().navigationBarBackButtonHidden(true), isActive: $shouldNavigate) {
+                        NavigationLink(destination: HealthProblemsView(), isActive: $shouldNavigate) {
                             GFButton(isLoading: $isLoading, text: "Next", backgroundColor: Colors.main, foregroundColot: Color.white) {
                                 showSecondQuestion = true
                                 shouldNavigate = true // Activate navigation when "Next" is tapped

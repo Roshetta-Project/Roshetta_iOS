@@ -76,7 +76,7 @@ struct RulerView: View {
                 }
                 
                 // Navigation Link
-                NavigationLink(destination: AddressView().navigationBarBackButtonHidden(true), isActive: $shouldNavigate) {
+                NavigationLink(destination: AddressView(), isActive: $shouldNavigate) {
                     EmptyView()
                 }
             }

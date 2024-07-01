@@ -15,3 +15,5 @@ protocol AuthViewModelProtocol {
     func googleLogin() async
     func appleLogin() async
 }
+
+
