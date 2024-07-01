@@ -12,6 +12,8 @@ struct MenuSide: View {
     @Binding var selectedTab : String
     var animation: Namespace.ID
     @Binding var showMenue: Bool
+    @AppStorage("isLogin") var isLogin: Bool = false
+
     
     // MARK: - Body
     var body: some View {
@@ -59,8 +61,27 @@ struct MenuSide: View {
             }
             
             //SignOut
-            TabButton(image: "iphone.and.arrow.forward", title: "Logout", selectedTab: .constant(""), animation: animation)
-                .padding(.leading,-20)
+            Button(action: {
+                print("Login out")
+                isLogin = false
+            }, label: {
+                HStack(spacing:15){
+                    Image(systemName: "iphone.and.arrow.forward")
+                        .font(.title2)
+                        .frame(width: 30)
+                        .foregroundColor(.white)
+                    
+                    Text("Logout")
+                        .font(.custom(GFFonts.SeguiSemiBold, size: 16))
+                        .foregroundColor(.white)
+                }
+                .foregroundColor(.white)
+                .padding(.vertical,12)
+                .padding(.horizontal,20)
+            })
+
+//            TabButton(image: "iphone.and.arrow.forward", title: "Logout", selectedTab: .constant(""), animation: animation)
+//                .padding(.leading, -20)
         }
         .overlay {
             Button {

@@ -11,6 +11,7 @@ struct SmokingView: View {
     // MARK: - Properties
     @State private var isLoading = false
     @State private var smoking = false
+    @AppStorage("isLogin") var isLogin: Bool = false
     
     // MARK: - Body
     var body: some View {
@@ -50,6 +51,7 @@ struct SmokingView: View {
                 Spacer()
                 // MARK: - Next Button
                     GFButton(isLoading: $isLoading, text: "Next", backgroundColor: Colors.main, foregroundColot: Color.white) {
+                        isLogin = true
                     }
                 
             }

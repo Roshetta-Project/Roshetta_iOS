@@ -26,25 +26,21 @@ struct RoshettaApp: App {
     // MARK: - MAIN
     var body: some Scene {
         WindowGroup {
-            if let authView = AuthModuleFactory().makeView() as? AuthView {
-                authView
+            if viewModel.currentState == true {
+                if isOnboardingViewActive {
+                    OnboardingView()
+                } else {
+                    if isLogin {
+                        SideMenuView()
+                    } else {
+                        if let authView = AuthModuleFactory().makeView() as? AuthView {
+                            authView
+                        }
+                    }
+                }
+            } else {
+                SideMenuView()
             }
-//            SideMenuView()
-//            if viewModel.currentState == true {
-//                if isOnboardingViewActive {
-//                    OnboardingView()
-//                } else {
-//                    if isLogin {
-//                        /// go to home
-//                    } else {
-//                        if let authView = AuthModuleFactory().makeView() as? AuthView {
-//                            authView
-//                        }
-//                    }
-//                }
-//            } else {
-//                SideMenuView()
-//            }
         }
     }
 }
