@@ -14,36 +14,40 @@ class DoctorDetailsViewModel: ObservableObject {
         
     @MainActor
     func getDoctors(id: String) async {
-        guard let url = URL(string: "https://roshetta-back.vercel.app/api/v1/doctors/\(id)") else { return }
         
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue(
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzU2MTEyOGQwMjM1YjJlNDk5M2I0ZiIsImlhdCI6MTcxOTc3OTY1NCwiZXhwIjoxNzI3NTU1NjU0fQ.GZcibPXxYgHCakpxWjbRoPIFx2PfSF14mLYgyowqCIg",
-            forHTTPHeaderField: "Authorization")
-
-        do {
-            let (data, response) = try await URLSession.shared.data(for: request)
+        if let user: UserModel = UserDefaults.standard.getUser(forKey: "cachedUser") {
             
-            if let jsonString = String(data: data, encoding: .utf8) {
-                print("Response is ---")
-               print(jsonString)
-            }
+            guard let url = URL(string: "https://roshetta-back.vercel.app/api/v1/doctors/\(id)") else { return }
             
-            guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-                throw URLError(.badServerResponse)
-            }
+            var request = URLRequest(url: url)
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue(
+                "Bearer \(user.data.token)",
+                forHTTPHeaderField: "Authorization")
             
-            let decoder = JSONDecoder()
-            let doctorResponse = try decoder.decode(DoctorDetailsModel.self, from: data)
-            doctor = doctorResponse
-            if doctor != nil {
-                status = .success
-            } else {
-                status = .error("Doctor not found")
+            do {
+                let (data, response) = try await URLSession.shared.data(for: request)
+                
+                if let jsonString = String(data: data, encoding: .utf8) {
+                    print("Response is ---")
+                    print(jsonString)
+                }
+                
+                guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+                    throw URLError(.badServerResponse)
+                }
+                
+                let decoder = JSONDecoder()
+                let doctorResponse = try decoder.decode(DoctorDetailsModel.self, from: data)
+                doctor = doctorResponse
+                if doctor != nil {
+                    status = .success
+                } else {
+                    status = .error("Doctor not found")
+                }
+            } catch {
+                status = .error(error.localizedDescription)
             }
-        } catch {
-            status = .error(error.localizedDescription)
         }
     }
 
