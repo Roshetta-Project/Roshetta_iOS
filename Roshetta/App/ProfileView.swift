@@ -42,8 +42,16 @@ struct ProfileView: View {
                     
                 }
                 
-                ProfileVieww()
-                    .padding()
+                List {
+                               ForEach(sections) { section in
+                                   NavigationLink(destination: destinationForSection(section)) {
+                                       ProfileViewSections(section: section)
+                                   }
+                               }
+                               .listRowBackground(Color.gray.opacity(0.1))
+                }
+                .listStyle(.plain)
+                .padding()
             }
             .navigationBarItems(
                 leading:
@@ -62,7 +70,26 @@ struct ProfileView: View {
             .navigationBarTitle("", displayMode: .inline)
         }
     }
+    
+    private func destinationForSection(_ section: ProfileSectionItem) -> some View {
+            switch section.title {
+            case "Account":
+                return AnyView(AccountView()) // Replace AccountView() with your desired account view
+            case "Privacy Policy":
+                return AnyView(PrivacyPolicyView()) // Replace PrivacyPolicyView() with your desired privacy policy view
+            case "Rate Us":
+                return AnyView(RateUsView()) // Replace RateUsView() with your desired rate us view
+            case "About Us":
+                return AnyView(AboutUsView()) // Replace AboutUsView() with your desired about us view
+            case "Contact Us":
+                return AnyView(ContactUsView()) // Replace ContactUsView() with your desired contact us view
+            default:
+                return AnyView(EmptyView())
+            }
+        }
 }
+
+
 
 #Preview {
     ProfileView(userName: "Sami Ahmed", location: "Damietta,Egypt", buttonAction: {})

@@ -14,6 +14,8 @@ struct CenterDetailsView: View {
     let id: String
     @StateObject var viewModel = CenterDetailsViewModel()
     @StateObject var doctorViewModel = DoctorViewModel()
+    @State private var isSheetPresented = false
+
 
     // MARK: - VIEW
     var body: some View {
@@ -40,12 +42,16 @@ struct CenterDetailsView: View {
                              text: "Book Now",
                              backgroundColor: Colors.main,
                              foregroundColot: Color.white) {
-                        // TODO: - Book
+                        isSheetPresented = true
                     }
                              .padding(.top, 24)
                 }//VStack
                 .padding()
             }//:ScrollView
+            .sheet(isPresented: $isSheetPresented) {
+                BookingView()
+            }
+            .presentationDetents([.fraction(0.4)])
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(
                 trailing: HStack {
