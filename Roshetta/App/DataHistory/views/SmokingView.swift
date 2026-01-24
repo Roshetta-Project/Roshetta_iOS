@@ -20,8 +20,8 @@ struct SmokingView: View {
             
             VStack(alignment: .leading) {
                 Text("Are you smoking?")
-                    .font(.custom(GFFonts.SeguiSemiBold, size: 24))
-                    .padding(.top, 50)
+                    .font(Typography.title2)
+                    .padding(.top, Spacing.xxxLarge)
                 
                 HStack{
                     Button(action: {
@@ -30,7 +30,7 @@ struct SmokingView: View {
                         Image(systemName: smoking ? "checkmark.square" : "square")
                         Text("Yes")
                     }
-                    .foregroundColor(smoking ? Colors.main : .gray)
+                    .foregroundColor(smoking ? Colors.main : Colors.secondaryLabel)
                     
                     Spacer()
                     
@@ -40,11 +40,11 @@ struct SmokingView: View {
                         Image(systemName: smoking ? "square" : "checkmark.square")
                         Text("No")
                     }
-                    .foregroundColor(smoking ? .gray : Colors.main)
+                    .foregroundColor(smoking ? Colors.secondaryLabel : Colors.main)
                 }
-                .padding(5)
-                .padding(.horizontal,25)
-                .font(.custom(GFFonts.Segui, size: 21))
+                .padding(Spacing.xSmall)
+                .padding(.horizontal, Spacing.large)
+                .font(Typography.title3)
                 .foregroundStyle(.black)
                 
                 
@@ -55,7 +55,7 @@ struct SmokingView: View {
                     }
                 
             }
-            .padding()
+            .padding(Spacing.medium)
         }
     }
 }

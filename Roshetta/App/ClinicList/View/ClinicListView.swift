@@ -8,49 +8,57 @@
 import SwiftUI
 
 struct ClinicListView: View {
-    
-    // MARK: - PROPERTIES
-    
-    @StateObject var viewModel = ClinicViewModel()
-    
-    let grids: [GridItem] = [
-        .init(.flexible()),
-        .init(.flexible())
+
+    @StateObject private var viewModel: ClinicViewModel
+
+    let grids = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
     ]
-    
-    // MARK: - VIEW
-    
+
+    init(viewModel: ClinicViewModel = ClinicViewModel(useMockData: true)) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+
     var body: some View {
-        switch viewModel.status{
+        content
+            .navigationTitle("Clinics")
+            .navigationBarTitleDisplayMode(.large)
+            .task {
+                if case .loading = viewModel.status {
+                    await viewModel.getClinic()
+                }
+            }
+    }
+
+    @ViewBuilder
+    private var content: some View {
+        switch viewModel.status {
         case .loading:
             ProgressView()
-                .onAppear {
-                    Task {
-                        await viewModel.getClinic()
-                    }
-                }
+
         case .error(let error):
-            Text("Error while loading page:  \(error)")
+            Text("Error: \(error)")
+
         case .success:
-            ScrollView(.vertical, showsIndicators: false) {
-                LazyVGrid(columns: grids) {
-                    ForEach(viewModel.clinics){ clinic in
+            ScrollView(showsIndicators: false) {
+                LazyVGrid(columns: grids, spacing: 12) {
+                    ForEach(viewModel.clinics, id: \.id) { clinic in
                         NavigationLink {
-                            ClinicDetailsView(id: "66748d78e9aeb04ffc589051")
+                            ClinicDetailsView(id: clinic.id)
                         } label: {
-                            ClincCard(image: clinic.logo, name: clinic.name, rate: Int(clinic.ratingsAverage), price: String(clinic.price), location: clinic.location
+                            ClincCard(
+                                image: clinic.logo,
+                                name: clinic.name,
+                                rate: Int(clinic.ratingsAverage),
+                                price: "\(clinic.price)",
+                                location: clinic.location
                             )
                         }
                     }
                 }
+                .padding()
             }
-            .padding()
-            .navigationTitle("Clinics")
-            .navigationBarTitleDisplayMode(.large)
         }
     }
-}
-
-#Preview {
-    ClinicListView()
 }

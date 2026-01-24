@@ -82,9 +82,9 @@ struct ClinicDetailsView: View {
                     .foregroundColor(Colors.text)
                     .font(.custom(GFFonts.popinsSemiBold, size: 20))
 
-                Text("Clinic ")
-                    .foregroundColor(Colors.text.opacity(0.6))
-                    .font(.custom(GFFonts.popinsMedium, size: 20))
+//                Text("Clinic ")
+//                    .foregroundColor(Colors.text.opacity(0.6))
+//                    .font(.custom(GFFonts.popinsMedium, size: 20))
             }//:HStack
 
             HStack {
@@ -100,13 +100,32 @@ struct ClinicDetailsView: View {
     }
 
     private func doctorSection() -> some View {
-        VStack(alignment: .leading, spacing: 8){
+        VStack(alignment: .leading, spacing: 12) {
             Text("Doctors")
                 .modifier(TitleTextModifir())
-            DoctorCard(image: " Ima",
-                       name: "Dr. Sami Ahmed", specialization: "dentist", rate: 4, price: "300", location: "Cairo")
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 16) {
+                    ForEach(viewModel.clinic?.doctors ?? []) { doctor in
+                        NavigationLink {
+                            DoctorDetailsView(id: doctor.id)
+                        } label: {
+                            DoctorCard(
+                                image: doctor.image,
+                                name: doctor.name,
+                                specialization: doctor.specilization,
+                                rate: Int(doctor.ratingsAverage),
+                                price: "\(doctor.price)",
+                                location: doctor.location
+                            )
+                            .frame(width: 260)
+                        }
+                    }
+                }
+            }
         }
     }
+
 
     private func doctorSpecilization() -> some View {
         VStack(alignment: .leading, spacing: 8) {

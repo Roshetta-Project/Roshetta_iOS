@@ -11,7 +11,7 @@ import SwiftUI
 struct ReservationVIew: View {
     @State private var selectedPage = 0
     var buttonAction: () -> Void
-
+    
     // MARK: - VIEW
     var body: some View {
         NavigationStack {
@@ -30,7 +30,7 @@ struct ReservationVIew: View {
             .navigationBarItems(
                 leading:
                     Button {
-                       buttonAction()
+                        buttonAction()
                     } label: {
                         Image(systemName: "line.horizontal.3")
                             .foregroundColor(.gray)
@@ -42,48 +42,54 @@ struct ReservationVIew: View {
                     }
             )
             .navigationBarTitle("", displayMode: .inline)
-
+            
         }
     }
     
     // MARK: - Functions
     @ViewBuilder
     func getPageContent() -> some View {
-        switch selectedPage {
-        case 0:
-            //Processing
-            
+        let reservations: [Reservation] = {
+            switch selectedPage {
+            case 0: return Reservation.mockProcessing
+            case 1: return Reservation.mockCompleted
+            case 2: return Reservation.mockCanceled
+            default: return []
+            }
+        }()
+        
+        if reservations.isEmpty {
+            VStack {
+                Spacer()
+                Image(systemName: "calendar.badge.exclamationmark")
+                    .font(.system(size: 60))
+                    .foregroundColor(.gray.opacity(0.3))
+                Text("No reservations found")
+                    .font(.headline)
+                    .foregroundColor(.secondary)
+                Spacer()
+            }
+        } else {
             ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing:-10){
-                    ForEach(0..<10){Index in
-                        ReservationCard(date: "Sep 28 2023 at 04:00 pm", status: "Processing", doctorName: "Doctor. Shrouk Ahmed", startTime: "Start at 04:00 pm ", endTime: "Ends at 04:30 pm", salary: "350 L.E", salaryDescription: "Expecting cash payment", statusColor: .yellow)
-                            .padding()
+                VStack(spacing: 0) {
+                    ForEach(reservations) { item in
+                        ReservationCard(
+                            date: "\(item.date) at \(item.startTime)",
+                            status: item.status,
+                            doctorName: item.doctorName,
+                            startTime: "Starts at \(item.startTime)",
+                            endTime: "Ends at \(item.endTime)",
+                            salary: item.price,
+                            salaryDescription: "Expecting cash payment",
+                            statusColor: item.statusColor
+                        )
+                        .padding(.horizontal)
+                        .padding(.top, 8)
                     }
                 }
             }
-            
-        case 1:
-            //Completed
-            ScrollView(.vertical, showsIndicators: false) {
-                ForEach(0..<10){Index in
-                    ReservationCard(date: "Sep 28 2023 at 04:00 pm", status: "Completed", doctorName: "Doctor. Shrouk Ahmed", startTime: "Start at 04:00 pm ", endTime: "Ends at 04:30 pm", salary: "350 L.E", salaryDescription: "Expecting cash payment", statusColor: .green)
-                        .padding()
-                }
         }
-        case 2:
-            //Canceled
-            ScrollView(.vertical, showsIndicators: false) {
-                ForEach(0..<10){Index in
-                    ReservationCard(date: "Sep 28 2023 at 04:00 pm", status: "Canceled", doctorName: "Doctor. Shrouk Ahmed", startTime: "Start at 04:00 pm ", endTime: "Ends at 04:30 pm", salary: "350 L.E", salaryDescription: "Expecting cash payment", statusColor: .red)
-                        .padding()
-                }
-        }
-        default:
-            Text("Error: Invalid Page")
-        }
-        
-    }
-}
+    }}
 
 // MARK: - Preview
 struct ReservationVIew_Previews: PreviewProvider {

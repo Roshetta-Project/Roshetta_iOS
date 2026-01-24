@@ -77,9 +77,9 @@ struct CenterDetailsView: View {
                     .foregroundColor(Color.black)
                     .font(.custom(GFFonts.SeguiSemiBold, size: 20))
 
-                Text("Clinic ")
-                    .foregroundColor(Color.gray)
-                    .font(.custom(GFFonts.SeguiSemiBold, size: 20))
+//                Text("Clinic ")
+//                    .foregroundColor(Color.gray)
+//                    .font(.custom(GFFonts.SeguiSemiBold, size: 20))
             }//:HStack
 
             HStack {
@@ -95,39 +95,31 @@ struct CenterDetailsView: View {
 
     }
 
-    private func avilableDoctors() -> some View{
-        let doctors = doctorViewModel.doctors
-        return VStack(alignment: .leading, spacing: 8){
+    private func avilableDoctors() -> some View {
+        VStack(alignment: .leading, spacing: 8) {
             Text("Doctors")
                 .modifier(TitleTextModifir())
 
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 20) {
-                    switch doctorViewModel.status {
-                    case .loading:
-                        ProgressView()
-                            .onAppear {
-                                Task {
-                                    await doctorViewModel.getDoctors()
-                                }
-                            }
-                    case .error(let error):
-                        Text("Error while loading page:  \(error)")
-                    case .success:
-                        ForEach(doctorViewModel.doctors) { doctor in
+                HStack(spacing: 16) {
+                    ForEach(viewModel.center?.doctors ?? []) { doctor in
+                        NavigationLink {
+                            DoctorDetailsView(id: doctor.id)
+                        } label: {
                             DoctorCard(
                                 image: doctor.image,
-                                name: doctor.name, specialization: doctor.specilization,
+                                name: doctor.name,
+                                specialization: doctor.specilization,
                                 rate: Int(doctor.ratingsAverage),
-                                price: String(doctor.price),
+                                price: "\(doctor.price)",
                                 location: doctor.location
                             )
+                            .frame(width: 260)
                         }
                     }
-                }//:HStack
-                .padding(2)
-            }//:ScrollView
-        }//:Vstack
+                }
+            }
+        }
     }
 
     private func specialization() -> some View {
@@ -169,31 +161,30 @@ struct CenterDetailsView: View {
         }//:VStack
     }
     private func reviewSection() -> some View {
-        let center = viewModel.center?.data
-        return VStack(alignment: .leading, spacing: 8){
-            HStack(spacing:20){
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
                 Text("Reviews")
                     .modifier(TitleTextModifir())
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Text("See All")
-                        .multilineTextAlignment(.trailing)
-                        .underline(true, color: .gray)
-                        .font(.custom(GFFonts.SeguiSemiBold, size: 14))
-                        .foregroundColor(Color.gray)
-                        
-                })
+
+                Spacer()
+
+                Button("See All") {}
+                    .underline()
+                    .foregroundColor(.gray)
             }
 
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 20) {
-                    ForEach(1..<6) { _ in
-                        ReviewCard(userName: "Sami Ahmed", description: "He is agood doctor and he is good good bbbbnbbb", review: "3")
+                HStack(spacing: 16) {
+                    ForEach(viewModel.center?.reviews ?? []) { review in
+                        ReviewCard(
+                            userName: review.user.name,
+                            description: review.review,
+                            review: "\(review.ratings)"
+                        )
                     }
-                } //:HStack
-                .padding(1)
-
-            } //:ScrollView
-        }//:VStack
+                }
+            }
+        }
     }
 }
 

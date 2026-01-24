@@ -9,60 +9,55 @@ import SwiftUI
 
 struct BookingView: View {
     // MARK: - Properties
-    //    @State private var selectedDayIndex = 0
-    //    @State private var selectedTimeIndex = 0
-    //
-    //    let days = ["Sat","Sun", "Mon", "Tue", "Wed", "Thu", "Fri"]
-    //    let times = ["10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:00 PM"]
-    //
-    //    init(){
-    //        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.init(red: 0.44, green: 0.76, blue: 0.97, alpha: 1.00)
-    //        UISegmentedControl.appearance().backgroundColor = .white
-    //        let selectedAttributes: [NSAttributedString.Key:Any] = [
-    //            .foregroundColor : UIColor.black,
-    //        ]
-    //        UISegmentedControl.appearance().setTitleTextAttributes(selectedAttributes, for: .selected)
-    //        let normalAttributes: [NSAttributedString.Key:Any] = [
-    //            .foregroundColor : UIColor.lightGray,
-    //        ]
-    //        UISegmentedControl.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
-    //    }
+    @Environment(\.dismiss) private var dismiss
+    @State private var showConfirmationAlert = false
     
     // MARK: - Body
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: Spacing.medium) {
             Text("Select Date")
+                .font(Typography.headline)
+                .foregroundColor(Colors.primaryLabel)
             
             DaysDateScrollView()
             
-          TimeScrollView()
+            TimeScrollView()
             
-
+            Spacer()
             
-            HStack{
+            // MARK: - Action Buttons
+            HStack(spacing: Spacing.medium) {
+                // Cancel Button
                 GFButton(isLoading: .constant(false),
                          text: "Cancel",
-                         backgroundColor: Color.white,
+                         backgroundColor: Colors.surface,
                          foregroundColot: Colors.main) {
-                    // TODO: - Cancel
-                }.overlay(
-                    RoundedRectangle(cornerRadius: 15)
+                    dismiss()
+                }
+                .overlay(
+                    RoundedRectangle(cornerRadius: Dimensions.cornerRadiusMedium)
                         .stroke(Colors.main, lineWidth: 2)
                 )
                 
+                // Confirm Button
                 GFButton(isLoading: .constant(false),
                          text: "Confirm",
                          backgroundColor: Colors.main,
                          foregroundColot: Color.white) {
-                    // TODO: - Confirm
+                    showConfirmationAlert = true
                 }
-            }.padding(.top, 18)
-            
-            
+            }
+            .padding(.top, Spacing.medium)
         }
-        .font(.custom(GFFonts.SeguiSemiBold, size: 18))
-        .padding()
-        Spacer()
+        .font(Typography.headline)
+        .padding(Spacing.medium)
+        .alert("Booking Confirmed! ✅", isPresented: $showConfirmationAlert) {
+            Button("OK", role: .cancel) {
+                dismiss()
+            }
+        } message: {
+            Text("Your appointment has been successfully booked. You will receive a confirmation shortly.")
+        }
     }
 }
 

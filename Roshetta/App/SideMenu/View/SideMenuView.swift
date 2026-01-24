@@ -25,25 +25,25 @@ struct SideMenuView: View {
                 //two bkg cards
                 Color.white
                     .opacity(0.5)
-                    .cornerRadius(showMenu ? 15 : 0)
+                    .cornerRadius(showMenu ? Dimensions.cornerRadiusMedium : 0)
                 //shadow
                     .shadow(color: .black.opacity(0.07), radius: 5)
                     .offset(x: showMenu ? -25 : 0)
-                    .padding(.vertical,30)
+                    .padding(.vertical, Spacing.xLarge)
             
                 Color.white
                     .opacity(0.5)
-                    .cornerRadius(showMenu ? 15 : 0)
+                    .cornerRadius(showMenu ? Dimensions.cornerRadiusMedium : 0)
                 //shadow
                     .shadow(color: .black.opacity(0.07), radius: 5)
                     .offset(x: showMenu ? -50 : 0)
-                    .padding(.vertical,60)
+                    .padding(.vertical, Spacing.xxxLarge + Spacing.medium)
                 
 
                 Home(selectedTab: $selectedTab, buttonAction: {
                     showMenu.toggle()                    
                 })
-                    .cornerRadius(showMenu ? 15 : 0)
+                    .cornerRadius(showMenu ? Dimensions.cornerRadiusMedium : 0)
             }
             //scalling and moving
             .scaleEffect(showMenu ?  0.84 : 1 )

@@ -31,64 +31,64 @@ struct MedicalCenterCard: View {
                     case .success(let image):
                         image
                             .resizable()
-                            .modifier(RoundedImage(size: 48))
-                            .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                            .modifier(RoundedImage(size: Dimensions.avatarSmall))
+                            .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
                     case .failure(let error):
                         Image("user")
                             .resizable()
-                            .modifier(RoundedImage(size: 48))
-                            .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                            .modifier(RoundedImage(size: Dimensions.avatarSmall))
+                            .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
                     @unknown default:
                         Image("user")
                             .resizable()
-                            .modifier(RoundedImage(size: 48))
-                            .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                            .modifier(RoundedImage(size: Dimensions.avatarSmall))
+                            .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
                     }
                 }
                 
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: Spacing.xSmall) {
                     Text(name)
-                        .font(.custom(GFFonts.SeguiSemiBold, size: 12))
+                        .font(Typography.caption1)
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Colors.primaryLabel)
                     
                     HStack {
                         ForEach(0..<5) { index in
                             Image(systemName: index < rate ? "star.fill" : "star")
                                 .resizable()
                                 .foregroundColor(.yellow)
-                                .frame(width: 8, height: 8)
+                                .frame(width: Dimensions.iconXSmall, height: Dimensions.iconXSmall)
                         }
                     }
                 }
             }
             
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: Spacing.small) {
                 InfoRow(symbol: SFSymbols.price, text: minPrice + " L.E" + " ~ " + maxPrice + " L.E")
                 InfoRow(symbol: SFSymbols.locationPin, text: location)
             }
-            .padding(.vertical, 8)
+            .padding(.vertical, Spacing.small)
         }
         .frame(width: cardWidth - 8, alignment: .leading)
-        .padding(.vertical, 8)
+        .padding(.vertical, Spacing.small)
         .background(
-            RoundedRectangle(cornerRadius: 8)
-                .foregroundColor(Color.white)
-                .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+            RoundedRectangle(cornerRadius: Dimensions.cornerRadiusSmall)
+                .foregroundColor(Colors.surface)
+                .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
                 .frame(width: cardWidth + 4, alignment: .leading)
                 .overlay {
                     Image(systemName: "bookmark.fill")
                         .resizable()
-                        .frame(width: 8, height: 12)
+                        .frame(width: Dimensions.iconXSmall, height: Dimensions.iconSmall)
                         .foregroundColor(Colors.main)
                         .frame(
                             maxWidth: .infinity,
                             maxHeight: .infinity,
                             alignment: .topTrailing
                         )
-                        .padding(.top, 4)
-                        .padding(.trailing, 6)
+                        .padding(.top, Spacing.xSmall)
+                        .padding(.trailing, Spacing.small)
                 }
         )
     }

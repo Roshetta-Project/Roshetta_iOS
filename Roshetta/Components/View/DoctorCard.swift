@@ -22,7 +22,7 @@ struct DoctorCard: View {
     
     // MARK: - VIEW
     var body: some View {
-        VStack(alignment: .center, spacing: 10) {
+        VStack(alignment: .center, spacing: Spacing.mediumSmall) {
             HStack{
                 Spacer()
                 Image(systemName: "bookmark.fill")
@@ -36,33 +36,33 @@ struct DoctorCard: View {
                 case .success(let image):
                     image
                         .resizable()
-                        .modifier(RoundedImage(size: 64))
-                        .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                        .modifier(RoundedImage(size: Dimensions.avatarMedium))
+                        .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
                 case .failure(let error):
                     Image("user")
                         .resizable()
-                        .modifier(RoundedImage(size: 64))
-                        .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                        .modifier(RoundedImage(size: Dimensions.avatarMedium))
+                        .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
                 @unknown default:
                     Image("user")
                         .resizable()
-                        .modifier(RoundedImage(size: 64))
-                        .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                        .modifier(RoundedImage(size: Dimensions.avatarMedium))
+                        .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
                 }
             }
             
-            VStack(alignment: .center, spacing: 4) {
+            VStack(alignment: .center, spacing: Spacing.xSmall) {
                 Text(name)
-                    .font(.custom(GFFonts.SeguiSemiBold, size: 12))
+                    .font(Typography.caption1)
                     .minimumScaleFactor(0.8)
                     .lineLimit(1)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(Colors.primaryLabel)
                 
                 Text(specialization)
-                    .font(.custom(GFFonts.SeguiSemiBold, size: 12))
+                    .font(Typography.caption1)
                     .minimumScaleFactor(0.8)
                     .lineLimit(1)
-                    .foregroundColor(Colors.text.opacity(0.6))
+                    .foregroundColor(Colors.secondaryLabel)
             }//: DOCTOR INFORMATION
             
             HStack {
@@ -70,13 +70,13 @@ struct DoctorCard: View {
                     Image(systemName: index < rate ? "star.fill" : "star")
                         .resizable()
                         .foregroundColor(.yellow)
-                        .frame(width: 12, height: 12)
+                        .frame(width: Dimensions.iconSmall, height: Dimensions.iconSmall)
                 }
             }//: RATING STARS
             
             // Price and Location
             HStack {
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading, spacing: Spacing.small) {
                     InfoRow(symbol: SFSymbols.price, text: price + " L.E")
                     InfoRow(symbol: SFSymbols.locationPin, text: location)
                 }
@@ -84,16 +84,16 @@ struct DoctorCard: View {
             
             
         }
-        .padding(12)
+        .padding(Spacing.mediumSmall)
         .background(
-            RoundedRectangle(cornerRadius: 8)
-                .foregroundColor(Color.white)
-                .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+            RoundedRectangle(cornerRadius: Dimensions.cornerRadiusSmall)
+                .foregroundColor(Colors.surface)
+                .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
         )
         .frame(width: cardWidth)
     }
-    
 }
+
 
 
 struct DoctorCard_Previews: PreviewProvider {

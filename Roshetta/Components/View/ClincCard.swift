@@ -22,7 +22,7 @@ struct ClincCard: View {
     // MARK: - VIEW
     var body: some View {
         VStack(alignment: .leading) {
-            HStack(alignment: .top, spacing: 8) {
+            HStack(alignment: .top, spacing: Spacing.small) {
                 AsyncImage(url: image.asUrl) { phase in
                     switch phase {
                     case .empty:
@@ -30,39 +30,39 @@ struct ClincCard: View {
                     case .success(let image):
                         image
                             .resizable()
-                            .modifier(RoundedImage(size: 48))
-                            .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                            .modifier(RoundedImage(size: Dimensions.avatarSmall))
+                            .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
                     case .failure(_):
                         Image("user")
                             .resizable()
-                            .modifier(RoundedImage(size: 48))
-                            .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                            .modifier(RoundedImage(size: Dimensions.avatarSmall))
+                            .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
                     @unknown default:
                         Image("user")
                             .resizable()
-                            .modifier(RoundedImage(size: 48))
-                            .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+                            .modifier(RoundedImage(size: Dimensions.avatarSmall))
+                            .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
                     }
                 }
                 
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: Spacing.xSmall) {
                     
                     Text(name)
-                        .font(.custom(GFFonts.SeguiSemiBold, size: 14))
+                        .font(Typography.subheadline)
                         .minimumScaleFactor(0.5)
                         .lineLimit(1)
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Colors.primaryLabel)
                     
                     HStack {
                         ForEach(0..<5) { index in
                             Image(systemName: index < rate ? "star.fill" : "star")
                                 .resizable()
                                 .foregroundColor(.yellow)
-                                .frame(width: 8, height: 8)
+                                .frame(width: Dimensions.iconXSmall, height: Dimensions.iconXSmall)
                         }
                     }//: RATING STARS
                     
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: Spacing.small) {
                         InfoRow(symbol: SFSymbols.price, text: price)
                         InfoRow(symbol: SFSymbols.locationPin, text: location)
                     }
@@ -70,24 +70,24 @@ struct ClincCard: View {
             }
         }
         .frame(width: cardWidth - 8, alignment: .leading)
-        .padding(.vertical, 14)
+        .padding(.vertical, Spacing.mediumSmall)
         .background(
-            RoundedRectangle(cornerRadius: 8)
-                .foregroundColor(Color.white)
-                .shadow(color: Color.gray.opacity(0.3), radius: 4, x: 2, y: 2)
+            RoundedRectangle(cornerRadius: Dimensions.cornerRadiusSmall)
+                .foregroundColor(Colors.surface)
+                .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
                 .frame(width: cardWidth + 4, alignment: .leading)
                 .overlay {
                     Image(systemName: "bookmark.fill")
                         .resizable()
-                        .frame(width: 8, height: 12)
+                        .frame(width: Dimensions.iconXSmall, height: Dimensions.iconSmall)
                         .foregroundColor(Colors.main)
                         .frame(
                             maxWidth: .infinity,
                             maxHeight: .infinity,
                             alignment: .topTrailing
                         )
-                        .padding(.top, 4)
-                        .padding(.trailing, 6)
+                        .padding(.top, Spacing.xSmall)
+                        .padding(.trailing, Spacing.small)
                 }
         )
     }

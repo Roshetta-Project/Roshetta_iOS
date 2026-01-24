@@ -19,11 +19,11 @@ struct GenderView: View {
             
             VStack {
                 Text("Tell me what's your gender?")
-                    .font(.custom(GFFonts.SeguiSemiBold, size: 24))
-                    .padding(.top, 50)
+                    .font(Typography.title2)
+                    .padding(.top, Spacing.xxxLarge)
                 Spacer()
                 
-                HStack(spacing: 32) {
+                HStack(spacing: Spacing.xLarge) {
                     // Male Image Button
                     VStack {
                         Button(action: {
@@ -34,11 +34,11 @@ struct GenderView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 120, height: 120)
-                                .foregroundColor(selectedGender == "male" ? .blue : .gray)
+                                .foregroundColor(selectedGender == "male" ? Colors.main : Colors.secondaryLabel)
                         }
                         Text("Male")
-                            .font(.custom(GFFonts.SeguiSemiBold, size: 20))
-                            .foregroundColor(.gray)
+                            .font(Typography.title3)
+                            .foregroundColor(Colors.secondaryLabel)
                     }
                     
                     // Female Image Button
@@ -51,11 +51,11 @@ struct GenderView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 120, height: 120)
-                                .foregroundColor(selectedGender == "female" ? .blue : .gray)
+                                .foregroundColor(selectedGender == "female" ? Colors.main : Colors.secondaryLabel)
                         }
                         Text("Female")
-                            .font(.custom(GFFonts.SeguiSemiBold, size: 20))
-                            .foregroundColor(.gray)
+                            .font(Typography.title3)
+                            .foregroundColor(Colors.secondaryLabel)
                     }
                 }
                 Spacer()

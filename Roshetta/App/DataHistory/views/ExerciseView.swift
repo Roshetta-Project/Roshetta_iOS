@@ -26,8 +26,8 @@ struct ExerciseView: View {
                 VStack(alignment: .leading) {
                     // MARK: - First Question
                     Text("Do you exercise daily?")
-                        .font(.custom(GFFonts.SeguiSemiBold, size: 24))
-                        .padding(.top, 50)
+                        .font(Typography.title2)
+                        .padding(.top, Spacing.xxxLarge)
                     
                     HStack {
                         Button(action: {
@@ -36,7 +36,7 @@ struct ExerciseView: View {
                             Image(systemName: exerciseDaily ? "checkmark.square" : "square")
                             Text("Yes")
                         }
-                        .foregroundColor(exerciseDaily ? Colors.main : .gray)
+                        .foregroundColor(exerciseDaily ? Colors.main : Colors.secondaryLabel)
                         
                         Spacer()
                         
@@ -46,19 +46,19 @@ struct ExerciseView: View {
                             Image(systemName: exerciseDaily ? "square" : "checkmark.square")
                             Text("No")
                         }
-                        .foregroundColor(exerciseDaily ? .gray : Colors.main)
+                        .foregroundColor(exerciseDaily ? Colors.secondaryLabel : Colors.main)
                     }
-                    .padding(5)
-                    .padding(.horizontal, 25)
-                    .font(.custom(GFFonts.Segui, size: 21))
+                    .padding(Spacing.xSmall)
+                    .padding(.horizontal, Spacing.large)
+                    .font(Typography.title3)
                     .foregroundStyle(.black)
                     
                     
                     // MARK: - Second Question
                     if showSecondQuestion {
                         Text("What type of exercises do you do?")
-                            .font(.custom(GFFonts.SeguiSemiBold, size: 24))
-                            .padding(.top, 25)
+                            .font(Typography.title2)
+                            .padding(.top, Spacing.large)
                         
                         VStack(alignment: .leading) {
                             ForEach(["Strenuous", "Moderate", "Light"], id: \.self) { exerciseType in
@@ -69,13 +69,13 @@ struct ExerciseView: View {
                                         Image(systemName: selectedExerciseType == exerciseType ? "checkmark.square" : "square")
                                         Text(exerciseType)
                                     }
-                                    .padding(.vertical, 5)
+                                    .padding(.vertical, Spacing.xSmall)
                                 }
-                                .foregroundColor(selectedExerciseType == exerciseType ? Colors.main : .gray)
+                                .foregroundColor(selectedExerciseType == exerciseType ? Colors.main : Colors.secondaryLabel)
                             }
                         }
-                        .padding(.horizontal, 25)
-                        .font(.custom(GFFonts.Segui, size: 21))
+                        .padding(.horizontal, Spacing.large)
+                        .font(Typography.title3)
                         .transition(.slide)
                         .animation(.easeInOut)
                     }
@@ -97,9 +97,9 @@ struct ExerciseView: View {
                         }
                         .buttonStyle(PlainButtonStyle()) // Ensures GFButton behaves like a regular button inside NavigationLink
                     }
-                    .padding()
+                    .padding(Spacing.medium)
                 }
-                .padding()
+                .padding(Spacing.medium)
             }
             .navigationViewStyle(StackNavigationViewStyle()) // Ensure correct display on all devices
         }

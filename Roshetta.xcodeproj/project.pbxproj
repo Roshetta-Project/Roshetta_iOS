@@ -61,6 +61,11 @@
 		26FF85B62C24DFF30025FB9C /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85B52C24DFF30025FB9C /* BookingView.swift */; };
 		26FF85B82C24E0E40025FB9C /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85B72C24E0E40025FB9C /* SavedView.swift */; };
 		26FF85BA2C24E29F0025FB9C /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF85B92C24E29F0025FB9C /* DatePicker.swift */; };
+		527AD3892F2417F700A26ADE /* AccessibilityIdentifiers 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527AD3852F2417F700A26ADE /* AccessibilityIdentifiers 2.swift */; };
+		527AD38A2F2417F700A26ADE /* Dimensions 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527AD3862F2417F700A26ADE /* Dimensions 2.swift */; };
+		527AD38B2F2417F700A26ADE /* Typography 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527AD3882F2417F700A26ADE /* Typography 2.swift */; };
+		527AD38C2F2417F700A26ADE /* Spacing 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527AD3872F2417F700A26ADE /* Spacing 2.swift */; };
+		527AD38E2F24187F00A26ADE /* Reservation 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527AD38D2F24187F00A26ADE /* Reservation 2.swift */; };
 		7F126DDA2C3294A500D585EA /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F126DD82C3294A500D585EA /* user.json */; };
 		7F1706CC2C24984A00EFC697 /* DoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1706CB2C24984A00EFC697 /* DoctorViewModel.swift */; };
 		7F1706DD2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1706DC2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift */; };
@@ -224,6 +229,11 @@
 		26FF85B52C24DFF30025FB9C /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
 		26FF85B72C24E0E40025FB9C /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		26FF85B92C24E29F0025FB9C /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		527AD3852F2417F700A26ADE /* AccessibilityIdentifiers 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccessibilityIdentifiers 2.swift"; sourceTree = "<group>"; };
+		527AD3862F2417F700A26ADE /* Dimensions 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dimensions 2.swift"; sourceTree = "<group>"; };
+		527AD3872F2417F700A26ADE /* Spacing 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Spacing 2.swift"; sourceTree = "<group>"; };
+		527AD3882F2417F700A26ADE /* Typography 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Typography 2.swift"; sourceTree = "<group>"; };
+		527AD38D2F24187F00A26ADE /* Reservation 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reservation 2.swift"; sourceTree = "<group>"; };
 		7F126DD92C3294A500D585EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/user.json; sourceTree = "<group>"; };
 		7F1706CB2C24984A00EFC697 /* DoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorViewModel.swift; sourceTree = "<group>"; };
 		7F1706DC2C24AC8C00EFC697 /* DoctorDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -454,6 +464,7 @@
 		26D6AEAB2BBB259F00F6B5A8 /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
+				527AD38D2F24187F00A26ADE /* Reservation 2.swift */,
 				26D6AEAC2BBB25AB00F6B5A8 /* View */,
 			);
 			path = Reservation;
@@ -667,6 +678,10 @@
 		7F5E42FD2AEBDDE9008C2FC1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				527AD3852F2417F700A26ADE /* AccessibilityIdentifiers 2.swift */,
+				527AD3862F2417F700A26ADE /* Dimensions 2.swift */,
+				527AD3872F2417F700A26ADE /* Spacing 2.swift */,
+				527AD3882F2417F700A26ADE /* Typography 2.swift */,
 				7F5E42FE2AEBDE00008C2FC1 /* Fonts.swift */,
 				7F5E43002AEBDFE6008C2FC1 /* Colors.swift */,
 				7F5E43022AEBE034008C2FC1 /* Images.swift */,
@@ -1326,6 +1341,10 @@
 				7F196E9B2B6F97F100CBBD6A /* AuthModuleFactory.swift in Sources */,
 				26D7017F2BBE298D00DF0A20 /* RateUsView.swift in Sources */,
 				CCD25B0B2C31FEA4009B60C2 /* CenterDetailsModel.swift in Sources */,
+				527AD3892F2417F700A26ADE /* AccessibilityIdentifiers 2.swift in Sources */,
+				527AD38A2F2417F700A26ADE /* Dimensions 2.swift in Sources */,
+				527AD38B2F2417F700A26ADE /* Typography 2.swift in Sources */,
+				527AD38C2F2417F700A26ADE /* Spacing 2.swift in Sources */,
 				7F5E43142AEBF49C008C2FC1 /* onboardingModel.swift in Sources */,
 				7F884CD02B6C1E2C00B82521 /* ReviewCard.swift in Sources */,
 				7FB00F5A2AFD7FF000303EB2 /* MedicalCenterCard.swift in Sources */,
@@ -1395,6 +1414,7 @@
 				7F884CC42B6C1D9400B82521 /* DoctorDetailsView.swift in Sources */,
 				265480F32BBC8FE20070F5B5 /* PrivacyPolicyView.swift in Sources */,
 				CCDCA52C2C2552E900E73D49 /* ClinicDetailsViewModel.swift in Sources */,
+				527AD38E2F24187F00A26ADE /* Reservation 2.swift in Sources */,
 				26FAD1E32BB4AF790025650F /* NotificationCard.swift in Sources */,
 				7F988EA02AE2D29900E0BCBD /* LanguageManager.swift in Sources */,
 				265480012BAF852100AD302B /* Home.swift in Sources */,

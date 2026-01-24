@@ -8,42 +8,35 @@
 import SwiftUI
 
 struct CenterListView: View {
-    
-    // MARK: - PROPERTIES
-    
-    @StateObject var viewModel = CenterViewModel()
-    
+
+    @StateObject var viewModel = CenterViewModel(useMockData: true)
+
     let grids: [GridItem] = [
         .init(.flexible()),
         .init(.flexible())
     ]
-    
-    // MARK: - View
-    
+
     var body: some View {
-        switch viewModel.status{
+        switch viewModel.status {
         case .loading:
             ProgressView()
-                .onAppear {
-                    Task {
-                        await viewModel.getCenter()
-                    }
-                }
+
         case .error(let error):
-            Text("Error while loading page:  \(error)")
+            Text("Error: \(error)")
+
         case .success:
-            ScrollView(.vertical, showsIndicators: false) {
-                LazyVGrid(columns: grids) {
-                    ForEach(viewModel.centers){center in
+            ScrollView(showsIndicators: false) {
+                LazyVGrid(columns: grids, spacing: 16) {
+                    ForEach(viewModel.centers) { center in
                         NavigationLink {
-                            CenterDetailsView(id: "6681c4a2d5f54fd64cd1f370")
+                            CenterDetailsView(id: center.id)
                         } label: {
                             MedicalCenterCard(
                                 image: center.logo,
                                 name: center.name,
-                                rate: 3,
-                                minPrice: String(center.price - 100),
-                                maxPrice: String(center.price + 100),
+                                rate: Int(center.ratingsAverage),
+                                minPrice: "\(center.price - 100)",
+                                maxPrice: "\(center.price + 100)",
                                 location: center.location
                             )
                         }
@@ -55,8 +48,4 @@ struct CenterListView: View {
             .navigationBarTitleDisplayMode(.large)
         }
     }
-}
-
-#Preview {
-    CenterListView()
 }

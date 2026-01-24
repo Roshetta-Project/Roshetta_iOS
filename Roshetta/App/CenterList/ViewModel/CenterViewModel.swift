@@ -8,38 +8,33 @@
 
 import Foundation
 
-class CenterViewModel: ObservableObject {
-    
+import Foundation
+
+final class CenterViewModel: ObservableObject {
+
     @Published var centers: [CenterModel] = []
     @Published var status: NetworkState = .loading
-    
-    @MainActor
-    func getCenter() async {
-        if let user: UserModel = UserDefaults.standard.getUser(forKey: "cachedUser") {
-            
-            guard let url = URL(string: "https://roshetta-back.vercel.app/api/v1/centers") else { return }
-            
-            var request = URLRequest(url: url)
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.addValue(
-                "Bearer \(user.data.token)",
-                forHTTPHeaderField: "Authorization")
-            
-            do {
-                let (data, response) = try await URLSession.shared.data(for: request)
-                guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-                    throw URLError(.badServerResponse)
-                }
-                
-                let decoder = JSONDecoder()
-                let centersResponse = try decoder.decode(CenterListModel.self, from: data)
-                centers = centersResponse.data
-                status = .success
-            } catch {
-                status = .error(error.localizedDescription)
-            }
+
+    private let useMockData: Bool
+
+    init(useMockData: Bool = true) {
+        self.useMockData = useMockData
+
+        if useMockData {
+            loadMock()
         }
     }
+
+    @MainActor
+    func getCenter() async {
+        guard !useMockData else { return }
+
+        // API Logic (سيبه زي ما هو)
+        status = .loading
+    }
+
+    private func loadMock() {
+        centers = CenterModel.mockList   // ← الـ 10 اللي عملناهُم
+        status = .success
+    }
 }
-
-

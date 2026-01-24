@@ -11,19 +11,19 @@ struct ProfileImage: View {
     var body: some View {
         Rectangle()
           .foregroundColor(.clear)
-          .frame(width: 136, height: 136)
+          .frame(width: Dimensions.avatarXLarge, height: Dimensions.avatarXLarge)
           .background(
             Image("user")
               .resizable()
               .aspectRatio(contentMode: .fill)
-              .frame(width: 136, height: 136)
+              .frame(width: Dimensions.avatarXLarge, height: Dimensions.avatarXLarge)
               .clipped()
           )
           .background(Color(red: 0.85, green: 0.85, blue: 0.85))
-          .cornerRadius(136)
-          .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 2)
+          .cornerRadius(Dimensions.avatarXLarge)
+          .shadow(color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity), radius: Dimensions.shadowRadius, x: Dimensions.shadowX, y: Dimensions.shadowY)
           .overlay(
-            RoundedRectangle(cornerRadius: 136)
+            RoundedRectangle(cornerRadius: Dimensions.avatarXLarge)
               .inset(by: 0.5)
               .stroke(Color(red: 0.44, green: 0.76, blue: 0.97), lineWidth: 1)
           )    }

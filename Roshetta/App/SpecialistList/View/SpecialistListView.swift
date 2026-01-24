@@ -8,25 +8,54 @@
 import SwiftUI
 
 struct SpecialistListView: View {
-    // MARK: - Properties
-    let specialization = ["Surgery","Dentist","Pediatrics","Psychiatry","Surgery","Dentist","Pediatrics","Psychiatry","Surgery","Dentist","Pediatrics","Psychiatry","Surgery","Dentist","Pediatrics","Psychiatry"]
+    
+    let specializations = [
+            "Cardiology",         // القلب والأوعية الدموية
+            "Dermatology",        // الجلدية
+            "Dentistry",          // الأسنان
+            "Psychiatry",         // النفسية
+            "Pediatrics",         // الأطفال
+            "Orthopedics",        // العظام
+            "Neurology",          // المخ والأعصاب
+            "Urology",            // المسالك البولية
+            "ENT",                // أنف وأذن وحنجرة
+            "Ophthalmology",      // الرمد والعيون
+            "Surgery",            // الجراحة العامة
+            "Obstetrics & Gyn",   // النساء والتوليد
+            "Internal Medicine",  // الباطنة
+            "Endocrinology",      // السكر والغدد
+            "Gastroenterology",   // الجهاز الهضمي
+            "Physical Therapy",   // العلاج الطبيعي
+            "Nutrition & Obesity",// التخسيس والتغذية
+            "Hepatology",         // الكبد
+            "Nephrology",         // الكلى
+            "Pulmonology",        // الصدر والجهاز التنفسي
+            "Radiology",          // الأشعة
+            "Clinical Pathology", // التحاليل الطبية
+            "Oncology",           // الأورام
+            "Vascular Surgery",   // جراحة الأوعية الدموية
+            "Rheumatology"        // الروماتيزم والتأهيل
+        ]
+    
     
     var body: some View {
-        NavigationStack{
-            ScrollView(.vertical, showsIndicators: false) {
-                ForEach(0..<16){Index in
-                    SpecializationCard(specializationImage: "specialist", specialization: specialization[Index])
-                        .padding(.horizontal)
-                        .padding(.vertical,6)
-                        
+        NavigationStack {
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 12) {
+                    ForEach(specializations, id: \.self) { specialization in
+                        NavigationLink {
+                            DoctorListView(specialization: specialization)
+                        } label: {
+                            SpecializationCard(
+                                specializationImage: "specialist",
+                                specialization: specialization
+                            )
+                            .padding(.horizontal)
+                        }
+                    }
                 }
+                .padding(.top, 12)
             }
         }
-        .navigationTitle("Specializations")
-        .navigationBarTitleDisplayMode(.large)
     }
-}
-
-#Preview {
-    SpecialistListView()
 }

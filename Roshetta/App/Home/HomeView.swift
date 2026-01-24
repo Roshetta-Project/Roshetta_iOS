@@ -35,37 +35,37 @@ struct HomeView: View {
         NavigationView{
             ScrollView (.vertical, showsIndicators: false){
                 // MARK: - Slider
-                HomeSlider(slides: .constant(["Banner", "baner2","baner3"]))
+                HomeSlider(slides: .constant(["Banner1", "Banner2", "Banner3"]))
                 
                 // MARK: - Categories
-                HStack (spacing: 16) {
+                HStack (spacing: Spacing.medium) {
                     ForEach(categories, id: \.name) { category in
                         NavigationLink(destination: category.destinationView) {
                             CategoryCard(image: category.imageName, name: category.name, destinationView: category.destinationView)
                         }
                     }
                 }
-                .padding(.vertical, 16)
+                .padding(.vertical, Spacing.medium)
                 
                 // MARK: - Nearest Doctors Section
                 HStack () {
                     Text("Nearest Doctors")
                         .bold()
-                        .font(.system(size: 20))
+                        .font(Typography.title3)
                     Spacer()
                     NavigationLink {
                         DoctorListView()
                     } label: {
                         Text("See All")
                             .underline()
-                            .font(.system(size: 16))
-                            .foregroundColor(.secondary)
+                            .font(Typography.callout)
+                            .foregroundColor(Colors.secondaryLabel)
                     }
                 }
-                .padding(.horizontal)
+                .padding(.horizontal, Spacing.medium)
                 
                 ScrollView (.horizontal, showsIndicators: false) {
-                    HStack (spacing: 21) {
+                    HStack (spacing: Spacing.large) {
                         switch doctorViewModel.status {
                         case .loading:
                             ProgressView()
@@ -90,28 +90,28 @@ struct HomeView: View {
                                     )
                                 }
                             }
-                            .padding(4)
+                            .padding(Spacing.xSmall)
                         }
                     }
                 }
-                .padding()
+                .padding(Spacing.medium)
                 
                 // MARK: - Nearest Clinics Section
                 HStack () {
                     Text("Nearest Clinics")
                         .bold()
-                        .font(.system(size: 20))
+                        .font(Typography.title3)
                     Spacer()
                     NavigationLink {
                         ClinicListView()
                     } label: {
                         Text("See All")
                             .underline()
-                            .font(.system(size: 16))
-                            .foregroundColor(.secondary)
+                            .font(Typography.callout)
+                            .foregroundColor(Colors.secondaryLabel)
                     }
                 }
-                .padding(.horizontal)
+                .padding(.horizontal, Spacing.medium)
                 
                 ScrollView (.horizontal, showsIndicators: false) {
                     HStack() {
@@ -131,34 +131,34 @@ struct HomeView: View {
                                     ClinicDetailsView(id: clinic.id)
                                 } label: {
                                     ClincCard(image: clinic.logo, name: clinic.name, rate: Int(clinic.ratingsAverage), price: String(clinic.price), location: clinic.location)
-                                        .padding(.trailing)
+                                        .padding(.trailing, Spacing.medium)
                                 }
                             }
-                            .padding(4)
+                            .padding(Spacing.xSmall)
                         }
                     }
-                    .padding()
+                    .padding(Spacing.medium)
                 }
                 
                 // MARK: - Nearest Centers Section
                 HStack () {
                     Text("Nearest Centers")
                         .bold()
-                        .font(.system(size: 20))
+                        .font(Typography.title3)
                     Spacer()
                     NavigationLink {
                         CenterListView()
                     } label: {
                         Text("See All")
                             .underline()
-                            .font(.system(size: 16))
-                            .foregroundColor(.secondary)
+                            .font(Typography.callout)
+                            .foregroundColor(Colors.secondaryLabel)
                     }
                 }
-                .padding(.horizontal)
+                .padding(.horizontal, Spacing.medium)
                 
                 ScrollView (.horizontal, showsIndicators: false) {
-                    HStack (spacing: 24) {
+                    HStack (spacing: Spacing.large) {
                         switch centerViewModel.status {
                         case .loading:
                             ProgressView()
@@ -172,7 +172,7 @@ struct HomeView: View {
                         case .success:
                             ForEach(centerViewModel.centers){center in
                                 NavigationLink {
-                                    CenterDetailsView(id: "6681c4a2d5f54fd64cd1f370")
+                                    CenterDetailsView(id:center.id)
                                 } label: {
                                     MedicalCenterCard(
                                         image: center.logo,
@@ -184,10 +184,10 @@ struct HomeView: View {
                                     )
                                 }
                             }
-                            .padding(4)
+                            .padding(Spacing.xSmall)
                         }
                     }
-                    .padding()
+                    .padding(Spacing.medium)
                 }
                 .navigationBarItems(
                     leading:
@@ -195,12 +195,12 @@ struct HomeView: View {
                            buttonAction()
                         } label: {
                             Image(systemName: "line.horizontal.3")
-                                .foregroundColor(.gray)
+                            .foregroundColor(Colors.secondaryLabel)
                         },
                     trailing:
                         NavigationLink(destination: SearchBar()) {
                             Image(systemName: "magnifyingglass")
-                                .foregroundColor(.gray)
+                                .foregroundColor(Colors.secondaryLabel)
                         }
                 )
                 .navigationBarTitle("", displayMode: .inline)

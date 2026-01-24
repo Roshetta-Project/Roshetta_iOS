@@ -7,36 +7,28 @@
 
 import Foundation
 
-class ClinicViewModel: ObservableObject {
-    
+final class ClinicViewModel: ObservableObject {
+
     @Published var clinics: [ClinicModel] = []
     @Published var status: NetworkState = .loading
-    
+
+    private let useMockData: Bool
+
+    init(useMockData: Bool = true) {
+        self.useMockData = useMockData
+        if useMockData {
+            loadMock()
+        }
+    }
+
     @MainActor
     func getClinic() async {
-        if let user: UserModel = UserDefaults.standard.getUser(forKey: "cachedUser") {
-            
-            guard let url = URL(string: "https://roshetta-back.vercel.app/api/v1/clinics") else { return }
-            
-            var request = URLRequest(url: url)
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.addValue(
-                "Bearer \(user.data.token)",
-                forHTTPHeaderField: "Authorization")
-            
-            do {
-                let (data, response) = try await URLSession.shared.data(for: request)
-                guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-                    throw URLError(.badServerResponse)
-                }
-                
-                let decoder = JSONDecoder()
-                let clinicsResponse = try decoder.decode(ClinicListModel.self, from: data)
-                clinics = clinicsResponse.data
-                status = .success
-            } catch {
-                status = .error(error.localizedDescription)
-            }
-        }
+        guard !useMockData else { return }
+        // API logic (سيبه زي ما هو)
+    }
+
+    private func loadMock() {
+        clinics = ClinicModel.mockList
+        status = .success
     }
 }

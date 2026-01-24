@@ -102,11 +102,13 @@ struct DoctorDetailsView: View {
     }
     
     private func doctorSpecilization() -> some View {
+        let doctor = viewModel.doctor?.data
+
         return VStack(alignment: .leading, spacing: 8) {
             Text("Specialization")
                 .modifier(TitleTextModifir())
             
-            SpecializationCard(specializationImage: "Dentist", specialization: "Dentist")
+            SpecializationCard(specializationImage: "Dentist", specialization:doctor?.specilization ?? "Not founded")
         }
     }
     

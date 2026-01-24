@@ -26,7 +26,7 @@ struct GFButton: View {
             } else {
                 Text(text)
                     .font(.system(size: 16, weight: .bold))
-                    .padding(.horizontal, 32)
+                    .padding(.horizontal, Spacing.xLarge)
                     .lineLimit(0)
                     .minimumScaleFactor(0.7)
                     .foregroundColor(foregroundColot)
@@ -37,7 +37,7 @@ struct GFButton: View {
                     .background {
                         backgroundColor
                     }
-                    .cornerRadius(isAnimating ? 24 : 8)
+                    .cornerRadius(isAnimating ? Dimensions.cornerRadiusXLarge : Dimensions.cornerRadiusSmall)
             }
         }
         .onChange(of: isLoading, perform: { value in

@@ -29,16 +29,16 @@ struct ProfileView: View {
     var body: some View {
         NavigationView {
             
-            VStack(alignment:.center,spacing: 8){
+            VStack(alignment:.center,spacing: Spacing.small){
                 ProfileImage()
                 Text(userName)
-                    .font(.custom(GFFonts.SeguiBold, size: 24))
+                    .font(Typography.title2)
                 
                 HStack{
                     Image("Location")
                     Text(location)
-                        .font(.custom(GFFonts.Segui, size: 16))
-                        .foregroundColor(.gray)
+                        .font(Typography.callout)
+                        .foregroundColor(Colors.secondaryLabel)
                     
                 }
                 
@@ -48,10 +48,10 @@ struct ProfileView: View {
                                        ProfileViewSections(section: section)
                                    }
                                }
-                               .listRowBackground(Color.gray.opacity(0.1))
+                               .listRowBackground(Colors.surface.opacity(0.5))
                 }
                 .listStyle(.plain)
-                .padding()
+                .padding(Spacing.medium)
             }
             .navigationBarItems(
                 leading:
@@ -59,12 +59,12 @@ struct ProfileView: View {
                        buttonAction()
                     } label: {
                         Image(systemName: "line.horizontal.3")
-                            .foregroundColor(.gray)
+                            .foregroundColor(Colors.secondaryLabel)
                     },
                 trailing:
                     NavigationLink(destination: SearchBar()) {
                         Image(systemName: "magnifyingglass")
-                            .foregroundColor(.gray)
+                            .foregroundColor(Colors.secondaryLabel)
                     }
             )
             .navigationBarTitle("", displayMode: .inline)

@@ -7,48 +7,34 @@
 
 import Foundation
 
-class DoctorDetailsViewModel: ObservableObject {
-    
+final class DoctorDetailsViewModel: ObservableObject {
+
     @Published var doctor: DoctorDetailsModel?
     @Published var status: NetworkState = .loading
-        
-    @MainActor
-    func getDoctors(id: String) async {
-        
-        if let user: UserModel = UserDefaults.standard.getUser(forKey: "cachedUser") {
-            
-            guard let url = URL(string: "https://roshetta-back.vercel.app/api/v1/doctors/\(id)") else { return }
-            
-            var request = URLRequest(url: url)
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.addValue(
-                "Bearer \(user.data.token)",
-                forHTTPHeaderField: "Authorization")
-            
-            do {
-                let (data, response) = try await URLSession.shared.data(for: request)
-                
-                if let jsonString = String(data: data, encoding: .utf8) {
-                    print("Response is ---")
-                    print(jsonString)
-                }
-                
-                guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-                    throw URLError(.badServerResponse)
-                }
-                
-                let decoder = JSONDecoder()
-                let doctorResponse = try decoder.decode(DoctorDetailsModel.self, from: data)
-                doctor = doctorResponse
-                if doctor != nil {
-                    status = .success
-                } else {
-                    status = .error("Doctor not found")
-                }
-            } catch {
-                status = .error(error.localizedDescription)
-            }
-        }
+
+    private let useMockData: Bool
+
+    init(useMockData: Bool = true) {
+        self.useMockData = useMockData
     }
 
+    @MainActor
+    func getDoctors(id: String) async {
+
+        if useMockData {
+            loadMock(id: id)
+            return
+        }
+
+        // API logic الحقيقي (سيبه زي ما هو)
+    }
+
+    private func loadMock(id: String) {
+        if let mock = DoctorDetailsModel.mock(id: id) {
+            doctor = mock
+            status = .success
+        } else {
+            status = .error("Doctor not found")
+        }
+    }
 }

@@ -17,89 +17,86 @@ struct MenuSide: View {
     
     // MARK: - Body
     var body: some View {
-        VStack(alignment:.leading,spacing: 15) {
+        VStack(alignment: .leading, spacing: Spacing.medium) {
+            // MARK: - Profile Image
             Circle()
-                .stroke(Color.white, lineWidth: 5)
-                .frame(width: 70, height: 70) // Adjust size as needed
+                .stroke(Color.white, lineWidth: 3)
+                .frame(width: 80, height: 80)
                 .overlay(
                     Image("user")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 70, height: 70)
+                        .frame(width: 80, height: 80)
                         .clipShape(Circle())
                 )
-                .padding(.top, 50) // Adjust top padding
+                .shadow(color: .black.opacity(0.2), radius: 4, x: 0, y: 2)
+                .padding(.top, Spacing.xxxLarge)
             
-            //Profile
-            
-            VStack(alignment:.leading,spacing: 8){
-                if let user: UserModel = UserDefaults.standard.getUser(forKey: "cachedUser") {
-                    Text("Hi \(user.data.user.name)")
-                        .font(.custom(GFFonts.SeguiBold, size: 20))
-                        .foregroundColor(.white)
-                    
-                    Text("\(user.data.user.email)")
-                        .font(.custom(GFFonts.SeguiBold, size: 8))
-                        .foregroundColor(Color(.secondaryLabel))
-                }
+            // MARK: - User Profile Info
+            VStack(alignment: .leading, spacing: Spacing.small) {
+                Text("Hi Sami Ahmed")
+                    .font(Typography.title3)
+                    .foregroundColor(.white)
+                
+                Text("samiahmed2@gmail.com")
+                    .font(Typography.title2)
+                    .foregroundColor(Color.white.opacity(0.8))
             }
             
-            VStack{
-                VStack(alignment:.leading,spacing:10){
+            // MARK: - Menu Items
+            VStack {
+                VStack(alignment: .leading, spacing: Spacing.small) {
                     
                     TabButton(image: "person", title: "Profile", selectedTab: $selectedTab, animation: animation)
                     
                     TabButton(image: "house", title: "Home", selectedTab: $selectedTab, animation: animation)
-                    
                     
                     TabButton(image: "calendar", title: "Reservation", selectedTab: $selectedTab, animation: animation)
                     
                     TabButton(image: "qrcode.viewfinder", title: "Scanner", selectedTab: $selectedTab, animation: animation)
                     
                     TabButton(image: "bookmark.fill", title: "Saved", selectedTab: $selectedTab, animation: animation)
-                    
-//                    TabButton(image: "gearshape.fill", title: "Setting", selectedTab: $selectedTab, animation: animation)
                 }
-                .padding(.leading,-20)
-                .padding(.top,50)
+                .padding(.leading, -20)
+                .padding(.top, Spacing.xxxLarge)
                 
                 Spacer()
             }
             
-            //SignOut
+            // MARK: - Logout Button
             Button(action: {
-                print("Login out")
+                print("Logging out")
                 isLogin = false
             }, label: {
-                HStack(spacing:15){
+                HStack(spacing: Spacing.medium) {
                     Image(systemName: "iphone.and.arrow.forward")
                         .font(.title2)
                         .frame(width: 30)
                         .foregroundColor(.white)
                     
                     Text("Logout")
-                        .font(.custom(GFFonts.SeguiSemiBold, size: 16))
+                        .font(Typography.callout)
                         .foregroundColor(.white)
                 }
                 .foregroundColor(.white)
-                .padding(.vertical,12)
-                .padding(.horizontal,20)
+                .padding(.vertical, Spacing.mediumSmall)
+                .padding(.horizontal, Spacing.medium)
             })
 
-//            TabButton(image: "iphone.and.arrow.forward", title: "Logout", selectedTab: .constant(""), animation: animation)
-//                .padding(.leading, -20)
         }
         .overlay {
+            // MARK: - Close Button
             Button {
                 showMenue.toggle()
             } label: {
                 Image(systemName: "xmark.circle.fill")
+                    .font(.title2)
                     .foregroundColor(.white)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         }
-        .padding()
-        .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .topLeading)
+        .padding(Spacing.medium)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
     
 }

@@ -13,30 +13,32 @@ struct SearchBar: View {
     
     var body: some View {
         VStack {
-            HStack(spacing:10){
+            HStack(spacing: Spacing.small) {
                 Image(systemName: "magnifyingglass")
-                    .foregroundColor(.gray)
-                    .padding(.leading, 8)
+                    .foregroundColor(Colors.secondaryLabel)
+                    .padding(.leading, Spacing.small)
                 
                 TextField("Search for doctor name, clinic...", text: $searchText, onCommit: search)
-                    .font(.custom(GFFonts.Segui, size: 14))
-                    .foregroundColor(Color.gray)
-                    .padding(.vertical, 10)
-                    .padding(.trailing, 8)
+                    .font(Typography.subheadline)
+                    .foregroundColor(Colors.placeholderLabel)
+                    .padding(.vertical, Spacing.small)
+                    .padding(.trailing, Spacing.small)
                 
             }
         }
         .background(
-            RoundedRectangle(cornerRadius: 8)
-                .foregroundColor(Color.white)
+            RoundedRectangle(cornerRadius: Dimensions.cornerRadiusSmall)
+                .foregroundColor(Colors.surface)
                 .shadow(
-                    color: Color.gray.opacity(0.3),
-                    radius: 4,
-                    x: 2,
-                    y: 2
+                    color: Colors.primaryLabel.opacity(Dimensions.shadowOpacity),
+                    radius: Dimensions.shadowRadius,
+                    x: Dimensions.shadowX,
+                    y: Dimensions.shadowY
                 )
         )
-        .frame(width: UIScreen.main.bounds.width - 40, height: 50)
+        .frame(maxWidth: .infinity)
+        .frame(height: Dimensions.buttonHeightMedium)
+        .padding(.horizontal, Spacing.medium)
     }
     
     func search() {
