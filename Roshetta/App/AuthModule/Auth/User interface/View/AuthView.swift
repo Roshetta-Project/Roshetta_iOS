@@ -27,7 +27,7 @@ struct AuthView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(spacing: 32) {
+                VStack(spacing: Spacing.xLarge) {
                     headerView()
                     authButtons()
                     Spacer()
@@ -47,18 +47,18 @@ struct AuthView: View {
         ZStack {
             CircularGradient()
 
-            VStack(spacing: 32) {
+            VStack(spacing: Spacing.xLarge) {
                 Spacer()
                 Text("Join us now !")
                     .foregroundColor(Color.black)
-                    .font(.custom(GFFonts.SeguiBold, size: 36))
-                    .padding(.top, 32)
+                    .font(Typography.largeTitle)
+                    .padding(.top, Spacing.xLarge)
                 
                 Images.authphoto
                     .resizable()
-                    .frame(width: 240,height: 280)
+                    .frame(width: 240, height: 280)
             }
-            .padding(.top, 32)
+            .padding(.top, Spacing.xLarge)
         }
         .ignoresSafeArea()
     }
@@ -67,7 +67,7 @@ struct AuthView: View {
     // MARK: - AUTH BUTTONS
     
     private func authButtons() -> some View {
-        VStack(spacing: 24) {
+        VStack(spacing: Spacing.large) {
             GFAuthButton(icon: SFSymbols.google,
                          tilte: "Continue With Google") {
                 Task {
@@ -87,17 +87,17 @@ struct AuthView: View {
                 
             }
         }
-        .padding(.horizontal)
+        .padding(.horizontal, Spacing.medium)
     }
     
     // MARK: - FOOTER
     
     private func footer() -> some View {
-        Text("By logging in you are agreeing to the Teems & Conditioning and Privacy policy")
-            .font(.custom(GFFonts.popinsMedium, size: 16))
+        Text("By logging in you are agreeing to the Terms & Conditions and Privacy policy")
+            .font(Typography.callout)
             .multilineTextAlignment(.center)
-            .padding(.horizontal, 32)
-            .padding(.bottom, 32)
-            .foregroundColor(.gray.opacity(0.7))
+            .padding(.horizontal, Spacing.xLarge)
+            .padding(.bottom, Spacing.xLarge)
+            .foregroundColor(Colors.tertiaryLabel)
     }
 }
